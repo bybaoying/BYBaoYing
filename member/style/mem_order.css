@@ -1,0 +1,96 @@
+﻿TR {
+	FONT-SIZE: 12px; FONT-FAMILY: "Arial", "穝灿砰"
+}
+.m-title {
+	FONT-SIZE: 12px; PADDING-LEFT: 45px; COLOR: #ffff99; PADDING-TOP: 5px
+}
+
+
+.order-bottom
+{
+	background-position: left bottom;
+	background-attachment: scroll;
+
+	background-repeat: repeat-y;
+}
+.text-order {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+}
+.text-red {
+	COLOR: #ff0000; FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #cccccc
+}
+.text-order-icon {
+	BACKGROUND-POSITION: 0px 0.3em; PADDING-LEFT: 8px; FONT-SIZE: 12px; 
+	BACKGROUND-IMAGE: url(../images/order_icon.jpg); COLOR: #000000; LINE-HEIGHT: 16px; 
+	BACKGROUND-REPEAT: no-repeat; TEXT-DECORATION: none
+}
+.text-red {
+	COLOR: #ff0000; FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #cccccc
+}
+.un-text {
+	COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.un-text-yew {
+	COLOR: #ffcc00; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.error {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #33ff33; TEXT-DECORATION: none
+}
+.rp_m_tab
+{
+	border-right: #cccccc 0px solid;
+	padding-right: 1px;
+	border-top: #cccccc 0px solid;
+	padding-left: 1px;
+	padding-bottom: 1px;
+	border-left: #cccccc 0px solid;
+	padding-top: 1px;
+	border-bottom: #cccccc 0px solid;
+	background-color: #330000;
+	margin: 0px;
+	width: 190px;
+}
+
+.ball_td
+{
+	background-position: center center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-color: #FCE4E0;
+	
+}
+.list_cen
+{
+	border-right: medium none;
+	padding-right: 1px;
+	border-top: medium none;
+	padding-left: 1px;
+	font-size: 12px;
+	padding-bottom: 1px;
+	border-left: medium none;
+	color: #000000;
+	padding-top: 3px;
+	border-bottom: medium none;
+	background-color: #e4e4e4;
+	text-align: center;
+	height: 25px;
+}
+
+.div_Class
+{
+	width: 232px;
+	background-repeat: no-repeat;
+}
+.error
+{
+	color: #FFF;
+	background-color: #900;
+}
+
+.team
+{
+	background-color: #FFF;
+	text-align: center;
+	border-bottom: 1px solid #900;
+
+}

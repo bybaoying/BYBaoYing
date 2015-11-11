@@ -1,0 +1,102 @@
+
+
+/* 2006 07 26 */
+html, body
+{
+	background-color: white;
+	margin: 0 0 0 2px;
+	padding-top: 10px;
+}
+form { margin:0; padding:0;}
+.ord, .ord2
+{
+	width: 220px;
+	background: #DFD9CB url(../images/member/order_bg_ft.gif) repeat-y left top;
+	font: 0.75em Arial, Helvetica, sans-serif;
+}
+
+
+h1
+{
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0px;
+	background: url(../images/member/order_h1_ft.gif) no-repeat left top;
+	height: 45px;
+	padding-right: 6px;
+	padding-left: 10px;
+	padding-bottom: 0px;
+	padding-top: 10px;
+}
+#info {}
+p
+{
+	margin: 0 4px 0 4px;
+	padding: 1px 5px 1px 5px;
+}
+.error
+{
+	color: #FFF;
+	background-color: #900;
+}
+/*error ps*/
+.team
+{
+	background-color: #FFF;
+	text-align: center;
+	border-bottom: 1px solid #900;
+
+}
+
+
+
+.foot, .foot2 {
+	width:220px;
+	padding:10px 6px 4px 10px; margin:0;
+	background: #DFD9CB url(../images/member/order_foot_ft.gif) no-repeat left bottom;
+	height: 40px;
+	text-align: center;
+}
+
+
+
+td
+{
+	font-size: 0.75em;
+}
+
+
+A:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px; COLOR: #cc0000; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px; COLOR: #000066
+}
+A:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px; COLOR: #cc0000; TEXT-DECORATION: none
+}
+.rp_m_tab
+{
+	border-right: #cccccc 1px solid;
+	padding-right: 0px;
+	border-top: #cccccc 0px solid;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	border-left: #cccccc 0px solid;
+	padding-top: 0px;
+	border-bottom: #cccccc 0px solid;
+	background-color: #330000;
+	margin: 0px 0px 0px 0px;
+	border-right: #cccccc 0px solid;
+}
+.m_rig
+{
+	background-color: #ffffff;
+	text-align: right;
+
+}
+
+.tdbg
+{
+	
+}

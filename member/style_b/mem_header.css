@@ -1,0 +1,184 @@
+BODY
+{
+	margin: 0px;
+	font-family: Arial;
+}
+DIV.headbar
+{
+	background-image: url(../imagesa/header_bk.jpg);
+	width: 100%;
+	height: 82px;
+	background-repeat: repeat-x;
+}
+.bar1
+{
+	float: left;
+	background-image: url(../imagesa/header_ph11.jpg);
+	width: 242px;
+	height: 82px;
+}
+.bar2
+{
+	float: left;
+	background-image: url(../imagesa/header_ph12.jpg);
+	width: 76px;
+	height: 82px;
+}
+
+.bar3
+{
+	position: absolute;
+	visibility: hidden;
+	width: 200px;
+	left: 15px;
+	top: 30px;
+	height: 22px;
+	background-image: url(../imagesa/header_bk.jpg);
+	z-index: 1;
+}
+.topbar
+{
+	padding-left: 15px;
+	left: 242px;
+	width: 650px;
+	position: absolute;
+	top: 0px;
+}
+
+
+TABLE.bt
+{
+	border-right: 0px;
+	border-top: 0px;
+	border-left: 0px;
+	border-bottom: 0px;
+	border-collpase: collapse;
+	font-size: 12px;
+	height: 38px;
+	width: 100%;
+}
+TABLE.bt1
+{
+	border-right: 0px;
+	border-top: 0px;
+	border-left: 0px;
+	border-bottom: 0px;
+	border-collpase: collapse;
+	font-size: 12px;
+	height: 40px;
+	width: 100%;
+}
+TD.Btt1
+{
+	vertical-align: middle;
+	text-decoration: none;
+	text-align: center;
+}
+TD.btt
+{
+	text-align: center;
+}
+.bt td
+{
+	text-align: center;
+}
+.m-dot1
+{
+	padding-right: 3px;
+	padding-left: 3px;
+	background-image: url(../imagesa/header_dot1.gif);
+	color: #4b4b4b;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	background-position: center center;
+}
+.m-dot2
+{
+	padding-right: 3px;
+	padding-left: 3px;
+	background-image: url(../imagesa/header_dot2.gif);
+	color: #4b4b4b;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	background-position: center center;
+}
+.m-dot
+{
+	text-decoration: none;
+	color: #fff600;
+	text-align: center;
+}
+.m-dot:link
+{
+	color: #fff600;
+	text-decoration: none;
+}
+.m-dot:visited
+{
+	color: #fff600;
+	text-decoration: none;
+}
+.m-dot:active
+{
+	color: #fff600;
+	text-decoration: none;
+}
+.m-dot:hover
+{
+	color: #fff600;
+	text-decoration: none;
+}
+.g-dot
+{
+	left: 0px;
+	color: white;
+	text-decoration: none;
+	font-size: 12px;
+}
+.g-dot:link
+{
+	color: white;
+	text-decoration: none;
+}
+.g-dot:visited
+{
+	color: white;
+	text-decoration: none;
+}
+.g-dot:active
+{
+	color: white;
+	text-decoration: none;
+}
+.g-dot:hover
+{
+	color: white;
+	text-decoration: none;
+}
+
+.line_click
+{
+	color: #fff600;
+	text-decoration: none;
+	font-size: 12px;
+}
+.line_click:link
+{
+	color: #fff600;
+	text-decoration: none;
+}
+.line_click:visited
+{
+	color: #fff600;
+	text-decoration: none;
+}
+.line_click:active
+{
+	color: #fff600;
+	text-decoration: none;
+}
+.line_click:hover
+{
+	color: #fff600;
+	text-decoration: none;
+}

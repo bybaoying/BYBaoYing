@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+#bottom {
+	  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=120, color=#000000);
+}
+.font_yuyan {
+	font-size: 12px;
+	color:#ccc;
+	text-decoration: none;
+	line-height: 20px;
+}
+.font_yuyan:hover {
+	font-size: 12px;
+	color:#e0e0e0;
+	text-decoration: none;
+	line-height: 20px;
+}

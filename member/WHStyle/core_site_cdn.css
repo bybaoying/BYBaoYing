@@ -1,0 +1,1137 @@
+HTML {
+	HEIGHT: 101%
+}
+BODY {
+	FONT-SIZE: 62.5%; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+HTML {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H6 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.hide {
+	BACKGROUND: #fff; LEFT: -200px; OVERFLOW: hidden; WIDTH: 1px; COLOR: #000; POSITION: absolute; TOP: -500px; HEIGHT: 1px
+}
+.hide A {
+	BACKGROUND: red; COLOR: #fff
+}
+.displayNone {
+	DISPLAY: none; BACKGROUND: #fff; COLOR: #000
+}
+.displayBlock {
+	DISPLAY: block
+}
+.clearBoth {
+	CLEAR: both
+}
+.clearBothBlock {
+	CLEAR: both; DISPLAY: block
+}
+A IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+A {
+	COLOR: #000; TEXT-DECORATION: underline
+}
+A:hover {
+	TEXT-DECORATION: none
+}
+A:unknown {
+	outline: none
+}
+A.eventResult {
+	COLOR: #000
+}
+A.eventSuspend {
+	COLOR: #556507
+}
+.headerBG {
+	BACKGROUND: url(../WHImages/headerBG.jpg?id=1) #011e30 repeat-x 50% top
+}
+#contentHeaderCenter {
+	MARGIN: auto; WIDTH: 996px; COLOR: #fff
+}
+#contentHeaderCenter A {
+	COLOR: #fff
+}
+#contentHeaderContainer {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 3px; PADDING-TOP: 4px; HEIGHT: 1%
+}
+#contentCenter {
+	BACKGROUND: #fff; MARGIN: auto; WIDTH: 996px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#contentHolder {
+	BORDER-RIGHT: #00243a 6px solid; PADDING-RIGHT: 0px; BORDER-TOP: #00243a 6px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #00243a 6px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #00243a 6px solid; POSITION: relative; HEIGHT: 1%
+}
+#contentHead {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px 10px 10px; WIDTH: 646px; PADDING-TOP: 0px; BORDER-BOTTOM: #4cadd2 5px solid; POSITION: relative; HEIGHT: 1%
+}
+#contentHead #oddsDisplay {
+	FONT-SIZE: 1.1em; RIGHT: 0px; MARGIN-BOTTOM: -28px; WIDTH: 270px; BOTTOM: 0px; POSITION: absolute; TEXT-ALIGN: right
+}
+#contentHead .oddsType {
+	FONT-SIZE: 0.8em; WIDTH: 125px; HEIGHT: 17px
+}
+#contentHead H1 {
+	FONT-WEIGHT: 100; FONT-SIZE: 2.8em; PADDING-BOTTOM: 0px; MARGIN: 3px 0px 4px; LETTER-SPACING: -1px
+}
+#contentHead H2 {
+	FONT-WEIGHT: 100; FONT-SIZE: 2.8em; PADDING-BOTTOM: 0px; MARGIN: 3px 0px 4px; LETTER-SPACING: -1px
+}
+#contentA {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 5px; MARGIN: 20px 10px 0px; WIDTH: 646px; PADDING-TOP: 0px
+}
+.fullWidth#contentA {
+	WIDTH: 974px
+}
+#contentB {
+	FLOAT: left; MARGIN: 20px 0px 0px; WIDTH: 302px; HEIGHT: 1%
+}
+H1 {
+	FONT-SIZE: 1.8em; MARGIN: 30px 0px 20px
+}
+H2 {
+	FONT-SIZE: 2.2em; COLOR: #000
+}
+#contentA H2 {
+	FONT-WEIGHT: 100; FONT-SIZE: 18pt; MARGIN: 0px 0px 7px 10px; LETTER-SPACING: -1px
+}
+#contentA H3 {
+	FONT-WEIGHT: 100; FONT-SIZE: 18pt; MARGIN: 0px 0px 7px 10px; LETTER-SPACING: -1px
+}
+H3 {
+	FONT-SIZE: 1.8em; MARGIN-BOTTOM: 8px
+}
+H4 {
+	FONT-SIZE: 1.2em
+}
+H5 {
+	FONT-SIZE: 1em
+}
+.textLeft {
+	TEXT-ALIGN: left
+}
+.textRight {
+	TEXT-ALIGN: right
+}
+.textCenter {
+	TEXT-ALIGN: center
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+LI {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 4px; PADDING-TOP: 3px
+}
+#introHeader {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 11px; FLOAT: left; PADDING-BOTTOM: 0px; PADDING-TOP: 3px
+}
+#introHeader H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 0.9em; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #fff; PADDING-TOP: 0px
+}
+#introHeader H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 0.9em; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #fff; PADDING-TOP: 0px
+}
+#headLinks .text {
+	COLOR: #196a91
+}
+UL#headLinks {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+UL#headLinks LI {
+	CLEAR: none; FLOAT: left; POSITION: relative
+}
+UL#headLinks LI UL {
+	DISPLAY: none; LEFT: 0px; POSITION: absolute; TOP: 1em
+}
+UL#headLinks LI UL LI {
+	Z-INDEX: 1; WIDTH: 113px; POSITION: relative
+}
+UNKNOWN {
+	LEFT: 8px; TOP: auto
+}
+UL#headLinks LI:hover UL {
+	BORDER-RIGHT: #1a6a91 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #1a6a91 1px; DISPLAY: block; PADDING-LEFT: 0px; Z-INDEX: 9999; BACKGROUND: url(../images/subNavHoverBG.jpg) #001d2e repeat-x 50% top; LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 26px 0px 0px; OVERFLOW: visible; BORDER-LEFT: #1a6a91 1px solid; WIDTH: 119px; PADDING-TOP: 0px; BORDER-BOTTOM: #1a6a91 1px solid; TOP: -6px
+}
+UL#headLinks LI.sfhover UL {
+	BORDER-RIGHT: #1a6a91 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #1a6a91 1px; DISPLAY: block; PADDING-LEFT: 0px; Z-INDEX: 9999; BACKGROUND: url(../images/subNavHoverBG.jpg) #001d2e repeat-x 50% top; LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 26px 0px 0px; OVERFLOW: visible; BORDER-LEFT: #1a6a91 1px solid; WIDTH: 119px; PADDING-TOP: 0px; BORDER-BOTTOM: #1a6a91 1px solid; TOP: -6px
+}
+LI.flagBorder#siteSelectLink {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 8px; BACKGROUND: url(../WHImages/langSelectLinkBG.jpg) no-repeat; PADDING-BOTTOM: 8px; WIDTH: 10.6em; PADDING-TOP: 2px
+}
+LI.flagBorder#langSelectLink {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 8px; BACKGROUND: url(../WHImages/langSelectLinkBG.jpg) no-repeat; PADDING-BOTTOM: 8px; WIDTH: 10.6em; PADDING-TOP: 2px
+}
+#siteSelectLink UL LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 1px; COLOR: #fff; PADDING-TOP: 1px
+}
+#siteSelectLink:hover UL LI {
+	BORDER-TOP: #1a6a91 1px solid
+}
+.sfhover#siteSelectLink UL LI {
+	BORDER-TOP: #1a6a91 1px solid
+}
+#siteSelectLink:hover UL LI A {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 7px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 4px; MARGIN: 0px -10px 0px 0px; WIDTH: 112px; COLOR: #7dddff; PADDING-TOP: 3px
+}
+.sfhover#siteSelectLink UL LI A {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 7px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 4px; MARGIN: 0px -10px 0px 0px; WIDTH: 112px; COLOR: #7dddff; PADDING-TOP: 3px
+}
+#siteSelectLink UL LI:hover A {
+	BACKGROUND: #002133; COLOR: #fff
+}
+#siteSelectLink UL LI.sfhover A {
+	BACKGROUND: #002133; COLOR: #fff
+}
+#langSelectLink UL LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 1px; COLOR: #fff; PADDING-TOP: 1px
+}
+#langSelectLink:hover UL LI {
+	BORDER-TOP: #1a6a91 1px solid
+}
+.sfhover#langSelectLink UL LI {
+	BORDER-TOP: #1a6a91 1px solid
+}
+#langSelectLink:hover UL LI A {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 7px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 4px; MARGIN: 0px -10px 0px 0px; WIDTH: 112px; COLOR: #7dddff; PADDING-TOP: 3px
+}
+.sfhover#langSelectLink UL LI A {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 7px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 4px; MARGIN: 0px -10px 0px 0px; WIDTH: 112px; COLOR: #7dddff; PADDING-TOP: 3px
+}
+#langSelectLink UL LI:hover A {
+	BACKGROUND: #002133; COLOR: #fff
+}
+#langSelectLink UL LI.sfhover A {
+	BACKGROUND: #002133; COLOR: #fff
+}
+.flagBorder#langSelectLink {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 8px; BACKGROUND: url(../WHImages/langSelectLinkBG.jpg) no-repeat; PADDING-BOTTOM: 8px; WIDTH: 10.6em; PADDING-TOP: 2px
+}
+.flagBorder#langSelectLink A {
+	MARGIN-TOP: 1px; DISPLAY: block; WIDTH: 7em; TEXT-DECORATION: none
+}
+.flagBorder#langSelectLink A:hover {
+	TEXT-DECORATION: none
+}
+.flagBorder#langSelectLink A SPAN {
+	PADDING-RIGHT: 15px; MARGIN-RIGHT: 5px
+}
+.flagBorder#siteSelectLink {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 8px; BACKGROUND: url(../WHImages/langSelectLinkBG.jpg) no-repeat; PADDING-BOTTOM: 8px; WIDTH: 10.6em; PADDING-TOP: 2px
+}
+.flagBorder#siteSelectLink A {
+	MARGIN-TOP: 2px; DISPLAY: block; WIDTH: 7em; TEXT-DECORATION: none
+}
+.flagBorder#siteSelectLink A:hover {
+	TEXT-DECORATION: none
+}
+.flagBorder#siteSelectLink A SPAN {
+	PADDING-RIGHT: 15px; MARGIN-RIGHT: 5px
+}
+UL#headLinks LI {
+	PADDING-RIGHT: 6px
+}
+UL#headLinks LI UL LI {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+LI.flagEN#langSelectLink A {
+	PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/langFlags.gif) no-repeat right 4px; PADDING-TOP: 1px
+}
+LI.flagES#langSelectLink A {
+	PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/langFlags.gif) no-repeat right -23px; PADDING-TOP: 1px
+}
+LI.flagDE#langSelectLink A {
+	PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/langFlags.gif) no-repeat right -51px; PADDING-TOP: 1px
+}
+LI.flagIT#langSelectLink A {
+	PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/langFlags.gif) no-repeat right -86px; PADDING-TOP: 1px
+}
+LI.flagFR#langSelectLink A {
+	PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/langFlags.gif) no-repeat right -122px; PADDING-TOP: 1px
+}
+LI.flagZH#langSelectLink A {
+	PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/langFlags.gif) no-repeat right -157px; PADDING-TOP: 1px
+}
+LI.flagCN#langSelectLink A {
+	PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/langFlags.gif) no-repeat right -157px; PADDING-TOP: 1px
+}
+LI.flagEL#langSelectLink A {
+	PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/langFlags.gif) no-repeat right -194px; PADDING-TOP: 1px
+}
+#blockA {
+	BORDER-RIGHT: #003756 6px solid; BORDER-TOP: #003756 5px solid; FONT-SIZE: 1.1em; Z-INDEX: 99999; BACKGROUND: url(../WHImages/blockABG.jpg) #011c2d repeat-x; FLOAT: left; BORDER-LEFT: #003756 6px solid; WIDTH: 984px; COLOR: #a2a2a2; POSITION: relative; HEIGHT: 32px
+}
+#blockA FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#blockA A {
+	COLOR: #fff; TEXT-DECORATION: underline
+}
+#blockA A:hover {
+	TEXT-DECORATION: none
+}
+#blockA #logo {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 20px; FLOAT: left; PADDING-BOTTOM: 0px; PADDING-TOP: 12px
+}
+#blockA FIELDSET {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 2px; WIDTH: 750px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; TEXT-ALIGN: left; BORDER-BOTTOM-STYLE: none
+}
+#blockA #signInA {
+	PADDING-LEFT: 0px; FLOAT: right; TEXT-ALIGN: left
+}
+#blockA A.regAccLink {
+	DISPLAY: inline; FONT-SIZE: 1.1em; MARGIN: 0px; COLOR: #fff
+}
+#blockA A.lostLoginLink {
+	PADDING-RIGHT: 5px; DISPLAY: block; PADDING-LEFT: 0px; FONT-SIZE: 1.1em; FLOAT: right; MARGIN: 3px 9px 0px 0px
+}
+#blockA A.helpLink {
+	MARGIN-TOP: 2px; DISPLAY: block; PADDING-LEFT: 8px; FONT-SIZE: 1.1em; FLOAT: right; MARGIN-RIGHT: 8px
+}
+.helpLinks {
+	FONT-SIZE: 1.1em; FLOAT: right; MARGIN-RIGHT: 5px; PADDING-TOP: 3px
+}
+#blockA FIELDSET A.helpLink {
+	MARGIN-TOP: 3px
+}
+#blockA A.signOutLink {
+	PADDING-RIGHT: 5px; MARGIN-TOP: 0px; DISPLAY: block; PADDING-LEFT: 5px; FONT-SIZE: 1.2em; BACKGROUND: url(../WHImages/signInBtnBG.jpg) no-repeat; FLOAT: right; PADDING-BOTTOM: 6px; WIDTH: 64px; MARGIN-RIGHT: 0px; PADDING-TOP: 3px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#blockA #signInA .inputBG {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; BACKGROUND: url(../WHImages/inputBG.gif) no-repeat; FLOAT: left; PADDING-BOTTOM: 2px; WIDTH: 8.9em; MARGIN-RIGHT: 4px; PADDING-TOP: 2px; HEIGHT: 20px
+}
+#blockA #signInA LABEL {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 5px; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 57px; COLOR: #fff; PADDING-TOP: 2px
+}
+#blockA #signInBtnHolder {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; WIDTH: 74px; HEIGHT: 18px
+}
+#blockA #joinNowBtnHolder {
+	PADDING-LEFT: 4px; FLOAT: left; HEIGHT: 18px
+}
+#blockA #joinNowBtnHolder A {
+	MARGIN-TOP: 1px; DISPLAY: inline-block; FONT-SIZE: 1.1em; BACKGROUND: url(../WHImages/joinNowBtnBG.jpg) no-repeat; PADDING-TOP: 0px; HEIGHT: 22px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#blockA #joinNowBtnHolder A SPAN {
+	PADDING-RIGHT: 13px; DISPLAY: inline-block; BACKGROUND: url(../WHImages/joinNowBtnRightBG.jpg) no-repeat right top; MARGIN-LEFT: 13px; CURSOR: pointer; PADDING-TOP: 3px; HEIGHT: 18px
+}
+#blockA #signInBtn {
+	PADDING-RIGHT: 4px; MARGIN-TOP: 1px; PADDING-LEFT: 5px; FONT-WEIGHT: normal; FONT-SIZE: 1.1em; BACKGROUND: url(../WHImages/signInBtnBG.jpg) no-repeat; PADDING-BOTTOM: 2px; WIDTH: 74px; CURSOR: pointer; COLOR: #fff; BORDER-TOP-STYLE: none; PADDING-TOP: 1px; FONT-FAMILY: Arial, Helvetica, sans-serif; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 22px; BORDER-BOTTOM-STYLE: none
+}
+#signInA INPUT#remember_me {
+	WIDTH: 20px; MARGIN-RIGHT: 2px; PADDING-TOP: 4px
+}
+#signInA A#remember_link {
+	FONT-SIZE: 1.1em; FLOAT: left; MARGIN: 3px 0px 0px
+}
+#blockA #signInA #username INPUT {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 2px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 11px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 1px; MARGIN: 1px; WIDTH: 8em; COLOR: #7b7b7b; PADDING-TOP: 1px; HEIGHT: 1.4em; BORDER-RIGHT-WIDTH: 0px
+}
+#blockA #signInA #password {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 2px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 11px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 1px; MARGIN: 1px; WIDTH: 8em; COLOR: #7b7b7b; PADDING-TOP: 1px; HEIGHT: 1.4em; BORDER-RIGHT-WIDTH: 0px
+}
+#blockA #signinLoader {
+	DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 1.1em; COLOR: rgb(147,194,39); PADDING-TOP: 3px
+}
+#blockA #userDetails {
+	PADDING-RIGHT: 0px; MARGIN-TOP: -6px; PADDING-LEFT: 0px; FLOAT: right; PADDING-BOTTOM: 0px; WIDTH: auto; PADDING-TOP: 8px; TEXT-ALIGN: right
+}
+#blockA #userDetails A {
+	COLOR: #7dddff
+}
+#blockA #userDetails UL LI {
+	CLEAR: none; PADDING-RIGHT: 0px; DISPLAY: block; FLOAT: left; MARGIN-LEFT: 5px; COLOR: #fff; MARGIN-RIGHT: 5px
+}
+#blockA #userDetails UL LI.name {
+	PADDING-RIGHT: 8px; PADDING-TOP: 1px
+}
+#blockA #userDetails UL LI.messages {
+	MARGIN-TOP: -2px
+}
+#blockA #userDetails UL LI.deposit {
+	PADDING-RIGHT: 0px; MARGIN-TOP: -2px; PADDING-LEFT: 0px; MARGIN-LEFT: 3px; MARGIN-RIGHT: 6px
+}
+#blockA #userDetails UL LI.userHighlight {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 8px; BACKGROUND: url(../WHImages/userHighlightLeft.jpg) no-repeat left top; PADDING-BOTTOM: 7px; MARGIN-LEFT: 0px; PADDING-TOP: 5px
+}
+#blockA #userDetails UL LI.userHighlight P {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/userHighlightRight.jpg) no-repeat right top; PADDING-BOTTOM: 7px; PADDING-TOP: 5px
+}
+#blockA #userDetails UL LI P {
+	PADDING-RIGHT: 10px; DISPLAY: inline
+}
+#blockA #userDetails UL LI SPAN {
+	PADDING-RIGHT: 5px; DISPLAY: inline; ZOOM: 1
+}
+#blockA #signInB {
+	PADDING-TOP: 3px; HEIGHT: 1%; TEXT-ALIGN: left
+}
+#blockA #signInLinks A {
+	COLOR: #7dddff
+}
+#blockA #signInLinks UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 300px; COLOR: #fdfdfd; PADDING-TOP: 4px; HEIGHT: 1%
+}
+#blockA #signInLinks UL LI {
+	DISPLAY: inline
+}
+#blockA #signInB INPUT {
+	BORDER-RIGHT: #fff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/btnPlaceBetGrad.jpg) #1b76a5 repeat-x 50% bottom; PADDING-BOTTOM: 2px; BORDER-LEFT: #fff 1px solid; WIDTH: 176px; COLOR: #fff; PADDING-TOP: 0px; BORDER-BOTTOM: #fff 1px solid; HEIGHT: 20px
+}
+#blockB {
+	DISPLAY: block; BACKGROUND: none transparent scroll repeat 0% 0%; MARGIN: 0px 5px
+}
+#blockB #logo {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; PADDING-TOP: 18px
+}
+#productsNav {
+	BORDER-RIGHT: #011d2f 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #011d2f 1px solid; PADDING-LEFT: 0px; BACKGROUND: #fff; PADDING-BOTTOM: 0px; MARGIN: 0px 5px; OVERFLOW: hidden; BORDER-LEFT: #011d2f 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #011d2f 1px; HEIGHT: 1%; TEXT-ALIGN: center
+}
+#productsNav UL {
+	PADDING-RIGHT: 0px; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 0px; FONT-SIZE: 1.3em; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; PADDING-TOP: 0px; HEIGHT: 1%; TEXT-ALIGN: center
+}
+#productsNav UL LI {
+	CLEAR: none; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #fff 1px solid; PADDING-TOP: 0px
+}
+#productsNav A {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; FONT-WEIGHT: bold; BACKGROUND: url(../WHImages/productTabOffRight.jpg) #c3e2f4 repeat-x right top; FLOAT: left; PADDING-BOTTOM: 3px; COLOR: #002f4a; MARGIN-RIGHT: 0px; PADDING-TOP: 5px; BORDER-BOTTOM: #fff 1px solid; HEIGHT: 19px; TEXT-DECORATION: none
+}
+#productsNav UL LI:hover {
+	MARGIN-TOP: 0px; BACKGROUND: #fff
+}
+#productsNav UL LI:hover A {
+	MARGIN-TOP: 0px; BACKGROUND: #fff; COLOR: #002f4a; HEIGHT: 19px
+}
+#productsNav LI#productSelected {
+	MARGIN-TOP: 0px; BACKGROUND: #359dd2; BORDER-LEFT: #fff 1px solid; BORDER-BOTTOM-STYLE: none
+}
+#productsNav LI#productSelected A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/productTabOnRight.jpg) #01517b repeat-x 50% bottom; PADDING-BOTTOM: 4px; COLOR: #fff; PADDING-TOP: 5px; HEIGHT: 19px; BORDER-BOTTOM-STYLE: none
+}
+#productsNav A:hover {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #01517b
+}
+#productsNav LI.sportsTab A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; WIDTH: 106px
+}
+#productsNav LI.casinoTab A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; WIDTH: 106px
+}
+#productsNav LI.pokerTab A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; WIDTH: 106px
+}
+#productsNav LI.gamesTab A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; WIDTH: 106px
+}
+BODY.langEN #productsNav LI.gamesTab A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/new.gif?v=1) no-repeat left top; WIDTH: 106px
+}
+BODY.langEN #productsNav LI.gamesTab A:hover {
+	BACKGROUND: url(../WHImages/new.gif) no-repeat left top
+}
+#productsNav LI.vegasTab A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; WIDTH: 106px
+}
+#productsNav LI.liveCasinoTab A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; WIDTH: 126px
+}
+#productsNav LI.skillTab A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; WIDTH: 106px
+}
+#productsNav LI.bingoTab A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; WIDTH: 106px
+}
+#productsNav LI.lotteriesTab A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; WIDTH: 106px
+}
+#productsNav LI.sportsTab#productSelected A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px
+}
+.subNavBG {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; BACKGROUND: #012b41; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#subNav {
+	BORDER-RIGHT: #fff 1px solid; BACKGROUND: url(../WHImages/subNavBG.jpg) #003149 repeat-x 50% top; MARGIN: 0px 5px; OVERFLOW: hidden; BORDER-LEFT: #fff 1px solid; POSITION: relative; HEIGHT: 1%
+}
+#subNav A {
+	FONT-WEIGHT: bold; FONT-SIZE: 1em; TEXT-DECORATION: none
+}
+#subNav A:hover {
+	TEXT-DECORATION: underline
+}
+#subNav UL {
+	DISPLAY: inline; FONT-SIZE: 1.2em; FLOAT: left; MARGIN: 0px 0px 0px -3px
+}
+#subNav UL LI {
+	CLEAR: none; PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/subNavOffRight.gif) #144471 no-repeat right top; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 6px 0px 0px; PADDING-TOP: 0px
+}
+#subNav LI#subNavSelected {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/subNavOnRight.gif) #fff no-repeat right top; PADDING-BOTTOM: 0px; MARGIN: 6px 0px 0px; PADDING-TOP: 0px; HEIGHT: 1%
+}
+#subNav LI A {
+	PADDING-RIGHT: 10px; DISPLAY: block; PADDING-LEFT: 10px; BACKGROUND: url(../WHImages/subNavOffLeft.gif) no-repeat left top; PADDING-BOTTOM: 7px; MARGIN: 0px 2px 0px 0px; COLOR: #fff; PADDING-TOP: 6px
+}
+#subNav LI#subNavSelected A {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; BACKGROUND: url(../WHImages/subNavOnLeft.gif) no-repeat left top; PADDING-BOTTOM: 7px; COLOR: #06335c; PADDING-TOP: 6px
+}
+IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#contentHeaderCenter HR {
+	DISPLAY: none
+}
+#contentA HR {
+	CLEAR: both; VISIBILITY: hidden; MARGIN: 12px -14px 0px -6px; WIDTH: 660px; COLOR: #ccc; HEIGHT: 1px
+}
+#contentB HR {
+	DISPLAY: none
+}
+INPUT {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-SIZE: 1em; FLOAT: left; PADDING-BOTTOM: 2px; WIDTH: 275px; PADDING-TOP: 2px
+}
+.searchField {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 6px; BACKGROUND: url(../WHImages/searchInputBG.gif) no-repeat; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 15.7em; BORDER-TOP-STYLE: none; MARGIN-RIGHT: 0px; PADDING-TOP: 2px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 20px; BORDER-BOTTOM-STYLE: none
+}
+.searchField INPUT {
+	BORDER-RIGHT: #fff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 0px; FONT-SIZE: 1.1em; PADDING-BOTTOM: 0px; BORDER-LEFT: #fff 1px solid; WIDTH: 143px; PADDING-TOP: 1px; BORDER-BOTTOM: #fff 1px solid; HEIGHT: 1.4em
+}
+.searchFieldContainer {
+	PADDING-LEFT: 0px; PADDING-TOP: 0px
+}
+.searchBtnField {
+	PADDING-RIGHT: 4px; MARGIN-TOP: 0px; PADDING-LEFT: 5px; FONT-WEIGHT: normal; FONT-SIZE: 1.2em; BACKGROUND: url(../WHImages/signInBtnBG.jpg); PADDING-BOTTOM: 2px; MARGIN-LEFT: 5px; WIDTH: 74px; CURSOR: pointer; COLOR: #fff; BORDER-TOP-STYLE: none; PADDING-TOP: 2px; FONT-FAMILY: Arial, Helvetica, sans-serif; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 22px; BORDER-BOTTOM-STYLE: none
+}
+#searchBlock {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 2px; Z-INDEX: 2; RIGHT: 0px; PADDING-BOTTOM: 2px; BORDER-TOP-STYLE: none; PADDING-TOP: 2px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; POSITION: absolute; TOP: 3px; BORDER-BOTTOM-STYLE: none
+}
+#footer {
+	FONT-SIZE: 1.1em; PADDING-BOTTOM: 10px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+#footer H3 {
+	FONT-SIZE: 1em
+}
+#footer P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 4px; LINE-HEIGHT: 1em; PADDING-TOP: 4px
+}
+#footerContent {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: auto; WIDTH: 996px; COLOR: #fff; PADDING-TOP: 0px
+}
+.footerContentHolder {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 1%
+}
+.footerContentHolder H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 10px 0px 0px; COLOR: #fbfbfa; PADDING-TOP: 0px
+}
+.footerContentHolder P {
+	COLOR: #a2a2a2
+}
+.footerContentHolder A {
+	COLOR: #53c2ed
+}
+.footerContentA {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#footer .footerContentA P {
+	PADDING-RIGHT: 0px; BORDER-TOP: #00bff3 1px dotted; PADDING-LEFT: 16px; PADDING-BOTTOM: 13px; PADDING-TOP: 10px
+}
+.footerContentA UL {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 15px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #fdfdfd; PADDING-TOP: 4px; HEIGHT: 32px
+}
+.footerContentA UL LI {
+	CLEAR: none; PADDING-RIGHT: 6px; DISPLAY: block; FLOAT: left
+}
+.footerContentB {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 17px; PADDING-BOTTOM: 0px; LINE-HEIGHT: normal; PADDING-TOP: 0px
+}
+.footerContentC {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 16px; BACKGROUND: #002134; PADDING-BOTTOM: 0px; OVERFLOW: hidden; PADDING-TOP: 0px; HEIGHT: 1%
+}
+.footerContentC UL {
+	PADDING-LEFT: 0px; PADDING-BOTTOM: 14px; MARGIN: 10px 0px 0px; COLOR: #53c2ed; LIST-STYLE-TYPE: square; HEIGHT: 30px
+}
+.footerContentC UL LI {
+	CLEAR: none; PADDING-RIGHT: 20px; DISPLAY: block; PADDING-LEFT: 0px; FLOAT: left; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 0px; WIDTH: 175px; PADDING-TOP: 0px
+}
+.footerContentC UL LI A {
+	COLOR: #00aeef
+}
+#footer .linkTitle {
+	DISPLAY: block; FONT-WEIGHT: bold; PADDING-BOTTOM: 1px; COLOR: #fbfbfa
+}
+.footerLinksHolder {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 5px; COLOR: #fff; PADDING-TOP: 7px
+}
+.footerLinksHolder A {
+	COLOR: #fff
+}
+.footerLinksA {
+	PADDING-LEFT: 16px; FONT-SIZE: 0.9em; FLOAT: left; PADDING-TOP: 1px
+}
+.footerLinksB {
+	PADDING-RIGHT: 5px; FONT-SIZE: 0.9em; FLOAT: right
+}
+#footerSub {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.9em; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 30px; MARGIN: auto; WIDTH: 996px; COLOR: #fdfdfd; PADDING-TOP: 8px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+#footerSub P {
+	LINE-HEIGHT: 1.6em
+}
+#footerSub A {
+	COLOR: #00bff3
+}
+.tipContainer {
+	Z-INDEX: 10000; BACKGROUND: url(../WHImages/tt-arrow-up.gif) no-repeat; COLOR: #fff; FONT-FAMILY: Tahoma; POSITION: absolute; HEIGHT: 22px
+}
+.tipText {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 5px; BACKGROUND: url(../WHImages/tt-top-l.gif) no-repeat; FLOAT: left; PADDING-BOTTOM: 0px; PADDING-TOP: 6px; HEIGHT: 22px
+}
+.tipText A {
+	COLOR: #fff
+}
+.tipCap {
+	BACKGROUND: url(../WHImages/tt-top-r.gif) no-repeat 0px -1px; FLOAT: left; WIDTH: 4px; HEIGHT: 22px
+}
+.siteMessages {
+	CLEAR: both; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 1.2em; BACKGROUND: url(../WHImages/message-bg.gif); PADDING-BOTTOM: 0px; COLOR: #015079; PADDING-TOP: 0px; HEIGHT: 41px
+}
+.siteMessages #leftMessage {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 930px; HEIGHT: 40px
+}
+.siteMessages #rightMessage {
+	FLOAT: right
+}
+#rightMessage A {
+	DISPLAY: block; BACKGROUND: url(../WHImages/message-x.gif) no-repeat 50% top; WIDTH: 30px; HEIGHT: 41px; TEXT-DECORATION: none
+}
+#rightMessage A:hover {
+	BACKGROUND-POSITION: center bottom
+}
+#contentMainPadding {
+	PADDING-RIGHT: 9px; PADDING-LEFT: 9px; PADDING-BOTTOM: 9px; PADDING-TOP: 9px
+}
+#contentMainPadding P {
+	PADDING-RIGHT: 35px; PADDING-LEFT: 0px; FONT-SIZE: 1.1em; PADDING-BOTTOM: 0px; MARGIN: 10px 0px 0px; COLOR: #000000; PADDING-TOP: 0px
+}
+#contentMainPadding UL {
+	PADDING-RIGHT: 35px; LIST-STYLE: square none outside; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#contentMainPadding LI {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-SIZE: 1.1em; PADDING-BOTTOM: 4px; BORDER-TOP-STYLE: none; PADDING-TOP: 4px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; LIST-STYLE-TYPE: square; BORDER-BOTTOM-STYLE: none
+}
+.userHighlight {
+	MARGIN-TOP: -4px
+}
+#balanceDisplay {
+	BACKGROUND-POSITION: left top; DISPLAY: block; FLOAT: left; PADDING-BOTTOM: 20px; WIDTH: auto; POSITION: relative; HEIGHT: 15px; TEXT-ALIGN: left
+}
+#balanceDisplay .mainBalance {
+	DISPLAY: block; FLOAT: left; WIDTH: 90px
+}
+#userDetails LI#balanceDisplay SPAN.mainBalanceValue {
+	PADDING-RIGHT: 8px; MARGIN-TOP: -5px; PADDING-LEFT: 1px; BACKGROUND: url(../WHImages/userHighlightRight.jpg?ver=89752e49593d625b26153e163d936498) no-repeat right top; FLOAT: left; PADDING-BOTTOM: 8px; WIDTH: 103px; PADDING-TOP: 5px
+}
+#balanceDropDown {
+	DISPLAY: none
+}
+#balanceDisplay:hover #balanceDropDown {
+	BORDER-RIGHT: #1a6a91 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #1a6a91 1px solid; MARGIN-TOP: 22px; DISPLAY: block; PADDING-LEFT: 0px; Z-INDEX: 9999; BACKGROUND: url(../WHImages/balanceBG.jpg?ver=89752e49593d625b26153e163d936498) repeat-x 50% top; LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN-LEFT: 0px; OVERFLOW: visible; BORDER-LEFT: #1a6a91 1px solid; WIDTH: auto; PADDING-TOP: 0px; BORDER-BOTTOM: #1a6a91 1px solid; POSITION: absolute; TOP: 0px
+}
+.sfhover#balanceDisplay #balanceDropDown {
+	BORDER-RIGHT: #1a6a91 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #1a6a91 1px solid; MARGIN-TOP: 22px; DISPLAY: block; PADDING-LEFT: 0px; Z-INDEX: 9999; BACKGROUND: url(../WHImages/balanceBG.jpg?ver=89752e49593d625b26153e163d936498) repeat-x 50% top; LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN-LEFT: 0px; OVERFLOW: visible; BORDER-LEFT: #1a6a91 1px solid; WIDTH: auto; PADDING-TOP: 0px; BORDER-BOTTOM: #1a6a91 1px solid; POSITION: absolute; TOP: 0px
+}
+UL#balanceDropDown {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#balanceDisplay UL#balanceDropDown LI {
+	PADDING-RIGHT: 0px; BORDER-TOP: #1a6a91 1px solid; DISPLAY: inline-block; PADDING-LEFT: 8px; PADDING-BOTTOM: 4px; MARGIN: 0px; WIDTH: 200px; PADDING-TOP: 4px; TEXT-ALIGN: left
+}
+#balanceDisplay UL#balanceDropDown LI DIV {
+	DISPLAY: block; FLOAT: left; WIDTH: 90px
+}
+#balanceDisplay UL#balanceDropDown LI SPAN {
+	DISPLAY: block; FLOAT: left
+}
+#balanceDisplay UL#balanceDropDown LI .balanceHelp {
+	PADDING-RIGHT: 8px; DISPLAY: block; FLOAT: right
+}
+#balanceDisplay UL#balanceDropDown LI.transferFunds {
+	MARGIN-BOTTOM: 0px
+}
+.hide {
+	BACKGROUND: #fff; LEFT: -200px; OVERFLOW: hidden; WIDTH: 1px; COLOR: #000; POSITION: absolute; TOP: -500px; HEIGHT: 1px
+}
+.hide A {
+	BACKGROUND: red; COLOR: #fff
+}
+.displayNone {
+	DISPLAY: none! important; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #000
+}
+.displayBlock {
+	DISPLAY: block
+}
+.clearBoth {
+	CLEAR: both; FONT-SIZE: 0px; LINE-HEIGHT: 0
+}
+.clearBothBlock {
+	CLEAR: both; DISPLAY: block
+}
+.displayInlineBlock {
+	DISPLAY: inline-block
+}
+A IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+A {
+	COLOR: #000; TEXT-DECORATION: underline
+}
+A:hover {
+	TEXT-DECORATION: none
+}
+A:unknown {
+	outline: none
+}
+A.eventResult {
+	COLOR: #000
+}
+A.eventPrice {
+	COLOR: #000
+}
+A.eventSuspend {
+	COLOR: #556507
+}
+.headerBG {
+	BACKGROUND: url(../WHImages/headerBG.jpg?ver=65e666318d8a680cab4666f1bdfeca75) #011e30 repeat-x 0px -50px
+}
+#contentHeaderCenter {
+	MARGIN: auto; WIDTH: 996px; COLOR: #fff
+}
+#contentHeaderCenter A {
+	COLOR: #fff
+}
+#contentHeaderContainer {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 3px; PADDING-TOP: 4px; HEIGHT: 1%
+}
+#contentHead {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px 12px 0px 9px; WIDTH: 646px; PADDING-TOP: 0px; BORDER-BOTTOM: #0ea2e6 3px solid; POSITION: relative; HEIGHT: 1%
+}
+#contentHead #oddsDisplay {
+	FONT-SIZE: 1.1em; RIGHT: 0px; FLOAT: right; MARGIN-BOTTOM: -25px; WIDTH: 270px; BOTTOM: 0px; PADDING-TOP: 8px; TEXT-ALIGN: right
+}
+#contentHead .oddsType {
+	FONT-SIZE: 0.8em; WIDTH: 125px; HEIGHT: 18px
+}
+BODY.langCN #contentHead .oddsType {
+	FONT-SIZE: 1em
+}
+BODY.langZH #contentHead .oddsType {
+	FONT-SIZE: 1em
+}
+#contentHead H1 {
+	FONT-WEIGHT: 100; FONT-SIZE: 18px; PADDING-BOTTOM: 0px; MARGIN: 10px 0px 2px
+}
+#contentHead H2 {
+	FONT-WEIGHT: 100; FONT-SIZE: 18px; PADDING-BOTTOM: 0px; MARGIN: 10px 0px 2px
+}
+#contentA {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; Z-INDEX: 2; FLOAT: left; PADDING-BOTTOM: 5px; MARGIN: 20px 12px 0px 9px; WIDTH: 646px; PADDING-TOP: 0px; POSITION: relative
+}
+.fullWidth#contentA {
+	WIDTH: 974px
+}
+#contentB {
+	FLOAT: left; MARGIN: 20px 0px 0px; WIDTH: 302px; HEIGHT: 1%
+}
+H1 {
+	FONT-SIZE: 1.8em; MARGIN: 30px 0px 20px
+}
+H2 {
+	FONT-SIZE: 2.2em; COLOR: #000
+}
+#contentA H2 {
+	FONT-WEIGHT: 100; FONT-SIZE: 14pt; MARGIN: 0px 0px 5px 10px; LETTER-SPACING: 0px
+}
+#contentA H3 {
+	FONT-WEIGHT: 100; FONT-SIZE: 14pt; MARGIN: 0px 0px 5px 10px; LETTER-SPACING: 0px
+}
+#contentA H3 {
+	MARGIN-TOP: 10px; MARGIN-LEFT: 0px
+}
+H3 {
+	FONT-SIZE: 1.8em; MARGIN-BOTTOM: 8px
+}
+H4 {
+	FONT-SIZE: 1.2em
+}
+H5 {
+	FONT-SIZE: 1em
+}
+.textLeft {
+	TEXT-ALIGN: left
+}
+.textRight {
+	TEXT-ALIGN: right
+}
+.textCenter {
+	TEXT-ALIGN: center
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+LI {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 4px; PADDING-TOP: 3px
+}
+#introHeader {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 11px; FLOAT: left; PADDING-BOTTOM: 0px; PADDING-TOP: 3px
+}
+#introHeader H1 {
+	PADDING-RIGHT: 0px; DISPLAY: none; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 0.9em; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #fff; BOTTOM: 0px; PADDING-TOP: 0px; POSITION: absolute
+}
+#introHeader H2 {
+	PADDING-RIGHT: 0px; DISPLAY: none; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 0.9em; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #fff; BOTTOM: 0px; PADDING-TOP: 0px; POSITION: absolute
+}
+#headLinks {
+	Z-INDEX: 10000; FLOAT: right; MARGIN: 1px 0px 0px
+}
+#headLinks LI {
+	DISPLAY: inline
+}
+#headLinks UL {
+	LEFT: 0px; OVERFLOW: hidden; WIDTH: 1px; POSITION: absolute; TOP: -500px
+}
+#headLinks UL LI {
+	DISPLAY: block
+}
+#langSelectLink {
+	PADDING-RIGHT: 10px; Z-INDEX: 100; POSITION: relative
+}
+#langSelectLink:hover {
+	BACKGROUND: url(../WHImages/langSelectHover.gif?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat right top
+}
+#langSelectLink:hover UL {
+	BORDER-RIGHT: #1a6a91 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #1a6a91 1px; MARGIN-TOP: 26px; PADDING-LEFT: 0px; Z-INDEX: 9999; BACKGROUND: url(../WHImages/subNavHoverBG.jpg?ver=65e666318d8a680cab4666f1bdfeca75) #001d2e repeat-x 50% top; PADDING-BOTTOM: 0px; MARGIN-LEFT: 0px; OVERFLOW: visible; BORDER-LEFT: #1a6a91 1px solid; WIDTH: 115px; PADDING-TOP: 0px; BORDER-BOTTOM: #1a6a91 1px solid; POSITION: absolute; TOP: -6px
+}
+.sfhover#langSelectLink UL {
+	BORDER-RIGHT: #1a6a91 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #1a6a91 1px; MARGIN-TOP: 26px; PADDING-LEFT: 0px; Z-INDEX: 9999; BACKGROUND: url(../WHImages/subNavHoverBG.jpg?ver=65e666318d8a680cab4666f1bdfeca75) #001d2e repeat-x 50% top; PADDING-BOTTOM: 0px; MARGIN-LEFT: 0px; OVERFLOW: visible; BORDER-LEFT: #1a6a91 1px solid; WIDTH: 115px; PADDING-TOP: 0px; BORDER-BOTTOM: #1a6a91 1px solid; POSITION: absolute; TOP: -6px
+}
+#langSelectLink UL LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 1px; COLOR: #fff; PADDING-TOP: 1px
+}
+#langSelectLink:hover UL LI {
+	BORDER-TOP: #1a6a91 1px solid
+}
+#langSelectLink:hover UL LI A {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 7px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 4px; MARGIN: 0px -10px 0px 0px; WIDTH: 85px; COLOR: #7dddff; PADDING-TOP: 3px
+}
+BODY #headLinks #langSelectLink UL LI:hover A {
+	DISPLAY: block; BACKGROUND: #002133; COLOR: #fff
+}
+LI.flagBorder#langSelectLink {
+	PADDING-RIGHT: 3px; DISPLAY: block; PADDING-LEFT: 8px; BACKGROUND: url(../WHImages/langSelectLinkBG.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat; PADDING-BOTTOM: 8px; WIDTH: 9.7em; PADDING-TOP: 2px
+}
+LI.flagBorder#langSelectLink A {
+	DISPLAY: block; WIDTH: 7em; TEXT-DECORATION: none
+}
+LI.flagBorder#langSelectLink A:hover {
+	TEXT-DECORATION: none
+}
+LI.flagBorder#langSelectLink A SPAN {
+	PADDING-RIGHT: 15px; MARGIN-RIGHT: 5px
+}
+UL#headLinks LI {
+	PADDING-RIGHT: 6px
+}
+UL#headLinks LI UL LI {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+LI.flagEN#langSelectLink A {
+	PADDING-LEFT: 22px; BACKGROUND: url(../WHImages/EN.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 3px; PADDING-TOP: 1px
+}
+LI.flagES#langSelectLink A {
+	PADDING-LEFT: 22px; BACKGROUND: url(../WHImages/ES.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 3px; PADDING-TOP: 1px
+}
+LI.flagDE#langSelectLink A {
+	PADDING-LEFT: 22px; BACKGROUND: url(../WHImages/DE.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 3px; PADDING-TOP: 1px
+}
+LI.flagIT#langSelectLink A {
+	PADDING-LEFT: 22px; BACKGROUND: url(../WHImages/IT.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 3px; PADDING-TOP: 1px
+}
+LI.flagFR#langSelectLink A {
+	PADDING-LEFT: 22px; BACKGROUND: url(../WHImages/FR.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 3px; PADDING-TOP: 1px
+}
+LI.flagZH#langSelectLink A {
+	PADDING-LEFT: 22px; BACKGROUND: url(../WHImages/ZH.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 3px; PADDING-TOP: 1px
+}
+LI.flagCN#langSelectLink A {
+	PADDING-LEFT: 22px; BACKGROUND: url(../WHImages/CN.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 3px; PADDING-TOP: 1px
+}
+LI.flagEL#langSelectLink A {
+	PADDING-LEFT: 22px; BACKGROUND: url(../WHImages/GR.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 3px; PADDING-TOP: 1px
+}
+LI.flagRU#langSelectLink A {
+	PADDING-LEFT: 22px; BACKGROUND: url(../WHImages/RU.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 3px; PADDING-TOP: 1px
+}
+LI.flagPL#langSelectLink A {
+	PADDING-LEFT: 22px; BACKGROUND: url(../WHImages/PL.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 3px; PADDING-TOP: 1px
+}
+LI.flagSV#langSelectLink A {
+	PADDING-LEFT: 22px; BACKGROUND: url(../WHImages/SV.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 3px; PADDING-TOP: 1px
+}
+LI.flagNL#langSelectLink A {
+	PADDING-LEFT: 22px; BACKGROUND: url(../WHImages/NL.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 3px; PADDING-TOP: 1px
+}
+#langSelectLink:hover UL {
+	TOP: 0px
+}
+.sfhover#langSelectLink UL {
+	TOP: 0px
+}
+#langSelectLink:hover UL.subnavcontent {
+	TOP: 24px
+}
+.sfhover#langSelectLink UL.subnavcontent {
+	TOP: 24px
+}
+#langSelectLink:hover UL LI {
+	BORDER-TOP-STYLE: none
+}
+LI#languageHolder UL:hover LI {
+	COLOR: #333
+}
+UL#headLinks LI#langSelectLink UL {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+UL#headLinks LI#langSelectLink UL LI {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+UL#headLinks LI#langSelectLink A SPAN.subhover {
+	BACKGROUND-POSITION: center bottom; CURSOR: pointer
+}
+UL#headLinks LI#langSelectLink UL.subnavcontent {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/ddTop-bg.png?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat 0px 0px; LEFT: -390px; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 508px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none; HEIGHT: 8px
+}
+UL#headLinks LI#langSelectLink UL.subnavcontent LI#languageHolder {
+	PADDING-RIGHT: 8px; DISPLAY: block; PADDING-LEFT: 8px; BACKGROUND: url(../WHImages/ddBtm-bg.png?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left bottom; PADDING-BOTTOM: 13px; MARGIN: 8px 0px 0px; WIDTH: 492px; PADDING-TOP: 8px; HEIGHT: 60px
+}
+UL#headLinks LI#langSelectLink UL.subnavcontent LI#languageHolder UL {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 123px; PADDING-TOP: 0px; POSITION: relative
+}
+UL#headLinks LI#langSelectLink UL.subnavcontent LI#languageHolder UL LI#selectedLanguage A {
+	FONT-WEIGHT: bold; COLOR: #0493ce
+}
+UL#headLinks LI#langSelectLink UL.subnavcontent LI#languageHolder UL LI A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 15px; FONT-WEIGHT: normal; FONT-SIZE: 11px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px 5px; WIDTH: 98px; COLOR: #333; LINE-HEIGHT: 18px; PADDING-TOP: 0px; BORDER-BOTTOM: #444 1px dotted; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+UL.subnavcontent LI#languageHolder UL LI A#en {
+	BACKGROUND: url(../WHImages/EN.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 4px
+}
+UL.subnavcontent LI#languageHolder UL LI A#de {
+	BACKGROUND: url(../WHImages/DE.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 4px
+}
+UL.subnavcontent LI#languageHolder UL LI A#nl {
+	BACKGROUND: url(../WHImages/NL.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 4px
+}
+UL.subnavcontent LI#languageHolder UL LI A#es {
+	BACKGROUND: url(../WHImages/ES.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 4px
+}
+UL.subnavcontent LI#languageHolder UL LI A#el {
+	BACKGROUND: url(../WHImages/GR.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 4px
+}
+UL.subnavcontent LI#languageHolder UL LI A#fr {
+	BACKGROUND: url(../WHImages/FR.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 4px
+}
+UL.subnavcontent LI#languageHolder UL LI A#pl {
+	BACKGROUND: url(../WHImages/PL.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 4px
+}
+UL.subnavcontent LI#languageHolder UL LI A#ru {
+	BACKGROUND: url(../WHImages/RU.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 4px
+}
+UL.subnavcontent LI#languageHolder UL LI A#sv {
+	BACKGROUND: url(../WHImages/SV.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 4px
+}
+UL.subnavcontent LI#languageHolder UL LI A#cn {
+	BACKGROUND: url(../WHImages/CN.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 4px
+}
+UL.subnavcontent LI#languageHolder UL LI A#zh {
+	BACKGROUND: url(../WHImages/ZH.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left 4px
+}
+UL#headLinks LI#langSelectLink UL.subnavcontent LI#languageHolder UL LI A:hover {
+	COLOR: #0493ce; BORDER-BOTTOM: #0493ce 1px dotted
+}
+LI#regAcc {
+	LEFT: 13.4em; POSITION: absolute; TOP: 0.5em
+}
+#blockB {
+	FONT-SIZE: 1.1em; BACKGROUND: #011c2d repeat-x; MARGIN: 5px 6px 0px; COLOR: #a2a2a2; POSITION: relative; HEIGHT: 32px
+}
+#blockB FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#blockB A {
+	COLOR: #fff; TEXT-DECORATION: underline
+}
+#blockB A:hover {
+	TEXT-DECORATION: none
+}
+#blockB FIELDSET {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0px; BORDER-TOP: medium none; DISPLAY: inline; PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/login-bg.gif?ver=65e666318d8a680cab4666f1bdfeca75) #024467 no-repeat; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: 3px -5px 2px 0px; BORDER-LEFT: medium none; WIDTH: 750px; PADDING-TOP: 0px; BORDER-BOTTOM: medium none; TEXT-ALIGN: left
+}
+#blockB #signInA {
+	PADDING-LEFT: 0px; FLOAT: right; WIDTH: 750px; HEIGHT: 26px; TEXT-ALIGN: left
+}
+#blockB A.regAccLink {
+	DISPLAY: block; FONT-SIZE: 1.1em; MARGIN: 0px; COLOR: #fff
+}
+#blockB A.lostLoginLink {
+	FONT-SIZE: 12px; FLOAT: right; MARGIN: 6px 10px 0px 0px
+}
+#blockB A.helpLink {
+	MARGIN-TOP: 5px; DISPLAY: block; FONT-SIZE: 12px; FLOAT: right; MARGIN-RIGHT: 0px
+}
+#blockB FIELDSET A.helpLink {
+	MARGIN-TOP: 3px
+}
+#blockB A.signOutLink {
+	PADDING-RIGHT: 5px; MARGIN-TOP: 0px; DISPLAY: inline-block; PADDING-LEFT: 5px; FONT-SIZE: 1.1em; BACKGROUND: url(../WHImages/signInBtnBG.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat; PADDING-BOTTOM: 6px; WIDTH: 65px; MARGIN-RIGHT: 0px; PADDING-TOP: 3px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#blockB #signInA .inputBG {
+	PADDING-RIGHT: 2px; MARGIN-TOP: 2px; PADDING-LEFT: 2px; BACKGROUND: url(../WHImages/inputBG.gif?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat; FLOAT: right; PADDING-BOTTOM: 2px; WIDTH: 8.9em; MARGIN-RIGHT: 4px; PADDING-TOP: 2px; HEIGHT: 20px; moz-background-clip: border; moz-background-inline-policy: continuous; moz-background-origin: padding
+}
+#blockB #signInA LABEL {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 5px; FLOAT: right; PADDING-BOTTOM: 0px; WIDTH: 57px; COLOR: #fff; PADDING-TOP: 2px
+}
+#blockB #signInBtnHolder {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: right; WIDTH: 74px; HEIGHT: 18px
+}
+#blockB #joinNowBtnHolder {
+	PADDING-RIGHT: 7px; PADDING-LEFT: 4px; FLOAT: right; HEIGHT: 18px
+}
+#blockB #joinNowBtnHolder A {
+	MARGIN-TOP: 2px; DISPLAY: inline-block; FONT-SIZE: 1.1em; BACKGROUND: url(../WHImages/joinNowBtnBG.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat 0px 0px; PADDING-TOP: 0px; HEIGHT: 22px; TEXT-ALIGN: center; TEXT-DECORATION: none; moz-background-clip: border; moz-background-inline-policy: continuous; moz-background-origin: padding
+}
+#blockB #joinNowBtnHolder A SPAN {
+	PADDING-RIGHT: 13px; DISPLAY: inline-block; BACKGROUND: url(../WHImages/joinNowBtnRightBG.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat right top; MARGIN-LEFT: 13px; CURSOR: pointer; PADDING-TOP: 3px; HEIGHT: 18px; moz-background-clip: border; moz-background-inline-policy: continuous; moz-background-origin: padding
+}
+#blockB #signInBtn {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 4px; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 5px; FONT-WEIGHT: normal; FONT-SIZE: 1.1em; BACKGROUND: url(../WHImages/signInBtnBG.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat 0px 0px; PADDING-BOTTOM: 2px; BORDER-LEFT: medium none; WIDTH: 74px; CURSOR: pointer; COLOR: #fff; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; FONT-FAMILY: Arial, Helvetica, sans-serif; HEIGHT: 22px; moz-background-clip: border; moz-background-inline-policy: continuous; moz-background-origin: padding
+}
+#blockB #signInA #username INPUT {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 2px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 11px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 1px; MARGIN: 1px; WIDTH: 8em; COLOR: #7b7b7b; PADDING-TOP: 1px; HEIGHT: 1.4em; BORDER-RIGHT-WIDTH: 0px
+}
+#blockB #signInA #password {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 2px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 11px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 1px; MARGIN: 1px; WIDTH: 8em; COLOR: #7b7b7b; PADDING-TOP: 1px; HEIGHT: 1.4em; BORDER-RIGHT-WIDTH: 0px
+}
+#blockB #signInA #tmp_password {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 2px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 11px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 1px; MARGIN: 1px; WIDTH: 8em; COLOR: #7b7b7b; PADDING-TOP: 1px; HEIGHT: 1.4em; BORDER-RIGHT-WIDTH: 0px
+}
+#blockB #signInA #tmp_username_div INPUT {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 2px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 11px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 1px; MARGIN: 1px; WIDTH: 8em; COLOR: #7b7b7b; PADDING-TOP: 1px; HEIGHT: 1.4em; BORDER-RIGHT-WIDTH: 0px
+}
+#blockB #signInA #username_div INPUT {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 2px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 11px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 1px; MARGIN: 1px; WIDTH: 8em; COLOR: #7b7b7b; PADDING-TOP: 1px; HEIGHT: 1.4em; BORDER-RIGHT-WIDTH: 0px
+}
+#blockB #userDetails {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0px; BORDER-TOP: medium none; DISPLAY: inline; PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/login-bg.gif?ver=65e666318d8a680cab4666f1bdfeca75) #024467 no-repeat; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: 3px -5px 2px 0px; BORDER-LEFT: medium none; WIDTH: 750px; PADDING-TOP: 0px; BORDER-BOTTOM: medium none; HEIGHT: 27px; TEXT-ALIGN: left
+}
+#blockB #userDetails A {
+	COLOR: #7dddff
+}
+#blockB #userDetails UL LI {
+	CLEAR: none; PADDING-RIGHT: 0px; DISPLAY: block; FLOAT: left; MARGIN-LEFT: 5px; COLOR: #fff; MARGIN-RIGHT: 5px
+}
+#blockB #userDetails UL LI.name {
+	PADDING-RIGHT: 8px; PADDING-TOP: 1px
+}
+#blockB #userDetails UL LI.messages {
+	PADDING-RIGHT: 0px; MARGIN-TOP: 3px; PADDING-LEFT: 0px; FLOAT: right
+}
+#blockB #userDetails UL LI.deposit {
+	PADDING-RIGHT: 2px; MARGIN-TOP: 3px; PADDING-LEFT: 2px; FLOAT: right
+}
+#blockB #userDetails UL LI.userHighlight {
+	PADDING-RIGHT: 0px; MARGIN-TOP: 1px; PADDING-LEFT: 8px; BACKGROUND: url(../WHImages/userHighlightLeft.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat left top; FLOAT: right; PADDING-BOTTOM: 7px; PADDING-TOP: 5px
+}
+#blockB #userDetails UL LI.userHighlight P {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/userHighlightRight.jpg?ver=65e666318d8a680cab4666f1bdfeca75) no-repeat right top; PADDING-BOTTOM: 7px; PADDING-TOP: 6px
+}
+#blockB #userDetails UL LI.signOut {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; FLOAT: right; PADDING-TOP: 1px; HEIGHT: 18px
+}
+#blockB #userDetails .signOut A {
+	MARGIN-TOP: 1px; DISPLAY: inline-block; FONT-SIZE: 1.1em; PADDING-TOP: 0px; HEIGHT: 18px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#blockB #userDetails .userName {
+	MARGIN-TOP: 1px; DISPLAY: inline-block; FONT-SIZE: 1.1em; FLOAT: right; PADDING-TOP: 5px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#blockB #userDetails .signOut SPAN A {
+	DISPLAY: inline-block; CURSOR: pointer; COLOR: #ffffff; PADDING-TOP: 3px; HEIGHT: 18px
+}
+#blockB #userDetails UL LI P {
+	PADDING-RIGHT: 10px; DISPLAY: inline
+}
+#blockB #userDetails UL LI SPAN {
+	PADDING-RIGHT: 5px; DISPLAY: inline; ZOOM: 1
+}
+#blockB #signInB {
+	PADDING-TOP: 3px; HEIGHT: 1%; TEXT-ALIGN: left
+}
+#blockB #signInLinks A {
+	COLOR: #7dddff
+}
+#blockB #signInLinks UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 300px; COLOR: #fdfdfd; PADDING-TOP: 4px; HEIGHT: 1%
+}
+#blockB #signInLinks UL LI {
+	DISPLAY: inline
+}
+#blockB #signInB INPUT {
+	BORDER-RIGHT: #fff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 0px; BACKGROUND: url(../WHImages/btnPlaceBetGrad.jpg?ver=65e666318d8a680cab4666f1bdfeca75) #1b76a5 repeat-x 50% bottom; PADDING-BOTTOM: 2px; BORDER-LEFT: #fff 1px solid; WIDTH: 176px; COLOR: #fff; PADDING-TOP: 0px; BORDER-BOTTOM: #fff 1px solid; HEIGHT: 20px
+}
+#blockB {
+	BACKGROUND: none transparent scroll repeat 0% 0%; MARGIN: 0px 5px; HEIGHT: 76px
+}
+#blockB #logo {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#blockB #signInA A#remember_link {
+	FONT-SIZE: 12px; FLOAT: right; MARGIN: 6px 0px 0px
+}
+#blockB #signInA INPUT#remember_me {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: 0px 5px; VERTICAL-ALIGN: top; WIDTH: 14px; PADDING-TOP: 0px; POSITION: relative; TOP: 7px; HEIGHT: 14px
+}
+#blockB #signInA A.lostLoginLink {
+	FONT-SIZE: 12px; FLOAT: right; MARGIN: 6px 10px 0px 0px
+}

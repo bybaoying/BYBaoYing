@@ -1,0 +1,144 @@
+/* CSS Document */
+
+
+html,body {
+	background-image: url(../images/login_bg.gif);
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	text-align:center
+}
+body,td,th {
+	font-size: 12px;
+}
+.font_yuyan
+{
+	font-size: 12px;
+	color: #958E75;
+	text-decoration: none;
+	line-height: 20px;
+	text-align: center;
+}
+.font_yuyan:hover
+{
+	font-size: 12px;
+	color: #CCCC00;
+	text-decoration: none;
+	line-height: 20px;
+	text-align: center;
+}
+.bg_1 {
+	background-attachment: scroll;
+	background-image: url(../images/login_5.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+.bg_2 {
+	background-attachment: scroll;
+	background-image: url(../images/login_3.gif);
+	background-repeat: no-repeat;
+	height: 226px;
+	width: 256px;
+}
+.bg_3 {
+	background-attachment: scroll;
+	background-image: url(../images/login_2.gif);
+	background-repeat: no-repeat;
+	height: 226px;
+	width: 56px;
+}
+.login_font_1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #640000;
+	text-decoration: none;
+}
+.login_font_2 {
+	font-size: 12px;
+	line-height: 18px;
+	color: #242424;
+	text-decoration: none;
+}
+.input_1 {
+	color: #242424;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #58523B;
+	border-right-color: #857E65;
+	border-bottom-color: #90896E;
+	border-left-color: #58523B;
+	background-color: #D1CEC2;
+}
+.number
+{
+	font-weight: bold;
+	font-size: 16px;
+	color: blue;
+}
+.img_pic1
+{
+	background-image: url(../images/chk_img01.gif);
+ 
+}
+.img_pic2
+{
+	background-image: url(../images/chk_img02.gif);
+ 
+}
+.img_pic3
+{
+	background-image: url(../images/chk_img03.gif);
+ 
+}
+.top_left_logo
+{
+	background-attachment: scroll;
+	background-image: url(../images/top_1.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	vertical-align: top;
+	color: #ffffff;
+	text-align: left;
+}
+.top_right_bg
+{
+	background-attachment: scroll;
+	background-image: url(../images/top_3.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+	text-align: left;
+	vertical-align: top;
+	color: #ffffff;
+}
+.font_1 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #CC0000;
+	line-height: 30px;
+}
+
+.top_div_1
+{
+	width: 600px;
+	border: 1px solid #000000;
+	vertical-align: middle;
+	background-color: black;
+	display: block;
+	text-align: center;
+	overflow: hidden;
+}
+
+.top_div
+{
+	height: 100%;
+	width: 100%;
+	border: 0px solid #000000;
+	vertical-align: middle;
+}

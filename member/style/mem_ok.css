@@ -1,0 +1,12 @@
+TR {
+	FONT-SIZE: 12px; LINE-HEIGHT: 24px; FONT-FAMILY: "Arial", "新細明體"
+}
+.border-line {
+	BORDER-RIGHT: #103359 1px solid; BORDER-LEFT: #103359 1px solid; BORDER-TOP-STYLE: none; BORDER-BOTTOM: #103359 1px solid
+}
+.za-button {
+	FONT-SIZE: 12px; PADDING-TOP: 1px; FONT-FAMILY: "Arial", "新細明體"; HEIGHT: 22px
+}
+.ok-tab {
+	PADDING-LEFT: 30px; PADDING-BOTTOM: 20px; PADDING-TOP: 20px
+}

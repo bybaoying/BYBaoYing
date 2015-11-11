@@ -1,0 +1,275 @@
+﻿html,body
+{
+	width: 232px;
+	margin-top: 0px;
+	margin-left: 0px;
+	background-image: url(../images/order_bk.gif);/* */
+	background-repeat: repeat-y;
+
+}
+
+
+.div_Head_a
+{
+	background-image: url(../images/order_ph11.gif);
+	height: 23px;
+	background-repeat: no-repeat;
+	display: block;
+}
+.div_Head_b
+{
+	background-image: url(../images/order_ph21.gif);
+	height: 23px;
+	background-repeat: no-repeat;
+	display: block;
+}
+.div_Head_d
+{
+	background-image: url(../images/order_ph31.gif);
+	height: 102px;
+	min-height: 102px;
+	background-repeat: no-repeat;
+	display: block;
+}
+.m-title
+{
+	font-size: 12px;
+	padding-left: 30px;
+	color: #ffff00;
+	font-weight: bold;
+	height: 18px;
+}
+
+.div_Head_e
+{
+	background-image: url(../images/order_ph51.gif);
+	height: 11px;
+	display: block;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+.div_Head_f
+{
+	height: 117px;
+	
+	overflow: hidden;
+	background-color: transparent;
+	
+}
+.div_table
+{
+	width: 204px;
+	margin-left: 14px;
+	display: block;
+	overflow: hidden;
+	background-color: transparent;
+}
+.div_Class
+{
+	width: 232px;
+	margin-left: 0px;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: left bottom; /*background-image: url(../images/order_bottom.gif);*/
+	background-image: url(../images/order_bottom.gif);
+	overflow: hidden;
+	color: white;
+	background-color: transparent;
+}
+.div_sendsub
+{
+	width: 204px;
+	margin-left: 14px;
+	text-align: center;
+}
+.Head_Table
+{
+	width: 100%;
+	background-color: transparent;
+}
+.Main_Table
+{
+	width: 100%;
+}
+
+
+.td_title_set_cen
+{
+	color: white;
+	background-color: #033686;
+	text-align: center;
+	height: 25px;
+	font-size: 0.75em;
+	font-weight: bold;
+	filter: alpha(opacity=60);
+}
+.td_Head_set_cen
+{
+	color: white;
+	background-color: #033686;
+	text-align: center;
+	height: 25px;
+	font-size: 0.75em;
+	font-weight: bold;
+}
+
+.td_Caption_set
+{
+	padding-right: 10px;
+	color: white;
+	text-align: right;
+	height: 25px;
+	font-size: 0.75em;
+	font-weight: bold;
+	width: 80px;
+	background-color: transparent;
+}
+.td_Caption_set a
+{
+	color: #0000cc;
+	text-decoration: underline;
+}
+.span_set
+{
+	font-size: 0.75em;
+	display: block;
+	padding-left: 5px;
+	color: white;
+	font-weight: bold;
+}
+.list_cen
+{
+	background-color: #ffffff;
+	text-align: center;
+	color: #000000;
+	font-size: 0.75em;
+}
+.list_cen td
+{
+	padding-bottom: 1px;
+	padding-top: 1px;
+}
+
+.Do_Focus
+{
+	background-color: powderblue;
+}
+.td_cen_caption
+{
+	background-color: #e4e4e4;
+	text-align: center;
+	border-bottom: 1px solid #900;
+	color: #000000;
+	font-size: 0.75em;
+	font-weight: bold;
+}
+em
+{
+	color: #cc0000;
+}
+.td_Text_set
+{
+	padding-top: 3px;
+	padding-left: 2px;
+	padding-right: 4px;
+	padding-bottom: 1px;
+	text-align: right;
+}
+.Ed_TmMoneyfont
+{
+	width: 50px;
+	font-size: 0.75em;
+	border-right: 1px solid;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+}
+.List_TmMoneyfont
+{
+	width: 40px;
+	border-right: 1px solid;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+}
+.cont_hidden
+{
+	display: none;
+	visibility: hidden;
+}
+.td_Caption_Text
+{
+	padding-right: 10px;
+	color: white;
+	text-align: right;
+	height: 25px;
+	font-size: 0.75em;
+	font-weight: bold;
+}
+.Tr_TmShow
+{
+	height: 30px;
+}
+.Td_TmBallfont
+{
+	background-position: center center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-color: #C6E0F5;
+	text-align: center;
+}
+
+TD.Td_TmBallfont_Stop
+{
+	background-position: center center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	text-align: center;
+	background-color: red;
+}
+TD.Td_TmBallfont_over
+{
+	background-position: center center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	text-align: center;
+	background-color: #ffff99;
+}
+TD.Td_TmBallfont_click
+{
+	background-position: center center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	text-align: center;
+	background-color: #ffff00;
+}
+
+.TmLabfont
+{
+	font-size: 0.75em;
+	background-color: #C6E0F5;
+	font-weight: bold;
+	text-align: center;
+	height: 25px;
+}
+.ballfont
+{
+	font-size: 0.85em;
+	padding-right: 2px;
+	padding-left: 2px;
+	FILTER: glow(color=#000000,strength=1);
+	padding-bottom: 2px;
+	color: #000000;
+	padding-top: 2px;
+	height: 10px;
+	font-weight: bold;
+}
+.button_delete
+{
+	background-position: center center;
+	background-image: url(../images/icon_delete.gif);
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+	width: 16px;
+	height: 16px;
+}

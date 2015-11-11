@@ -1,0 +1,1905 @@
+/*
+	$Id: regAcc.css,v 1.88 2010-04-16 09:44:32 afolga Exp $
+	Copyright (c) 2008 Orbis Technology Ltd. All rights reserved.
+
+	Registration CSS
+*/
+
+
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: #1a313f url(../../images/cn/sportsbookBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x;
+}
+
+body#games_site{background: #718a0b url(../../images/cn/games/site/gamesMainBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x;}
+body#vegas_site{background: #1e0413 url(../../images/cn/vegas/site/vegasMainBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x;}
+body#liveDealer_site{background: #403b23 url(../../images/cn/liveDealer/site/liveDealerMainBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x;}
+
+
+/*-----------------------PRODUCT TABS TOP OF PAGE-------------------------------------------*/
+
+body#casino_site #productsNav ul li {border-left: 1px solid #3d0522;}
+body#poker_site #productsNav ul li {border-left: 1px solid #710100;}
+body#vegas_site #productsNav ul li {border-left: 1px solid #930a52;}
+body#skill_site #productsNav ul li {border-left: 1px solid #752d05;}
+body#games_site #productsNav ul li {border-left: 1px solid #000;}
+body#vegas_site #productsNav ul li {border-left: 1px solid #b1276d;}
+body#bingo_site #productsNav ul li {border-left: 1px solid #0486c2}
+body#liveDealer_site #productsNav ul li {border-left: 1px solid #011d2f;}
+body#lotteries_site #productsNav ul li {border-left: 1px solid #181832}
+
+body#casino_site #productsNav li#productSelected{background: #a3185c}
+body#poker_site #productsNav li#productSelected{background: #b8030a}
+body#games_site #productsNav li#productSelected{background: #79a52a}
+body#vegas_site #productsNav li#productSelected{background: #d5277e}
+body#liveDealer_site #productsNav li#productSelected{background: #013f5f}
+body#skill_site #productsNav li#productSelected{background: #d06f10}
+body#bingo_site #productsNav li#productSelected{background: #54b8ea}
+body#lotteries_site #productsNav li#productSelected{background: #5e699f}
+
+body#casino_site #productsNav a{border-bottom: 1px solid #3d0522}
+body#poker_site #productsNav a{border-bottom: 1px solid #710100}
+body#vegas_site #productsNav a{border-bottom: 1px solid #930a52}
+body#skill_site #productsNav a{border-bottom: 1px solid #752d05}
+body#games_site #productsNav a{border-bottom: 1px solid #000}
+body#vegas_site #productsNav a{border-bottom: 1px solid #820347}
+body#bingo_site #productsNav a{border-bottom: 1px solid #0486c2}
+body#liveDealer_site #productsNav a{border-bottom: 1px solid #013c5c}
+body#lotteries_site #productsNav a{border-bottom: 1px solid #181832}
+
+body#games_site #productsNav .sports,
+body#vegas_site #productsNav .sports,
+body#casino_site #productsNav .sports,
+body#poker_site #productsNav .sports,
+body#skill_site #productsNav .sports,
+body#lotteries_site #productsNav .sports,
+body#bingo_site #productsNav .sports,
+body#liveDealer_site #productsNav .sports {border-left: 1px solid #FFF;}
+
+
+body#casino_site #productsNav li#productSelected a{background: #a3185c; border-bottom: none;}
+body#poker_site #productsNav li#productSelected a{background: #b8030a; border-bottom: none;}
+body#games_site #productsNav li#productSelected a{background: #7aa317; border-bottom: none;}
+body#vegas_site #productsNav li#productSelected a{background: #d5277e; border-bottom: none;}
+body#liveDealer_site #productsNav li#productSelected a{background: #00365d; border-bottom: none;}
+body#skill_site #productsNav li#productSelected a{background: #d06f10; border-bottom: none;}
+body#bingo_site #productsNav li#productSelected a{background: #54b8ea; border-bottom: none;}
+body#lotteries_site #productsNav li#productSelected a{background: #5f6aa0; border-bottom: none;}
+
+/*body #productsNav li a:hover{background: #002337 url(../../images/cn/productTabOver.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x}*/
+
+span.payPalReg{background: url(../../images/cn/payPalReg.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; padding: 2px 30px;}
+
+/*-------------------------------------------------------------------------------------------*/
+
+#content {
+	width: 996px;
+}
+
+.regAccContent form{position: relative;}
+
+
+.reqFieldHolder {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #000;
+	margin: 0px 4.8em 0 0 ;
+	font-size:1.2em;
+}
+.reqField, fieldset .reqField {
+	display: inline;
+	float: none;
+	color: red;
+}
+#depReqFieldHolder {
+	display: inline;
+	float: right;
+	position: relative;
+	margin-bottom: -15px;
+	margin-top: -25px;
+}
+#depReqFieldHolder, #not#ie8 {
+	margin-top: 0;
+}
+
+.accStyle #contentHolder{position: relative}
+
+/*-------------------------------MAIN NAV ADJUST----------------------------------------*/
+
+#contentHeadReg {
+	height: 70px;
+	border-bottom: 5px solid #4cadd2;
+	margin: 0 55px 0 0;
+	padding: 0 5px;
+	background: #FFF;
+	position: relative;
+
+}
+#contentHeadReg h1 {
+	padding-left: 0;
+	margin-left: -5px;
+}
+.accStyle #contentHead {
+	height: 107px;
+	border-bottom: 3px solid #0EA2E6;
+	margin: 0 45px;
+	padding: 0 5px 0 5px;
+	background: none;
+	width: 884px;
+	position: static;
+	overflow: auto;
+}
+/*#contentHead.depAdjust {
+	height: 105px;
+	padding: 20px 0 0 0;
+	border-bottom: 5px solid #4cadd2;
+	display: block;
+	overflow: auto;
+}
+#contentHead.depAdjust h1, #contentHead.depAdjust h2 {
+	float: left;
+	width: 630px;
+	margin-top: 20px;
+	padding: 0 0 0 5px;
+}*/
+.accStyle #contentHead h1, .accStyle #contentHead h2 {
+	margin-top: 0;
+	margin-left: -5px;
+	padding-top: 71px;
+	padding-bottom: 0;
+}
+#mainNavHolder{
+        overflow:visible;
+}
+#mainNavHolder.navAcc #mainNavA {
+	width: 986px;
+	padding: 20px 0;
+	text-align: center;
+}
+#mainNavAcc {
+	text-align: center;
+	padding: 15px 0 20px 0;
+	background: #001826 url(../../images/cn/mainNavAccBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x;
+}
+#mainNavAcc ul li {
+	display: inline;
+	padding-right: 20px;
+}
+#mainNavAcc ul li a {
+	padding: 0 24px;
+	color: #FFF;
+	text-decoration: none;
+	padding: 5px 20px 6px 20px;
+	zoom: 1;
+}
+#mainNavAcc ul li a:hover {
+	background: #007ab6 url(../../images/cn/selectedNavAcc.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x;
+	color: #FFF;
+	text-decoration: none;
+	border: 1px solid #002131;
+	padding: 4px 19px 5px 19px;
+}
+#mainNavAcc li#selectedNavAcc a {
+	background: #007ab6 url(../../images/cn/selectedNavAcc.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x;
+	color: #FFF;
+}
+.accStyle #blockA fieldset {
+	float: right;
+	padding: 2px 0 0 20px;
+	height: 20px;
+	margin: 0;
+	clear: none;
+}
+.accStyle #blockA #signInA label {
+	width: 56px;
+	font-size: 0.8em;
+	padding: 1px 4px 0 5px;
+	height: 1%;
+	font-weight: normal;
+	margin: 0;
+}
+.accStyle #blockA #signInBtn {
+	height: 18px;
+	padding: 0;
+	font-size: 0.7em;
+	width: 90px;
+	margin-top: -1px;
+}
+.accStyle #blockA #signInB {
+	padding-top: 3px;
+	text-align: left;
+	height: 1%;
+}
+
+.accStyle #blockA #signInB input {
+	height: 20px;
+	padding: 0 0 2px 0;
+	width: 176px;
+	border: none;
+	background: #1b76a5 url(../../images/cn/btnPlaceBetGrad.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;
+	border: 1px solid #FFF;
+	color: #FFF;
+}
+/*-------------------------------HEADERS------------------------------------------------*/
+
+h1, h2 {
+	color: #000;
+	padding-bottom: 20px;
+}
+h3 {
+	font-size: 1.5em;
+	color: #000;
+	margin-bottom: 8px;
+}
+h4 {
+	font-size: 1em;
+	color: #000;
+	margin-bottom: 8px;
+}
+.subHead {
+	background: none;
+	border: none;
+}
+#regAccPayPal {
+	position: absolute;
+	width: 318px;
+	height: 100px;
+	right: 0px;
+	margin-top: 25px;
+	font-size: 1.2em;
+}
+#thawte {
+	position: absolute;
+	width: 39px;
+	height: 32px;
+	right: 0px;
+	margin: -44px 10px 0 0;
+	font-size: 1.2em;
+	z-index:1
+}
+#thawte img{width: 39px; height: 32px}
+h2.payPal {
+	padding: 3px 0 0 75px;
+	font-size: 1.6em;
+	color: #000;
+	background: url(../../images/cn/payPalLogo2.gif?ver=e29378bd396e2061fed90c753cdbe984) left 2px no-repeat;
+}
+#regAccPayPal h4 {
+	padding: 0 0 0 70px;
+	font-size: 1.8em;
+	color: #000;
+	background: url(../../images/cn/paypal.gif?ver=e29378bd396e2061fed90c753cdbe984) left 5px no-repeat;
+}
+.regAccContent li {
+	clear: both;
+	padding: 3px 0 3px 0;
+	overflow: hidden;
+}
+.regAccContent .joinNowButton1 {
+	position:absolute;
+	right:80px;
+	top:50px
+}
+
+.regAccContent a:focus {
+	outline: 1px dotted #0174ec;
+}
+
+.regAccContent .textRight {
+	padding: 10px 45px 0 0;
+	font-size: 1.1em;
+}
+
+.regAccContent h2 {
+	font-size: 1.8em;
+	padding-top: 25px;
+	margin-bottom: 16px;
+	color: #000;
+}
+
+h2 .textSmall {font-size: 9pt;  padding-left: 6px; letter-spacing: 0;}
+
+h2 .clearBoth{ line-height: 0; padding: 0; margin: 0;}
+
+.regAccContent .headLeft {
+	display: block;
+	float: left;
+	padding-top: 45px;
+}
+.regAccContent .headRight {
+	display: block;
+	float: right;
+	padding: 45px 45px 0 0;
+}
+#payPalTitle {
+	background: url(../../images/cn/paypal.gif?ver=e29378bd396e2061fed90c753cdbe984) left 9px no-repeat;
+	padding-left: 75px;
+}
+.accDetailsPayPal {
+	width: 100%;
+}
+.accDetailsPSC {
+	width: 100%;
+}
+#listWallet{
+	margin-top: 80px;
+}
+#listUKSH{
+	margin-top: 100px;
+}
+#listPSC{
+	margin-top: 100px;
+}
+/*#contactDetails ol {
+	padding-top: 16px;
+}*/
+/*-------------------------------TABLE DATA FOR ACCOUNTS--------------------------------*/
+.regAccContent .tableData {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 894px;
+	margin-left: 0px;
+}
+
+.regAccContent .tableData caption{width: 894px; padding: 0 0 5px 0}
+
+body.langEL .statementTitle {font-size: 1.4em}
+
+/*.regAccContent .tableData th {
+	height: 26px;
+	background: #0a3862;
+	color: #FFF;
+	font-size: 1em;
+	text-align: left;
+	border-bottom: none;
+}*/
+
+.regAccContent .tableData.tableList{background: #e7f6fd url(../../images/cn/tableListAccBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) top repeat-x; }
+
+.regAccContent .tableData td {
+	height: 24px;
+	border-bottom: 1px solid #002134;
+	padding: 3px 0 2px 8px;
+}
+.regAccContent .tableData.tablePayments td {
+	padding: 9px 0 12px 8px;
+}
+.regAccContent .tableData.tableList td {
+	padding-left: 8px
+}
+.regAccContent .noBorder td {
+	border-bottom: none;
+	padding: 0 0 0 6px;
+}
+.regAccContent .lastCommon td {
+	padding: 0 0 0 6px;
+}
+/*.regAccContent .tableData caption {
+	font-weight: 100;
+	padding: 10px 0 14px 3px;
+	font-size: 2em;
+	color: #000;
+	margin-left: 0;
+	width: 800px;
+	letter-spacing: 0;
+}*/
+.regAccContent .tableData .rowGroup td {
+	border: none;
+	padding: 0 0 0 6px
+}
+.regAccContent .tableData .rowGroup.top td {
+	padding-top: 15px
+}
+.regAccContent .tableData .rowGroup.bottom td {
+	padding-bottom: 15px;
+	border-bottom: 1px solid #002134;
+}
+.regAccContent .tableData td.borderBottom {
+	border-bottom: 1px solid #7bbfff;
+}
+
+.regAccContent .tableData td ul.paymentTypes {
+	list-style: none;
+	text-align: left;
+	line-height: 24px
+}
+body .regAccContent .tableData td ul.paymentTypes.noPad li{padding-left: 0}
+
+/*-PAYMENT LOGOS-*/
+
+.hidden{display: none}
+.show{display: block}
+
+.regAccContent .tableData td ul.paymentTypes li{width: 130px; padding-left: 105px}
+
+.paymentMaestro{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984)  0px 0px no-repeat;float:left;position:static}
+.paymentSolo{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984)  0px -30px no-repeat;float:left;position:static}
+.paymentDelta{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984)  0px -61px no-repeat;float:left;position:static}
+.paymentLaser{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984)  0px -60px no-repeat;float:left;position:static}
+.paymentElectron{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -90px no-repeat;float:left;position:static}
+.paymentVisa{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984)  0px -120px no-repeat;float:left;position:static}
+.paymentMastercard{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984)  0px -150px no-repeat;float:left;position:static}
+.paymentEurocard{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentPaypal{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984)  0px -180px no-repeat;float:left;position:static}
+.paymentMoneyBookers{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984)  0px -210px no-repeat;float:left;position:static}
+.paymentClick2Pay{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984)  0px -240px no-repeat;float:left;position:static}
+.paymentClickAndBuy{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984)  0px -270px no-repeat;float:left;position:static}
+.paymentNeteller{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984)  0px -300px no-repeat;float:left;position:static}
+.paymentPaySafe{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984)  0px -360px no-repeat;float:left;position:static}
+.paymentMBWLT{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984)  0px -210px no-repeat;float:left;position:static}
+.paymentMBVSA{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -900px no-repeat;float:left;position:static}
+.paymentMBVSD{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -900px no-repeat;float:left;position:static}
+.paymentMBVSE{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -930px no-repeat;float:left;position:static}
+.paymentMBMAE{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -960px no-repeat;float:left;position:static}
+.paymentMBSLO{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -990px no-repeat;float:left;position:static}
+.paymentMBAMX{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBDIN{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1020px no-repeat;float:left;position:static}
+.paymentMBJCB{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBLSR{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1050px no-repeat;float:left;position:static}
+.paymentMBGCB{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBNET{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPBT{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBDNK{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1080px no-repeat;float:left;position:static}
+.paymentMBPSP{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1110px no-repeat;float:left;position:static}
+.paymentMBLCSI{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -140px no-repeat;float:left;position:static}
+.paymentMBPBT{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1170px no-repeat;float:left;position:static}
+.paymentMBGIR{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1200px no-repeat;float:left;position:static}
+.paymentMBDID{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBSFT{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1230px no-repeat;float:left;position:static}
+.paymentMBENT{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1260px no-repeat;float:left;position:static}
+.paymentMBEBT{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1290px no-repeat;float:left;position:static}
+.paymentMBSO2{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1290px no-repeat;float:left;position:static}
+.paymentMBIDL{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1320px no-repeat;float:left;position:static}
+.paymentMBNPY{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPLI{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1350px no-repeat;float:left;position:static}
+.paymentMBPWY{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY5{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY6{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY7{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY14{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY15{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY17{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY18{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY19{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY20{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2340px no-repeat;float:left;position:static}
+.paymentMBPWY21{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY22{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY25{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY26{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY28{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY32{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY33{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBPWY36{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBEUR6{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1440px no-repeat;float:left;position:static}
+.paymentMBEPY{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1470px no-repeat;float:left;position:static}
+.paymentMBMCC{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1500px no-repeat;float:left;position:static}
+.paymentMBPWY37{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2130px no-repeat;float:left;position:static}
+.paymentMBELV{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1530px no-repeat;float:left;position:static}
+.paymentMB4BC{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -1560px no-repeat;float:left;position:static}
+.paymentEnvoyENFBT{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -540px no-repeat;float:left;position:static}
+.paymentEnvoyENIDL{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -780px no-repeat;float:left;position:static}
+.paymentEnvoyENP24{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -630px no-repeat;float:left;position:static}
+.paymentEnvoyEUTLR{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -480px no-repeat;float:left;position:static}
+.paymentEnvoyPOLI{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -840px no-repeat;float:left;position:static}
+.paymentEnvoyBLKUN{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -720px no-repeat;float:left;position:static}
+.paymentEnvoyBLKSB{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2310px no-repeat;float:left;position:static}
+.paymentEnvoyBLETO{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -660px no-repeat;float:left;position:static}
+.paymentEnvoyMBANC{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2280px no-repeat;float:left;position:static}
+.paymentEnvoyEPS{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -450px no-repeat;float:left;position:static}
+.paymentEnvoyTELEI{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -690px no-repeat;float:left;position:static}
+.paymentEnvoyGIROP{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -750px no-repeat;float:left;position:static}
+.paymentEnvoyPLINZ{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -840px no-repeat;float:left;position:static}
+.paymentEnvoyEKONT{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -420px no-repeat;float:left;position:static}
+.paymentEnvoyNORDE{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -810px no-repeat;float:left;position:static}
+.paymentEnvoyCDIGI{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2250px no-repeat;float:left;position:static}
+.paymentEnvoyBSANT{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -2220px no-repeat;float:left;position:static}
+.paymentEnvoyNSURF{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -600px no-repeat;float:left;position:static}
+.paymentEnvoySOFEU{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -870px no-repeat;float:left;position:static}
+.paymentEnvoySOFCH{background: url(../../images/cn/paymentLogosReg.gif?ver=e29378bd396e2061fed90c753cdbe984) 0px -870px no-repeat;float:left;position:static}
+
+
+
+/*-------------------------------MY ACCOUNT LINK STYLE---------------------------*/
+
+a {
+	color: #0174ec;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+.ulExtraPad li {
+	padding: 11px 0;
+}
+.regAccContent {
+	margin: 0;
+	padding: 16px 0 0 45px;
+	border: none;
+	clear: both;
+	position: relative;
+	height: 1%;
+	background: #FFFFFF;
+}
+.regAccContent .infoBox {
+	margin: 30px 55px 16px 0;
+	font-size: 1.2em;
+	text-align: center;
+	padding: 8px 0 40px 0;
+	width: 892px;
+	border: none;
+	border-bottom: 3px solid #0ea2e6;
+}
+
+.regAccContent .infoBox.error{
+	border: 1px solid red;
+	padding: 3px 0;
+	margin: 0 0 5px 0;
+	color: red;
+}
+
+
+.regAccContent .infoBox.error ul{
+	margin-left: 20px
+}
+
+
+
+.regAccContent #breadcrumb {
+	margin: 0 55px 15px 58px;
+}
+.regAccContent .infoBox p {
+	text-align: left;
+	padding-left: 20px;
+}
+.regAccContent .infoBox .infoLeft {
+	text-align: left;
+	padding-left: 110px;
+	width: 500px;
+}
+.regAccContent .infoBox ul {
+	text-align: left;
+}
+.regAccContent .infoBox ul p {
+	float: left;
+	width: 125px;
+}
+.regAccContent .infoBox ul span {
+	float: left;
+	text-align: left;
+	width: 250px;
+}
+fieldset {
+	margin: 20px 0 0 55px;
+	border: none;
+	clear: both;
+	font-size: 1.2em;
+	padding-top: 100px;
+}
+body .regAccContent.bonus fieldset, .regAccContent #updateDetails fieldset {
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #002134;
+	padding-bottom: 10px;
+}
+
+.regAccContent.bonus fieldset{
+	margin-bottom: 10px;
+}
+
+.regAccContent.bonus fieldset.noBorder, .regAccContent #updateDetails fieldset .noBorder {
+	border: none;
+	padding-bottom: 20px
+}
+span.bonusBarHolder {
+	border: 1px solid #002131;
+	width: 400px;
+	padding: 2px
+}
+.bonusGraphicCasino {
+	background: #EE3c96 url(../../images/cn/bonusCasinoBG.gif?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;
+	float: left;
+	height: 10px;
+	display: block;
+}
+.bonusGraphicPoker {
+	background: #ed1c24 url(../../images/cn/bonusPokerBG.gif?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;
+	float: left;
+	height: 10px;
+	display: block;
+}
+.bonusGraphicArcade,
+.bonusGraphicVegas,
+.bonusGraphicGames {
+	background: #EE3c96 url(../../images/cn/bonusGamesBG.gif?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;
+	float: left;
+	height: 10px;
+	display: block;
+}
+.bonusGraphicBingo {
+	background: #faa61a url(../../images/cn/bonusBingoBG.gif?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;
+	float: left;
+	height: 10px;
+	display: block;
+}
+
+.bonusGraphicSportsbook {
+	background: #96C527 url(../../images/cn/bonusSportsBG.gif?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;
+	float: left;
+	height: 10px;
+	display: block;
+}
+
+.bonus .bonusTxt {
+	padding: 4px 0 2px 8px;
+	color: #000;
+	display: block;
+	float: left;
+	width: 40px;
+}
+.regAccContent fieldset {
+	margin: 0px 47px 37px 0px;
+	border: 1px solid #fff;
+	clear: both;
+	font-size: 1.2em;
+	padding: 0;
+	position: relative;
+}
+
+.regAccContent fieldset ol{
+	margin-top: 40px; margin-bottom: 20px
+}
+
+.bonus fieldset ol{margin-top: 20px}
+
+.regAccContent hr {
+	visibility: hidden;
+	margin-bottom: 60px;
+	clear: both;
+}
+.regAccContent legend {
+	font-weight: bold;
+	/*margin: 0px 0 20px -8px;
+	padding: 8px 0 0 0;*/
+	font-size: 1.5em;
+	color: #000;
+	top: 0;
+	letter-spacing: 0px;
+	font-weight: 100;
+
+}
+
+.regAccContent legend span{
+	position: absolute;
+	display: block;
+	left: -1px;
+}
+
+.bonus legend span{top: 18px}
+
+.legendLeft {
+	display: block;
+	float: left;
+	width: 400px
+}
+.legendRight {
+	display: block;
+	float: right;
+	width: 200px;
+	text-align: right;
+	font-size: 0.6em;
+	padding-top: 10px;
+}
+#registration legend {
+	margin-bottom: 0;
+}
+/*#accDetails legend {
+	margin-bottom: 25px;
+}*/
+p.key {
+	margin-bottom: 20px;
+	width: 300px;
+}
+label {
+	display: block;
+	float: left;
+	width: 200px;
+	padding-top: 4px;
+	text-align: right;
+	margin-right: 20px;
+	margin-top: 5px;
+	font-weight: bold;
+	color: #000;
+}
+
+
+li.error label {
+	color: red
+}
+.labelDate {
+	width: 18px;
+	text-align: left;
+}
+input.btn {
+	width: 187px;
+}
+
+.lowerForm {
+
+}
+.lowerForm.noBG {
+	background: none;
+}
+.lowerForm.marginAdjust {
+	margin-top: -35px;
+}
+.lowerForm fieldset {
+	margin-bottom: 0;
+	margin-left: -45px;
+	border: none;
+	display: block;
+}
+
+fieldset .lowerForm  li.error label {
+	color: red;
+	height: 20px;
+}
+/*--------------------------------REGISTRATION HEADER-------------------*/
+
+#regBG {
+	background: #002538 url(../CN_files/headerBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) top repeat-x;
+	border: none;
+}
+#regHeader {
+	background: #015079 url(../../images/cn/mainNavBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;
+	margin: 0 6px;
+	padding: 0 0 0 45px;
+	height: 1%;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+	height: 222px
+}
+
+#regHeader.short{height: 150px}
+
+#regHeader h2 {
+	color: #FBFBFA;
+	padding-bottom: 12px;
+	font-size: 2em;
+}
+#regHeader ul {
+	color: #A2A2A2;
+	font-size: 1.2em;
+	margin-bottom: 20px;
+}
+#regHeader ul.regProcess {
+	line-height: 20px;
+	margin: 15px 0 0 0;
+	color: #FFF;
+	font-size: 1.6em;
+}
+
+#regHeader ul.regProcess.payPal{
+	margin-top: -10px;
+}
+
+#regHeader ul.regProcess.lostDetails {
+	margin-top: -2px;
+}
+#regHeader .stepComplete {
+	background: #000;
+	width: 600px;
+	color: #7dddff;
+	margin-left: -10px;
+	padding: 0 0 3px 10px;
+
+}
+#regHeader p {
+	color: #A2A2A2;
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+#regHeader a {
+	color: #a5d335;
+	font-weight: bold;
+}
+.regHeaderLeft {
+	float: left;
+	width: 624px;
+	margin: 25px 0 20px 0;
+}
+
+#regHeader.short .regHeaderLeft {margin-top: 2px}
+
+.regHeaderLeft h2{visibility: hidden}
+
+.regHeaderLeft h2.payPalHead{visibility: visible; background: url(../../images/cn/payPalHead.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; padding: 3px 0 0 100px; height: 42px}
+
+.regHeaderLeft p{padding-top: 7px}
+
+.regHeaderRight {
+	float: left;
+	width: 274px;
+	margin:  25px 0 20px 0;
+}
+/*--------------------------------FADE OUT------------------------------*/
+
+.fadeOut label {
+	color: #e4e4e4;
+}
+.fadeOut input {
+	border: 1px solid #e4e4e4;
+}
+.fadeOut sup {
+	color: #e4e4e4;
+}
+/*---------------*/
+fieldset p {
+	float: left;
+	width: 200px;
+	padding-top: 4px;
+	text-align: left;
+	margin-right: 20px;
+	color: #000;
+}
+fieldset span {
+	float: left;
+	width: 550px;
+	padding: 4px 0 5px 0;
+}
+.bonus fieldset p {width: 125px}
+.bonus fieldset span {width: 460px}
+
+fieldset a {
+	color: #0174ec;
+	text-decoration: underline;
+}
+fieldset a:hover {
+	text-decoration: none;
+}
+/*-----------------*/
+
+
+
+.btn {
+	margin: 0;
+	font-size: 1.1em;
+	width: 189px;
+}
+.extraPad {
+	padding: 13px 0 13px 0;
+}
+.btnHolder {
+	clear: both;
+	padding: 13px 0 0 219px;
+	margin: 0;
+}
+.btnHolder .btn {
+	width: 180px;
+	font-size: 1.1em;
+}
+.lowerForm .btnHolder {
+	margin: 0px 55px 20px 0;
+	padding: 0px 0 30px 175px;
+}
+/*--------------------------FIELD SETS---------------------------------------*/
+
+#addressSelect {
+	margin: 20px 55px 10px 0;
+	padding: 20px 0 0 0;
+	border-top: 1px solid #4cadd2;
+	border-bottom: 1px solid #4cadd2;
+	background: #FFF;
+	height: 1%;
+}
+#addSelect {
+	width: 443px;
+	height: 84px;
+	padding: 5px;
+}
+.textPrompt {
+	padding: 2px 0 20px 220px;
+}
+.divideLine {
+	border-bottom: 1px solid #CCC;
+}
+.extraSpace {
+	margin-top: 18px;
+}
+.extraSpace2 {
+	margin-top: 38px;
+}
+.checkBoxMail {
+	border: none;
+	width: 13px;
+	margin-right: 5px
+}
+.labelMail {
+	width: 100px;
+	font-weight: normal;
+	color: #000;
+}
+.mailBtn {
+	float: right;
+	margin-right: 43px;
+	margin-top: 20px;
+	font-size: 1.1em;
+	width: 189px
+}
+/*--------------------------UNIQUE INPUT SIZES-------------------------------*/
+
+
+.dob {
+	width: 76px;
+	margin-right: 10px;
+}
+#title {
+	width: 75px;
+}
+#dob_month {
+	width: 111px;
+}
+#country_code, #challenge_1 {
+	width: 283px;
+}
+#postcode {
+	width: 68px;
+}
+#postcode2 {
+        width: 68px;
+}
+#captureImg {
+	width: 190px;
+}
+.dateField {
+	width: 75px;
+	margin-right: 10px;
+}
+.dateFieldMonth {
+	width: 111px;
+	margin-right: 10px;
+}
+.nameFieldNarrow {
+	width: 250px;
+}
+
+select {
+	float: left;
+	width: 198px;
+	padding: 1px;
+	font-size: 1.1em;
+	margin-top: 5px;
+}
+
+input{margin-top: 5px; margin-bottom: 2px}
+/*---------------------------IMG CAPTURE----------------------------------*/
+
+#regCapture {
+	margin-top: 0px;
+}
+#regCapture legend {
+	margin-bottom: 20px;
+}
+#regCapture .subHead {
+	width: 400px;
+}
+#regCapture img {
+	margin: 0;
+	width: 196px
+}
+#regCapture p {
+	margin-top: 10px;
+}
+/*---------------------------STEMENT MATRIX NAV-------------------------------*/
+
+.matrixAccA {
+	font-size: 1.2em;
+	color: #040404;
+	margin-top: 20px;
+}
+.matrixAccA a {
+	padding-bottom: 0.5em;
+}
+.matrixAccA li {
+	width: 892px;
+	list-style: none;
+	clear: both;
+	height: 1%;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	position: relative;
+	border-bottom: 1px solid #002134;
+}
+.matrixAccA li.reducedHeight {
+	padding-bottom: 3px;
+	margin-bottom: 3px;
+}
+.matrixAccA li.extraPad {
+	padding-top: 40px
+}
+.matrixAccA li.extraMargin {
+	padding-bottom: 20px
+}
+.matrixAccA li.noBorder {
+	border-bottom: none;
+}
+.matrixA li.paymentVerify {
+	border-top: 1px solid red;
+	border-bottom: 1px solid #4cadd2;
+	padding-top: 0px;
+	padding-bottom: 30px;
+}
+.matrixA li.paymentVerify ul li iframe {
+	width: 500px;
+	height: 475px;
+	border: 1px solid #000
+}
+.matrixAccA ul.liBtnHolder li {
+	margin-bottom: 30px
+}
+.matrixAccA.accConfirm {
+	margin: -20px 0 50px 0;
+}
+.matrixAccA.accConfirm li {
+	border-bottom: none;
+	padding-bottom: 3px;
+	margin-bottom: 3px;
+}
+
+.matrixAccA ul {
+	width: 650px;
+	display: block;
+	margin: -1.4em 0 0 225px;
+}
+.matrixAccA li ul li {
+	padding: 2px 0 5px 0;
+	margin: 0;
+	width: 650px;
+	border: none;
+}
+.matrixAccA .listFloat li {
+	clear: none;
+	display: block;
+	width: 200px;
+	float: left;
+}
+.lastLiFloat:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+.colLink a {
+	background: blue;
+	color: red;
+}
+/*---------------------------MATRIX TEXT ALIGNMENT------------------------*/
+
+.matrixAccA .pLeft {
+	float: left;
+	width: 400px
+}
+.matrixAccA .pRight {
+	float: left;
+	width: 200px;
+}
+.matrixAccA .noBorder {
+	border: none;
+}
+.matrixAccA .pRight input {
+	width: 215px;
+	margin-top: 0px;
+}
+/*---------------------------CHECKBOX ROW---------------------------------*/
+
+.searchFields {
+	padding-bottom: 0px;
+	border-bottom: 3px solid #0ea2e6;
+	margin-left: 0px;
+	margin-right: 45px;
+	height: 1%
+}
+.searchFields .btnHolder {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+#checkRows {
+	padding-top: 20px;
+}
+.lowerForm #checkRows {
+	padding-top: 0;
+	margin-top: 5px;
+}
+.lowerForm hr {
+	color: #4cadd2;
+	height: 6px;
+	margin-bottom: 5px;
+	margin-left: -10px;
+	margin-right: 55px;
+	background: #4cadd2;
+	border: none;
+}
+#checkRows input {
+	border: none;
+	width: 13px;
+	height: 13px;
+	margin: 0 0 0 220px;
+	padding: 0;
+}
+#checkRows p {
+	border: none;
+	width: 13px;
+	height: 13px;
+	margin: 0 0 0 210px;
+	padding: 0;
+}
+#checkRows label {
+	width: 560px;
+	text-align: left;
+	padding: 0 0 0 10px;
+	float: left;
+	margin-top: 0;
+}
+.checkBoxRow input {
+	width: 13px
+}
+.checkBoxRow label {
+	width: 500px;
+	padding: 0 0 0 10px
+}
+
+
+/*---------------------statement check blocks---------------------------*/
+
+
+fieldset.checkA, fieldset.checkB {
+	margin: 0px;
+	border: none;
+	clear: none;
+	font-size: 1.2em;
+	padding: 0;
+}
+fieldset.searchCriterea {
+	margin-bottom: 0;
+}
+.checkA strong {
+	position: absolute;
+	top: 7px;
+	padding-left: 5px;
+}
+.checkA {
+	float: left;
+	width: 430px;
+}
+.checkB {
+	float: left;
+	width: 200px;
+}
+.checkA input, .checkB input {
+	margin: 5px 5px 0 0;
+	width: 13px;
+	height: 13px;
+	float: left
+}
+.checkA input {
+	margin-left: 226px;
+}
+.checkA label, .checkB label {
+	float: left;
+	width: 150px;
+	text-align: left;
+	margin-top: 0
+}
+
+.regAccContent fieldset.checkA ol, .regAccContent fieldset.checkB ol{
+	margin-top: 0
+}
+
+fieldset.searchCriterea .btnHolder{padding-bottom: 20px}
+/*---------------------------ERROR MSGS-----------------------------------*/
+
+
+.regAccContent fieldset .btnHolder.error {
+	padding-bottom: 30px;
+	padding-left: 219px;
+	border: none;
+	width:600px;
+}
+
+.lowerForm .btnHolder.error {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-top: 0;
+	width: 650px;
+	border: none;
+}
+
+
+.btnHolder.error .validationAdvice {
+	background: url(../../images/cn/validationFailedBG.gif?ver=e29378bd396e2061fed90c753cdbe984) left center no-repeat;
+	color: #FFF;
+	height: 29px;
+	padding-top: 5px; padding-left: 25px;
+	line-height: 12px;
+	position: absolute;
+	right: 0;
+	width: 355px;
+	border: none;
+	font-weight: bold;
+	display: block;
+	font-size: 1em;
+	margin-top: -8px
+}
+
+.btnHolder.error .validationAdvice a{color: #FFF}
+
+.lowerForm .btnHolder.error .validationAdvice {
+	background: url(../../images/cn/validationFailedBG.gif?ver=e29378bd396e2061fed90c753cdbe984) left center no-repeat;
+	color: #FFF;
+	height: 29px;
+	padding-top: 5px; padding-left: 25px;
+	line-height: 12px;
+	position: absolute;
+	right: 55px;
+	width: 450px;
+	border: none;
+	font-weight: bold;
+	display: block;
+	font-size: 1.2em;
+	margin-top: -8px
+}
+
+.lowerForm .btnHolder.error .validationAdvice a{color: #FFF}
+
+
+
+li.error input {
+	border: 1px solid red;
+	padding:3px;
+}
+li.error #acceptTerms {
+	border: 1px solid #FF8000;
+	width: 15px;
+	height: 15px;
+}
+
+
+li.errorUserName {
+	padding-top: 60px;
+	padding-bottom: 20px;
+	color: red;
+}
+
+
+li.errorUserName #username {
+	border: 1px solid red;
+}
+li.errorUserName .validationAdvice {
+	background: url(../../images/cn/validationFailedUsername.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;
+	color: #FFF;
+	padding: 16px 0;
+	margin-top: -40px;
+	font-weight: bold;
+	display: block;
+	padding-left: 30px;
+	height: 76px;
+	width: 350px;
+}
+li.errorUserName .userSelect label {
+	color: #FFF;
+}
+li.errorUserName label {
+	color: red;
+}
+.userSelect {
+	padding-top: 10px;
+}
+.userSelect li {
+	padding: 0;
+	margin-top: -5px;
+	color: #000;
+	overflow: visible
+}
+.userSelect li input {
+	width: 13px;
+	float: left;
+}
+.userSelect label {
+	padding: 5px 0 0 5px;
+	text-align: left
+}
+
+.regAccContent .lowerForm{border: none; padding-left: 45px;}
+
+.lowerForm #checkRows ol{margin-top: 0}
+
+.lowerForm #checkRows li.error label {
+	padding-left: 15px;
+	padding-top: 8px;
+	margin-top: -10px;
+	display: inline;
+	height: 30px;
+	background: url(../../images/cn/validationFailedBG.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;
+	color: #FFF;
+	position: absolute;
+	right: 55px;
+
+}
+
+
+.lowerForm #checkRows li.error label a {
+	color: #FFF;
+}
+.validationAdvice {
+	float: right;
+	width: 329px;
+	height: 18px;
+	padding: 3px 0 0 0;
+	color: #00a8f9;
+	font-weight: bold;
+	display: none;
+	line-height: 11px
+}
+li.error .validationAdvice {
+	background: url(../../images/cn/validationFailedBG.gif?ver=e29378bd396e2061fed90c753cdbe984) left center no-repeat;
+	color: #FFF;
+	height: 30px;
+	padding-top: 4px; padding-left: 25px;
+	line-height: 12px;
+	position: absolute;
+	right: 0;
+	width: 355px;
+	border: none;
+	font-weight: bold;
+	display: block
+}
+
+li.error .validationAdvice a{color: #FFF}
+
+li.error select{background: #ffdbaf}
+li.focus select{background: #e5f1cd}
+li.focus input{border: 1px solid #a5d62f; padding: 3px}
+
+
+.regAccContent li.error{margin: 0; padding: 3px 0 3px 0; overflow: hidden; border: none;}
+
+.regAccContent li.error.extend{margin: 0; padding: 40px 0 40px 0; overflow: auto; border: none;}
+
+li.error.extend .validationAdvice {
+	background: url(../../images/cn/validationFailedUsername.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;
+	color: #FFF;
+	padding: 16px 0;
+	margin-top: -37px;
+	font-weight: bold;
+	display: block;
+	padding-left: 30px;
+	height: 76px;
+	width: 350px;
+}
+
+.validationAdvice.prompt {
+	background: url(../../images/cn/validationPromptBG.gif?ver=e29378bd396e2061fed90c753cdbe984) left center no-repeat; color: #FFF; height: 30px; padding-top: 4px; line-height: 12px; position: absolute; right: 0; width: 355px; padding-left: 25px; display: block;
+}
+.checkRow .validationAdvice {
+	float: right;
+	width: 249px;
+	color: red;
+	padding: 0;
+}
+.validationFailed {
+	border: 1px solid red;
+}
+.validationPassed {
+	position: absolute;
+	display: block;
+	right: 0;
+	width: 350px;
+	height: 28px;
+	padding: 0;
+	background: url(../../images/cn/fieldPassed.gif?ver=e29378bd396e2061fed90c753cdbe984) left 6px no-repeat;
+}
+.fieldInfo {
+	float: left;
+	padding: 9px 0 0 12px;
+}
+
+.success{background: url(../../images/cn/fieldPassed.gif?ver=e29378bd396e2061fed90c753cdbe984) 5px 2px no-repeat; line-height: 30px; padding: 8px 0 10px 30px}
+.textLarge.success{background: url(../../images/cn/fieldPassed.gif?ver=e29378bd396e2061fed90c753cdbe984) 5px 17px no-repeat; line-height: 30px; padding: 12px 0 10px 30px; font-size: 2.2em}
+
+.tableData .success{background: none;}
+
+
+/*----------------------------BET SUMMARY-------------------------------*/
+
+.betSummaryList {
+	list-style: none;
+}
+/*----------------------------ACCOUNTS NAV------------------------------
+
+#accNav{
+	font-size: 1.2em;
+	height: 1%;
+	margin-left: 8px;
+}
+
+#accNav li{
+	display: inline;
+	float: left;
+	clear: none;
+	padding: 8px 33px 8px 33px;
+	border-bottom: 1px solid #000;
+}
+
+#accNav li#accNavSelected{
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	padding-left: 47px;
+	padding-right: 47px;
+	border-bottom: none
+
+}
+
+
+#accNav li:hover{
+	background: #CCC;
+}
+*/
+
+
+
+/*----------------------------DEPOSIT PAYMENT TYPES--------------------*/
+#accNav li ul li {
+	display: block;
+	float: none;
+	border: none;
+	font-weight: normal;
+}
+#depType {
+	list-style: none;
+	font-size: 1.2em;
+}
+#depType input {
+	width: 110px;
+}
+#depType li {
+	display: block;
+	width: 648px;
+	position: relative;
+}
+#depType li ul {
+	width: 125px;
+	margin-left: 0px;
+}
+#depType li ul li {
+	border-bottom: 1px solid #CCC;
+	padding: 10px 0 10px 0;
+	height: 30px;
+}
+#depType li ul li ul {
+	position: absolute;
+	width: 580px;
+	top: 0;
+	left: 0;
+	margin: 0 0 0 125px;
+}
+#depType li ul li ul li {
+	float:left;
+}
+#depType .depTypeLogos {
+	width: 230px;
+	float: left;
+	clear: none;
+	border: none;
+	padding-top: 7px;
+}
+#depType .depTypeMin {
+	width: 200px;
+	float: left;
+	clear: none;
+	border: none;
+	padding: 15px 0 0 20px;
+}
+#depType .depTypeDetails {
+	width: 100px;
+	clear: none;
+	float: right;
+	border: none;
+	padding-top: 15px;
+}
+/*------------------------------PAGINATION----------------------------*/
+
+p.stateLegacy {
+	float: left;
+	font-size: 1.1em;
+	padding-top: 21px;
+}
+/*-------------------------------ACCOUNT MESSAGES/EMAIL-----------------------*/
+
+.accMsg {
+	border: 1px solid #CCC;
+	border-bottom: 3px solid #CCC;
+	margin-top: 15px;
+	padding: 10px;
+	font-size: 1.2em;
+	width: 628px;
+}
+.accMsg h3 {
+	padding-top: 0;
+	margin-top: 0;
+}
+.accMsg p {
+	padding-top: 10px;
+}
+li.accMsgFull p {
+	padding: 5px 0;
+}
+/*--------------------------------SUPPORT AREA----------------------------------*/
+
+#supportArea {position: absolute; top: 12px; right: 20px; font-size: 1.1em}
+
+#supportArea h4{font-size: 1.3em; margin-bottom: 2px}
+
+#supportArea ul{line-height: 10px; font-size: 1.1em}
+
+
+#supportAreaDepWdl {
+	width: 220px;
+	padding: 5px 5px 0px 10px;
+	display: block;
+	border: 1px solid #4cadd2;
+	top: 14px;
+	right: 0;
+	position: absolute;
+	margin-top: 0px;
+}
+#supportAreaDepWdl ul {
+	line-height: 1.5em;
+	font-size: 1.1em;
+	height: 55px;
+}
+#supportAreaDepWdl ul li {
+	padding: 0;
+}
+#supportAreaDepWdl ul p {
+	float: left
+}
+#supportAreaDepWdl ul span {
+	float: right;
+	text-align: left;
+	width: 100px;
+}
+#qcVoucherHolder {
+	border-top: 1px solid #4cadd2;
+	border-bottom: 1px solid #4cadd2;
+	padding: 20px 0;
+	margin-right: 45px;
+	font-size: 1.2em
+}
+#qcVoucherHolder span {
+	display: block;
+	float: left;
+	width: 215px;
+	padding-left: 5px;
+}
+#qcVoucherHolder #qcVoucher {
+	display: block;
+	float: left;
+	width: 632px;
+	background: #CCC;
+	padding: 20px;
+}
+#qcVoucher ul li p {
+	float: left;
+	width: 130px;
+}
+#qcVoucher p.textLeft {
+	display: block;
+	float: left;
+	width: 300px;
+	padding: 0;
+	font-size: 1.1em;
+	padding-top: 30px
+}
+#qcVoucher p.textRight {
+	display: block;
+	float: right;
+	width: 300px;
+	padding: 0;
+	font-size: 1.1em;
+	padding-top: 30px
+}
+#footer {
+	background: none;
+}
+
+
+#contentHolder .findAddress a:focus{outline: 1px dotted #0174ec}
+
+#subExpand{
+        position: relative;
+}
+
+#subExpand a span{
+        background: url(../../images/cn/subNavExpand.gif?ver=e29378bd396e2061fed90c753cdbe984) 100% 4px no-repeat;      padding-right: 10px
+}
+
+#subExpand ul{
+        display:none;
+        overflow:hidden;
+        position: absolute;
+}
+
+li#subExpand:hover ul, li#subExpand.sfhover ul{
+        display: block;
+        width: 14em;
+        padding: 2px 2px 2px 2px;
+        font-size: 0.9em;
+        overflow: visible;
+        background: #002132;
+        left: 0;
+        top: 23px;
+        z-index: 99999;
+}
+
+#subExpand:hover ul li, #subExpand.sfhover ul li{
+        margin: 0;
+        padding: 0;
+        z-index: 99999;
+}
+
+body #subExpand:hover ul li a, body #subExpand.sfhover ul li a{
+        float: none;
+        display: block;
+        text-align: left;
+        font-size: 1.1em;
+        padding-left: 17px;
+        z-index: 99999;
+}
+
+body #subExpand ul li a:hover{
+        padding-left: 16px;
+        z-index: 99999;
+
+}
+
+body .selectedNavAcc#subExpand ul li a{
+        background: none
+}
+
+body .selectedNavAcc#subExpand ul li a:hover{
+        background: #007ab6 url(../../images/cn/selectedNavAcc.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x;
+}
+
+
+
+/*-------Multiple Payment Methods----------*/
+
+.regAccContent .tableData.tablePayments tr.cpmRow {
+	font-size: 0.83em;
+	background-color: #FFFFFF;
+}
+
+.regAccContent .tableData.tablePayments input.accBtn {
+	float: right;
+	width: 300px;
+	margin-right: 10px;
+}
+
+.regAccContent .tableData.tablePayments input.cpmBtn {
+	float: right;
+	width: 200px;
+	margin-right: 10px;
+}
+
+.regAccContent .tableData tr.revMsg {
+	height: 100px; 
+	text-align: center
+}
+
+.regAccContent tr.btnRow {
+    height: 50px;
+}
+
+.regAccContent tr.selectRow {
+    height: 50px;
+    font-weight: bold;
+}
+
+
+.form_wtd .validationAdvice.prompt {
+	background: transparent url(../../images/cn/validationPromptBG.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat scroll left center;
+	border: medium none;
+	color: #FFFFFF;
+	display: block;
+	font-weight: bold;
+	height: 30px;
+	line-height: 12px;
+	padding-left: 15px;
+	padding-top: 4px;
+	width: 200px;
+			float: right;
+			position: relative;
+}
+.form_wtd .validationAdvice {
+	background: transparent url(../../images/cn/validationFailedBG.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat scroll left center;
+	border: medium none;
+	color: #FFFFFF;
+	display: block;
+	font-weight: bold;
+	height: 30px;
+	line-height: 12px;
+	padding-left: 15px;
+	padding-top: 4px;
+	width: 200px;
+}
+.form_wtd .validationPassed {
+	background: url(../../images/cn/fieldPassed.gif?ver=e29378bd396e2061fed90c753cdbe984) left 6px no-repeat;
+	display: block;
+	position: relative;
+	width: 26px;
+	height: 34px;
+}
+
+.form_wtd td.error input {
+	border:1px solid red;
+	padding:3px;
+}
+
+.depTransfer table.tableData {
+	padding-bottom: 30px;
+}
+
+/* Reverse Withdrawals heading column width */
+table .rev_wtd_table_heading_time {
+	width:160px;
+}
+
+table .rev_wtd_table_heading_mtd {
+	width:428px;
+}
+
+table .rev_wtd_table_heading_amt {
+	width:150px;
+}
+
+table .rev_wtd_table_heading_until {
+	width:160px;
+}
+
+
+/*    IE 6 HACKS    */
+* html .regAccContent li {zoom: 1;}
+* html li.error input { height: 15px; padding-bottom:4px;}
+* html li.error .validationAdvice { padding-top:9px; padding-bottom:10px; line-height: 16px;}
+* html .regAccContent .form_wtd .tablePayments td.error {
+	border: none;
+	border-bottom: 1px solid black;
+	padding: 9px 0 12px 8px;
+	width: auto;
+}
+* html #form_wtd div.btnHolder {
+	padding: 30px 0 0 219px;
+}
+/********************/
+
+.regAccContent .transferMsgHolder {
+	font-size: 18px;
+	padding-right: 46px;
+}
+
+span.mthdExp {
+	float: right;
+	margin-right: 10px;
+	width: 300px;
+	font-size: 1.1em;
+	text-align: center;
+}
+
+td.optional_msg {
+	padding-left: 0!important;
+	width: 245px;
+}
+
+.cpmRow .form_cc div#scheme_msg {
+	display: none;
+}
+
+.casinoWarningText {
+	color:black;
+	font-size:1.2em;
+	font-weight:bold;
+	margin-top: 0px;
+	position: relative;
+	top:18px;
+	margin-top: 3px;
+	height: 50%;
+	line-height: 1.4em;
+}
+
+#warningBtnHolder {
+	margin: 10px;
+}
+
+.wide {
+	width:142px;
+}
+
+.errorWideBtn      {
+	font-size:1.0em;
+	padding-top:2px;
+	font-weight:bold;
+}
+
+div.whdialog {
+	top: -58px;
+	padding:20px 40px;
+	position: absolute;
+	z-index:5001;
+	margin: 29px 101px;
+	display:none;
+	width: 390px;
+
+}
+
+div.whdialog div.top {
+	background: url('../../images/cn/whdialog_top.png?ver=e29378bd396e2061fed90c753cdbe984') no-repeat;
+	width: 390px;
+	height:8px;
+	overflow: hidden;
+}
+
+div.whdialog div.main {
+	background: url('../../images/cn/whdailog_main.png?ver=e29378bd396e2061fed90c753cdbe984') 0 bottom  no-repeat;
+	width: 390px;
+	padding:0 0 20px;
+
+}
+div.whdialog div.main div {
+	margin: 0 15px 0 15px;
+	font-size: 12px;
+	line-height: 16px;
+}
+div.whdialog div.main div div.title {
+	padding: 10px 30px 10px 0;
+	margin: 0px -14px 0px 0px;
+	font-size: 18px;
+}
+div.whdialog div.main div div.warning {
+	background: url('../../images/cn/whdialog_warn.gif?ver=e29378bd396e2061fed90c753cdbe984') right 0 no-repeat;
+}
+div.whdialog div.main div div.title strong {
+	color: red;
+}
+div.whdialog div.main div p {
+	margin: 5px 0 10px 0;
+}
+div.whdialog div.main div a {
+	color: #377ff6 !important;
+}
+
+div.whdialog div.main div a.ok {
+	background: url('../../images/cn/whdialog_btn_ok.gif?ver=e29378bd396e2061fed90c753cdbe984') no-repeat;
+}
+div.whdialog div.main div a.cancel {
+	background: url('../../images/cn/whdialog_btn_cancel.gif?ver=e29378bd396e2061fed90c753cdbe984') no-repeat;
+}
+div.whdialog div.main div a.button {
+	color: black !important;
+	text-decoration: none;
+	height: 28px;
+	display: block;
+	float: left;
+	margin: 0 20px 0 0;
+}
+div.whdialog div.main div a.button:hover {
+	color: #555;
+}
+div.whdialog div.main div a.button span {
+	background: url('../../images/cn/whdialog_btn_span.gif?ver=e29378bd396e2061fed90c753cdbe984') right 0 no-repeat;
+	padding: 6px 13px 6px 5px;
+	display: block;
+	float: left;
+	margin-left: 26px;
+}
+

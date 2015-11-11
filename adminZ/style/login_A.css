@@ -1,0 +1,162 @@
+html
+{
+	width: 100%;
+}
+BODY
+{
+	left: 0px;
+	background-image: url(../imagesLoginA/2004/index_bg.gif);
+	margin: 0px;
+	clip: rect(0px auto auto auto);
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0px;
+	text-align: center;
+	width: 100%;
+}
+
+.form
+{
+	width: 812px;
+
+	padding-top: 30px;
+}
+
+.divtop
+{
+	width: 812px;
+	height: 95px;
+	background-image: url(../imagesLoginA/login_r2_c1.jpg);
+
+}
+.lang
+{
+	width: 100%;
+	height: 26px;
+}
+.link
+{
+	background-image: url(../imagesLoginA/2004/index_top2.gif);
+	background-repeat: repeat-x;
+	text-align: left;
+	height: 26px;
+}
+.link img
+{
+
+	display: block;
+	float: left;
+}
+
+
+.main_bg
+{
+	
+	width: 100%;
+	background-repeat: repeat-x;
+}
+.main
+{
+	background-position: left top;
+	padding-left: 32px;
+	background-image: url(../imagesLoginA/2004/index_logo.gif);
+	margin-bottom: 100px;
+	width: 100%;
+	padding-top: 0px;
+
+	background-repeat: no-repeat;
+	height: 155px;
+}
+.main H1
+{
+	background-position: left 50%;
+	padding-left: 20px;
+	font-weight: normal;
+	font-size: 12px;
+	background-image: url(../imagesLoginA/2004/arrow_0.gif);
+	margin: 0px;
+	color: #ffffff;
+	background-repeat: no-repeat;
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.main H2
+{
+	background-position: left 15px;
+	padding-left: 20px;
+	font-weight: normal;
+	font-size: 12px;
+	background-image: url(../imagesLoginA/2004/index_login.gif);
+	margin: 0px;
+	color: #ffffff;
+	background-repeat: no-repeat;
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+}
+H3 {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; MARGIN: 0px; COLOR: #ffffff; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.main P
+{
+	background-position: left 10px;
+	padding-left: 20px;
+	font-size: 12px;
+	background-image: url(../imagesLoginA/2004/arrow_4.gif);
+	margin: 0px;
+	color: #ffffff;
+	padding-top: 2px;
+	background-repeat: no-repeat;
+	font-family: Arial, Helvetica, sans-serif;
+}
+P INPUT {
+	FONT-SIZE: 12px; WIDTH: 80px; FONT-FAMILY: Arial; HEIGHT: 20px
+}
+.login {
+	MARGIN-LEFT: 15px
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+
+
+.code
+{
+	border-right: #03374e 2px outset;
+	padding-right: 5px;
+	border-top: #06c1fe 2px outset;
+	margin-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	border-left: #05b1fe 2px outset;
+	width: 350px;
+	padding-top: 5px;
+	border-bottom: #095e84 2px outset;
+	background-color: #0579ac;
+	text-align: left;
+}
+.number
+{
+	font-weight: bold;
+	font-size: 16px;
+	color: #0000ff;
+	text-align: center;
+}
+.font_1
+{
+	
+	font-size: 12px;
+	color: white;
+	text-decoration: none;
+	
+}
+
+.login_font_6
+{
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+.login_font_6:hover {
+	font-size: 12px;
+	color: #FFCC00;
+	text-decoration: none;
+}

@@ -1,0 +1,2512 @@
+/*-----------------------------------TEXT HEADER STYLES-------------------------------*/
+/*
+	$Id: mainLayout.css,v 1.66 2010-03-30 11:32:55 ptagliaf Exp $
+	Copyright (c) 2008 Orbis Technology Ltd. All rights reserved.
+
+	Main Layout CSS
+*/
+
+
+.headLeft{display: block; float: left}
+.headRight{display: block; float: right; padding-top: 10px}
+
+caption .textSmall input.radio{display: inline; padding: 0; margin: 0;  float: none; clear: none; width: 14px; height: 16px}
+
+.subHead {
+	font-size: 0.65em;
+	display: block;
+	background: none;
+	margin: -3px 0 0 -3px;
+	padding: 2px 0 0px 6px;
+	height: 18px;
+	color: #000;
+	width: 640px;
+	letter-spacing: 0;
+}
+
+.tableData.tableLive .subHead{border-bottom: 1px solid #004470;  background:#001c30}
+
+.subHeadLeft{
+	float: left;
+	display: block;
+	padding-top: 2px
+}
+.subHead .highlight{color: #ccff00}
+.highlight{color:#ccff00}
+
+.subHeadRight{
+	float: right;
+	display: block;
+	padding: 2px 0 0 0;
+	height: 20px;
+}
+.subHead .betType{
+	font-size: 9px;
+	width: 125px;
+	height: 17px;
+	padding: 0;
+	margin-top: -1px;
+}
+.subHead label{padding-top: 1px;}
+
+.subHead a img{
+	padding: 0;
+	margin-top: 2px;
+	float: left;
+}
+.subHead a{
+	float: left;
+	padding-left: 3px;
+	color: #000;
+}
+.subHead input{
+	width: 15px;
+	height: 15px;
+	border: none;
+	margin-top: 0;
+	float: left;
+}
+.subHead label{
+	padding-left: 3px;
+	float: left
+}
+
+
+/*------------------------ELEMENTS-------------------------*/
+
+a.iconTV{display: block; margin: -8px 0 0 7px}
+a.iconStats{display: block; margin-top: -8px}
+
+
+.floatContainer {height: 1%;}
+.dataSpacerBlock {
+	border: none;
+	height: 227px;
+	margin: 5px 0 5px 0;
+	background: #000;
+	width: 646px;
+	overflow: hidden;
+}
+.dataSpacerBlockSmall {
+	border: none;
+	height: 100px;
+	margin: 31px 0 16px 0;
+	background: #CCC;
+}
+.dataSpacerBlockHome {
+	border: 1px solid #000;
+	height: 160px;
+	margin: 10px 0 16px 0;
+}
+.dataSelectionBlock{
+	width: 646px;
+	margin: 10px 0 0 10px;
+	background: #074e81 url(../../images/cn/lineWhite.gif?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;
+}
+.dataSelected{
+	width: 420px;
+	float: left;
+	color: #000;
+	font-size: 1.1em;
+	padding: 5px;
+}
+#contentA .dataSelected h3{font-size: 1.4em; margin-left: 0}
+
+.dataSelectedType1, .dataSelectedType2, .dataSelectedType3{
+	background: #FFF; height: 167px; padding: 15px 0 0 0;
+}
+.dataSelectedType1 div, .dataSelectedType3 div{
+	overflow:auto; height: 120px; width: 400px
+}
+.dataSelectedType2 div{
+	height: 130px; width: 400px; display: inline;
+}
+.dataSelectedType2 .videoBlock{
+	width: 150px; height: 90px; background: #ccc; margin-left: 20px; float: left; display: inline
+}
+.dataSelectedType2 .videoText{
+	float: left; margin-left: 10px; width: 210px; border: 1px solid #e4e4e4; height: 90px; overflow: auto; padding-left: 6px;
+}
+.dataSelectedType1 div p, .dataSelectedType2 div p, .dataSelectedType3 div p{
+	margin-top: 0;
+}
+.dataSelectedType1 p, .dataSelectedType2 p, .dataSelectedType3 p{
+	margin-top: 10px;
+}
+.dataSelected h3, .dataSelected p{
+	padding: 0 10px 0 20px;
+}
+.dataSelected p{
+	font-size: 1em;
+	line-height: 16px;
+}
+.dataSelect{
+	float: right;
+	background: #FFF;
+	width: 216px;
+	height: 192px;
+}
+.dataSelect a{
+	height: 40px;
+	border-bottom: 1px solid #fff;
+	font-size: 1.1em;
+	padding: 15px 0 8px 20px;
+	background: #08355f;
+	color: #FFF;
+	font-weight: bold;
+	line-height: 15px;
+	border-left: 1px solid #FFF;
+	display: block;
+	text-decoration: none;
+}
+.dataSelect a.dataLinkOn{
+	background: #074e81;
+	border-left: 1px solid #074e81;
+}
+.dataSelect a.dataLinkOff{
+	background: #08355f;
+	border-left: 1px solid #FFF;
+}
+
+.dataSelect a span{
+	color: #d2c881
+}
+
+/*-------------------------------------MEDIA SELECTOR---------------------------*/
+
+.mediaSelectionBlock{
+	border: 3px solid #08355f;
+	padding: 4px;
+	margin: 13px 0 10px 0;
+}
+
+.mediaSelectionBlock .subHead {
+	width: 621px;
+	margin: 5px 0 0 0;
+	font-size: 1em;
+}
+
+ul.mediaParent{
+	position: relative;
+	height: 192px;
+	background: red url(../../images/cn/mediaSelectionBlockBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) top repeat-x;
+	padding: 0 0 0 1px;
+	margin: 0;
+}
+
+ul.mediaParent li {
+	float: left;
+	width: 210px;
+	clear: none;
+	height: 50px;
+	padding: 0;
+}
+
+ul.mediaChild {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 640px;
+	background: none;
+	height: 157px;
+	font-size: 1.1em;
+	padding: 3px 5px 5px 2px;
+	margin: 0;
+}
+
+.homeContentBlock ul.mediaChild li.rpVerdict{background: url(../../images/cn/rpVerdictImg.jpg?ver=e29378bd396e2061fed90c753cdbe984) top right no-repeat;}
+
+#contentA ul.mediaChild li{
+	display: block;
+	width: 623px;
+	clear: both;
+	border: none;
+	padding-right: 7px;
+	background: #e3f2f9 url(../../images/cn/homeContentBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;
+	height: 137px
+}
+
+#contentA ul.mediaChild li.grBlock1{background: url(../../images/cn/grBlockBestOdds.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat}
+#contentA ul.mediaChild li.grBlock2{background: url(../../images/cn/grBlockForm.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat}
+
+
+#contentA ul.mediaChild li.hrBlock1{background: url(../../images/cn/rpVerdictBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat}
+#contentA ul.mediaChild li.hrBlock2{background: url(../../images/cn/hrBlockRacingTv.jpg?ver=e29378bd396e2061fed90c753cdbe984) right top no-repeat}
+
+
+
+#contentA ul.mediaChild li.hrBlock1 h3{background: url(../../images/cn/rpLogoVerdict.jpg?ver=e29378bd396e2061fed90c753cdbe984) 14px 10px no-repeat; padding-left: 130px}
+
+a.mediaTab{
+	background: url(../../images/cn/mediaBlockTab.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom no-repeat;
+	display: block;
+	width: 210px;
+	height: 40px;
+	margin: 0;
+	text-decoration: none;
+	font-size: 1.4em;
+	color: #FFF;
+	padding-top: 10px;
+	text-align: center;
+}
+a.mediaTab:hover{text-decoration: underline}
+
+a.mediaTab.selected{background: url(../../images/cn/mediaBlockTabSelected.jpg?ver=e29378bd396e2061fed90c753cdbe984) top no-repeat; color: #000; padding-top: 14px;}
+
+a.mediaTab span{display:block; margin: 0}
+a.mediaTab.selected span{margin-top: 0px}
+
+a.mediaTab span#racingPost{background: url(../../images/cn/rpLogo.jpg?ver=e29378bd396e2061fed90c753cdbe984) left -67px no-repeat; margin-left: 28px; padding-left: 75px}
+a.mediaTab.selected span#racingPost{background:url(../../images/cn/rpLogo.jpg?ver=e29378bd396e2061fed90c753cdbe984) left 1px no-repeat;}
+
+a.mediaTab span#racingTV{background: url(../../images/cn/racingTVLogo.jpg?ver=e29378bd396e2061fed90c753cdbe984) center 1px no-repeat; text-indent: -2000px; height: 24px; margin-top: -5px; cursor: pointer}
+a.mediaTab.selected span#racingTV{background:url(../../images/cn/racingTVLogo.jpg?ver=e29378bd396e2061fed90c753cdbe984) center 1px no-repeat;}
+
+a.mediaTab span#radio{background: url(../../images/cn/radioLogo.jpg?ver=e29378bd396e2061fed90c753cdbe984) center 1px no-repeat; text-indent: -2000px; height: 24px; margin-top: -5px; cursor: pointer}
+a.mediaTab.selected span#radio{background:url(../../images/cn/radioLogo.jpg?ver=e29378bd396e2061fed90c753cdbe984) center 1px no-repeat;}
+
+ul.mediaChild .mediaContent{border: 1px solid #e4e4e4; height: 110px; overflow: auto; width: 415px; float: left; }
+
+ul.mediaChild .mediaContent p{width: 370px;}
+
+.homeContentBlock ul li ul.mediaChild li a{color: #000; font-weight: normal; display: inline; text-decoration: underline}
+.homeContentBlock ul li ul.mediaChild li a:hover{text-decoration: none;}
+
+ul.mediaChild .mediaContent.radio{border: none; height: 145px; width: 625px; float: left; overflow: auto; margin-left: -2px; background: url(../../images/cn/mediaContentBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; padding: 0}
+
+#contentA ul.mediaChild .mediaContent ul{background: none; position: static; margin: -10px 0 0 5px}
+#contentA ul.mediaChild .mediaContent.radio ul{margin-left: 5px; width: 185px; display: block; position: static; padding: 12px 0 0 0; background: none}
+#contentA ul.mediaChild .mediaContent.radio ul li{padding-bottom: 3px; height: 1%;}
+
+#contentA ul.mediaChild .mediaContent h3{font-size: 1.4em; padding: 8px 0 6px 15px; margin: 0; letter-spacing: 0; font-weight: bold}
+
+ul.mediaChild .mediaContent.radio .mediaRadioBlock1{width: 200px; border-right: 1px solid #002131; float: left; height:137px; padding: 0}
+ul.mediaChild .mediaContent.radio .mediaRadioBlock1 p{width: 200px;  height: 90px; padding: 0;}
+ul.mediaChild .mediaContent.radio .mediaRadioBlock2{float: left; padding-left: 10px; width: 208px; height: 137px; border-right: 1px solid #002131;}
+
+ul.mediaChild .mediaContent.radio .mediaRadioBlock2 p{width: 203px; height: 90px}
+
+ul.mediaChild .mediaContent.radio .mediaRadioBlock3{float: left; margin-left: 10px; width: 190px; height: 130px; border-right: none;}
+
+ul.mediaChild .mediaContent.radio .mediaRadioBlock3 p{width: 190px; height: 90px}
+
+ul.mediaChild .mediaContent.radio .mediaRadioBlock3 ul{height: 90px}
+
+ul.mediaChild .mediaContent.radio .editorialLink{margin-left: 5px}
+
+
+ul.mediaChild .mediaContentImgPanel {float: right; width: 203px; height: 112px; text-align: right; margin-right: 3px}
+
+#contentA ul.mediaChild li h4{margin:0 0 0 5px; padding: 0; font-size: 1.2em;}
+#contentA ul.mediaChild li p{float: left; padding: 0px 0 15px 15px;}
+
+#contentA ul.mediaChild .mediaContent.radio p{float: left; padding: 5px 0 0 5px;}
+
+#contentA ul.mediaChild li ul{list-style: square; display: block; margin-left: 25px; border: none; width: 350px; padding-top: 15px}
+#contentA ul.mediaChild li ul li{display: block; clear: none; float: left; background: url(../../images/cn/homeContentBullet.gif?ver=e29378bd396e2061fed90c753cdbe984) left 5px no-repeat; width: 150px; height: 1%; padding: 0 0 5px 10px}
+
+#contentA ul.mediaChild li ul.wide li{width: 350px;}
+
+#contentA ul#mediaSubLinks{clear: both; float: left}
+#contentA ul#mediaSubLinks li{display: inline; border: 1px solid red; width: 50px}
+#contentA ul#mediaSubLinks li a{display: inline;}
+
+
+
+.mediaIntro{float: left; width: 250px; padding-top: 5px; margin-right: 10px}
+ul.mediaChild li .mediaIntro p{width: 225px; margin: 0;}
+
+#contentA .mediaIntro h3{font-size: 1.2em; margin-left: 0;}
+
+
+/*----------------------------------------MEDIA VIRTUAL---------------------------------*/
+
+.mediaVirtual{border: 3px solid #002133; margin: 13px 0 28px 0; padding: 8px; height: 1%; overflow: auto; background: url(../../images/cn/mediaVirtualBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x}
+
+.mediaVirtual .mediaBlock{float: left; width: 424px; height: 237px; border: 1px solid #002131; background: #999}
+
+.mediaVirtual .mediaBlock p{text-align: center; padding-top: 110px; font-size: 1.2em}
+.mediaVirtual .mediaBlock p a{color: #FFF}
+
+.mediaVirtual.dogs .mediaBlock{width: 320px; height: 240px}
+
+.mediaVirtual .mediaBlock2{float: right; width: 190px;}
+.mediaVirtual .mediaBlock3{float: right; width: 190px;}
+
+.mediaVirtual.dogs .mediaBlock2{width: 294px}
+
+.mediaDetails{border: 1px solid #9bc8dd; background: url(../../images/cn/mediaVirtualBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x; height: 121px; padding: 10px;}
+
+.mediaDetails.dogs .mediaDetails{height: 124px}
+
+#contentA .mediaDetails h3{margin: 0; padding: 0; font-size: 1.6em; letter-spacing: 0}
+.mediaDetails ul{list-style: square; margin: 10px 0 0 15px; padding-left: 0px; font-size: 1.2em}
+.mediaDetails ul li{margin-left: 0; padding-left: 0}
+
+
+#contentA ul#listLinks{background: none;}
+#contentA ul#listLinks li{border: 1px solid #000; background: #FFF; font-size: 1.1em; height: 21px; padding: 5px 0 0 7px; margin-top: 4px}
+
+#contentA ul#listLinks li a{display: block; zoom: 1;}
+#contentA ul#listLinks li a:hover{text-decoration: none}
+#contentA ul#listLinks li.linkOn{background: url(../../images/cn/tableDataHeaderBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x}
+#contentA ul#listLinks li.linkOn a{color: #FFF}
+
+/*------------------------TEXT SIZES-----------------------*/
+
+a.iconTV:hover, a.iconStats:hover{background: white; color: #FFF}
+
+.textVSmall {font-size: x-small;}
+.textSmall {font-size: 1em;}
+caption .textSmall{
+	font-size: 0.6em;
+	padding-left: 6px;
+}
+caption .textSmallRight{
+	display: block;
+	text-align: right;
+	padding-right: 6px;
+	margin-bottom: 6px;
+	font-size: 0.4em;
+	letter-spacing: 0;
+}
+caption .textMedium{font-size: 0.7em; display: block; letter-spacing: 0}
+
+h1 .textSmall, h2 .textSmall {font-size: 0.45em; padding-left: 6px; letter-spacing: 0;}
+h3 .textSmall {font-size: 0.65em; padding-left: 6px; letter-spacing: 0;}
+h3 .textSmallRight{font-size: 0.65em; padding-left: 6px; letter-spacing: 0; float: right; display: block; position: absolute; right: 0; top: 17px}
+
+caption a.streaming{background: url(../../images/cn/tvIcon.gif?ver=e29378bd396e2061fed90c753cdbe984) right -4px no-repeat; padding-right: 28px}
+
+.textMedium {font-size: 1.1em;}
+.textNormal {font-size: 1.2em;}
+.textLarge {font-size: xx-large;}
+.textWhite {color: #FFF;}
+
+#contentA p.result{margin-left: 5px;}
+
+
+/*---------------------------INFO AREAS---------------------*/
+
+.infoBox {
+	margin: 10px 0 0 0;
+	padding: 20px;
+	border: 2px solid #074e81;
+	width: 602px;
+	font-size: 1.1em;
+}
+
+.infoBox.liveInfo{
+	border: 2px solid #7ddfff;
+	color: #FFF;
+}
+
+.infoBox.error{
+	border: 2px solid red;
+	width: 602px;
+	color: red;
+}
+
+/*-----------------------------------TABLE DATA---------------------------------------*/
+
+
+.tableData.tableLive{
+	background: #00355a;
+	color: #FFF;
+}
+
+.tableData.tableLeft{width: 318px; float: left; margin-right: 10px}
+.tableData.tableRight{width: 318px; float: left;}
+
+.tableData.tableLeft caption{width: 318px;}
+.tableData.tableRight caption{width: 318px}
+
+/*---TABLE DATA CAPTION---*/
+
+.tableData caption{
+	font-size: 14pt;
+	text-align: left;
+	padding: 0 0 2px 0;
+	color: #000;
+	font-weight: bold;
+	width: 646px;
+	margin: 0;
+	font-weight: 100;
+	letter-spacing: -1px;
+}
+
+
+
+.tableData caption .textSmall{
+	font-size: 0.65em;
+	padding-left: 6px;
+	letter-spacing: 0;
+}
+/*---TABLE DATA ROWS--*/
+.tableData tr.altRow{background: none;}
+
+.tableData tr.headDivide th {
+	border-top: 23px solid #FFF;
+	padding: 7px 0 7px 6px;
+	height: 1%;
+	border-left: none;
+	border-right: none;
+}
+
+.tableData tr.headDivide td{
+	padding-top: 8px;
+}
+
+/*---TABLE DATA COL STYLES---*/
+.tableData tr th span {
+	display: block;
+	text-align: center;
+	padding: 0;
+	width: 64px;
+	margin-left: -4px;
+}
+
+.tableData tr th.textCenter, .tableData tr td.textCenter{text-align: center}
+
+.tableData tr th.textRight, .tableData tr td.textRight{
+	text-align: right;
+	padding: 0 6px 0 0;
+}
+.tableData tr td.noPad{
+	padding-right: 0;
+	padding-left: 2px;
+}
+.tableData tr td.noBorderRight{
+	border-right: none;
+}
+.tableData tr.noBorderBottom td {
+	border-bottom: none;
+}
+.tableData ul {
+	padding: 4px 0;
+	line-height: 1.2em;
+	list-style: none;
+}
+.tableData .silk {margin: 0.2em 0 1.8em 0;}
+.tableData .silk img {display: block;}
+.tableData img{margin-top: 1px; padding-bottom: 1px}
+
+.tableData .rpRating, .tableData .rpRatingFav {
+	background: url(../../images/cn/rpCircle.jpg?ver=e29378bd396e2061fed90c753cdbe984) top  no-repeat;
+	height: 21px;
+	display: block;
+	padding: 8px 2px 1px 1px;
+	font-size: 0.9em;
+	width: 26px;
+	text-align: center;
+	letter-spacing: 0.1em;
+}
+.tableData .rpRatingFav {
+	background: url(../../images/cn/rpCircleFav.jpg?ver=e29378bd396e2061fed90c753cdbe984) top no-repeat;
+	color: #FFF;
+}
+
+.tableData tr th.priceHistory{
+	text-align: center;
+	padding: 0 12px 0 0;
+	color: #FFF;
+}
+
+.tableData .priceHistory{
+	text-align: center;
+	padding: 0 12px 0 0;
+	color: #666;
+}
+
+.tableData .priceHistory strong{color:#074e81}
+
+
+/*-----------------------------------TABLE LIVE TO BE REMOVED------------------------*/
+
+.tableData.tableLive a{text-decoration: none;}
+.tableData.tableLive a:hover{text-decoration: underline;}
+
+
+.tableData.tableLive .altRow{background: none;}
+
+.tableData.tableLive caption{color: #FFF;}
+.tableData.tableLive caption a{color: #7ddfff;}
+
+.tableData tr.liveRow{background: #000; color: #FFF}
+.tableData tr.liveRow td{border-right: 1px solid #999; border-bottom: 1px solid #999}
+.tableData tr.liveRow a{color: #FFF}
+
+.tableData.tableLive tr th{background: #000819; color: #FFF; border-right: none; border-bottom: 1px solid #000}
+
+.tableData.tableLive tr td{border-bottom: 2px solid #000; color: #FFF;  border-right: none; height: 20px; background: #001c30}
+
+/*--------------------------FLOATING TABLES--------------------------------*/
+
+
+.tableFloat3 .tableData.tableSearchResults tr th{padding-top: 0px; padding-bottom: 0px; margin: 0}
+.tableFloat3 .tableData.tableSearchResults tr td{padding-top: 0px; padding-bottom: 0px}
+
+/*.tableFloat1 .tableData tr th, .tableFloat2 .tableData tr th, .tableFloat3 .tableData tr th{
+	height: 5px;
+	margin: 0;
+}*/
+
+.tableFloat1 .tableData tr th a, .tableFloat2 .tableData tr th a, .tableFloat3 .tableData tr th a{color: #FFF}
+
+.tableFloatA{
+	width: 318px;
+	float: left;
+	margin: 5px 5px 0 0;
+	padding: 0 4px 0 0;
+	border-right: 1px solid #103b5b;
+}
+.tableFloatA .tableData{width: 318px; margin-left: 0;}
+
+.tableFloatB{
+	width: 318px;
+	float: left;
+	margin: 5px 0 0 0;
+	padding: 0;
+}
+
+.tableFloatB .tableData{width: 318px; margin-left: 0;}
+
+
+
+/*-------------------------------TABLE DATA WITH FORM----------------------------*/
+.tableForm tr td {
+	height: 23px;
+	border-bottom: 1px solid #7bbfff;
+}
+.tableForm ul {
+	padding: 3px 0;
+	line-height: 1.1em;
+	list-style: none;
+}
+
+.tableData.tableForm td{background: url(../../images/cn/spotlightBG.gif?ver=e29378bd396e2061fed90c753cdbe984) left 20px repeat-x;}
+
+.tableForm .spotlight{background: url(../../images/cn/spotlightBG.gif?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;}
+.tableForm .altRow.spotlight{background: url(../../images/cn/spotlightBG.gif?ver=e29378bd396e2061fed90c753cdbe984) top repeat-x;}
+
+
+.tableForm tr.noBorder td{
+	border-bottom: none;
+}
+
+.tableForm .spotlight td {
+	border-top: none;
+	border-bottom: 1px solid #7bbfff;
+	padding: 0 0 2px 0;
+	background: #f1fafd;
+}
+.tableForm .spotlight p {width: 540px; margin-top: 4px}
+
+.tableForm .spotlight span {
+	display: block;
+	padding: 4px 0 16px 0;
+}
+.selectionTitle{font-size: 1.3em; padding-bottom: 2px; font-weight: normal;}
+
+.selectionTitle.fav{padding: 1.5em 0}
+
+/*--------------------------------COLUMN WIDTHS-----------------------------------*/
+
+.priceCol {width:58px;}
+.priceCol2 {width:78px;}
+.priceColCS {width: 88px}
+.priceColQp {width: 85px}
+
+
+.moreCol2 {width: 52px;}
+.dateCol {width:110px}
+
+.tvCol {width: 12px; padding-top: 2px}
+.statsCol {width: 6px; padding-top: 2px; padding-right: 0; padding-left: 0;}
+
+
+.grTrap{width:28px}
+.grNext3{width: 160px}
+
+.tcMeeting{width: 220px;}
+.tcSelection{width: 135px;}
+
+.qpRace{width: 66px;}
+.qpSelection{width: 294px;}
+.qpSelection2{width: 314px;}
+
+.compsCol{width: 215px;}
+
+.SCastSelection {width: 188px;}
+
+.SCastPlayer { width: 138px;}
+.SCastScore { width: 142px;}
+
+.SCORTeam {width: 189px;}
+.SCORPlayer {width: 189px;}
+
+.OUESelection {width: 200px;}
+.OUETotal {width: 40px; text-align: right;}
+
+.YN1 {width: 253px;}
+.YN2 {width: 253px;}
+
+
+.WOSelection, .HTFTSelection {width: 576px}
+
+.HHSelection {width: 270px}
+
+.CSTeam {width: 174px;}
+.CSTeam2 {width: 174px;}
+.CSDraw {width: 70px;}
+
+.CSTeam2W {width: 253px;}
+.CSTeam2W2 {width: 253px;}
+
+.OUSelection {width: 277px}
+.OUTotal {width: 40px;}
+
+.HSelection {width: 303px}
+.HOutcome {width: 203px}
+.HSpread {width: 58px}
+
+.WMTMatch {width:210px}
+
+.HTFT {width: 543px;}
+
+.WOTrap {width: 28px;}
+.WONo {width: 18px;}
+.WORunner {width: 378px;}
+.WOPrevOdds {width:104px;}
+
+.WMTLSelection{width: 303px}
+.WMTLOutcome{width: 267px}
+
+.tableForm .WONo {width: 25px;}
+.tableForm .WODetails {width: 45px}
+.tableForm .WORunner {width: 242px}
+.tableForm .WORP {width: 64px;}
+.tableForm .WOPrevOdds {width:110px;}
+.tableForm .WOselection {width: 365px}
+.tableForm .WOPriceCol {width: 59px}
+
+.SCastInput { width: 132px ; font-size: 1em; height: 18px; margin: 1px 0 0 0; padding: 0}
+
+body.langCN .SCastInput, body.langZH .SCastInput {font-size: 1em}
+
+.tableData td span.oddsBtn{
+	display: block;
+	text-align: center;
+	padding-right: 6px;
+	color: #666;
+}
+
+.tableData td.ocSuspended, #scOcSuspended {
+	color: #666;
+}
+
+
+.BLDateCol {width: 14%}
+.BLEvent {width: 48%}
+.BLSport {width: 27%}
+.BLTVCol {width: 11%}
+
+/*
+.tableData td a.oddsBtn.btnA{background: #e5f6fd; margin: 2px 0 2px -4px;}
+.tableData td a.oddsBtn.btnB{background: #f5fbfe; margin: 2px 0 2px -4px;}
+
+
+.tableData.tableLive td a.oddsBtn{
+	background: #000819;
+	padding: 5px 6px 0 0;
+	text-decoration: none;
+	color: #7ddfff;
+	border: 2px solid #001c30;
+	border-right: none
+}
+
+.tableData.tableLive .altRow td a.oddsBtn{background: none;}*/
+
+
+
+
+/*.tableData.tableLive td a.oddsBtn:hover {
+	background: url(../../images/cn/oddsBtnLiveBG.gif?ver=e29378bd396e2061fed90c753cdbe984) left center repeat-x;
+	text-decoration: none;
+	color: #FFF;
+}*/
+
+/*----------------------------Matrix Navigation -------------*/
+
+.matrixContainer{ padding: 9px 5px 15px 0px; position: relative}
+
+#contentA .matrixContainer h3{
+	margin: 0 -5px 3px 0px;
+	padding: 0 0 5px 11px;
+	border-bottom: 3px solid #4cadd2;
+}
+
+#USRacingAllRaces {
+ 	position:relative;
+}
+
+#USRacingAllRaces .textSmallRight {
+	top: 5px;
+}
+
+ul.matrix li{
+	clear: none;
+	width: 204px;
+	float: left;
+	font-size: 1.1em;
+	color: #FFF;
+	margin: 0 5px 5px 0;
+	background: #01253d;
+	padding: 0;
+}
+
+ul.matrix li a{
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding: 5px 6px 7px 10px;
+	border: 1px solid #7ddfff;
+}
+
+ul.matrix li a:hover{color: #FFF; border: 1px solid #FFF }
+
+#contentA .matrixContainer h2{font-size: 1.7em; margin-left: 0; padding: 10px 0 0 0}
+
+.matrixA, .matrixB, .matrixC {font-size: 1.1em; padding-top: 0.2em;}
+
+.matrixA.toteBetting{padding-top: 0; margin-top: -2px;}
+
+.matrixA .altRow, .matrixB .altRow, .matrixC .altRow{background: #FFF; background: #e2f2f9 url(../../images/cn/moreMarketsAltRow.jpg?ver=e29378bd396e2061fed90c753cdbe984) top repeat-x; border: 1px solid #cce8f5; padding-left: 0; padding-bottom: 2px}
+
+#contentA .matrixContainer .matrixA{margin-left: 0}
+
+#contentA .matrixB h3 {
+	font-size: 1.1em;
+	padding: 5px 0 0 6px;
+	letter-spacing: 0;
+	font-weight: bold;
+}
+
+.matrixA a, .matrixB a, .matrixC a {padding-bottom: 0.1em;}
+
+.matrixB h3 a{display: block; width: 160px;}
+
+.matrixA li, .matrixB li, .matrixC li {
+	width: 643px;
+	list-style: none;
+	clear: both;
+	height: 1%;
+	border-bottom: none;
+	padding:0 0 0 1px;
+	margin-bottom: 0px;
+	position: relative;
+}
+
+.matrixA.toteBetting li{background: none; border: none; border-bottom: 1px dotted #4badd2; padding-bottom: 20px}
+
+.matrixA.poolBetting li{width: 810px}
+
+.matrixA.toteBetting li{width: 890px; padding-bottom: 10px; padding-top: 1px}
+
+.matrixA.toteBetting li.indent{width: 870px; margin-left: 10px}
+
+
+.matrixB{margin-top: 13px}
+
+.matrixA li.headerRow{background: #013855 url(../../images/cn/tableDataHeaderBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x; color: #FFF; border: 1px solid #0d577d; padding-left: 0; padding-bottom: 3px; margin-bottom: 5px;}
+
+.matrixA.toteBetting li.headerRow{border: none; border-bottom: 1px solid #85cce8; background: #ddeef5 url(../../images/cn/toteThBg.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x; padding: 0 0 0 1px; margin-bottom: 0}
+
+
+.matrixB li.headerRow{background: #013855 url(../../images/cn/tableDataHeaderBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x; color: #FFF; border: 1px solid #0d577d; padding-left: 0; margin-bottom: 5px; height: 26px;}
+
+.matrixA li.headerRow a{color: #fff}
+.matrixA.toteBetting li.headerRow a{color: #000}
+
+.matrixB li.headerRow a{color: #fff; text-decoration: none}
+
+#contentA .matrixB li.headerRow h3 {padding-top: 5px; padding-bottom: 4px; font-weight: bold; font-size: 1.1em}
+
+
+.matrixCondensed li {padding-bottom: 3px; margin-bottom: 0px;}
+.matrixA .lastLiRow, .matrixB .lastLiRow, .matrixC .lastLiRow {border-bottom: 2px solid #CCC;}
+.matrixA .lastLiRowNoBorder {border-bottom: none;}
+.matrixCondensed .lastLiRow {border-bottom: none; padding-bottom: 19px;}
+.matrixA li h4 {
+	padding: 6px 0 4px 10px;
+	font-size: 1.1em;
+	height: 1%
+}
+.matrixA li.headerRow h4 {
+	padding: 5px 0 4px 10px;
+	font-size: 1.1em;
+	height: 1%
+}
+
+.matrixContainer.toteRaceType .matrixA.toteBetting li h4 {padding: 20px 0 4px 10px;}
+
+span.toteVideo{position: absolute; top: 29px; right: 10px; font-weight: normal; font-size: 0.9em; background:url(../../images/cn/toteVideoIcon.jpg?ver=e29378bd396e2061fed90c753cdbe984) left 1px no-repeat; padding-left: 16px}
+
+.matrixContainer.toteRaceType .matrixA.toteBetting li.indent h4 {padding: 18px 0 4px 0px;}
+
+.matrixA li.headerRow h4,.matrixContainer.toteRaceType .matrixA li.headerRow h4 {
+	padding: 2px 0 4px 10px;
+	font-size: 1.0em;
+	height: 1%
+}
+
+
+.matrixA.toteBetting li.headerRow h4{padding-top: 2px; margin: 0; font-size: 1em}
+.matrixA.toteBetting li.headerRow h4 a{text-decoration: none}
+
+
+.matrixA.toteBetting li.headerRow ul {padding: 3px 0 0px 0;}
+
+
+.matrixContainer.toteRaceType .matrixA.toteBetting li.headerRow ul {padding-top: 6px; margin-top: -2.4em}
+
+#contentA .matrixA.toteBetting li.headerRow ul li a{border: none; padding: 0; text-decoration: none}
+
+.matrixA ul, .matrixB ul, .matrixC ul {
+	width: 405px;
+	display: block;
+	margin: 0 0 2px 180px;
+	z-index: 1;
+	padding: 0px;
+}
+
+.matrixA.poolBetting ul{
+	margin-left: 180px;
+	width: 605px;
+}
+
+.matrixA.toteBetting ul{
+	margin-left: 230px;
+	width: 700px;
+}
+
+
+.matrixA ul {margin-top: -2em; height: 1%; overflow: auto; padding: 0}
+
+.matrixContainer.toteRaceType h3{width: 880px}
+
+#contentA .matrixContainer.toteRaceType.border{border: none}
+
+#contentA .matrixContainer.toteRaceType.border h3{border-bottom: none; margin-bottom: 0}
+
+#contentA .matrixContainer.toteRaceType.border .matrixBorder {border: 3px solid #4cadd2; margin-left: -2px; width: 893px; padding-top: 1px}
+
+#contentA .matrixContainer.toteRaceType.border .matrixA.toteBetting{padding-left: 1px; padding-top: 2px}
+
+.matrixContainer.toteRaceType .matrixA ul{margin-top: -3.3em; margin-left: 150px; margin-bottom: 0}
+
+.matrixB ul{margin-top: -2.3em; width: 465px; height: 1%; overflow: auto}
+
+.matrixA li.headerRow ul{margin-top: -2.1em; height: 20px; overflow: visible;}
+.matrixA li.headerRow ul li{font-size: 1.1em; font-weight: bold; color: #FFF; }
+
+.matrixA li.headerRow ul li a{text-align: left}
+
+#contentA .matrixA.poolBetting li.headerRow ul li a{color: #FFF; text-align: left}
+
+.matrixA li.headerRow ul.QPLink{margin-top: -22px;}
+
+.matrixA.poolBetting li.headerRow ul.QPLink{margin-left: 220px}
+
+.matrixA li.headerRow ul.QPLink a{text-decoration: none}
+
+.matrixB li.headerRow ul{margin-top: -2.8em;}
+.matrixB li.headerRow ul li{font-size: 1.1em; font-weight: bold}
+
+
+.matrixB.results ul{margin-top: -2.5em; width: 450px;}
+.matrixA ul li, .matrixB ul li, .matrixC ul li{position: static;}
+.matrixCondensed ul {margin-top: -1.2em;}
+
+.matrixC ul {
+	width: 250px;
+	margin-bottom: 0.5em;
+}
+.matrixA li ul li, .matrixB li ul li {
+	clear: none;
+	display: inline;
+	border: none;
+	padding: 0;
+}
+.matrixA li ul li a{
+	padding: 0px 6px 0 6px;
+}
+.matrixA li.altRow ul li a{background: none; }
+
+.matrixA li ul li a{
+	display: block;
+	width: 50px;
+	float: left;
+	padding: 2px 7px 5px 1px ;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-right: 4px;
+	text-align: right
+}
+
+
+#contentA .matrixA.toteBetting li ul li, #contentA .matrixA.toteBetting.border li ul li{padding: 13px 0 0 0; display: block; width: 45px; text-align: center; border-bottom: none; float: left; }
+
+#contentA .matrixA.toteBetting li.headerRow ul li, #contentA .matrixA.toteBetting.border li.headerRow ul li{padding: 0; margin: 0; font-size: 1em}
+
+#contentA .matrixA.poolBetting li ul li a{width: 95px; text-align: right}
+#contentA .matrixA.toteBetting li ul li a, #contentA .matrixA.toteBetting.border li ul li a{width: 40px; text-align: center; border: 1px solid #65c1ea; padding: 1px 0 3px 0; float: none}
+
+
+
+
+#contentA .matrixA.toteBetting li ul li a span, #contentA .matrixA.toteBetting.border li ul li a span{padding: 0 4px}
+
+#contentA .matrixA.toteBetting li.group2 ul li, #contentA .matrixA.toteBetting.border li.group2 ul li{width: 85px; margin-right: 3px}
+#contentA .matrixA.toteBetting li.group2 ul li a, #contentA .matrixA.toteBetting.border li.group2 ul li a{width: 83px}
+
+
+
+
+#contentA .matrixA.toteBetting li.group3 ul li{width: 119px; margin-right: 3px}
+#contentA .matrixA.toteBetting li.group3 ul li a{width: 117px}
+
+
+#contentA .matrixA.toteBetting li.group4 ul li{width: 154px; margin-right: 3px}
+#contentA .matrixA.toteBetting li.group4 ul li a{width: 152px}
+
+#contentA .matrixA.toteBetting li.group5 ul li{width: 188px; margin-right: 3px}
+#contentA .matrixA.toteBetting li.group5 ul li a{width: 186px}
+
+#contentA .matrixA.toteBetting li.group6 ul li{width: 225px; margin-right: 3px;}
+#contentA .matrixA.toteBetting li.group6 ul li a{width: 223px}
+
+#contentA .matrixA.toteBetting li.groupMultiple ul li{width: auto; margin-right: 3px}
+#contentA .matrixA.toteBetting li.groupMultiple ul li a{width: auto; }
+#contentA .matrixA.toteBetting li.groupMultiple ul li a{padding-left: 8px; padding-right:8px}
+
+
+#contentA .matrixA.toteBetting li ul li.toteResult{background: url(../../images/cn/toteResult.jpg?ver=e29378bd396e2061fed90c753cdbe984) center top no-repeat}
+#contentA .matrixA.toteBetting li ul li.toteResult a{border: 1px solid #000}
+#contentA .matrixA.toteBetting li ul li.toteOnNow a{border: 1px solid #8cb924; padding-top: 1px; background: #e5f1cd}
+
+
+
+
+#contentA .matrixA li ul li a.eventResult{border: 1px solid #65c1ea; padding: 1px 6px 3px 0; background: url(../../images/cn/eventResult.gif?ver=e29378bd396e2061fed90c753cdbe984) 3px 2px no-repeat}
+#contentA .matrixA li ul li a.eventLive{border: 1px solid #8cb924; padding: 1px 6px 3px 0; background: #e5f1cd}
+#contentA .matrixA li ul li a.eventSuspend{padding: 2px 7px 4px 1; background: #FFF; text-decoration: none; text-decoration:line-through; color: #666}
+
+#contentA .matrixA li ul li a.eventPriced{border: 1px solid #58A6D6; padding: 1px 6px 3px 0; background: #B5DDF5}
+.matrixContainer h3 .priceKey{position: absolute; right: 0; font-size:0.6em; margin-top: 5px}
+.matrixContainer h3 .eventLive{border: 1px solid #8cb924; padding: 2px 15px 3px 15px; background: #e5f1cd; display: inline-block}
+.matrixContainer h3 .eventPriced{border: 1px solid #58A6D6; padding: 2px 15px 3px 15px; background: #B5DDF5; display: inline-block}
+.matrixContainer h3 .eventResult{border: 1px solid #65c1ea; padding: 2px 15px 3px 20px; background: #ffffff url(../../images/cn/eventResult.gif?ver=e29378bd396e2061fed90c753cdbe984) 3px 2px no-repeat; display: inline-block}
+.matrixContainer h3 .eventVideo{border: 1px solid #65c1ea; padding: 2px 15px 3px 24px; background: #ffffff url(../../images/cn/streamingReplay.gif?ver=e29378bd396e2061fed90c753cdbe984) 3px 2px no-repeat; display: inline-block}
+
+
+
+.matrixB li ul li a, .matrixB li ul li span {
+	display: block;
+	width: 42px;
+	float: left;
+	padding-top: 1px;
+	padding-bottom: 4px;
+}
+
+.matrixA h4 a {display: block;}
+
+.matrixA h4.streaming{background: url(../../images/cn/tvIcon.gif?ver=e29378bd396e2061fed90c753cdbe984) 150px 2px no-repeat;}
+
+.matrixA h4.streaming a{width: 170px;}
+
+.matrixA h4 .toteEvLink {padding-top: 2px;}
+
+.matrixA li ul.toteAvail {margin-top: -3.5em; margin-bottom: 1em;}
+
+.matrixA.poolBetting li ul li a{
+	width: 60px;
+}
+
+
+
+
+.matrixB li ul li a {width: 225px; padding: 6px 0 6px 6px;}
+.matrixB.results li ul li a {width: 180px; padding: 6px 0 6px 6px;}
+.matrixA .altRow ul li a{background: #e5f6fd;}
+.matrixB .altRow ul li a{background: none;}
+.matrixA .QPLink {
+	position: absolute;
+	top: 24px;
+	right: 0;
+	width: 80px;
+	border: none;
+	height: 20px;
+	overflow: visible;
+	text-align: left
+}
+
+#contentA .matrixA.poolBetting .QPLink{width: 125px; left: 505px;}
+#contentA .matrixA.toteBetting .QPLink{width: 165px; left: -218px; top: 46px;}
+
+
+.matrixCondensed .QPLink {top: 18px;}
+.matrixA .QPLink li {width: 60px;}
+.matrixA li ul.QPLink li a {
+	width: 70px;
+	background: none;
+	border: none;
+	text-align: left;
+}
+
+#contentA .matrixA.toteBetting li ul.QPLink li{text-align: left; width: 260px; padding-top: 0}
+#contentA .matrixA.toteBetting li ul.QPLink li a { text-align: left; border: none; display: inline; float: none;}
+
+
+.matrixC ul ul {width: 250px; margin-left: 250px;}
+.matrixC ul li, .matrixC ul ul li {
+	width: 250px;
+	padding:0;
+	border: none;
+	margin: 0;
+}
+.colLink a {background: blue; color: red;}
+
+.matrixB .altRow{background: #fcfeff url(../../images/cn/moreMarketsAltRow.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;}
+
+
+ul.matrixPool{
+	margin-left: 2px;
+	overflow: visible;
+	height: 1%;
+	background: #e8f5fb url(../../images/cn/matrixPoolBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;
+}
+
+ul.matrixPool li{
+	clear: none;
+	float: left;
+	width: 127px;
+	font-size: 1.1em;
+	padding: 7px 0 8px 8px;
+	border-bottom: 1px solid #7bbfff;
+}
+
+ul.matrixPool.medium li{width: 262px}
+
+
+
+ul.matrixPool li.headerRow{
+background: #013855 url(../../images/cn/tableDataHeaderBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x; color: #FFF; padding:  6px 0 6px 8px; margin-bottom: 0px; clear: both; display: block; width: 803px; border-bottom: 1px solid #FFF;
+}
+
+
+
+ul.matrixPool.wide li{
+	width: 803px;
+	clear: both;
+}
+/*------------------------------POOL BETTING-----------------------------*/
+
+ul.poolBettingOptions{
+	margin-top: 13px;
+	margin-left: 0px;
+	height: 2.8em;
+	position: relative;
+	font-size: 1.1em;
+	z-index: 1;
+}
+
+ul.poolBettingOptions a{text-decoration: none}
+
+ul.poolBettingOptions li{
+	clear: none;
+	float: left;
+	border: 1px solid #09324a;
+	padding: 5px 20px 5px 20px;
+	margin-right: 4px;
+	background: url(../../images/cn/paginationOff.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;
+	z-index: 2;
+	height: 14px;
+}
+
+ul.poolBettingOptions li ul{
+	display: none;
+}
+
+ul.poolBettingOptions li:hover{
+	background: #FFF;
+}
+
+ul.poolBettingOptions li#poolSelected{
+	background: #FFF;
+	font-weight: bold;
+	background: #013451 url(../../images/cn/paginationOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;
+	padding-bottom: 10px;
+}
+
+ul.poolBettingOptions li#poolSelected a{color: #FFF;}
+
+ul.poolBettingOptions li#poolSelected ul{
+	display: block;
+}
+
+ul.poolBettingOptions li#poolSelected ul li{
+	font-weight: normal;
+	font-size: 11px;
+}
+
+
+/*ul.poolBettingOptions li:hover ul{
+	display: block;
+	z-index: 9999;
+}*/
+
+ul.poolBettingOptions li ul li{
+	position: absolute;
+	top: 3.5em;
+	left: 28em;
+	background: #FFF;
+	z-index: -1;
+	width: 473px;
+	padding-left: 0px; padding-right: 10px;
+	border: none;
+	height: 4.6em;
+	line-height: 1.3em;
+}
+
+ul.poolBettingOptions li ul li ol{
+	border:1px solid red;
+	top: 0;
+	left: 0;
+	list-style: disc;
+	height: 1%;
+}
+
+ul.poolBettingOptions li ul li ol li{border: 1px solid blue; margin: 0; padding: 0; left: 0; top: 0; display: block; list-style: decimal; clear: both; position: static}
+
+
+input.checkBoxPool{
+	width: 13px;
+	text-align: center;
+	display: inline;
+	float: none;
+}
+
+.tableData .poolScratched td{
+	color: #666;
+	text-decoration: line-through;
+}
+
+
+#poolBettingContainer{border: 3px solid #002134; width: 781px; padding: 45px 12px 3px 12px; height: 1%;}
+#contentA #poolBettingContainer .tableData{width: 781px; margin: 0}
+#contentA #poolBettingContainer .tableData.tableList{background: none;}
+
+
+/*------------------------------TOTE BETTING-----------------------------*/
+
+
+.toteBettingContainer .tableData{width: 891px; }
+.toteBettingContainer .tableData th{background: #ddeef5 url(../../images/cn/toteThBg.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x; border-bottom: 1px solid #85cce8; color: #000; padding-top: 4px; padding-bottom: 4px; height: auto}
+
+.toteBettingContainer .tableData th a{color: #000; padding-right: 20px; background:url(../../images/cn/toteSortArrows.gif?ver=e29378bd396e2061fed90c753cdbe984) right center no-repeat; text-decoration: none}
+
+.toteBettingContainer .tableData th.center, .toteBettingContainer .tableData td.center{text-align: center; padding: 0}
+
+.toteBettingContainer .tableData th.borderL, .toteBettingContainer .tableData td.borderL{border-left: 2px solid #FFF}
+
+
+.tableData td.disabled label{color: #999}
+
+
+.toteBettingContainer .tableData .col1{width: 26px}
+.toteBettingContainer .tableData .col2{width: 32px}
+.toteBettingContainer .tableData .col3{width: 206px}
+.toteBettingContainer .tableData .col4{width: 115px}
+.toteBettingContainer .tableData .col5{width: 63px}
+.toteBettingContainer .tableData .col6{width: 80px}
+.toteBettingContainer .tableData .col7{width: 83px}
+.toteBettingContainer .tableData .col8{width: 60px}
+.toteBettingContainer .tableData .col9{width: 83px}
+
+.toteBettingContainer .tableData.placeBets .col7{width: 105px; }
+.toteBettingContainer .tableData.placeBets .col8{width: 105px; }
+.toteBettingContainer .tableData.placeBets .col9{width: 105px; }
+
+.toteBettingContainer .tableData.swinger .col7{width: 115px; }
+.toteBettingContainer .tableData.swinger .col8{width: 115px; }
+
+.toteBettingContainer .tableData.toteExacta .col7{width: 105px; }
+.toteBettingContainer .tableData.toteExacta .col8{width: 105px; }
+.toteBettingContainer .tableData.toteExacta .col9{width: 0px; }
+.toteBettingContainer .tableData.toteExacta .col10{width: 105px; }
+
+
+.toteBettingContainer .tableData.toteTrifecta .col7{width: 80px; }
+.toteBettingContainer .tableData.toteTrifecta .col8{width: 80px; }
+.toteBettingContainer .tableData.toteTrifecta .col9{width: 80px; }
+.toteBettingContainer .tableData.toteTrifecta .col10{width: 80px; }
+
+.toteBettingContainer .tableData tr.error td input{border: 1px solid red;}
+
+.toteBettingContainer .tableData td.center input{margin: 0 8px; width: 75px; text-align: center}
+
+#contentA .toteBettingContainer .tableData.placeBets tr td.extraPad input{width: 14px; height: 14px; display: block; margin: 0 3px 0 8px; padding: 0; float: left}
+
+body #contentA .toteBettingContainer .tableData.toteExacta tr td.center.extraPad input{width: 14px; height: 14px; display: block; margin: 0 3px 0 33px; padding: 0; float: left;}
+
+body #contentA .toteBettingContainer .tableData.toteTrifecta tr td.extraPad input{width: 14px; height: 14px; display: block; margin: 0 3px 0 18px; padding: 0; float: left;}
+
+#contentA .toteBettingContainer .tableData.placeBets td.extraPad input{margin-left: 25px}
+
+#contentA .toteBettingContainer .tableData.toteExacta td.extraPad input{margin-left: 35px}
+
+#contentA .toteBettingContainer .tableData.toteTrifecta td.extraPad input{margin-left: 24px}
+
+
+#contentA .toteBettingContainer .tableData.placeBets th.extraPad1 input{margin-left: 13px}
+#contentA .toteBettingContainer .tableData.placeBets td.extraPad1 input{margin-left: 35px}
+
+#contentA .toteBettingContainer .tableData.placeBets th.extraPad2 input{margin-left: 13px}
+#contentA .toteBettingContainer .tableData.placeBets td.extraPad2 input{margin-left: 35px}
+
+#contentA .toteBettingContainer .tableData.placeBets th.extraPad3 input{margin-left: 0px}
+#contentA .toteBettingContainer .tableData.placeBets td.extraPad3 input{margin-left: 35px}
+
+
+#contentA .toteBettingContainer .tableData.placeBets.swinger td.extraPad input{margin-left: 33px}
+
+#contentA .toteBettingContainer .tableData.placeBets.swinger th.extraPad1 input{margin-left: 13px}
+#contentA .toteBettingContainer .tableData.placeBets.swinger td.extraPad1 input{margin-left: 30px; margin-right: 4px; padding-right: 0; width: 14px; height: 14px;}
+
+#contentA .toteBettingContainer .tableData.placeBets.swinger td.extraPad2 input{margin-left: 41px; margin-right: 4px; padding-right: 0; width: 14px; height: 14px;}
+
+#contentA .toteBettingContainer .tableData.placeBets.toteExacta th.extraPad input{margin-left: 13px}
+#contentA .toteBettingContainer .tableData.placeBets.toteExacta th.extraPad input{margin-left: 35px}
+
+#contentA .toteBettingContainer .tableData.placeBets.toteExacta td.extraPad1 input{margin-left: 35px; margin-right: 4px; padding-right: 0; width: 14px; height: 14px;}
+#contentA .toteBettingContainer .tableData.placeBets.toteExacta td.extraPad2 input{margin-left: 35px;margin-right: 4px; padding-right: 0; width: 14px; height: 14px;}
+#contentA .toteBettingContainer .tableData.placeBets.toteExacta td.extraPad3 input{margin-left: 35px;margin-right: 4px; padding-right: 0; width: 14px; height: 14px;}
+#contentA .toteBettingContainer .tableData.placeBets.toteExacta td.extraPad4 input{margin-left: 35px;margin-right: 4px; padding-right: 0; width: 14px; height: 14px;}
+
+#contentA .toteBettingContainer .tableData.placeBets.toteTrifecta td.extraPad1 input{margin-left: 23px;margin-right: 4px; padding-right: 0; width: 14px; height: 14px;}
+#contentA .toteBettingContainer .tableData.placeBets.toteTrifecta td.extraPad2 input{margin-left: 23px;margin-right: 4px; padding-right: 0; width: 14px; height: 14px;}
+#contentA .toteBettingContainer .tableData.placeBets.toteTrifecta td.extraPad3 input{margin-left: 23px;margin-right: 4px; padding-right: 0; width: 14px; height: 14px;}
+#contentA .toteBettingContainer .tableData.placeBets.toteTrifecta td.extraPad4 input{margin-left: 23px;margin-right: 4px; padding-right: 0; width: 14px; height: 14px;}
+
+/*#contentA .toteBettingContainer .tableData.placeBets.swinger th.extraPad2 input{margin-left: 13px}
+#contentA .toteBettingContainer .tableData.placeBets.swinger td.extraPad2 input{margin-left: 21px}
+
+#contentA .toteBettingContainer .tableData.placeBets.swinger th.extraPad3 input{margin-left: 21px}
+#contentA .toteBettingContainer .tableData.placeBets.swinger td.extraPad3 input{margin-left: 29px}*/
+
+
+
+#contentA .toteBettingContainer .tableData.placeBets th.active {background: url(../../images/cn/toteMultiBetHeader.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x; color: #FFF}
+
+#contentA .toteBettingContainer .tableData.placeBets td.active {background: url(../../images/cn/toteActiveRow.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x}
+
+#contentA .toteBettingContainer .tableData.placeBets th input{margin: 0 3px 0 0}
+
+
+
+/*#contentA .toteBettingContainer .tableData.placeBets th.highlight{ color: #5ed1fe}*/
+
+#contentA .toteBettingContainer .tableData.placeBets label{margin: -1px 10px 0 0; display: block; float: left}
+
+#contentA .toteBettingContainer .tableData.toteExacta label{margin: -1px 10px 0 0; display: block; float: left}
+
+#contentA .toteBettingContainer .tableData.toteTrifecta label{margin: -1px 10px 0 0; display: block; float: left}
+
+.toteBettingContainer .tableData ul{line-height: 10px}
+.toteBettingContainer .selectionTitle{font-weight: bold; padding-bottom: 5px}
+
+.toteBettingContainer .tableData tr{background:url(../../images/cn/toteTdBg.jpg?ver=e29378bd396e2061fed90c753cdbe984)}
+.toteBettingContainer .tableData tr.alt{background: none}
+.toteBettingContainer .tableData td{border-bottom: none}
+
+.toteBettingContainer .tableData tr.fav{background: none}
+.toteBettingContainer .tableData tr.fav td{border-top: 1px solid #85ccea; padding-top: 8px; padding-bottom: 9px }
+.toteBettingContainer .tableData tr.fav.pos2 td{border-bottom: 1px solid #85ccea}
+
+.toteBettingContainer .tableData tr.spotlight{background: none;}
+.toteBettingContainer .tableData tr.spotlight td{height: 100px; vertical-align: top}
+.toteBettingContainer .tableData tr.spotlight td .spotlightContent { margin-top: -5px; margin-left: -20px; position: absolute; width: 875px; height: 65px; background: url(../../images/cn/toteExpand.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; padding: 20px; }
+
+.toteBettingContainer .tableData tr.spotlight td .spotlightContent h4{padding-left: 120px}
+.toteBettingContainer .tableData tr.spotlight td .spotlightContent p{padding-left: 120px}
+
+.spotlightLeft {float: left; width: 650px}
+.spotlightRight{float: right; width: 179px; text-align: right}
+
+.spotlightControl {background: url(../../images/cn/toteSpotlightBtn1.jpg?ver=e29378bd396e2061fed90c753cdbe984) top no-repeat; height: 30px; padding: 3px; display: block; margin-top: 2px}
+
+.spotlightLink{margin-top: -5px}
+
+.spotlightControl .hideAll{ padding: 0; display: block; float: right; }
+.spotlightControl .showAll{ padding: 0; display: block; float: right; margin-right: 1px }
+
+.toteBettingContainer .tableData td.RP{vertical-align: top;}
+
+tr .silkMask{display: none}
+
+tr.altStripe .silkMultiMask {position: absolute; width: 40px; height: 29px; background: red; background: url(../../images/cn/toteSilkMultiCover.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; display: block}
+
+
+.toteBettingContainer .tableData td.RP span{display: block; width: 44px; height: 40px; margin-top: 10px; text-align: center; color: #000; padding-top: 14px; padding-bottom: 0; background: url(../../images/cn/toteRP.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; font-weight: bold}
+
+.toteBettingContainer .tableData td.RP span.RPFav{background: url(../../images/cn/toteRPFav.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; color: #FFF}
+
+.toteBettingContainer .info{font-size: 1.1em; padding: 16px 8px 16px 16px; overflow: auto; height: 1%; border-top: 1px solid #85cce8}
+.toteBettingContainer .info .left{float: left}
+.toteBettingContainer .info .right{float: right}
+.toteBettingContainer .info .clearSelections{padding-left: 35px}
+
+
+.toteNav {padding-top: 20px}
+.toteNav ul {margin-top: 0px; margin-bottom: 0}
+.toteNav ul li{display: block; background: url(../../images/cn/toteNavBGLeft.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; padding-left: 8px; padding-top: 6px; padding-bottom: 6px; float: left; clear: none; margin-right: 3px}
+.toteNav ul li a{background: url(../../images/cn/toteNavBGRight.jpg?ver=e29378bd396e2061fed90c753cdbe984) top right no-repeat; padding: 6px 10px 6px 2px; text-decoration: none; font-weight: bold; font-size: 11px;}
+
+.toteNav ul li.toteSingleRaces, .toteNav ul li.toteSingleRaces a{background: none; text-decoration: underline; font-weight: normal}
+.toteNav ul li.toteSingleRaces a:hover{text-decoration: none}
+
+
+body #contentA .toteNav ul li.toteWinTab{padding-left: 0; width: 107px; background: url(../../images/cn/toteWinTab.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+/* body #contentA .toteNav ul li.toteWinTab.toteNavOn{background: url(../../images/cn/toteWinTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;} */
+body #contentA .toteNav ul li.toteWinTab a{background: none; display: block; float: left; text-indent: -1000px; width: 107px; padding: 0}
+body #contentA .toteNav ul li.toteWinTab.toteNavOn_UWIN { background: url(../../images/cn/toteWinTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; }
+
+body #contentA .toteNav ul li.toteExactaTab{padding-left: 0; width: 85px; background: url(../../images/cn/toteExactaTab.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+/*body #contentA .toteNav ul li.toteExactaTab.toteNavOn{background: url(../../images/cn/toteExactaTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;} */
+body #contentA .toteNav ul li.toteExactaTab a{background: none; display: block; float: left; text-indent: -1000px; width: 85px; padding: 0}
+body #contentA .toteNav ul li.toteExactaTab.toteNavOn_UEXA {background: url(../../images/cn/toteExactaTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+
+body #contentA .toteNav ul li.toteSwingerTab{padding-left: 0; width: 93px; background: url(../../images/cn/toteSwingerTab.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+/*body #contentA .toteNav ul li.toteSwingerTab.toteNavOn{background: url(../../images/cn/toteSwingerTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; width: 93px;} */
+body #contentA .toteNav ul li.toteSwingerTab a{background: none; display: block; float: left; text-indent: -1000px; width: 93px; padding: 0}
+body #contentA .toteNav ul li.toteSwingerTab.toteNavOn_USW {background: url(../../images/cn/toteSwingerTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; width: 93px;}
+
+.toteNav ul li.toteTrebleTab{padding-left: 0; width: 84px; background: url(../../images/cn/toteTrebleTab.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+/*.toteNav ul li.toteTrebleTab.toteNavOn{background: url(../../images/cn/toteTrebleTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;} */
+.toteNav ul li.toteTrebleTab a{background: none; display: block; float: left; text-indent: -1000px; width: 88px; padding: 0}
+.toteNav ul li.toteTrebleTab.toteNavOn_UTT{background: url(../../images/cn/toteTrebleTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+
+.toteNav ul li.toteDoubleTab{padding-left: 0; width: 90px; background: url(../../images/cn/toteDoubleTab.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+/*.toteNav ul li.toteDoubleTab.toteNavOn{background: url(../../images/cn/toteDoubleTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}*/
+.toteNav ul li.toteDoubleTab a{background: none; display: block; float: left; text-indent: -1000px; width: 88px; padding: 0}
+.toteNav ul li.toteDoubleTab.toteNavOn_UTD{background: url(../../images/cn/toteDoubleTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+
+.toteNav ul li.toteTrifectaTab{padding-left: 0; width: 88px; background: url(../../images/cn/toteTrifectaTab.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+/*.toteNav ul li.toteTrifectaTab.toteNavOn{background: url(../../images/cn/toteTrifectaTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}*/
+.toteNav ul li.toteTrifectaTab a{background: none; display: block; float: left; text-indent: -1000px; width: 88px; padding: 0}
+.toteNav ul li.toteTrifectaTab.toteNavOn_UTRI{background: url(../../images/cn/toteTrifectaTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+
+.toteNav ul li.toteJackpotTab{padding-left: 0; width: 89px; background: url(../../images/cn/toteJackpotTab.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+/*.toteNav ul li.toteJackpotTab.toteNavOn{background: url(../../images/cn/toteJackpotTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}*/
+.toteNav ul li.toteJackpotTab a{background: none; display: block; float: left; text-indent: -1000px; width: 89px; padding: 0}
+.toteNav ul li.toteJackpotTab.toteNavOn_UJKP{background: url(../../images/cn/toteJackpotTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+
+.toteNav ul li.totePlacepotTab{padding-left: 0; width: 98px; background: url(../../images/cn/totePlacepotTab.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+/*.toteNav ul li.totePlacepotTab.toteNavOn{background: url(../../images/cn/totePlacepotTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}*/
+.toteNav ul li.totePlacepotTab a{background: none; display: block; float: left; text-indent: -1000px; width: 98px; padding: 0}
+.toteNav ul li.totePlacepotTab.toteNavOn_UPLP{background: url(../../images/cn/totePlacepotTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+
+.toteNav ul li.toteQuadpotTab{padding-left: 0; width: 96px; background: url(../../images/cn/toteQuadpotTab.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+/*.toteNav ul li.toteQuadpotTab.toteNavOn{background: url(../../images/cn/toteQuadpotTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}*/
+.toteNav ul li.toteQuadpotTab a{background: none; display: block; float: left; text-indent: -1000px; width: 96px; padding: 0}
+.toteNav ul li.toteQuadpotTab.toteNavOn_UQDP{background: url(../../images/cn/toteQuadpotTabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+
+.toteNav ul li.toteScoop6Tab{padding-left: 0; width: 90px; background: url(../../images/cn/toteScoop6Tab.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+/*.toteNav ul li.toteScoop6Tab.toteNavOn{background: url(../../images/cn/toteScoop6TabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}*/
+.toteNav ul li.toteScoop6Tab a{background: none; display: block; float: left; text-indent: -1000px; width: 90px; padding: 0}
+.toteNav ul li.toteScoop6Tab.toteNavOn_USC6{background: url(../../images/cn/toteScoop6TabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+
+.toteNav ul li.toteSuper7Tab{padding-left: 0; width: 72px; background: url(../../images/cn/toteSuper7Tab.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+/*.toteNav ul li.toteSuper7Tab.toteNavOn{background: url(../../images/cn/toteSuper7TabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}*/
+.toteNav ul li.toteSuper7Tab a{background: none; display: block; float: left; text-indent: -1000px; width: 72px; padding: 0}
+.toteNav ul li.toteSuper7Tab.toteNavOn_USC7{background: url(../../images/cn/toteSuper7TabOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+
+/*
+#subNav #subNavSelected.toteTab, #subNav .toteTab{background: none;}
+#subNav #subNavSelected.toteTab a, #subNav .toteTab a{text-indent: -1000px; background: url(../../images/cn/toteSubNavTab-sel.gif?ver=e29378bd396e2061fed90c753cdbe984) left top no-repeat; padding-left: 10px; padding-right: 10px; width: 28px}
+#subNav .toteTab a{background: url(../../images/cn/toteSubNavTab.gif?ver=e29378bd396e2061fed90c753cdbe984) left top no-repeat}
+*/
+
+ .tableMultiSelections{width: 871px; border-top: 1px solid #85cce8}
+ .tableMultiSelections td{border-bottom: 1px solid #85cce8; border-right: none; height: 43px; padding: 0; font-size: 1.2em}
+
+.toteSummaryContainer{border: 1px solid #0783bf; margin-bottom: 4px; background: url(../../images/cn/toteBetSummaryBG.gif?ver=e29378bd396e2061fed90c753cdbe984) repeat-x;}
+
+.toteSummaryTableHolder{border: 1px solid #FFF; border-bottom: none; padding: 1px 8px 1px 8px;}
+
+.toteBetSummary th{text-align: left; padding: 2px 0 10px 0px}
+
+.toteBetSummary{margin-bottom: 8px}
+.toteBetSummary.receipt{margin-bottom: 0}
+
+.toteBetSummary td{border-bottom: 1px solid #9bca2c; padding: 7px 0 7px 0px}
+.toteBetSummary.checkBet td{border-bottom: none; padding: 4px 0 4px 0px }
+.toteBetSummary tr.last td{border: none;}
+
+.toteBetSummary .col1{width: 190px}
+.toteBetSummary .col2{width: 126px}
+.toteBetSummary .col3{width: 190px}
+.toteBetSummary .col4{width: 160px}
+.toteBetSummary .col5{width: 187px}
+
+
+
+
+
+
+
+/*------------------------TOTE TABLE FLOATS-------------------------------*/
+
+
+.toteTableFloat{float: left; width: 291px;}
+.toteTableFloat.centerMargin{margin: 0 9px;}
+
+.toteTableFloat h3{padding-left: 8px}
+
+.toteTableFloat.error .tableHolder{border: 1px solid red; padding: 1px}
+.toteTableFloat .tableHolder{border: 1px solid #0b81be; padding: 1px}
+
+.toteTableFloat table {font-size: 1.1em}
+
+.toteTableFloat.error table th{ background: url(../../images/cn/slipSelectionError.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x}
+
+.toteTableFloat table th{text-align: left; background: #0986bc url(../../images/cn/toteTableFloatHeader.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x; color: #FFF; padding: 3px 0 5px 8px}
+.toteTableFloat table td{padding: 5px 0 6px 8px; background: url(../../images/cn/toteTableFloatCell.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x}
+
+.toteTableFloat table th.center{text-align: center; padding-left: 0}
+
+.toteTableFloat table input.smlField{ margin-right: 8px}
+
+.toteTableFloat table .col1{width: 98px;}
+.toteTableFloat table .col2{width: 34px}
+.toteTableFloat table .col3{width: 47px}
+.toteTableFloat table .col4{width: 20px}
+
+.toteTotalStake{background: #002235; font-size: 1.6em; color: #FFF; font-weight: bold; padding: 8px 8px 8px 95px; margin-top: 1px; text-align: left;}
+
+
+.totePlaceBet{overflow: auto; padding: 8px}
+
+.totePlaceBet .left{float: left; font-size: 1.2em; padding-top: 3px}
+
+.totePlaceBet .right{float: right}
+
+.totePlaceBet .right input{width: 125px}
+
+
+.toteErrorWide{text-align: center; background: url(../../images/cn/toteErrorMsgWide.jpg?ver=e29378bd396e2061fed90c753cdbe984) center top no-repeat; height: 55px; padding-top: 27px; font-size: 1.2em; margin-top: 10px; color: #000; font-weight: bold}
+
+.toteErrorWide.extraMargin{margin-top: 30px; margin-bottom: -10px; background: url(../../images/cn/toteErrorMsgWidePos1.jpg?ver=e29378bd396e2061fed90c753cdbe984)  center top no-repeat}
+
+.toteErrorWide.pos1{background: url(../../images/cn/toteErrorMsgWidePos1.jpg?ver=e29378bd396e2061fed90c753cdbe984) center top no-repeat}
+.toteErrorWide.pos2{background: url(../../images/cn/toteErrorMsgWide.jpg?ver=e29378bd396e2061fed90c753cdbe984) center top no-repeat}
+.toteErrorWide.pos3{background: url(../../images/cn/toteErrorMsgWidePos3.jpg?ver=e29378bd396e2061fed90c753cdbe984) center top no-repeat}
+.toteErrorWide.posToteWin{background: url(../../images/cn/toteErrorMsgWidePos4.jpg?ver=e29378bd396e2061fed90c753cdbe984) center top no-repeat}
+
+
+
+
+
+/*------------------------------------TOTE INFO BLOCKS---------------------------------*/
+
+.toteInfo {height: 153px; border: 3px solid #002134; margin-top: 0px; margin-bottom: 3px; position: relative; background: none}
+
+.type1 .toteInfoContainer{margin: 4px; background: url(../../images/cn/toteInfoBG1.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; height: 145px}
+
+.type1 .toteGraphic{width: 295px; height: 207px; background: url(../../images/cn/toteInfoGraphic1.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; position: absolute; top: -36px; right: -43px}
+
+.toteInfoNav {width: 165px; float: left}
+
+.toteInfoNav ul{padding-top: 10px}
+.toteInfoNav ul li{margin: 0; padding: 0}
+.toteInfoNav ul li a{font-size: 1.2em; padding: 5px 0 0 12px; height: 21px; display: block; text-decoration: none; font-weight: bold}
+
+
+a.toteRadio{background: url(../../images/cn/toteRadioGraphic.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; display: block; text-indent: -2000px; width: 138px; height: 38px; margin-left: 10px; margin-top: 10px}
+
+.type1 li.toteNav1 a{background:url(../../images/cn/toteNav1Type1.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; color: #FFF}
+.type1 li.toteNav1 a:hover{background:url(../../images/cn/toteNav1Type1Over.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+.type1 li.toteNav1.on a{background:url(../../images/cn/toteNav1Type1On.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; color: #000}
+
+.type1 li.toteNav2 a{background:url(../../images/cn/toteNav2Type1.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; color: #FFF}
+.type1 li.toteNav2 a:hover{background:url(../../images/cn/toteNav2Type1Over.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+.type1 li.toteNav2.on a{background:url(../../images/cn/toteNav2Type1On.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; color: #000}
+
+.type1 li.toteNav3 a{background:url(../../images/cn/toteNav1Type1.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; color: #FFF}
+.type1 li.toteNav3 a:hover{background:url(../../images/cn/toteNav1Type1Over.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat}
+.type1 li.toteNav3.on a{background:url(../../images/cn/toteNav1Type1On.gif?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; color: #000}
+
+.toteInfoMain {border: 1px solid #000; width: 436px; height: 108px; float: left; margin-top: 9px; overflow: auto; font-size: 1.1em; padding: 8px 12px }
+
+.toteInfoMain{color: #FFF}
+
+
+
+.type1 .toteInfoMain{border: none;}
+
+.toteInfoMain h4{ padding: 0 0 0 140px; margin-bottom: 6px; font-size: 1.8em; font-weight: normal}
+
+.type1 .toteInfoMain h4{background: url(../../images/cn/toteRPTitleType1.gif?ver=e29378bd396e2061fed90c753cdbe984) left 3px no-repeat;}
+
+
+
+/*------------------------------MORE MARKETS NAV-------------------------*/
+
+.moreMarkets {
+	width: 646px;
+	margin-top: 10px;
+	margin-left: 0px;
+}
+
+.moreMarkets.liveMarkets{background: #000; margin: 0; padding: 5px 10px 5px 5px}
+
+.moreMarkets .selectedMarket{padding: 0px; margin: 0px;}
+
+.moreMarkets.liveMarkets .selectedMarket{padding-left: 0px; background: #000}
+.moreMarkets.liveMarkets .selectedMarket a{color: #7ddfff}
+
+.moreMarkets a {font-size: 1.1em;}
+
+.moreMarkets .selectedMarket .tableData {margin: 0px;}
+
+.moreMarkets .selectedMarket .tableData.tableList .letterHead{border: 1px solid #396178; display: block; margin-left: -6px; margin-right: 5px; padding: 4px 0 4px 6px; background: url(../../images/cn/letterHeadBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x}
+
+.moreMarkets .selectedMarket .tableData a {font-size: 1em;}
+
+.moreMarkets .selectedMarket {background: #FFF; padding-bottom: 5px}
+
+.moreMarkets.liveMarkets li{border-bottom: 1px solid #004470; background: #000819}
+.moreMarkets.liveMarkets li.altRow{background: #000819;}
+
+.moreMarkets li {border: 1px solid #FFF; margin-bottom: 0px;  padding-left: 5px}
+.moreMarkets li.altRow{background: #FFF; background: #e2f2f9 url(../../images/cn/moreMarketsAltRow.jpg?ver=e29378bd396e2061fed90c753cdbe984) top repeat-x; border: 1px solid #cce8f5}
+
+
+.moreMarkets.liveMarkets .selectedMarket{background: #000}
+
+.moreMarkets .selectedMarket a{font-size: 1.7em; text-decoration: none}
+
+.moreMarkets .selectedMarket .marketLink {
+	background: #fff;
+	display: block;
+	padding: 0 0 6px 20px;
+	font-weight: normal;
+	background:url(../../images/cn/moreMarketsOn.gif?ver=e29378bd396e2061fed90c753cdbe984) left 4px no-repeat;
+	margin-left: 2px;
+}
+
+.moreMarkets .selectedMarket ul li {
+	background: none;
+	padding: 2px 0 0 0;
+	border-bottom: none;
+}
+
+.moreMarkets.liveMarkets .selectedMarket ul li {background: #000}
+
+.moreMarkets .marketLink {
+	padding: 2px 0 2px 20px;
+	display: block;
+	background:url(../../images/cn/moreMarketsOff.gif?ver=e29378bd396e2061fed90c753cdbe984) left center no-repeat;
+	margin-left: 5px;
+	text-decoration: none;
+	font-size: 1.7em;
+	font-weight: normal;
+}
+
+#contentA a.marketLink{text-decoration: underline}
+#contentA a.marketLink:hover{text-decoration: none}
+
+.moreMarkets.liveMarkets a{color: #7ddfff; text-decoration: none;}
+
+.extraPadAZ {margin-top: -32px}
+.extraPadAZ .marketLink {padding-left: 80px;}
+.extraPadAZ .lastLiRow {border-bottom: 2px solid #0a3862;}
+
+
+#contentA .moreMarkets .tableData.tableList{margin-bottom: 22px; }
+#contentA .tableData.tableList a:hover{text-decoration: none}
+/*------------------------------PAGINATION----------------------------*/
+
+.pagination{
+	width: 450px;
+	text-align: right;
+	padding: 20px 34px 20px 0;
+	margin-right: 10px;
+	font-size: 1.2em;
+	float: right;
+}
+
+.pagination li{
+	display: inline;
+}
+
+.pagination.results{padding-right: 0}
+
+.pagination li a{
+	padding: 3px 5px 3px 4px;
+	margin: 0 2px;
+	text-decoration: none;
+	background: url(../../images/cn/paginationOff.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x;
+	border: 1px solid #194c67;
+	color: #194c67;
+}
+
+.pagination .selected a{
+	border: 1px solid #194c67;
+	background: url(../../images/cn/paginationOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x; color: #FFF;
+}
+
+.pagination li a:hover{
+	background: #CCC;
+	color: #FFF;
+}
+
+
+
+
+
+/*------------------------------PAGINATION AZ----------------------------*/
+
+.paginationAZ {
+	padding: 10px 10px 4px 0;
+	margin: 13px 0 16px 0;
+	font-size: 1.2em;
+	text-align: center;
+	border: 1px solid #074e81;
+	padding: 25px 0 25px 25px;
+	height: 1%;
+	overflow: hidden;
+}
+.paginationAZ li {
+	display: inline;
+	margin: 0 1px 1px 0;
+	clear: none;
+	float: left;
+}
+.paginationAZ span {display: block;}
+
+
+.paginationAZ li{
+	padding: 4px 5px;
+}
+
+.paginationAZ li a {
+	text-decoration: none;
+	border: 1px solid #194c67;
+	padding: 4px;
+	margin: -4px -5px;
+	width: 11px;
+	display: block;
+	background: url(../../images/cn/paginationOff.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x;
+}
+
+.paginationAZ li.numbers a{width: 25px;}
+
+.paginationAZ li#selectedAZ a {background: url(../../images/cn/paginationOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x; color: #FFF;}
+.paginationAZ .selected a {border: 1px solid #0174ec;}
+.paginationAZ li a:hover {background: #144471; color: #FFF;}
+
+
+/*---------------------------------------DAILY MATCHES----------------------------------*/
+
+.paginationDailyMatches {
+	text-align: left;
+	padding: 0 0 0 0;
+	margin: 13px 0 6px 0;
+	font-size: 1.2em;
+	overflow: hidden;
+	height: 1%;
+	text-align: center;
+	width: 650px;
+}
+.paginationDailyMatches span {display: block;}
+.paginationDailyMatches li {
+	display: block;
+	margin: 0 2px 1px 0;
+	border: 1px solid #194c67;
+	width: 77px;
+	clear: none;
+	float: left;
+	font-size: 0.9em;
+	background: url(../../images/cn/dailyMatchOff.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x;
+	padding: 8px 0 10px 0;
+}
+.paginationDailyMatches li#selectedDailyMatch {background:  url(../../images/cn/dailyMatchOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;}
+.paginationDailyMatches a{text-decoration: none}
+.paginationDailyMatches li#selectedDailyMatch a, .paginationDailyMatches li:hover a {color: #FFF; text-decoration: none;}
+.paginationDailyMatches li:hover {background:  url(../../images/cn/dailyMatchOn.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;}
+.paginationDailyMatches li p {font-size: 0.9em;}
+
+
+/*----------------------------------------------MEDIA AREA-----------------------------*/
+
+.mediaArea {height: 1%; background: #F3F3F3; margin-bottom: 15px;}
+
+
+
+.mediaBlock1 {width: 380px; float: left;}
+.mediaBlock2 {width: 266px; float: left; border-left: 1px solid #FFF;}
+
+.mediaBlock2 .link {
+	border-bottom: 1px solid #FFF;
+	padding: 20px 30px 0 30px;
+	height: 57px;
+}
+.mediaBlock2 .linkDouble {
+	border-bottom: 1px solid #FFF;
+	padding: 20px 30px 0 30px;
+	height: 133px;
+}
+.mediaBlock2 .link1 {background: #CCCCCC;}
+.mediaBlock2 .link1 p {padding: 0 0 7px 0;}
+.mediaBlockBullets {list-style: none; margin: 30px;}
+.mediaBlockBullets li {padding-bottom: 10px;line-height: 13px;}
+.raceLive a {color: green;}
+.raceOver a {color: #000;}
+.mediaStream {
+	width: 320px;
+	height: 172px;
+	margin: 30px;
+	background: #e8e8e8;
+	color: #e8e8e8;
+}
+.mediaStream:hover {
+	background: #CCC;
+	color: #000;
+}
+/*----------------------------list items inline------------------------*/
+
+.listContainer {
+	margin-top: 0px;
+	padding-bottom: 0;
+	margin-left: 0px;
+	margin-bottom: -1px;
+}
+
+.listContainerExtraMargin {
+	margin-top: 13px;
+	padding-bottom: 0;
+	margin-left: 0px;
+	margin-bottom: -1px;
+}
+
+.listContainer.border{margin-top: 13px; border: 1px solid #002134; padding: 8px 0px 8px 8px; width: 636px}
+
+#contentA .listContainer h3{margin-top: 0}
+
+.listInline {
+	font-size: 1.1em;
+	margin: 0;
+	padding: 0;
+	height: 1%;
+}
+.listInline li {
+	display: inline;
+	clear: none;
+	width: 210px;
+	float: left;
+	margin-left: 0px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+	padding: 0;
+	background: url(../../images/cn/listInlineBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom left repeat-x;
+	color: #FFF;
+	height: 2.9em;
+	position: relative;
+	border: 1px solid #002134;
+}
+
+.listInline.col4 li {width: 156px}
+
+
+
+
+.listInline li a{
+	color: #00314a;
+	font-weight: bold;
+	text-decoration: none;
+	position:absolute; top:50%; height:1em;  margin-top: -0.6em;
+	line-height: 1em;
+	display: block;
+	padding: 8px 0;
+	top: 25%;
+	left: 0;
+	width: 212px;
+	text-align: center
+}
+.listInline.col4 li a {width: 156px; }
+
+
+.border .listInline li, .border .listInline li a {width: 205px; }
+
+.listInline li:hover{
+	background: #000 url(../../images/cn/listInlineOnBG.gif?ver=e29378bd396e2061fed90c753cdbe984) top left no-repeat;
+}
+
+.listInline li#listOn{
+	background: #000 url(../../images/cn/listInlineOnBG.gif?ver=e29378bd396e2061fed90c753cdbe984) top left no-repeat;
+}
+
+.listInline li#listOn a, .listInline li:hover a{
+	color: #FFF;
+}
+
+.list3 {margin-bottom: 0;}
+
+
+/*------------------------------------------EDITORIAL----------------------------------------*/
+
+
+.editorial.promo{
+	padding: 8px 0 0 0;
+}
+
+.editorial.promo:hover{
+	background: #01253c url(../../images/cn/editorialPromoBG.gif?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x;
+}
+
+.editorial.promo:hover h3{color: #7ddfff}
+.editorial.promo:hover h4{color: #7ddfff}
+.editorial.promo:hover p{color: #FFF}
+.editorial.promo:hover ul{color: #FFF}
+.editorial.promo:hover a{color: #7ddfff; }
+
+.editorial.promo .clearBoth{height: 13px;}
+
+.editorial.promo img {
+	width: 187px;
+	height: 93px;
+	background: #CCC;
+}
+
+.editorial.promo .editorialTxt{width: 310px}
+
+.editorial.promo .editorialTxt.et2{
+	width: 430px;
+}
+
+.editorial.promo .tableFloat3{width: 102px}
+
+
+.promoTC{
+	padding: 20px; padding-bottom: 20px;
+	border: 1px solid #7ddfff;
+	margin:0px 12px 30px 12px;
+	display: none;
+}
+
+/*----------------------------------------PROMO LIST--------------------------------------------*/
+
+.promoList{font-size: 1.1em;}
+
+
+/*---------------------------search / results ---------------------------------*/
+
+.searchResultsFields{
+	margin-left: 0;
+	margin-top: 13px;
+	border: 1px solid #002134;
+	height: 1%;
+	width: 608px;
+	padding: 24px 0 26px 36px;
+	background: url(../../images/cn/searchResultsPanelBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x;
+}
+
+.searchResultsFields.searchFooter{padding: 8px; width: 628px; background: url(../../images/cn/searchInfoBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x; margin-top: 38px}
+#contentA .searchResultsFields.searchFooter label{text-align: right; width: 80px}
+.searchResultsFields.searchFooter #searchFooterField{width: 370px}
+.searchResultsFields .btnHolder{margin-top: 10px; margin-bottom: 20px;}
+
+
+
+.searchResultsFields fieldset{height: 1%}
+
+
+fieldset.searchSport{clear: both; font-size: 1.1em; border: none;}
+fieldset.searchSport label{float: left; padding: 3px 10px 0 0px; font-weight: bold; width: 120px}
+fieldset.searchSport .btn{float: left; width: 120px; height: 22px; margin-left: 10px; padding: 0; font-size: 1.1em}
+
+fieldset.searchTimeFilter{clear: both; font-size: 1.1em; border: none; padding-left: 130px}
+fieldset.searchTimeFilter strong{position: absolute}
+fieldset.searchTimeFilter input{float: left; padding: 0 10px 0 0; height: 13px; width: 13px; display: block; margin-left: 170px; margin-right: 10px}
+
+fieldset.searchTimeFilter ul.filterLeft label, fieldset.searchTimeFilter ul.filterLeft label{float: left; padding: 1px 0 0 0}
+
+fieldset.searchTimeFilter ul.filterLeft{width: 200px; margin-left: 0px; float: left; }
+fieldset.searchTimeFilter ul.filterRight {width: 200px; float: left;}
+fieldset.searchTimeFilter ul.filterLeft input{margin-left: 6px}
+fieldset.searchTimeFilter ul.filterRight input{margin-left: 6px}
+
+fieldset.searchResultsCriterea{border: none; font-size: 1.1em;}
+fieldset.searchResultsCriterea label{float: left; padding: 3px 10px 0 0px; font-weight: bold; width: 120px}
+fieldset.searchResultsCriterea .btnHolder{padding: 0 0 0 130px; margin-bottom: 0}
+fieldset.searchResultsCriterea .btnHolder .btn{width: 120px}
+
+.dateField{width: 75px}
+
+.dateFieldMonth{width: 111px}
+
+
+
+/*-------------------------------TABLE DATA SearchResults--------------------------------*/
+
+
+#contentA .tableData.tableSearchResults th{
+	height: 24px;
+	background: #0a3862;
+	color: #FFF;
+	font-size: 1em;
+	text-align: left;
+}
+
+.tableData.tableSearchResults th a{color: #FFF}
+
+.tableData.tableSearchResults tr td{
+	height: 24px;
+	border-bottom: 1px solid #7bbfff;
+	padding-top: 3px;
+	padding-bottom: 2px;
+}
+
+.tableData.tableSearchResults tr.noBorder td{border: none}
+
+.tableData.tableSearchResults tr.altRow td{background: #e5f6fd}
+
+.tableData.tableSearchResults td ul li{
+	clear: both;
+	padding: 0 10px 0 0px;
+	margin-left: 15px;
+	list-style: square;
+}
+
+.tableData.tableSearchResults td ul li a{
+	line-height: 20px;
+}
+
+.tableData.tableSearchResults .rowGroup td{border: none; padding: 0 0 0 6px}
+.tableData.tableSearchResults .rowGroup.top td{padding-top: 15px}
+.tableData.tableSearchResults .rowGroup.bottom td{padding-bottom: 15px; border-bottom: 1px solid #7bbfff;}
+.tableData.tableSearchResults td.borderBottom { border-bottom: 1px solid #7bbfff; vertical-align:middle}
+
+#contentA .resultsInfo{padding-top: 20px; padding-left: 10px; font-size: 1.1em; border-bottom: 3px solid #002134; border-top: 3px solid #002134;  margin-top: 10px; height: 1%}
+.resultsInfo h4{padding-bottom: 5px; font-size: 1em;}
+.resultsInfo ul{ padding-bottom: 5px; margin-bottom: 16px; margin-left: 193px; margin-top: -22px}
+
+.searchInfo{padding: 0; font-size: 1.1em; margin: 0; clear: both; padding-bottom: 10px; width: 644px; border: 1px solid #0ea2e6; background: url(../../images/cn/searchInfoBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x}
+
+.searchInfo ul {clear: both; padding: 8px 0 8px 12px}
+.searchInfo ul li{clear: none; width: 204px; float: left; }
+
+#contentA .searchGroup {padding-top: 30px; padding-bottom: 0px; width: 646px;}
+#contentA .searchGroup h3{
+	margin: 0 0 25px 0px;
+	padding: 0 0 5px 0;
+	border-bottom: 3px solid #4cadd2;
+}
+#contentA .searchGroup .tableData{margin-left: 0;}
+#contentA .searchGroup .tableData caption{padding-left:0px;}
+/*#contentA .searchGroup hr{color: #0a3862; height: 1px; margin: auto; margin-bottom: 5px; width: 646px; background: #0a3862; border: none; visibility: visible; margin-top: 5px}*/
+#contentA .searchGroup .textRight.fullMarket{padding-top: 10px}
+#contentA .searchGroup .infoBox{margin-left: 0px;}
+#contentA .searchGroup .infoBox strong{color: #404040;}
+#contentA .searchGroup strong, .searchInfo strong{
+	color: #0033FF
+}
+
+ul.noResults strong{color: #404040;}
+
+ul.noResults li ul {margin-left: 120px; margin-top: -17px}
+
+
+.searchInfo.noResults{margin-top: 0; border: 1px solid #0a3862; height: 69px; position: relative}
+
+.searchInfo.noResults h4 {width: 150px; padding-top:14px}
+
+
+
+
+
+/*--------------------------------SUPPORT AREA----------------------------------*/
+
+#supportAreaSearch{
+	border: none;
+	right: 0;
+	margin: 27px 10px;
+	font-size: 1.1em;
+	padding: 15px 10px 10px 10px;
+	top: 0px;
+	font-size: 1em; position: absolute; left: 0; padding: 0; margin-left: 200px; height: 50px;
+}
+
+#supportAreaSearch{
+	line-height: 12px;
+}
+
+#supportAreaSearch .supportSearchLeft{float: left}
+#supportAreaSearch .supportSearchLeft p{padding-top: 5px;}
+#supportAreaSearch ul{float: left; width: 200px; line-height: 9px; margin-top: -29px; margin-left: 230px; padding-left: 30px; display: inline}
+#supportAreaSearch ul li{width: 180px}
+#supportAreaSearch .supportRight{float: right}
+
+#supportAreaSearch h4 {width: 200px; padding-top:0px; padding-bottom: 2px}
+
+
+/*-----------------------------Real Time --------------------------------*/
+
+.realTimeBlockA{height: 1%; background: none; padding: 12px 10px 5px 24px; width: 400px; float: left; color: #FFF; margin-top: 10px}
+.realTimeBlockA h3{color: #000; font-size: 1.2em; margin-bottom: 3px; letter-spacing: 0}
+.realTimeBlockA p{color: #FFF; font-size: 1.1em;}
+
+
+ul.realTimeBlockB{float: right; color: #fff; text-align: right; padding: 22px 6px 0 0; font-size: 1.1em; line-height: 10px; margin-right: 10px}
+ul.realTimeBlockB li a{color: #FFF;}
+
+ul.realTimeMoreLinks {display: inline; clear: none; padding-left: 4px;}
+ul.realTimeMoreLinks li{display: inline; clear: none; margin-right: 7px}
+ul.realTimeMoreLinks li.noBorder a{border: none}
+
+ul.realTimeMoreLinks li a{color: #7ddfff; border-right: 1px solid #fff; padding-right: 12px;}
+
+
+
+
+.realTimeContentHolder{margin: 0 0 5px 0; padding: 0}
+
+#contentA .realTimeContentHolder h3{
+	background: #003b59 url(../../images/cn/tableDataHeaderBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x; color: #FFF; font-size: 1.1em; padding: 5px 8px 7px 8px; margin: 2px 0 2px 0; width: 630px; letter-spacing: 0; font-weight: bold;
+}
+
+
+
+
+.realTimeIntro{width: 646px; color: #fff; padding: 0 0 0 0}
+
+.realTimeIntro h4{font-size: 1.3em; padding: 1px 0 0 22px; margin-bottom: 2px; color: #7ddfff}
+
+.realTimeContentHolder.type2 h4{font-size: 1.2em; color: #7ddfff}
+
+.realTimeContentHolder .matrixHolder {margin: 0; height: 1%; padding: 0 0 0 2px; margin-top: 5px; }
+
+.realTimeContentHolder.type2 .matrix{ height: 1%; padding-left: 0px;}
+
+
+.realTimeIntro p{font-size: 1.1em; padding-left: 22px}
+
+.realTimeDataContainer{
+	background: #01253d; height: 1%; padding-top: 0px; padding-bottom: 0px; width: 646px
+}
+
+
+.realTimeInfoBlockHR{background: url(../../images/cn/realTimeHorses.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; width: 640px; height: 119px; border: 3px solid #002131; margin-bottom: 0px;}
+.realTimeInfoBlockFB{background: url(../../images/cn/realTimeFootball.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; width: 640px; height: 119px; border: 3px solid #002131; margin-bottom: 0px;}
+
+
+.realTimeDataHolder{
+	background: #05325b; width: 666px; padding-bottom: 0px
+}
+
+.realTimeTableContainer{
+	border: 1px solid #01253c; border-top: none; border-bottom: none; padding: 1px 10px 10px 10px; background: #FFF; margin: 0 10px 0 11px;
+}
+
+.realTimeContentHolder.type2 .realTimeTableContainer{
+margin-bottom: 8px
+}
+
+#contentA tr.realTimeNoQualContainer td{
+	margin: 0px 6px 8px 6px; padding: 30px 10px 30px 10px; margin-left: 12px; margin-right: 11px; border: 1px solid #7ddfff; background: url(../../images/cn/realTimeNoQualBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) bottom repeat-x; border: 1px solid #002131;
+}
+
+.realTimeContentHolder.type2  p.textRight{padding-right: 20px; padding-bottom: 5px; font-size: 1.1em}
+
+.realTimeContentHolder.type2  p.textRight a{color: #7ddfff}
+
+.realTimeNoQualContainer p{
+	height: 1%; font-size: 1.1em; padding-top: 25px; padding-bottom: 20px; color: #FFF; text-align: center
+}
+
+
+.realTimeContentHolder.type2 .realTimeDataContainer{
+	background: #01253d; padding-bottom: 6px;
+}
+
+.realTimeTableContainer .tableLinks{
+margin: 0px; background: #FFF; width: 100%
+}
+
+#contentA .realTimeTableContainer .tableData.tableLinks tr td{
+	border-right: 2px solid #FFF;
+}
+
+#contentA .realTimeTableContainer .tableData.tableLinks tr td.noBorder{border: none}
+
+.realTimeFooterContainer{
+	font-size: 1.1em; color: #FFF; background: #01253d;  padding: 6px 6px 8px 6px; margin: 0px 13px 0 13px
+}
+
+
+/*------------------------------------------TERMS AND CONDITIONS--------------------------------*/
+
+.terms{
+	padding: 20px; padding-bottom: 20px;
+	margin:0px 12px 15px 12px;
+}
+
+.terms.intro{border: 1px solid #7ddfff;  margin-top: 32px}
+
+#contentA .terms h2{margin-left: 0; padding-left: 0}
+#contentA .terms h4{margin:  20px 0 5px 0; padding: 0 0 0 0}
+
+#contentA .terms p{margin-bottom: 10px}
+
+.terms p{font-size: 1.1em}
+
+#contentA .terms ul{font-size: 1.1em;  margin-bottom: 10px; list-style: square; margin-left: 15px}
+
+/*------------------------------------------MOBILE--------------------------------*/
+
+
+#mobileHomePage{
+	height: 1%;
+	background:url(../../images/cn/mobileBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;
+	height: 514px;
+	position: relative;
+	margin: 13px 0 24px 0
+}
+
+.mobileHomeFloat{
+	width: 142px;
+}
+
+#float1{position: absolute; margin: 37px}
+#float2{position: absolute; right: 0; margin: 37px}
+#float3{position: absolute; bottom: 0; margin: 37px}
+#float4{position: absolute; bottom: 0; right: 0; margin: 37px}
+
+#contentA .mobileHomeFloat h3{font-size: 1.2em; margin: 0}
+#contentA .mobileHomeFloat p{font-size: 1.1em; margin-top: 5px}
+
+
+.mobileFeatureHolder{
+	margin: 10px 0; height: 75px; overflow: auto; border: 3px solid #002131; padding: 30px 0 0 0
+}
+
+
+.mobileFeatureHolder h5{color: #FFF; padding: 5px 0 5px 8px; font-size: 1.1em; background: url(../../images/cn/tableDataHeaderBG.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x; margin-bottom: 5px}
+
+.mobileFeatureBlock{
+	float: left; width: 194px
+}
+
+.mobileFeatureBlock img{
+	float: left; width: 45px; margin-right: 3px; display: block;
+}
+
+.mobileFeatureTxt{
+	float: left; width: 144px; font-size: 1.1em;
+}
+
+.textArea{
+	padding: 20px 0 20px 20px; padding-bottom: 20px;
+	margin:0px 0 15px 0; border: 1px solid #7ddfff
+}
+
+.textArea.intro{border: none; margin-top: 26px; padding-left: 20px; width: 626px;}
+
+body #contentA .textArea h3{margin: 0; padding-left: 0; border-bottom: none;}
+body #contentA .textArea h4{margin: 0; padding: 0 0 10px 0; border-bottom: none; font-size: 2em; font-weight: normal}
+body #contentA .textArea h5{font-size: 1.1em}
+
+body #contentA .textArea.intro h3{ margin: 0 0 10px 0}
+body #contentA .textArea.intro h3 .subHead{padding: 4px 0 0 0; margin-left: 0; width: 600px}
+
+body #contentA .textArea.intro h3 .subHead a{display: inline; float: none;}
+
+.textArea.noMargin{margin: 0; padding-bottom: 10px}
+
+#contentA .textArea p{margin-bottom: 10px}
+
+.textArea p{font-size: 1.1em}
+
+#contentA .textArea ul{font-size: 1.1em;  margin-bottom: 10px; list-style: square; margin-left: 18px}
+#contentA .textArea ol{font-size: 1.1em;  margin-bottom: 10px; margin-left: 20px; list-style:decimal}
+
+#contentA .textArea ol p{font-size: 1em}
+
+#contentMain{height: 1%; margin: 9px; padding: 9px; margin-bottom: 12px; background: #FFF; width: 946px; position: relative}
+
+#toteMultiRace{margin-top: 35px; font-size: 1.2em}
+#toteMultiRace .leg{float: left; border-right: 1px solid #FFF; position: relative}
+
+#toteMultiRace #leg7{border-right: none}
+#toteMultiRace .active#leg7{border-right: 3px solid #0a82be}
+
+#toteMultiRace .legA{float: left;}
+#toteMultiRace .legB{border-left: none; float: left}
+
+#toteMultiRace .legA table{width: 93px; text-align: left; border-bottom: 1px solid #85cce8}
+#toteMultiRace .active table{border-bottom: none}
+
+#toteMultiRace .legA table tr th{padding-left: 7px; text-align: left}
+#toteMultiRace .legA table tr td{padding-left: 4px; border-right: none}
+
+#toteMultiRace table th{background: #dceff6; border-bottom: 1px solid #85cce8; padding: 4px 0; border-right: 1px solid #FFF; font-weight: normal; font-size: 0.9em }
+
+#toteMultiRace table tr.altRow{background: #ecf7f9}
+
+#toteMultiRace .active {border: 3px solid #0a82be; margin: -31px 2px 0 0px; padding-top: 28px;}
+
+#toteMultiRace .active#leg1{margin-left: 0px}
+
+
+#toteMultiRace .active table tr.altRow{background: url(../../images/cn/toteActiveRow.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x}
+
+#toteMultiRace  img{visibility: hidden}
+#toteMultiRace .active img{visibility: visible}
+
+#toteMultiRace .leg h3{background: url(../../images/cn/toteMultiBetHeader.jpg?ver=e29378bd396e2061fed90c753cdbe984) repeat-x; margin: -28px 0 0 0; padding: 5px 0 8px 0; position: absolute; left: 0px; width: 100%; font-size: 1em; font-weight: bold; text-align: left; color: #FFF}
+
+#toteMultiRace .leg h3 span{padding-left: 28px; display: block; float: left}
+#toteMultiRace .leg h3 span.lines{display: block; float: right; margin: -2px 26px 0 0; background: url(../../images/cn/toteMultiLinesBG.jpg) no-repeat; text-align: center; padding: 1px 0 0 0; height: 20px; width: 84px}
+#toteMultiRace .legB {width: 226px}
+#contentA #toteMultiRace .legB .col1{width: 112px; text-align: left; padding-left: 10px}
+#toteMultiRace .legB .col2{width: 58px; text-align: center}
+#toteMultiRace .legB .col3{width: 58px; text-align: center}
+
+
+
+#toteMultiRace .legB table tr th:first-child,
+#toteMultiRace .legB table tr td:first-child {padding-left: 10px; text-align: left}
+
+#toteMultiRace .legB th{border-right: none; padding-left:10px;}
+#toteMultiRace .legB td{border: none; border-top: 2px solid #FFF; padding-left:10px;}
+
+#toteMultiRace .legOn{border: 2px solid green;}
+#toteMultiRace .legOff{border: none;}
+
+#toteMultiRace table td{height: 64px; border-right: 1px solid #FFF; border-top: 2px solid #FFF}
+
+#toteMultiRace input{width: 14px; height: 14px; display: block; margin: 0 5px 0 0; padding: 0; float: left}
+
+#toteMultiRace label{margin: -1px 10px 0 0; display: block; float: left}
+
+#toteMultiRace .tableMultiSelections{width: 891px}
+#toteMultiRace .tableMultiSelections td{border-bottom: 1px solid #85cce8; border-right: none; height: 43px; padding: 0}
+
+#toteMultiRace  a.toteMultiLeft{width: 20px; height: 20px; background: url(../../images/cn/toteMultiLeft.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; position: absolute; top: 2px; left: 2px; text-indent: -3000px; display: block}
+#toteMultiRace .toteMultiRight{width: 20px; height: 20px; background: url(../../images/cn/toteMultiRight.jpg?ver=e29378bd396e2061fed90c753cdbe984) no-repeat; position: absolute; top: 2px; right: 2px; text-indent: -3000px; display: block}
+
+
+#toteMultiRace.toteMulti2Legs .legB {width: 694px}
+#contentA #toteMultiRace.toteMulti2Legs .legB table{width: 100%}
+#contentA #toteMultiRace.toteMulti2Legs .legB .col1{width: 250px; padding-left: 40px}
+#contentA #toteMultiRace.toteMulti2Legs .legB .col2{width: 116px}
+#contentA #toteMultiRace.toteMulti2Legs .legB .col3{width: 116px}
+
+#toteMultiRace.toteMulti3Legs .legB {width: 601px}
+#contentA #toteMultiRace.toteMulti3Legs .legB table{width: 100%}
+#contentA #toteMultiRace.toteMulti3Legs .legB .col1{width: 250px; padding-left: 40px}
+#contentA #toteMultiRace.toteMulti3Legs .legB .col2{width: 116px}
+#contentA #toteMultiRace.toteMulti3Legs .legB .col3{width: 116px}
+
+#toteMultiRace.toteMulti4Legs .legB {width: 508px}
+#contentA #toteMultiRace.toteMulti4Legs .legB table{width: 100%}
+#contentA #toteMultiRace.toteMulti4Legs .legB .col1{width: 250px; padding-left: 40px}
+#contentA #toteMultiRace.toteMulti4Legs .legB .col2{width: 116px}
+#contentA #toteMultiRace.toteMulti4Legs .legB .col3{width: 116px}
+
+#toteMultiRace.toteMulti5Legs .legB {width: 410px}
+#contentA #toteMultiRace.toteMulti5Legs .legB table{width: 100%}
+#contentA #toteMultiRace.toteMulti5Legs .legB .col1{width: 204px; padding-left: 40px}
+#contentA #toteMultiRace.toteMulti5Legs .legB .col2{width: 90px}
+#contentA #toteMultiRace.toteMulti5Legs .legB .col3{width: 90px}
+
+
+#toteMultiRace.toteMulti6Legs .legB {width: 320px}
+#contentA #toteMultiRace.toteMulti6Legs .legB table{width: 100%}
+#contentA #toteMultiRace.toteMulti6Legs .legB .col1{width: 158px; padding-left: 40px}
+#contentA #toteMultiRace.toteMulti6Legs .legB .col2{width: 74px}
+#contentA #toteMultiRace.toteMulti6Legs .legB .col3{width: 74px}
+
+#toteMultiRace.toteMulti7Legs .legB {width: 226px}
+#contentA #toteMultiRace.toteMulti7Legs .legB .col1{width: 112px; padding-left: 10px}
+#contentA #toteMultiRace.toteMulti7Legs .legB .col2{width: 58px}
+#contentA #toteMultiRace.toteMulti7Legs .legB .col3{width: 58px}
+
+.listInline li.blockbuster { 
+ background: url(../../images/cn/listInlinebbBG.gif?ver=e29378bd396e2061fed90c753cdbe984) bottom left repeat-x;
+} 
+ 
+.listInline li.blockbuster:hover{ 
+ background: #F8FCE1 url(../../images/cn/listInlinebbOnBG.gif?ver=e29378bd396e2061fed90c753cdbe984) top left no-repeat;
+} 
+ 
+.listInline li#listbbOn{ 
+ background: #F8FCE1 url(../../images/cn/listInlinebbOnBG.gif?ver=e29378bd396e2061fed90c753cdbe984) top left no-repeat;
+}
+ 
+ 
+.listInline li#listbbOn a, .listInline li.blockbuster:hover a{ 
+ color: #00314A; 
+} 
+
+
+
+/************************  RP / Tote Narrow version **********************************/
+.toteInfo .toteVerdictContainer {background: url(../../images/cn/rpVerdictBG.png?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+.toteInfo .toteTcContainer {background: url(../../images/cn/rpTcBG.png?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+.toteInfo .toteWatchLiveContainer{background: url(../../images/cn/rpWatchLiveBG.png?ver=e29378bd396e2061fed90c753cdbe984) no-repeat;}
+.toteInfoMain a {color:white;}
+
+.toteWatchLiveContainer .toteInfoMain ul {
+	list-style: disc;
+	margin-left:8px;
+}
+
+.toteWatchLiveContainer .toteInfoMain > ul li {
+	padding-bottom: 1px;
+	padding-top: 1px;
+	font-weight:bold;
+}
+
+#contentA .toteInfoMain h3 {margin-top: -3px;}
+
+#rpBtnHolder {margin-left: -10px;}
+
+#rpBtnHolder ul {
+	padding-top: 6px;
+	width: 400px;
+	float:left;
+	border-top: dotted #6F6F6F   1pt;
+	margin-top:21px;
+}
+
+ #rpBtnHolder li {
+	display: inline;
+	height: 23px;
+	padding: 0px 0px 0px 4px;
+	background: url(../../images/cn/rpBtnleft.gif?ver=e29378bd396e2061fed90c753cdbe984) top left no-repeat;
+	float:left;
+	clear: none;
+	margin-right:6px;
+ }
+
+ #rpBtnHolder li a {
+	background: url(../../images/cn/rpBtnRight.gif?ver=e29378bd396e2061fed90c753cdbe984) top right no-repeat;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.0em;
+	display:inline;
+	float:left;
+	height: 23px;
+	padding: 4px 18px 4px 14px;
+ }
+
+.toteWatchLiveContainer .toteInfoStream, .toteWatchLiveContainer .toteInfoStream .qualMain {
+	border-bottom: none;
+	border-left: 1pt solid #523F44;
+}
+
+.toteWatchLiveContainer .toteInfoStream h4, .toteWatchLiveContainer .toteInfoStream .qualMain h4{
+	background: url(../../images/cn/whTvLogo.jpg?ver=e29378bd396e2061fed90c753cdbe984) left 4px no-repeat;
+	padding-left: 61px;
+	height: 23px;
+	line-height: 23px;
+	font-size: 14pt;
+	margin-top: -4px;
+}
+
+#rpBtnHolder li a.plainWhiteLink {
+	background: none transparent;
+	color: #fff;
+	text-decoration: underline;
+	padding-left: 0px;
+}
+
+/* Qualifying list is a list of lists - the left item aligned left and the right right */
+
+.toteWatchLiveContainer .toteInfoStream .qualMain {
+	height: 110px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+.toteWatchLiveContainer .toteInfoStream .qualMain > ul li {
+	width: 100%;
+	border-bottom: dotted #6F6F6F   1pt;
+	padding: 0 0 3px 0;
+	margin: 2px 0 -2px 0;
+	list-style: disc;
+}
+
+.toteWatchLiveContainer .toteInfoStream .qualMain ul li ul li{
+	width:49%;
+	height: 17px;
+	display: inline;
+	border:none;
+}
+
+.toteWatchLiveContainer .toteInfoStream .qualMain ul li ul li a{
+	height:17px;
+	display: inline-table;
+}
+
+.toteWatchLiveContainer .toteInfoStream .qualMain .listLeftAlign {text-align: left;}
+.toteWatchLiveContainer .toteInfoStream .qualMain .listRightAlign {text-align: right;}
+
+.toteWatchLiveContainer .toteInfoStream .qualMain .listRightAlign a{
+	width: 97px;
+	height:17px;
+	background: url(../../images/cn/watchNowBG.jpg?ver=e29378bd396e2061fed90c753cdbe984);
+	vertical-align: middle;
+}
+
+.WatchNowBtn {
+	width: 97px;
+	height:17px;
+	background: url(../../images/cn/watchNowBG.jpg?ver=e29378bd396e2061fed90c753cdbe984);
+	vertical-align: middle;
+	display:block;
+}
+
+.rpQualTable {margin-top: 4px;}
+
+.toteWatchLiveContainer .toteInfoStream .qualMain td {border-bottom: #6F6F6F  0.5pt  dotted; padding-bottom: 2px;}
+.rpQualBullet {width: 6px;}
+.toteWatchLiveContainer .toteInfoStream .qualMain td.bullet {background: url(../../images/cn/bullet.png?ver=e29378bd396e2061fed90c753cdbe984)  left no-repeat; border:none;}
+
+.rpQualCol1 {width: 280px;}
+.rpQualCol2 {width: 100px;}
+
+.toteWatchLiveContainer .toteInfoStream .qualMain .WatchNowBtn:hover {background: url(../../images/cn/watchNowOverBG.jpg?ver=e29378bd396e2061fed90c753cdbe984);}
+.toteWatchLiveContainer .toteInfoStream .qualMain .listRightAlign a:hover {background: url(../../images/cn/watchNowOverBG.jpg?ver=e29378bd396e2061fed90c753cdbe984);}
+
+/* Need a narrower header for qual h4 */
+.toteWatchLiveContainer .toteInfoStream .qualMain h4 {width: 200px;}
+.rpQualRefreshHolder {
+	width: 94px;
+	float: right;
+	margin-top: -20px;
+}
+
+/* For VoD results */
+
+#contentA .matrixA li ul li.eventVoD a {background: none;}
+#contentA .matrixA li ul li.eventVoD a.VODLink {
+	height:auto;
+	margin:3px 0 0 -58px;
+	padding:0;
+	width:auto;
+}
+

@@ -1,0 +1,3810 @@
+/*
+    Author:     Michael Hay - mhay[at]williamhill.co.uk
+    Website:    williamhill.com
+    Version:    1.0
+    Date:       10/09/2008
+    Built For:  MooTools 1.2
+*/
+
+//Global Variables
+var serverDate = new Date(strServerTime*1000);
+var version = navigator.appVersion;
+var new_window;
+
+strUrlLang = '/'+strLang+'/';
+
+var strCurrency = '&pound;';
+
+//William Hill Core
+var whHelp = {
+	root: function() {
+		void(0);
+
+		var temp = strHelpUrl.replace(/lang\.cfg/g, strHelpLang.replace(/-/g, "_")+'.cfg');
+		window.open(temp.replace(/lang\.custhelp/g, strHelpLang+'.custhelp'), 'RightNow', 'width=664,height=440,scrollbars=yes');		
+		//window.open(strHelpUrl.replace(/lang/g, strHelpLang), 'RightNow', 'width=664,height=440,scrollbars=yes');
+	},
+	load: function(metaID, anchor) {
+		void(0);
+		window.open('http://williamhill-' + strHelpLang + '.custhelp.com/cgi-bin/williamhill_' + strHelpLang.replace(/-/g, "_")+ '.cfg/php/enduser/std_alp.php?meta=' + metaID + '#' + anchor, 'RightNow', 'width=664,height=440,scrollbars=yes');
+	},
+	faq: function(metaID) {
+		void(0);
+		window.open('http://williamhill-' + strHelpLang + '.custhelp.com/cgi-bin/williamhill_' + strHelpLang.replace(/-/g, "_") + '.cfg/php/enduser/meta_faq.php?meta=' + metaID, 'RightNow', 'width=664,height=440,scrollbars=yes');
+	},
+	faq2: function(metaID, langUK) {
+		void(0);
+		if(langUK != 'undefined' && langUK != undefined) {
+			window.open('http://williamhill-lang-uk.custhelp.com/cgi-bin/williamhill_lang_uk.cfg/php/enduser/guided_adp.php?p_faqid=' + metaID, 'RightNow', 'width=664,height=440,scrollbars=yes');
+		}
+		else {
+			window.open('http://williamhill-' + strHelpLang + '.custhelp.com/cgi-bin/williamhill_' + strHelpLang.replace(/-/g, "_") + '.cfg/php/enduser/std_adp.php?p_faqid=' + metaID, 'RightNow', 'width=664,height=440,scrollbars=yes');
+		}
+	},
+	ask: function(metaID) {
+		void(0);
+		window.open('http://williamhill-' + strHelpLang + '.custhelp.com/cgi-bin/williamhill_' + strHelpLang.replace(/-/g, "_") + '.cfg/php/enduser/ask.php?p_pv=1.5&p_prods=5&prod_lvl1=5', 'RightNow', 'width=664,height=440,scrollbars=yes');
+	},
+	contact: function() {
+		void(0);
+		switch(document.body.id){
+	            case 'casino_site':
+			productId = 4;
+	            	break;
+	            case 'poker_site':
+	            	productId = 5;
+	                break;
+	            case 'vegas_site':
+	            	productId = 739;
+	                break;	                
+	            default:
+	                productId = '';
+            	}
+		window.open('http://williamhill-' + strHelpLang + '.custhelp.com/cgi-bin/williamhill_' + strHelpLang.replace(/-/g, "_") + '.cfg/php/enduser/ask.php?p_prods=' + productId, 'RightNow', 'width=664,height=440,scrollbars=yes');
+	}	
+};
+// Casino Leaderboard
+function casinoLeaderBoard() {
+	//console.log("Leaderboard");
+	new Asset.javascript('http://cachexml.williamhillcasino.com/xmassleadebord/xmass_leadebord_whcasino.js?time:' + strServerTime, {
+		onload: function(){
+			if(typeof LBdata=="undefined") {
+				$('casino-leaderboard').innerHTML = "No data";
+			}
+			else {
+				//console.log('Get Data');
+				tempData = LBdata.replace('<table id=\'xmass_leaderboard\'>', '<table id=\'xmass_leaderboard\' cellspacing=\'0\'>');
+				switch (strLang)
+				{
+				case 'fr':
+					tempData = tempData.replace('Username','Utilisateur');
+					tempData = tempData.replace('Name','Client');
+					tempData = tempData.replace('Leaderboard Points <br> needed to next place up','Points LB pour<br />monter une place');
+					tempData = tempData.replace('Prizes','Prix');
+				break;
+				case 'es':
+					tempData = tempData.replace('Place','PosiciÃ³n');
+					tempData = tempData.replace('Username','Nombre de usuario');
+					tempData = tempData.replace('Name','Nombre');
+					tempData = tempData.replace('Leaderboard Points <br> needed to next place up','Puntos LB restantes<br />para subir un puesto');
+					tempData = tempData.replace('Prizes','Premios');
+				break;
+				case 'de':
+					tempData = tempData.replace('Place','Platz');
+					tempData = tempData.replace('Username','Benutzername');
+					tempData = tempData.replace('Leaderboard Points <br> needed to next place up','LB-Punke, um den<br />nÃ¤chsten Platz einzunehmen');
+					tempData = tempData.replace('Prizes','Preise');
+				break;
+				case 'el':
+					tempData = tempData.replace('Place','Î˜Î­ÏƒÎ·');
+					tempData = tempData.replace('Username','ÎŒÎ½Î¿Î¼Î± Î§ÏÎ®ÏƒÏ„Î·');
+					tempData = tempData.replace('Name','ÎŒÎ½Î¿Î¼Î±');
+					tempData = tempData.replace('Leaderboard Points <br> needed to next place up','Î’Î±Î¸Î¼Î¿Î¯ LB Î³Î¹Î± Ï„Î·Î½<br />ÎµÏ€ÏŒÎ¼ÎµÎ½Î· Î¸Î­ÏƒÎ·');
+					tempData = tempData.replace('Prizes','Î’ÏÎ±Î²ÎµÎ¯Î±');
+				break;
+				}
+				$('casino-leaderboard').innerHTML = tempData;
+			}
+
+		},
+		onFailure: function(){
+			$('casino-leaderboard').innerHTML = "No data";
+		}
+	});
+}
+
+// JSON SORTER
+var sort_by = function(field, reverse, primer){
+   reverse = (reverse) ? -1 : 1;
+   return function(a,b){
+
+       a = a[field];
+       b = b[field];
+
+       if (typeof(primer) != 'undefined'){
+           a = primer(a);
+           b = primer(b);
+       }
+
+       if (a<b) return reverse * -1;
+       if (a>b) return reverse * 1;
+       return 0;
+   }
+}
+
+function getQueryVariable(variable) {
+	var query = window.location.search.substring(1);
+	var vars = query.split("&");
+	for (var i=0;i<vars.length;i++) {
+		var pair = vars[i].split("=");
+		if (pair[0] == variable) {
+			return pair[1];
+		}
+	}
+}
+function whShowHideDiv(id) {
+	if (!document.getElementById(id)) {return;}
+	element = document.getElementById(id);
+	if (element.style.display=='block') {element.style.display='none';}
+	else{element.style.display='block';};
+}
+
+function lang_change(value) {
+	Cookie.write("cust_lang", value, {duration: 30, domain: '.williamhill.com', path: '/'});
+	if(value != 'en') {
+		if(Cookie.read('cust_prefs') != null){
+			var temp = Cookie.read('cust_prefs');
+			if(temp.search('ODDS') > 0){
+				temp = temp.replace('ODDS', 'DECIMAL');
+			}
+			if(temp.search('AMERICAN') > 0){
+				temp = temp.replace('AMERICAN', 'DECIMAL');
+			}
+			Cookie.write("cust_prefs", temp, {duration: 30, domain: '.williamhill.com', path: '/'});
+		}
+		else {
+			Cookie.write("cust_prefs", 'en|DECIMAL|form|TYPE|||0|SB|0|0|', {duration: 30, domain: '.williamhill.com', path: '/'});
+		}
+	}
+	else {
+		if(Cookie.read('cust_prefs') != null){
+			var temp = Cookie.read('cust_prefs');
+			if(temp.search('DECIMAL') > 0){
+				temp = temp.replace('DECIMAL', 'ODDS');
+			}
+			if(temp.search('AMERICAN') > 0){
+				temp = temp.replace('AMERICAN', 'ODDS');
+			}
+			Cookie.write("cust_prefs", temp, {duration: 30, domain: '.williamhill.com', path: '/'});
+		}
+		else {
+			Cookie.write("cust_prefs", 'en|ODDS|form|TYPE|||0|SB|0|0|', {duration: 30, domain: '.williamhill.com', path: '/'});
+		}
+	}
+	whNews.dataStore.erase('selectedSports');
+}
+
+function site_change(url) {
+	Cookie.write("cust_defaultsite", url, {duration: 365, domain: '.williamhill.com', path: '/'});
+}
+
+// launch radio player
+radioWindow = null;
+function launchRadio() {
+	if (radioWindow && !radioWindow.closed) {radioWindow.focus();}
+	else {
+		radioWindow = window.open("/radio-popup/", 'radioWindow', "toolbar=no,width=323,height=280,resizable=no,scrollbars=no");
+		radioWindow.focus();
+	};
+}
+
+// launch bingo product
+function launchBingo(gameName, gameType) {
+	//console.log(gameName);
+	if (!gameName || gameName=="") {gameName="Bingo";}
+	if (!gameType) {gameType="";}
+	var winName = gameName.replace(/ /g,"");
+	if(strLang == 'en') {
+		new_window = window.open("https://sports.williamhill.com/bet/EN?action=DoGameLaunch&systemName=VirtueFusion&base_url=https://williamhill.virtuefusion.com/igames/play/game_page.do&lang=EN&source=BN&gameType="+gameName+"&gameCode=BNEN&gameType="+gameType,winName, "toolbar=no,width=800,height=550,resizable=yes,scrollbars=yes");
+	}
+	else {
+		new_window = window.open("https://sports.williamhill.com/bet/"+strLang+"?action=DoGameLaunch&systemName=VirtueFusion&base_url=https://williamhill.virtuefusion.com/igames/play/game_page.do&lang="+strLang.toUpperCase()+"&source=BN&gameType="+gameName+"&gameCode=BNES&gameType="+gameType,winName, "toolbar=no,width=800,height=550,resizable=yes,scrollbars=yes");
+	}
+	whTrack.getEETag('bingo_'+gameName);
+	Cookie.write('bingoPlayed', '1', {duration: 30, path: '/'});
+	new_window.focus();
+}
+
+// launch bingo advanced ticket purchace window
+function launchBingoATP(scheduleID) {
+	var gameName = 'Community Room';
+	var gameType = 'Bingo';
+	winName = 'ATP';
+	if(strLang == 'en') {
+		new_window = window.open("https://sports.williamhill.com/bet/EN?action=DoGameLaunch&systemName=VirtueFusion&gameCode=BZEN&gameType="+gameType+"-"+gameName+"-"+scheduleID+"-"+gameName+"&gameName="+gameName+"&x="+Math.random(),winName, "toolbar=no,width=800,height=550,resizable=yes,scrollbars=yes");
+	}
+	else {
+		new_window = window.open("https://sports.williamhill.com/bet/"+strLang+"?action=DoGameLaunch&systemName=VirtueFusion&gameCode=BZES&gameType="+gameType+"-"+gameName+"-"+scheduleID+"-"+gameName+"&gameName="+gameName+"&x="+Math.random(),winName, "toolbar=no,width=410,height=480,resizable=yes,scrollbars=yes");
+	}
+	new_window.focus();
+}
+
+// launch bingo advanced ticket purchace window for individual game
+function openAdvancedTicketPurchaseWindow(scheduleKey) {
+	var gameName = 'Community Room';
+	var gameType = 'Bingo';
+	winName = 'ATP';
+	if(strLang == 'en') {
+		new_window = window.open("https://sports.williamhill.com/bet/EN?action=DoGameLaunch&systemName=VirtueFusion&gameCode=BZEN&gameType="+gameType+"-"+gameName+"-N-"+gameName+"-"+scheduleKey+"&gameName="+gameName+"&scheduleKey="+scheduleKey+"&x="+Math.random(),winName, "toolbar=no,width=800,height=550,resizable=yes,scrollbars=yes");
+	}
+	else {
+		new_window = window.open("https://sports.williamhill.com/bet/"+strLang+"?action=DoGameLaunch&systemName=VirtueFusion&gameCode=BZES&gameType="+gameType+"-"+gameName+"-N-"+gameName+"-"+scheduleKey+"&gameName="+gameName+"&scheduleKey="+scheduleKey+"&x="+Math.random(),winName, "toolbar=no,width=410,height=480,resizable=yes,scrollbars=yes");
+	}
+	new_window.focus();
+}
+
+// bookmark site function
+function addToFavorites(url, title){
+	if (window.sidebar)
+		window.sidebar.addPanel(title, url, "");
+	else if(window.opera && window.print){
+		var elem = document.createElement('a');
+		elem.setAttribute('href',url);
+		elem.setAttribute('title',title);
+		elem.setAttribute('rel','sidebar');
+		elem.click();
+	}
+	else if(document.all)
+		window.external.AddFavorite(url, title);
+}
+
+// launch casino and poker downloads or instant plays
+var whLaunch = {
+	target: '',
+	frameKill: function() {
+		if (top !== self) top.location.href = self.location.href;
+	},
+	openCasino: function(down) {
+		//console.log(window.location.hash);
+		if(window.location.hash == '#download'){whLaunch.launchDownload();}else{
+			var cookieName = document.body.id+'_no_prompt';
+			if (Cookie.read(cookieName)) {return;}
+			whTrack.getTag('downloadPrompt');
+			var container = $('contentCenter');
+			var myDrag = new Drag.Move('modalPopup2', {'container': container});
+			$('modalPopup2').setStyle('display', 'block');
+			$('modalDimmer').setStyle('display', 'block');
+			whLaunch.target='http://banner.casino.williamhill.com/cgi-bin/SetupCasino.exe';
+		}
+	},
+	cryptoCasino: function(type) {
+		//if (version=='usd') {target='http://whdn.williamhill.com/cms/images/casino/WilliamHillUSDCasinoInstall.exe';}
+		if(type == 'instant') {window.open('https://www.ifunds.com/XP/00/index.ehtml','instant','width=800,height=600,toolbar=no,status=yes,scrollbars=yes');}
+		else {window.location.href='http://whdn.williamhill.com/cms/images/casino/WilliamHillClassicCasinoInstall.exe';}
+	},
+	launchCasino: function() {
+		//Playtech New Casino Download Launch
+		whTrack.getTag('pltc_instant');
+		whTrack.getEETag('pltc_casino_instant');
+		if(strLang != 'en' && strLang != 'nl' && strLang != 'ru' && strLang != 'sv' && strLang != 'pl') {window.open('http://banner.casino.williamhill.com/flashcasino.php?language='+strLang,'instant','width=820,height=600,toolbar=no,status=yes,scrollbars=yes');}
+		else {window.open('http://banner.casino.williamhill.com/flashcasino.php','instant','width=820,height=600,toolbar=no,status=yes,scrollbars=yes');}
+		//Crypto
+		//whTrack.getEETag('casino_instant');
+	        //window.open('https://www.ifunds.com/XP/00/index.ehtml','instant','width=800,height=600,toolbar=no,status=yes,scrollbars=yes');
+		
+	},
+	closeCasino: function() {
+		//New Casino Instant Launch
+		$('modalPopup2').setStyle('display', 'none');
+		$('modalDimmer').setStyle('display', 'none');
+		$('dragger').setStyle('display', 'none');
+		
+		whLaunch.dropPromptCookie();
+	},
+	launchDownload: function(version, siteId) {
+		whTrack.getTag('download');
+		var affID = "";
+		
+		if(Cookie.read('banner_click') != null){
+			affID =	Cookie.read('banner_click');
+		}else{
+			if(Cookie.read('NETREFER_COOKIE_BTAG') != null){
+				affID =	Cookie.read('NETREFER_COOKIE_BTAG').split('&')[0].split('=')[1]
+			}
+		}
+		if(siteId == undefined || siteId == ''){siteId = document.body.id;}
+		switch(siteId){
+	            case 'casino_site':
+	            	whTrack.getEETag('casino_download');
+			whLaunch.target='http://banner.casino.williamhill.com/cgi-bin/SetupCasino.exe?opt_lang='+strLang+'&creferer=time:' + strServerTime + ';affiliate_id:' + affID;
+			window.location.href = whLaunch.target;
+			//console.log(' - Start Download: ' + whLaunch.target);
+			//$('modalPopupIframe').src = whLaunch.target;
+	            	break;
+	            case 'poker_site':
+	            	whTrack.getEETag('poker_download');
+	            	whLaunch.target='http://banner.poker.williamhill.com/cgi-bin/SetupPoker.exe?opt_lang='+strLang+'&creferer=time:' + strServerTime + ';affiliate_id:' + affID;
+	                window.location.href = whLaunch.target;
+	                //console.log(' - Start Download: ' + whLaunch.target);
+	                //$('modalPopupIframe').src = whLaunch.target;
+			//if(Browser.Engine.trident){whLaunch.centre_element('modalPopup');}
+	                break;
+            	}
+
+	},
+	centre_element: function(element) {
+		// position popup
+		new Fx.Scroll(window).toTop();
+		var winSize = window.getSize();
+		console.log(parseInt($(element).getStyle('height')));
+		$(element).setStyles({
+		    left: ((winSize.x/2)-240),
+		    top: ((winSize.y/2)-parseInt($(element).getStyle('height'))/1.5),
+		    display: 'block'
+		});
+		$('modalDimmer').setStyles({
+		    height: document.body.offsetHeight,
+		    display: 'block'
+		});
+	},
+	close: function() {
+		$('modalPopup').setStyle('display', 'none');
+		$('modalDimmer').setStyle('display', 'none');
+		$('dragger').setStyle('display', 'none');
+	},
+	launchInstant: function() {
+		whTrack.getTag('instant');
+		switch(document.body.id){
+	            case 'casino_site':
+	            whTrack.getEETag('casino_instant');
+	            window.open('https://www.ifunds.com/XP/00/index.ehtml','instant','width=800,height=600,toolbar=no,status=yes,scrollbars=yes');
+	            break;
+	            case 'poker_site':
+	            whTrack.getEETag('poker_instant');
+	            window.open('https://ndpoker.wagerlogic.com/Poker/PokerFlex.html','instant','width=800,height=600,toolbar=no,status=yes,scrollbars=yes');
+	            break;
+            	}
+	},
+	getFile: function() {
+		console.log("File: " + whLaunch.target);
+		window.location.href = whLaunch.target;
+	},
+	launchPrompt: function() {
+		console.log(window.location.hash);
+		if(window.location.hash == '#download'){
+			//console.log('1');
+			whLaunch.launchDownload();
+		}else{
+			//console.log('2');
+			var cookieName = document.body.id+'_no_prompt';
+			if (Cookie.read(cookieName)) {return;}
+			whTrack.getTag('downloadPrompt');
+			var container = $('contentCenter');
+			var myDrag = new Drag.Move('modalPopup2', {'container': container});
+			//$('dragger').setStyle('display', 'block');
+			$('modalPopup2').setStyle('display', 'block');
+			$('modalDimmer').setStyle('display', 'block');
+		}
+	},
+	acceptPrompt: function() {
+		whTrack.getTag('downloadPrompt/Yes');
+		whLaunch.dropPromptCookie();
+		$('modalPopup2').setStyle('display', 'none');
+		$('modalDimmer').setStyle('display', 'none');
+		whLaunch.launchDownload();
+	},
+	cancelPrompt: function() {
+		whTrack.getTag('downloadPrompt/No');
+		whLaunch.dropPromptCookie();
+		$('modalPopup2').setStyle('display', 'none');
+		$('modalDimmer').setStyle('display', 'none');
+		$('dragger').setStyle('display', 'none');
+	},
+	dropPromptCookie: function() {
+		var cookieName = document.body.id+'_no_prompt';
+		Cookie.write(cookieName, '1', {duration: 30, path: '/'});
+	},
+	inParent: function(url) {
+		if(opener && !opener.closed){
+		    opener.location.href = url;
+		    opener.focus();
+		    void(0);
+		}else{
+		    var win = window.open(url, '', 'fullscreen=yes,scrollbars=auto,menubar=yes,status=yes,location=yes,toolbar=yes');	
+		    win.focus();
+		    void(0);
+		}
+	}
+};
+
+var whTrack = {
+	getCookie: function(c_name) {
+		if (document.cookie.length > 0) {
+			c_start = document.cookie.indexOf(c_name + "=");
+			if (c_start != -1) {
+				c_start = c_start + c_name.length + 1;
+				c_end = document.cookie.indexOf(";", c_start);
+				if (c_end == -1) c_end = document.cookie.length;
+				return unescape(document.cookie.substring(c_start, c_end));
+			}
+		}
+		return "";
+	},
+	getQuerystring: function(key, url){
+		key = key.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+	  	var regex = new RegExp("[\\?&]"+key+"=([^&#]*)");
+	  	var qs = regex.exec(url);
+	  	if(qs == null)
+	    	    return "nokey";
+	  	else
+	    	    return qs[1];
+	},
+	getTag: function(strTag) {
+		try{
+			imgRedEye = new Image();
+			var srcURL = strReGif+ "?nosubsite=" + strLang+ "&norefer=" + this.urlEncode(document.referrer) + "&nourl=www.willhill.com/" + strLang + "/" + strPageTag + "/" + strTag;
+			if(strExistingUser != "1"){
+			    srcURL += '&noscres='+screen.width+'x'+screen.height+'&amp;browser='+navigator.userAgent+'&amp;platform='+navigator.platform+'&amp;color='+screen.colorDepth+'&amp;flash='+flashinstalled+'/'+flashversion;
+			}
+			imgRedEye.src = srcURL;
+			console.log(" - Fire Tag: " + srcURL );
+			console.log(" - Ref: " + document.referrer );
+		}catch(e){
+			console.error("Tracking Error: " + e)
+		}
+	},
+	getEETag: function(strTag) {
+		//MH Deprecated 20/12/2009
+		//imgEE = new Image();
+		//var srcURL = "http://www.williamhill.com/index.php/site/click_track/"+(Math.ceil(9999*Math.random()))+"?tag=" + strTag;
+		//imgEE.src = srcURL;
+	},
+	getAffTag: function(strTag, strLangSelect) {
+		var goUrl = "";
+		if(strLangSelect == null || strLangSelect == ''){
+			strLangSelect = strLang;
+		}
+		if(strIP == null || strIP == ''){
+			strIP = 0;
+		}
+			
+		switch(strLangSelect){
+			case 'en': var zone = '78064637'; break;   
+			case 'es': var zone = '66908159'; break; 
+			case 'fr': var zone = '66908161'; break;          
+        		default:   var zone = '78064637'; break;
+		}
+		var tagVar = "source";strTag+strLangSelect
+		whTrack.getTag('affutd/'+strTag);
+		if(Cookie.read('clickinfo') != null){
+			goUrl = 'http://serve.williamhillcasino.com/promoRedirect?'+ Cookie.read('clickinfo') +'&zone='+zone+'&lp='+strIP+'&'+tagVar+'='+strTag+strLangSelect+'&var10='+whTrack.getQuerystring('q', document.referrer);
+		}else{
+			goUrl = 'http://serve.williamhillcasino.com/promoRedirect?member=DEFAULT&campaign=DEFAULT&channel=DEFAULT&zone='+zone+'&lp='+strIP+'&'+tagVar+'='+strTag+strLangSelect+'&var10='+whTrack.getQuerystring('q', document.referrer);
+		}
+		console.log(' - AffUtd Sent: ' + goUrl);
+		window.location = goUrl;
+	},
+	getAffUtdTag: function(strSource, strZone, strProductUrl, strLP, varU) {
+		var tagVar = "source";
+		var goUrl = "";
+		if(strProductUrl == null || strProductUrl == ''){
+			strProductUrl = "williamhill";
+		}
+		if(strLP == null || strLP == ''){
+			strLP = 0;
+		}
+		if(varU == null || varU == '') {
+			varUrl = '';
+		}
+		else {
+			varUrl = '&var3='+varU;
+		}
+		whTrack.getTag('affutd/'+strSource);
+		if(Cookie.read('clickinfo') != null){
+			goUrl = 'http://serve.'+strProductUrl+'.com/promoRedirect?'+ Cookie.read('clickinfo') +'&zone='+strZone+'&lp='+strLP+'&'+tagVar+'='+strSource+varUrl+'&var10='+whTrack.getQuerystring('q', document.referrer);
+		}else{
+			goUrl = 'http://serve.'+strProductUrl+'.com/promoRedirect?member=DEFAULT&campaign=DEFAULT&channel=DEFAULT&zone='+strZone+'&lp='+strLP+'&'+tagVar+'='+strSource+varUrl+'&var10='+whTrack.getQuerystring('q', document.referrer);
+		}
+		console.log(' - AffUtd Sent: ' + goUrl);
+		window.location = goUrl;
+	},
+	urlEncode: function(encodeHtml){
+	     encodedHtml = escape(encodeHtml);
+	     encodedHtml = encodedHtml.replace(/\//g,"%2F");
+	     encodedHtml = encodedHtml.replace(/\?/g,"%3F");
+	     encodedHtml = encodedHtml.replace(/=/g,"%3D");
+	     encodedHtml = encodedHtml.replace(/&/g,"%26");
+	     encodedHtml = encodedHtml.replace(/@/g,"%40");
+	     return encodedHtml;
+	},
+	getSERef: function(code){
+		if(code  == '' || code == null) code = 'Seowh';
+		
+		if(!Cookie.read('banner_click')) {
+			var SEDIR = ['google.com/intl/ar/'];
+			var SEDOM = ['bng.loc','bing.','a9.','alexa.','alltheweb.','altavista.','aol.','yahoo.','atlas.','azet.','francite.','centrum.','clusty.','cnn.','live.','collarity.','cometquery.','congoo.','cuil.','debeste.','digger.','dogpile.','eli.','emulti.','entireweb.','excite.','fazzle.','freenet.','gigablast.','gmx.','google.','gooru.','goyams.','hotbot.','icerocket.','ilse.','ithaki.','iwon.','ixquick.','kartoo.','kobala.','kx.','leonardo.','libero.','looksmart.','lycos.','mamma.','metacrawler.','metaspider.','mnemo.','mojeek.','mooter.','msdewey.','msn.','netmenu.','netscape.','netsprint.','quintura.','releton.','rollyo.','search.','seznam.','spinneweb.','surfwax.','sympatimsn.','szukacz.','theking.','tiscali.','t-online.','track.','ujiko.','url.','vinden.','alice.','vmgo.','webcrawler.','web.','yoople.','zapmeta.','zoekhet.','zoek.','zuula.'];
+			
+			var SEDEF = ['msn.','google.','yahoo.','bing.'];
+			var REF = document.referrer;
+			//var REF = 'http://google.co.uk'; // Test
+	
+			var refFound = false;
+			var DEF = '';
+			for(sdir in SEDIR){if(REF.indexOf(SEDIR[sdir])!=-1){refFound = true;};};
+			if(!refFound){for(sdom in SEDOM){if(REF.indexOf(SEDOM[sdom])!=-1){refFound = true;};};};
+			if(refFound){ 
+				for(sdef in SEDEF){if(REF.indexOf(SEDEF[sdef])!=-1){DEF='&def='+SEDEF[sdef]+'default';};};
+				REF = REF.split('?')[0]
+				new Asset.javascript('http://login.williamhill.com/referer/'+code+'/getReferer.asp?ref='+REF+DEF , {
+					onload: function(){
+					    console.log(' - SEO Refer Sent: Y ('+code+') - ' + REF);
+					},
+					onFailure: function(){
+					    console.log(' - SEO Refer Sent: N - Failed ');
+					}
+				});
+			};
+		}
+	}
+}
+
+var Kwix = {
+    start: function(){Kwix.parseKwicks();},
+    parseKwicks: function(){
+        var squeeze_to = 58;
+        var max_height = 148;
+        var start_heights = new Array();
+        var slider = $$('#col_right_3step ul')
+
+        slider.each(function(item, index){
+            var items = item.getElements('li');
+            var fx = new Fx.Elements(items, {wait: false, duration: 250, transition:Fx.Transitions.Cubic.easeOut});
+            items.each(function(kwick, i){
+                start_heights[i] = kwick.getStyle('height').toInt();
+                kwick.addEvent('mouseenter', function(e){
+                    var obj = {};
+                    obj[i] = {
+                        'height': [kwick.getStyle('height').toInt(), max_height]
+                    };
+
+                    var counter = 0;
+
+                    items.each(function(other, j){
+                        if (other != kwick){
+                            var w = other.getStyle('height').toInt();
+                            if (w != squeeze_to) obj[j] = {'height': [w,squeeze_to] };
+                        }
+                    });
+                    fx.start(obj);
+                });
+            });
+        });
+    }
+};
+
+var tip = new Class({
+    Implements: [Options],
+    options: {
+        elLock: document.body,
+        tipDelay: 0,
+        tipDuration: 60000,
+        tipBounce: 10000,
+        msg: ''
+    },
+    initialize: function(options) {
+        var tip = new Element('div', {
+            'class': 'tipContainer',
+            'style': 'margin-top: 35px;',
+            'html': '<div class="tipText">' + options.msg + '</div><div class="tipCap">&nbsp;</div>'
+        });
+
+        tip.setOpacity(0);
+        tip.inject(document.body, 'top');
+	
+        var tipFx = new Fx.Morph(tip, {duration: 1000, transition: Fx.Transitions.Bounce.easeOut});
+        this.setTipPosition(options.elLock, tip);
+        window.addEvent('resize', function(){
+        	setTipPosition(options.elLock, tip);
+        });
+        
+        (function(){
+            tipFx.start({
+                'opacity': 1,
+                'margin-top': 0
+            });
+            if(options.tipBounce > 0){
+                var tipBounceStartFx = new Fx.Morph(tip, {duration: 250, transition: Fx.Transitions.Quad.easeInOut});
+                var tipBounceEndFx = new Fx.Morph(tip, {duration: 1000, transition: Fx.Transitions.Bounce.easeOut});
+                var bounceTmr = function(){
+                    tipBounceStartFx.start({
+                        'margin-top': [0 , 16]
+                    }).chain(function(){
+                    tipBounceEndFx.start({
+                        'margin-top': [16 , 0]
+                    })});
+                }.periodical(options.tipBounce);
+            };
+            (function(){
+                new Fx.Tween(tip).start('opacity', 0).chain(function(){
+                    $clear(bounceTmr);
+                    tip.destroy();
+                })
+            }).delay(options.tipDuration);
+        }).delay(options.tipDelay);
+    },
+    setTipPosition: function(el, tip){
+        var alignTo = $(el).getCoordinates();
+        if(alignTo.left.toInt() + tip.getSize().x > 996){
+            tip.setStyles({
+                top: alignTo.top + alignTo.height + 7,
+                left: (alignTo.left - tip.getSize().x) + alignTo.width,
+                backgroundPosition: 'top right'
+            });
+        }else{
+            tip.setStyles({
+                top: alignTo.top + alignTo.height + 7,
+                left: alignTo.left
+            });
+        }
+    
+    }
+});
+
+var SliderPromo = new Class({
+    //implements
+    Implements: [Options],
+
+    //options
+    options: {
+        scrollArea: '',
+        scrollControl: '',
+        autoScroll: true
+    },
+    //initialization
+    initialize: function(options) {
+        var scrollAreas = $$(options.scrollArea);
+        var scrollControls = $$(options.scrollControl);
+        
+        var itemCount = [];
+        var itemCurrent = [];
+        var navCount = [];
+        var navCurrent = [];
+        var scrollView = [];
+        var scrollOffset = [];
+        var scrollFx = [];
+        var scrollBusy = [];
+        var duration = 600;
+
+        scrollAreas.each(function(item, index){
+            var scrollItems =  item.getElements('li');
+            scrollBusy[index] = false;
+            itemCount[index] = scrollItems.length;
+
+            navCurrent[index] = 0;
+
+            scrollView[index] = itemCurrent[index];
+            scrollOffset[index] = scrollItems[0].getSize().y;
+           
+            scrollFx[index] = new Fx.Scroll(item, {
+            	duration: 500,
+                wheelStops : false,
+                transition: Fx.Transitions.Quad.easeInOut
+            });
+            scrollItems.each(function(item, index){
+	            item.addEvent('click', function(event){
+	            	selectScroll(item.get('id')+'-block');
+	            	scrollItems.each(function(item){item.removeClass('activePromo');});
+	            	item.addClass('activePromo');
+	            });
+	    });
+        });
+        scrollControls.each(function(navItems, conIndex){
+        	var upB = navItems.getElements('a.upButton');
+        	var downB = navItems.getElements('a.downButton');
+		downB.addEvent('click', function(event){
+			if(navCurrent[conIndex]+3<itemCount[conIndex]) {
+				event.stop();
+				scrollMe(navItems, conIndex, navCurrent[conIndex]+1);
+			}
+		});
+		upB.addEvent('click', function(event){
+			if(navCurrent[conIndex]>0) {
+				event.stop();
+				scrollMe(navItems, conIndex, navCurrent[conIndex]-1);
+			}
+		});
+        });
+        function scrollMe(navItems, conIndex, index){
+		scrollFx[conIndex].start(0, (scrollOffset[conIndex]) * index).chain(function(){
+			navCurrent[conIndex] = index;
+			scrollBusy[conIndex] = false;
+		});
+        }
+	function selectScroll(blockId) {
+		$$('div.promosContent').each(function(item) {item.setStyle('display','none');});
+		//console.log(blockId);
+		$(blockId).setStyle('display','block');
+	}
+     }
+});
+
+var SliderNav = new Class({
+    //implements
+    Implements: [Options],
+
+    //options
+    options: {
+        scrollArea: '',
+        scrollControl: '',
+        autoScroll: true
+    },
+    
+    //initialization
+    initialize: function(options) {
+        var scrollAreas = $$(options.scrollArea);
+        var scrollControls = $$(options.scrollControl);
+        
+        var itemCount = [];
+        var itemCurrent = [];
+        var navCount = [];
+        var navCurrent = [];
+        var scrollView = [];
+        var scrollOffset = [];
+        var scrollFx = [];
+        var scrollBusy = [];
+        var duration = 600;
+
+        scrollAreas.each(function(item, index){
+            var scrollItems =  item.getElements('li');
+            scrollBusy[index] = false;
+            itemCount[index] = scrollItems.length;
+            
+            navCount[index] = scrollControls[index].getElements('li.dot').length;
+            navCurrent[index] = 0;
+
+            scrollView[index] = itemCurrent[index];
+            scrollOffset[index] = scrollItems[0].getSize().x -1;
+
+            scrollFx[index] = new Fx.Scroll(item, {
+            	duration: 500,
+                wheelStops : false,
+                transition: Fx.Transitions.Quad.easeInOut
+            });
+        }); 
+        
+        scrollControls.each(function(navItems, conIndex){
+        	var navLinks = navItems.getElements('li');
+		navLinks .each(function(item, index){
+			if(index == 0){updateDots(navItems, 0);}
+			item.addEvent('click', function(event){
+				event.stop();
+				if(navLinks .length > 1){
+					scrollMe(navItems, conIndex, index);
+				}
+			});
+		});
+
+        });
+               
+        function scrollMe(navItems, conIndex, index){
+        	updateDots(navItems, index);
+		scrollFx[conIndex].start((scrollOffset[conIndex]) * index+1, 0).chain(function(){
+			navCurrent[conIndex] = index;
+			scrollBusy[conIndex] = false;
+		});
+        }
+        
+
+        function updateDots(navItems, navCurrent){
+            navItems.getElements('li.dot').each(function(item, index){
+                if(index == navCurrent){item.addClass('on');}else{item.removeClass('on');}
+            });
+        }
+    }
+});
+
+var FadeNav = new Class({
+    //implements
+    Implements: [Options],
+
+    //options
+    options: {
+        scrollArea: ''
+    },
+    
+    //initialization
+    initialize: function(options) {
+        var scrollAreas = $$(options.scrollArea);
+        var pauseDuration = (options.duration)?(options.duration):4;
+        pauseDuration = pauseDuration * 1000;
+
+        var itemList = [];
+        var itemCount = [];
+        var itemCurrent = [];
+        var navCurrent = [];
+        var fadeDuration = 600;
+
+        scrollAreas.each(function(item, index){
+            itemList[index] =  item.getElements('li');
+            itemCount[index] = itemList[index].length;
+            navCurrent[index] = 0;
+            if (itemList[index].length>1) {	
+		    scrollNext.delay(pauseDuration, this, index);
+	    }
+	    itemList[index][0].setStyle('display','block');
+        }); 
+        
+        function scrollNext(index){
+		var fadeOut = new Fx.Tween(itemList[index][navCurrent[index]], {
+			duration: fadeDuration,
+	                transition: Fx.Transitions.Quad.easeIn
+	            });
+	            
+		navCurrent[index]++;	
+		if (navCurrent[index]==itemCount[index]) {navCurrent[index]=0;}
+		
+		var fadeIn = new Fx.Tween(itemList[index][navCurrent[index]], {
+			duration: fadeDuration,
+	                transition: Fx.Transitions.Quad.easeOut
+	            });
+		
+		fadeOut.start('opacity', 1, 0).chain(
+			function(){ 
+				itemList[index][navCurrent[index]].setStyle('opacity', '0');
+				itemList[index][navCurrent[index]].setStyle('display', 'block');
+				fadeIn.start('opacity', 0, 1); 
+			}
+		);
+		scrollNext.delay(pauseDuration+2*fadeDuration, this, index);
+        }
+    }
+});
+
+var winners = new Class({
+    Implements: [Options],
+    options: {
+        table: ''
+    },
+    initialize: function(options) {
+	var tables = $$(options.table)
+		if(tables.length > 0){
+			var dataRows = $$(options.table)[0].getElements('li.dataRow');
+			(function(){
+				dataRows.each(function(item, index){
+				if(item.getElement('.seconds')){
+					var secDom = item.getElement('.seconds');
+					var endDate = new Date(item.getElement('.timestamp').innerHTML*1000)
+					var endMins = Math.round((endDate - serverDate)/(60*1000));
+					if (!secDom) {return;}
+					if (endMins > 0){
+						if(endMins == 1){
+							secDom.innerHTML = "< " + endMins;
+						}else{
+							secDom.innerHTML = endMins;
+						}
+					}else{
+						item.fade(.3);
+						item.getElement('.playNow a').href = "javascript:;";
+						item.getElement('.playNow a').setStyle('cursor', 'default');
+						(function(){
+							item.dispose();
+							if(dataRows.length > index + 5){
+								dataRows[index + 5].setStyle('display', 'block');
+							}
+						}).delay(30000)
+					}
+				}
+				}); 
+			}).periodical(30000);
+		}
+    }
+});
+
+var whMessaging = {
+	init: function() {
+	    var msgBar = $$('#contentCenter .headerBG .siteMessages');
+	    if(msgBar.length > 0){
+	    	if(!Cookie.read('msg_'+msgBar[0].id)){
+	    	msgBar[0].setStyle('display', 'block');
+		msgBar[0].getElement('#rightMessage a').addEvent('click', function(event){
+			Cookie.write('msg_'+msgBar.id, true, {duration: 1, path: ''});
+			msgBar[0].setStyle('display', 'none');
+		});
+		}
+	    }
+	}
+};
+
+var whLogin = {
+	init: function(events) {
+
+	    var defaultUserText = $('user').get('value');
+	    $('signinDetails').setStyle('display','none');
+	    if(Cookie.read('cust_login') == "" || Cookie.read('cust_login') == null){
+		console.log(' - Authenticated: N');
+		if(Cookie.read('username_cookie') != "" && Cookie.read('username_cookie') != null){
+			$('user').set('value', Cookie.read('username_cookie'));
+			$('remember_me').set('checked') == true;
+			$('remember_me_value').set('value', 1);
+		}
+		loginListener.loggedOut();
+		    var loginBar = $('login');
+		    if(loginBar.length > 0){
+		    	$('password').addEvent('focus', function(event){
+				this.clone().set('value', '').setProperty('type','password').setProperty('id','password').injectAfter(this);
+				this.dispose();
+				$('password').focus();
+			});
+			$('user').addEvent('focus', function(event){
+				if(defaultUserText == $('user').get('value')){
+					this.set('value', '');
+				}
+			});
+			$('login').addEvent('submit', function(e) {
+				e.stop();
+				if(defaultUserText != $('user').get('value')){
+					$('signinLoader').setStyle('display','block');
+		    	    		$('signinForm').setStyle('display','none');
+		    	    		//$('loadingMessage').innerHTML = "Signing in...";
+		    	    		var lgnForm = this;
+					console.log(' - Login Request Sent');
+					new Asset.javascript('http://sports.williamhill.com/bet/'+strLang.toUpperCase()+'?action=GetXLoginForm&lang='+strLang+'&t=' + serverDate.getTime(), {
+						onload: function(){
+						    console.log(' - Response From Login Server - Auth: '+ WHX.authenticated);
+					            	if(WHX.authenticated == 'N'){
+								new Element('div',{html: WHX.data.obFormHidden}).inject(lgnForm ,'bottom');
+								new Element('input', {type: 'hidden', name: 'target_page', value: window.location.href.split('?')[0]}).inject(lgnForm , 'top');
+								Cookie.write("firstLogin", 0, {duration: 365, domain: '.williamhill.com', path: '/'});
+								lgnForm.submit();
+					            	}
+						},
+						onFailure: function(){
+							console.log(' - Login Failed ');
+						}
+					});
+				}else{
+					$('user').set('value', '');
+					$('password').set('value', '');
+					
+				}
+			});
+		    }
+		    if((events != undefined) && (events != 'undefined') && (typeof(events.callback) != 'undefined') && (events.callback != 'undefined')){events.callback.run();}
+		    $('signinLoader').setStyle('display','none');
+	    	    $('signinForm').setStyle('display','block');
+	    }else{
+	    	$('signinLoader').setStyle('display','block');
+	    	$('signinForm').setStyle('display','none');
+		console.log(' - Auth Request Sent');
+		new Asset.javascript('http://sports.williamhill.com/bet/'+strLang.toUpperCase()+'?action=GetXLoginForm&lang='+strLang+'&t=' + serverDate.getTime(), {
+			onload: function(){
+		            console.log(' - Response From Login Server - Auth: '+ WHX.authenticated);
+		            	if(WHX.authenticated == 'Y'){
+		            	    $('obGreetingLabel').innerHTML = WHX.data.obGreetingLabel;
+		                    $('obClientName').innerHTML = WHX.data.obClientName;
+		            	    $('obAccountLabel').innerHTML = WHX.data.obAccountLabel;
+				    $('obAccountNumber').innerHTML = WHX.data.obAccountNumber;
+				    $('obBalanceLabel').innerHTML = WHX.data.obBalanceLabel;
+				    $('userBalance').innerHTML = WHX.data.obBalanceCurrency + WHX.data.obBalanceAmount;
+				    $('obDepositLabel').innerHTML = WHX.data.obDepositLabel;
+				    $('obMessageLabel').innerHTML = WHX.data.obMessageLabel;
+				    $('obMessageNumber').innerHTML = WHX.data.obMessageNumber;
+				    
+				    if(Cookie.read('firstLogin') != 1) {
+				    	//whTrack.getTag('LoginSuccess'+productCode, WHX.data.obAccountNumber);
+				    	Cookie.write("firstLogin", 1, {duration: 365, domain: '.williamhill.com', path: '/'});
+				    }
+				    
+				    strCurrency = WHX.data.obBalanceCurrency;
+			    	    if($chk($('jackpotCurr'))){
+			    		//Loop through all euro jackpots
+					$$('#jackpotCurr .EUR').each(function(item) {
+						if(strCurrency != '&pound;') {
+							item.setStyle('display', 'block');
+						}
+						if(strCurrency == '&pound;') {
+							item.setStyle('display', 'none');
+						}
+					});
+					//Loop through all sterling jackpots
+					$$('#jackpotCurr .GBP').each(function(item) {
+						if(strCurrency != '&pound;') {
+							item.setStyle('display', 'none');
+						}
+						if(strCurrency == '&pound;') {
+							item.setStyle('display', 'block');
+						}
+					});
+				    }
+				    $('obLogoutValue').innerHTML = WHX.data.obLogoutValue;
+
+		            	    $('signinLoader').setStyle('display','none');
+		            	    $('signinDetails').setStyle('display','block');
+				    loginListener.loggedIn();
+
+		            	    if((events != undefined) && (events != 'undefined') && (typeof(events.callback) != 'undefined') && (events.callback != 'undefined')){events.callback.run();}
+		            	    
+		            	}
+			},
+			onFailure: function(){
+				console.log(' - Login Failed ');
+			}
+		});
+	    }
+	},
+	rememberCheck: function() {
+		if ($('remember_me').get('checked') == true) {
+			$('remember_me_value').value = 1;
+		}
+		else {
+			$('remember_me_value').value = -1;
+		}
+	},
+	showSimple: function() {
+		$('signinLoader').setStyle('display','none');
+		$('signinError').setStyle('display','block');
+	},
+	getBalance: function() {
+		var request = new Request({
+			url: '/getBalance/',
+			onComplete: function(jsonObj) {
+				var loginObj = JSON.decode(jsonObj);
+				if(loginObj.result == 'OK'){
+					$('userBalance').innerHTML = loginObj.amount;
+				}else{
+					$('userBalance').innerHTML = 'Error';
+				}
+			}
+		}).send();
+	},
+	//wsop poker promo
+	wsopPoker: function() {
+		if($chk($('wsop-promo-poker'))){
+			if(typeof(WHX) === 'undefined' || typeof(WHX.data.obAccountNumber) === 'undefined') {
+				$('wsop-promo-poker').innerHTML = "<p>You must be logged in</p>";
+			}
+			else {
+				cust_auth = Cookie.read('cust_auth');
+				//console.log('http://whdn.williamhill.com/cms/index.php/cdn/wsopJSON/'+WHX.data.obAccountNumber+'/'+cust_auth+'/?id=32');
+				new Asset.javascript('http://whdn.williamhill.com/cms/index.php/cdn/wsopJSON/'+WHX.data.obAccountNumber+'/'+cust_auth+'/?id=32', {
+					onload: function(){
+						if(typeof promoRanking=="undefined") {
+							$('wsop-promo-poker').innerHTML = "No data";
+						}
+						else {
+							var promoPoints;
+							var promoTPoints;
+							var promoRank;
+							var promoBrace;
+							var promoContent;
+
+							promoContent = "<div style='float:left;'>";
+
+							switch(strLang){
+					        		case 'en':
+					        			promoContent += "<div class='th'>Date</div><div class='th'>WSOP Points</div><div class='th'>Bracelets</div><div class='th'>Daily Bonus</div><div class='th'>Race Position</div><div class='clearBoth' style='height:8px;'>&nbsp;</div>";
+					        			var totalText = "Total Points";
+					        			var noData = "There is currently no data for your account";
+					        		break;
+					        		case 'es':
+					        			promoContent += "<div class='th'>Fecha</div>><div class='th'>Puntos</div><div class='th'>Monedas</div><div class='th'>Bono</div><div class='th'>Rank</div><div class='clearBoth' style='height:8px;'>&nbsp;</div>";
+					        			var totalText = "Total";
+					        			var noData = "Actualmente no existen datos para su cuenta";
+					        		break;
+					        		case 'fr':
+					        			promoContent += "<div class='th'>Date</div>><div class='th'>Points</div><div class='th'>Jetons</div><div class='th'>Bonus</div><div class='th'>Rank</div><div class='clearBoth' style='height:8px;'>&nbsp;</div>";
+					        			var totalText = "Total";
+					        			var noData = "Il nâ€™y a pas de donnÃ©es pour votre compte";
+					        		break;
+					        		case 'el':
+					        			promoContent += "<div class='th'>Î—Î¼ÎµÏÎ¿Î¼Î·Î½Î¯Î±</div><div class='th'>Î’Î±Î¸Î¼Î¿Î¯</div><div class='th'>ÎšÎ­ÏÎ¼Î±Ï„Î±</div><div class='th'>ÎœÏ€ÏŒÎ½Î¿Ï…Ï‚</div><div class='th'>Rank</div><div class='clearBoth' style='height:8px;'>&nbsp;</div>";
+					        			var totalText = "Î£ÏÎ½Î¿Î»Î¿";
+					        			var noData = "Î”ÎµÎ½ Ï…Ï€Î¬ÏÏ‡Î¿Ï…Î½ ÏƒÏ„Î¿Î¹Ï‡ÎµÎ¯Î± ÏƒÏ„Î¿ Î»Î¿Î³Î±ÏÎ¹Î±ÏƒÎ¼ÏŒ ÏƒÎ±Ï‚ Ï€ÏÎ¿Ï‚ Ï„Î¿ Ï€Î±ÏÏŒÎ½";
+					        		break;
+					        	}
+							promoCount = 0;
+							
+							promoRanking.each(function(item1) {
+								promoCount = 1;
+								promoTPoints = item1.totalpoints;
+								
+								promoRank = item1.id;
+								promoBrace = item1.bracelets;
+								promoName = item1.nickname;
+								promoBonus = item1.dailyBonus;
+								promoPoints = item1.points;
+								promoDate = item1.accumdate;
+								promoContent += "<div class='td'>"+promoDate+"</div><div class='td'>"+promoPoints+"</div><div class='td'>"+promoBrace+"</div><div class='td'>"+promoBonus+"</div><div class='td'>"+promoRank+"</div><div class='clearBoth'>&nbsp;</div>";
+							});
+							if(promoCount == 0) {
+								promoContent += "<div class='td2'>"+noData+"</div><div class='clearBoth'>&nbsp;</div>";
+							}
+							else {
+								promoContent += "<div class='clearBoth' style='background-color:#A20206; height:1px; border-top:5px solid #FFF; border-bottom:5px solid #FFF;'>&nbsp;</div><div class='td' style='font-weight: bold; color:#A20206; text-align: left;'>"+totalText+"</div><div class='td' style='font-weight: bold; color:#A20206; text-align: left;'>"+promoTPoints+"</div><div class='clearBoth' style='background-color:#A20206; height:1px; border-top:5px solid #FFF; border-bottom:5px solid #FFF;'>&nbsp;</div><div class='td' style='font-weight: bold; color:#A20206; text-align: left;'>Race Position </div><div class='td' style='font-weight: bold; color:#A20206; text-align: left;'>"+promoRank+"</div>";
+							}
+							promoContent += "</div><div class='clearBoth'>&nbsp;</div>";
+							$('wsop-promo-poker').innerHTML = promoContent;
+						}
+		
+					},
+					onFailure: function(){
+						console.log(' - Content Request Failed ');
+						$('wsop-promo-poker').innerHTML = "Log in?";
+					}
+				});
+			}
+		}
+	},
+	// poker promotions
+	promoPoker: function() {
+		if($chk($('new-promo-poker'))){
+			if(typeof(WHX) === 'undefined' || typeof(WHX.data.obAccountNumber) === 'undefined') {
+				$('new-promo-poker').innerHTML = "<p>You must be logged in</p>";
+			}
+			else {
+				cust_auth = Cookie.read('cust_auth');
+				//console.log('http://whdn.williamhill.com/cms/index.php/cdn/poker-promo-json/'+WHX.data.obAccountNumber+'/'+cust_auth+'/');
+				new Asset.javascript('http://whdn.williamhill.com/cms/index.php/cdn/poker-promo-json/'+WHX.data.obAccountNumber+'/'+cust_auth+'/', {
+					onload: function(){
+						if(typeof xmasPromo=="undefined") {
+							$('new-promo-poker').innerHTML = "No data";
+						}
+						else {
+							var promoDate;
+							var promoPoints;
+							var promoSock;
+							var promoDBonus;
+							var promoWBonus;
+							var promoContent;
+							var promoDBTot;
+							var promoStotal;
+							promoContent = "<div style='float:left;'>";
+							switch(strLang){
+					        		case 'en':
+					        			promoContent += "<div class='th'>Date</div><div class='th'>Points</div><div class='th'>Coins</div><div class='th'>Bonus</div><div class='clearBoth' style='height:8px;'>&nbsp;</div>";
+					        			var totalText = "Total";
+					        			var noData = "There is currently no data for your account";
+					        		break;
+					        		case 'es':
+					        			promoContent += "<div class='th'>Fecha</div><div class='th'>Puntos</div><div class='th'>Monedas</div><div class='th'>Bono</div><div class='clearBoth' style='height:8px;'>&nbsp;</div>";
+					        			var totalText = "Total";
+					        			var noData = "Actualmente no existen datos para su cuenta";
+					        		break;
+					        		case 'fr':
+					        			promoContent += "<div class='th'>Date</div><div class='th'>Points</div><div class='th'>Jetons</div><div class='th'>Bonus</div><div class='clearBoth' style='height:8px;'>&nbsp;</div>";
+					        			var totalText = "Total";
+					        			var noData = "Il nâ€™y a pas de donnÃ©es pour votre compte";
+					        		break;
+					        		case 'el':
+					        			promoContent += "<div class='th'>Î—Î¼ÎµÏÎ¿Î¼Î·Î½Î¯Î±</div><div class='th'>Î’Î±Î¸Î¼Î¿Î¯</div><div class='th'>ÎšÎ­ÏÎ¼Î±Ï„Î±</div><div class='th'>ÎœÏ€ÏŒÎ½Î¿Ï…Ï‚</div><div class='clearBoth' style='height:8px;'>&nbsp;</div>";
+					        			var totalText = "Î£ÏÎ½Î¿Î»Î¿";
+					        			var noData = "Î”ÎµÎ½ Ï…Ï€Î¬ÏÏ‡Î¿Ï…Î½ ÏƒÏ„Î¿Î¹Ï‡ÎµÎ¯Î± ÏƒÏ„Î¿ Î»Î¿Î³Î±ÏÎ¹Î±ÏƒÎ¼ÏŒ ÏƒÎ±Ï‚ Ï€ÏÎ¿Ï‚ Ï„Î¿ Ï€Î±ÏÏŒÎ½";
+					        		break;
+					        	}
+							
+							promoCount = 0;
+							promoStotal = 0;
+							promoDBTot = 0;
+							promoPTot = 0;
+							
+							xmasPromo.each(function(item1) {
+								promoCount = 1;
+								promoDate = item1.accumdate;
+								promoPoints = item1.points;
+								promoPTot = promoPTot.toFloat()+promoPoints.toFloat();
+								promoSock = item1.socksYN;
+								promoDBonus = item1.dailyBonus;
+								promoWBonus = item1.weeklyBonus;
+								promoDBTot = promoDBTot.toFloat()+promoDBonus.toFloat();
+								if(promoSock=='true') {
+									promoSock = '<img src="http://whdn.williamhill.com/cms/images/poker/site/coin.gif" border="0" />';
+									promoStotal++;
+								}
+								else {
+									xmasSock = '&nbsp;';
+								}
+								
+								promoContent += "<div class='td'>"+promoDate+"</div><div class='td'>"+promoPoints+"</div><div class='td'>"+promoSock+"</div><div class='td'>"+promoDBonus+"</div><div class='clearBoth' style='background-color:#A20206; height:1px; border-top:5px solid #FFF; border-bottom:5px solid #FFF;'>&nbsp;</div>";
+							});
+							promoContent += "<div class='td' style='font-weight: bold; color:#A20206;'>"+totalText+"</div><div class='td' style='font-weight: bold; color:#A20206;'>"+promoPTot+"</div><div class='td' style='font-weight: bold; color:#A20206;'>"+promoStotal+"</div><div class='td' style='font-weight: bold; color:#A20206;'>"+promoDBTot+"</div><div class='clearBoth' style='background-color:#A20206; height:1px; border-top:5px solid #FFF; border-bottom:5px solid #FFF;'>&nbsp;</div>";
+							if(promoCount == 0) {
+								promoContent += "<div class='td2'>"+noData+"</div><div class='clearBoth'>&nbsp;</div>";
+							}
+							promoContent += "</div>";
+							$('new-promo-poker').innerHTML = promoContent;
+						}
+		
+					},
+					onFailure: function(){
+						//console.log(' - Content Request Failed ');
+						$('new-promo-poker').innerHTML = "Log in?";
+					}
+				});
+			}
+		}
+	},
+	pokerRS: function() {
+		if($chk($('poker-room-school'))){
+			
+			cust_auth = Cookie.read('cust_auth');
+			//console.log('http://whdn.williamhill.com/cms/index.php/cdn/pokerRSJSON/');
+			new Asset.javascript('http://whdn.williamhill.com/cms/index.php/cdn/pokerRSJSON/?v1-01', {
+				onload: function(){
+				
+					pokerRoomSchool.sort(sort_by('points', true, parseInt));
+					var PRSplace;
+					var PRSuser;
+					var PRSnick;
+					var PRSpoints;
+					var PRScurrency;
+					promoContent = "<div style='float:left;'>";
+					promoContent += "<div class='th'>Place</div><div class='th'>Nickname</div><div class='th'>PRS Points</div><div class='th'>Prize</div><div class='th'>New Prize</div><div class='clearBoth'>&nbsp;</div>";
+					promoCount = 0;
+					
+					pokerRoomSchool.each(function(item1) {
+						if(item1.points > 0) {
+							promoCount++;
+							if(promoCount > 100) {return;}
+	
+							PRSplace = item1.place;
+							PRSuser = item1.username;
+							PRSnick = item1.nickname;
+							PRSpoints = item1.points;
+							PRSprize = item1.prize;
+							PRSNprize = item1.nprize;
+							PRScurrency = item1.currency;
+							promoContent += "<div class='td'>"+promoCount+"</div><div class='td'>"+PRSnick+"</div><div class='td'>"+PRSpoints+"</div><div class='td'>$"+PRSprize+"</div><div class='td'>$"+PRSNprize+"</div><div class='clearBoth'>&nbsp;</div>";
+						}
+					});
+					
+					promoContent += "</div>";
+					$('poker-room-school').innerHTML = promoContent;
+				
+	
+				},
+				onFailure: function(){
+					console.log(' - Content Request Failed ');
+					$('poker-room-school').innerHTML = "Log in?";
+				}
+			});
+		}
+	},
+	// poker leaderboard
+	promoLeaderboard: function(type, jsonName) {
+		console.log('http://whdn.williamhill.com/cms/index.php/cdn/'+type+'/?id=1');
+		new Asset.javascript('http://whdn.williamhill.com/cms/index.php/cdn/'+type+'/?id=1', {
+			onload: function(){
+				if(typeof promoLeaders=="undefined") {
+					$(jsonName).innerHTML = "No data";
+				}
+				else {
+					var xmasContent;
+					xmasContent = "<div>";
+					xmasContent += "<div class='th'>Rank</div><div class='th'>Nickname</div><div class='th'>Bracelets</div><div class='th'>Points</div><div class='clearBoth'>&nbsp;</div>";
+					xmasCount = 0;
+					
+					promoLeaders.each(function(item1) {
+						xmasContent += "<div class='td'>"+item1.id+"</div><div class='td'>"+item1.nickname+"</div><div class='td'>"+item1.bracelets+"</div><div class='td'>"+item1.totalpoints+"</div><div class='clearBoth'>&nbsp;</div>";
+						xmasCount=1;
+					});
+					if(xmasCount == 0) {
+						xmasContent += "<div class='td2'>There is currently no data for your account</div><div class='clearBoth'>&nbsp;</div>";
+					}
+					xmasContent += "</div>";
+					$(jsonName).innerHTML = xmasContent;
+				}
+
+			},
+			onFailure: function(){
+				$(jsonName).innerHTML = "Log in?";
+			}
+		});
+	},
+	logOut: function(outUrl, outDest) {
+
+		Cookie.write("cust_ssl_login", "", {duration: 30, domain: '.williamhill.com', path: '/'});
+		if(strLang != 'en'){outDest += strLang + '/index/';}
+		window.location = outUrl + '?action=DoLogout&target_page=' + whTrack.urlEncode(outDest + "?t=" + serverDate.getTime());
+	}
+};
+
+var loginListener = {
+	loggedIn: function() {
+		switch(document.body.id){
+        		case 'bingo_site':
+        			if (!$("loggedInMsg")) {return;}
+        			$("loggedInMsg").setStyle('display', 'block');
+        			$("joinNow").setStyle('display', 'none');
+        			
+        			if (Cookie.read('bingoPlayed')=='1') {
+        				$("miniFeatureOther").setStyle('display', 'block');
+        			}else {
+        				$("miniFeatureNPB").setStyle('display', 'block');
+        			};
+        		break;
+        		case 'vegas_site':
+        			if (!$("joinNowBtn")) {return;}
+        			$("joinNowBtn").setStyle('display', 'none');
+        			$$(".demo").each(function(item){
+        				item.setStyle('display', 'none');
+        			});
+        		break;
+        		case 'liveDealer_site':
+        			if (!$("joinNowBtn")) {return;}
+        			$("joinNowBtn").setStyle('display', 'none');
+        			$$(".demo").each(function(item){
+        				item.setStyle('display', 'none');
+        			});
+        		break;
+        		case 'casino_site' :       			
+        			var browser=navigator.appName;
+				var b_version=navigator.appVersion;
+				var version=parseFloat(b_version);
+				if (browser=="Microsoft Internet Explorer"){
+					
+				if (version <= 7) {casinoTicker.Search();}
+				}
+        			casinoTicker.Search();	
+        		break;
+		}
+	},
+
+	loggedOut: function() {
+		switch(document.body.id){
+        		case 'bingo_site':
+	        		if (!$("loggedInMsg")) {return;}
+        			$("loggedInMsg").setStyle('display', 'none');
+        			$("joinNow").setStyle('display', 'block');
+        			$("miniFeatureNPB").setStyle('display', 'block');
+        		break;
+        		case 'vegas_site':
+        			if (!$("joinNowBtn")) {return;}
+        			$("joinNowBtn").setStyle('display', 'block');
+        		break;   
+        		case 'liveDealer_site':
+        			if (!$("joinNowBtn")) {return;}
+        			$("joinNowBtn").setStyle('display', 'block');
+        		break;          		
+		}
+	}
+};
+
+//Product Specific
+var scheduleToday = {
+	init:function() {if(!$("scheduleTodayContent")){return;}
+		scheduleToday.select('All', null);
+	},
+	select:function(gameType) {
+		var content='';
+		if (gameType=='All') {style="scheduleTodayGamesSelected";}
+		else {style="";};
+		content+='<ul><li><a class="'+style+'" href="javascript:scheduleToday.select(\'All\');">All</a></li>';
+		var flip=true;
+		for (i=0; i<gameTypes.length; i++) {
+			flip=!flip;
+			if (gameTypes[i]==gameType) {style="scheduleTodayGamesSelected";}
+			else if (flip) {style="";}
+			else {style="scheduleTodayGamesAlt";};
+			content+="<li><a class=\""+style+"\" href=\"javascript:scheduleToday.select('"+gameTypes[i]+"');\">"+gameTypes[i]+"</a></li>";
+		}
+		content+='</ul>';
+		$('scheduleTodayGames').innerHTML=content;	
+			
+		content='';
+		for (i=0; i<tournaments.length; i++) {
+			if (gameType=='All' || gameType==tournaments[i][0]) {
+				content+='<ul>';
+				content+='<li class="scheduleTodayGamesCol2"><a href="javascript:scheduleToday.detail('+i+');">'+tournaments[i][1]+'</a></li>';
+				content+='<li class="scheduleTodayGamesCol3">'+tournaments[i][0]+'</li>';
+				content+='<li class="scheduleTodayGamesCol4">'+tournaments[i][2]+' + '+tournaments[i][3]+'</li>';
+				content+='<li class="scheduleTodayGamesCol5">'+tournaments[i][4]+'</li>';
+				content+='</ul>';
+			}
+		}
+		$('scheduleTodayContent').innerHTML=content;
+	},
+	detail:function(id) {
+		var content='';
+		$('scheduleTodayDetail0').innerHTML = tournaments[id][1];
+		$('scheduleTodayDetail1').innerHTML = tournaments[id][5];
+		$('scheduleTodayDetail2').innerHTML = tournaments[id][4];
+		$('scheduleTodayDetail3').innerHTML = tournaments[id][6];
+		$('scheduleTodayDetail4').innerHTML = tournaments[id][7];
+		$('scheduleTodayDetail5').innerHTML = tournaments[id][8];
+		$('scheduleTodayDetail6').innerHTML = tournaments[id][9];
+		$('scheduleTodayDetail7').innerHTML = tournaments[id][10];
+		$('scheduleTodayDetail').setStyle('display', 'block');
+		window.location='#scheduleToday';
+	}
+}
+
+var whAnnouncementScroll = {
+	items:[],
+	selected:0,
+	init: function() {
+		if($chk('#contentHeadText')){
+			$$('#contentHeadText li').each(function(item, index){
+				whAnnouncementScroll.items.push(item);
+				item.style.display='none';
+			})
+			switch(whAnnouncementScroll.items.length){
+				case 0: 
+					return;
+					break;
+				case 1: 
+					whAnnouncementScroll.items[0].style.display = 'block';
+					break;
+				default:
+					whAnnouncementScroll.nextItem();
+					break;
+			}
+		}
+	},
+	nextItem: function() {
+		var t = 1000; 	// ms
+		var d = 100; 	//px
+		var pause = 4;
+		var element = whAnnouncementScroll.items[whAnnouncementScroll.selected];
+		element.setOpacity(0);
+		element.style.display = 'block';
+		var myFx = new Fx.Morph(element,{duration:t,transition: Fx.Transitions.Cubic.easeOut});
+		myFx.start({
+			'opacity': [0, 1]
+		}).chain(
+			// set time to wait until the item is faded out
+			function(){
+				(function() {
+					myFx.start({
+						'opacity': [1, 0]
+					});	
+				}).delay(t*pause);
+			},
+			// begin the next item
+			function(){
+				element.style.display = 'none';
+				whAnnouncementScroll.selected++;
+				if (whAnnouncementScroll.selected == whAnnouncementScroll.items.length) { whAnnouncementScroll.selected = 0; }
+				whAnnouncementScroll.nextItem();
+			}			
+		);
+	}
+}
+
+var whNewsScroll = {
+	items:[],
+	selected:0,
+	init: function() {
+		if($chk('#news_ticker')){
+			$$('#news_ticker li').each(function(item, index){
+				whNewsScroll.items.push(item);
+				item.style.display='none';
+			})
+			switch(whNewsScroll.items.length){
+				case 0: 
+					return;
+					break;
+				case 1: 
+					whNewsScroll.items[0].style.display = 'block';
+					break;
+				default:
+					whNewsScroll.nextItem();
+					break;
+			}
+		}
+	},
+	nextItem: function() {
+		var t = 1000; 	// ms
+		var d = 20; 	//px
+		var pause = 3;
+		var element = whNewsScroll.items[whNewsScroll.selected];
+		element.setOpacity(0);
+		element.style.display = 'block';
+		var myFx = new Fx.Morph(element,{duration:t,transition: Fx.Transitions.Cubic.easeOut});
+		myFx.start({
+			'opacity': [0, 1],
+			'margin-top':[d, 0]
+		}).chain(
+			// set time to wait until the item is faded out
+			function(){
+				(function() {
+					myFx.start({
+						'opacity': [1, 0],
+						'margin-top':[0, -1*d]
+					});	
+				}).delay(t*pause);
+			},
+			// begin the next item
+			function(){
+				element.style.display = 'none';
+				whNewsScroll.selected++;
+				if (whNewsScroll.selected == whNewsScroll.items.length) { whNewsScroll.selected = 0; }
+				whNewsScroll.nextItem();
+			}			
+		);
+	}
+}
+var rewardClaimNow = {
+	send: function(promo, errorMsg, reward) {
+		if(typeof(WHX) === 'undefined' || typeof(WHX.data.obAccountNumber) === 'undefined') {
+			$("claimNow").innerHTML = '<p class="errorMsg">You must log in to claim this promotion</p>';	
+			return;
+		}
+		var claimreq = new Request({
+			method:'get', 
+			url:'/poker-reward-claim/', data:'promo='+promo+'&reward='+reward+'&uid='+WHX.data.obAccountNumber+'&n='+Math.random(),
+			onRequest: function() {
+				$("claimNow").innerHTML = 'Sending claim...';	
+			},
+			onSuccess: function(txt){
+				$("claimNow").innerHTML = txt;	
+			},
+			onFailure: function(){
+				$("claimNow").innerHTML = 'Failed';	
+			}
+		}).send();
+		
+	}
+}
+var casinoClaimNow = {
+	send: function(promo, hours) {
+		if(typeof(WHX) === 'undefined' || typeof(WHX.data.obAccountNumber) === 'undefined') {
+			$("claimNow").innerHTML = '<p class="errorMsg">You must log in to claim this promotion</p>';	
+			return;
+		}
+		var claimreq = new Request({
+			method:'get', 
+			url:'/promotions-claim-now/', data:'promo='+promo+'&hours='+hours+'&uid='+WHX.data.obAccountNumber+'&n='+Math.random(),
+			onRequest: function() {
+				$("claimNow").innerHTML = 'Sending claim...';	
+			},
+			onSuccess: function(txt){
+				$("claimNow").innerHTML = txt;	
+			},
+			onFailure: function(){
+				$("claimNow").innerHTML = 'Failed';	
+			}
+		}).send();
+		
+	}
+}
+
+var promotionsClaimNow = {
+	send: function(promo, errorMsg, successMsg) {
+		if(typeof(WHX) === 'undefined' || typeof(WHX.data.obAccountNumber) === 'undefined') {
+			$("claimNow").innerHTML = '<p class="errorMsg">'+errorMsg+'</p>';	
+			return;
+		}
+		var claimreq = new Request({
+			method:'get', 
+			url:'/'+strLang+'/promotions-claim-now/', data:'promo='+promo+'&msg='+successMsg+'&uid='+WHX.data.obAccountNumber+'&n='+Math.random(),
+			onRequest: function() {
+				$("claimNow").innerHTML = 'Sending claim...';	
+			},
+			onSuccess: function(txt){
+				$("claimNow").innerHTML = txt;	
+			},
+			onFailure: function(){
+				$("claimNow").innerHTML = 'Failed';	
+			}
+		}).send();
+		
+	}
+}
+
+var whNext3Races = {
+	intServerTime:parseInt(strServerTime),
+	init: function() {
+		if($chk('#next3Races')){
+			var count = 0;
+			$$('#next3Races li').each(function(item, index){
+				startTime = item.getElement('p.raceTime').innerHTML;
+				if (startTime > whNext3Races.intServerTime && count<10) { 
+					item.style.display = 'block';
+					count++; 
+				}
+				else { item.style.display = 'none'; };
+			});
+			(function() {
+				whNext3Races.intServerTime+=60;
+				whNext3Races.init();
+			}).delay(60000);
+		}
+	}
+}
+
+var whNews = {
+	dataStore: new Hash.Cookie('newsStore', {path: '/', duration: 365}),
+	dataRequest: new Hash(),
+	init: function() {
+		if($chk($('trackside-live'))){
+			whNews.requestTrackside();
+			(function() {whNews.requestTrackside();}).periodical(90000);
+		}
+		if($chk($('allSportsBtn'))){
+			//Setup Sports Slide Nav		
+			var sportsNavSlide = new Fx.Slide('subNavSports');
+			sportsNavSlide.hide(); sportsNavSlide.element.setStyle('display', 'block');
+			
+			$('allSportsBtn').addEvent('click', function(e){
+				e.stop();
+				sportsNavSlide.toggle();
+			});
+			
+			whNews.dataStore.load();
+			
+			if(whNews.dataStore.getLength() == 0){
+				sportsNavSlide.toggle();
+				console.log(' - Setting Up Page for the first time');
+				
+				switch (strLang)
+				{
+				case 'fr':
+					whNews.dataStore.extend({
+					    'selectedSports': [
+						{'id': 'football', 'name': 'Football', 'layout':[
+							{'view': 'newsImgList', 'content': 'Récent'},
+							{'view': 'newsSingle', 'content': 'Ce qui Figure'},
+							{'view': 'newsImgList', 'content': 'Populaire'}
+						]}
+					    ]
+					});
+				break;
+				case 'es':
+					whNews.dataStore.extend({
+					    'selectedSports': [
+						{'id': 'football', 'name': 'Fútbol', 'layout':[
+							{'view': 'newsImgList', 'content': 'Recientes'},
+							{'view': 'newsSingle', 'content': 'Destacadas'},
+							{'view': 'newsImgList', 'content': 'Populares'}
+						]}
+					    ]
+					});
+				break;
+				default:
+					whNews.dataStore.extend({
+					    'selectedSports': [
+						{'id': 'horse-racing', 'name': 'Horse Racing', 'layout':[
+							{'view': 'newsImgList', 'content': 'Recent'},
+							{'view': 'newsSingle', 'content': 'Featured'},
+							{'view': 'newsImgList', 'content': 'Trackside Live'}
+						]},
+						{'id': '2010-cheltenham-festival', 'name': 'Cheltenham 2010', 'layout':[
+							{'view': 'newsImgList', 'content': 'Recent'},
+							{'view': 'newsSingle', 'content': 'Featured'},
+							{'view': 'newsImgList', 'content': 'Popular'}
+						]},
+						{'id': 'football', 'name': 'Football', 'layout':[
+							{'view': 'newsImgList', 'content': 'Recent'},
+							{'view': 'newsSingle', 'content': 'Featured'},
+							{'view': 'newsImgList', 'content': 'Popular'}
+						]},
+						{'id': '2010-world-cup', 'name': '2010 World Cup', 'layout':[
+							{'view': 'newsImgList', 'content': 'Recent'},
+							{'view': 'newsSingle', 'content': 'Featured'},
+							{'view': 'newsImgList', 'content': 'Popular'}
+						]},
+						{'id': 'tennis', 'name': 'Tennis', 'layout':[
+							{'view': 'newsImgList', 'content': 'Recent'},
+							{'view': 'newsSingle', 'content': 'Featured'},
+							{'view': 'newsImgList', 'content': 'Popular'}
+						]},
+						{'id': 'golf', 'name': 'Golf', 'layout':[
+							{'view': 'newsImgList', 'content': 'Recent'},
+							{'view': 'newsSingle', 'content': 'Featured'},
+							{'view': 'newsList', 'content': 'Popular'}
+						]},
+						{'id': 'cricket', 'name': 'Cricket', 'layout':[
+							{'view': 'newsImgList', 'content': 'Recent'},
+							{'view': 'newsSingle', 'content': 'Featured'},
+							{'view': 'newsList', 'content': 'Popular'}
+						]},
+						{'id': 'radio', 'name': 'Radio', 'layout':[
+							{'view': 'newsImgList', 'content': 'Recent'},
+							{'view': 'newsSingle', 'content': 'Featured'},
+							{'view': 'newsList', 'content': 'Popular'}
+						]}
+					    ]
+					});
+				}
+			}
+			
+	
+	
+			//Setup Sports Inputs			
+			$$('#subNavSports input').each(function(input, index){
+				input.checked = false;
+				input.addEvent('change', function(e){
+					var chkCount = $('subNavSports').getElements('input[checked]').length;
+					var dataArray = whNews.dataStore.get('selectedSports');
+					if(chkCount >= 1){
+						if(this.checked){
+							//Add
+							var sportId = input.get('name').split('_')[1];
+							var sportName = input.getParent().getElement('a').get('text');
+							switch (strLang)
+							{
+							case 'fr':
+								dataArray.include({'id' : sportId, 'name': sportName, 'layout':[
+									{'view': 'newsImgList', 'content': 'Récent'},
+									{'view': 'newsSingle', 'content': 'Ce qui Figure'},
+									{'view': 'newsList', 'content': 'Populaire'}
+								]});
+							break;
+							case 'es':
+								dataArray.include({'id' : sportId, 'name': sportName, 'layout':[
+									{'view': 'newsImgList', 'content': 'Recientes'},
+									{'view': 'newsSingle', 'content': 'Destacadas'},
+									{'view': 'newsList', 'content': 'Populares'}
+								]});
+							break;
+							default:
+								dataArray.include({'id' : sportId, 'name': sportName, 'layout':[
+									{'view': 'newsImgList', 'content': 'Recent'},
+									{'view': 'newsSingle', 'content': 'Featured'},
+									{'view': 'newsList', 'content': 'Popular'}
+								]});
+							}
+							whNews.addTab(dataArray.getLast());
+							if($('newsHolder') != null){whNews.addPanel(dataArray.getLast());}
+						}else{		
+							//Remove	
+							dataArray.each(function(item, index){
+								if(item.id == input.get('name').split('_')[1]){
+									dataArray.splice(index, 1);
+									if($('newsHolder') != null){$('panel_'+item.id).destroy();}
+									$('subnav_'+item.id).destroy();
+								}
+							});
+						}
+						$$('#subNavSports input').each(function(input, index){
+							if(chkCount > 7 && !input.checked){
+								input.disabled = true;
+							}else{
+								input.disabled = false;
+							}
+						});
+						whNews.dataStore.set('selectedSports', dataArray);
+					}else{
+						this.checked = true;
+					}
+				});
+			});
+			
+			//News Homepage Navigation
+			whNews.dataStore.get('selectedSports').each(function(item, index){
+				if(item.id!='2010-cheltenham-festival') {
+					$('subNavSports').getElement('input[name=sport_'+item.id+']').checked = true;
+					whNews.addTab(item);
+					if($('feature') != null){whNews.addPanel(item);}
+				}
+			});
+			
+			var sort = new Sortables('ul#newsHolder', {
+				handle: 'div.newsAreaControl a',
+				constrain: true,
+				clone: true,
+				opacity: 0.1,
+				revert: false,
+				snap: 0,
+				onComplete: function(){
+					var serializeFunction = function(el) { return el; };
+					var orderTxt = sort.serialize(serializeFunction);
+					//Match Arrays
+	
+					whNews.dataStore.get('selectedSports').sort(function(a, b){
+						var aNum = 0; var bNum = 0;
+						orderTxt.each(function(el, index){
+							if(el.id.split('_')[1] == a.id) aNum = index+1;
+							if(el.id.split('_')[1] == b.id) bNum = index+1;
+						});
+						return  aNum - bNum;
+					})
+					whNews.dataStore.save();
+					
+				}
+			});
+		}
+	},
+	addTab: function(item){
+		if(strLang=='en') {strUrlLang='/';}
+		new Element('li', {
+		    'id': 'subnav_'+item.id,
+		    'html': '<a href="'+strUrlLang+'c/'+item.id+'/">'+item.name+'</a>'
+		}).inject($('selectedSports'), 'bottom');
+	},
+	addPanel: function(item){
+		var panel = new Element('li', {
+		    'class': 'newsArea',
+		    'id': 'panel_' + item.id,
+		    'html': '<div class="newsAreaControl">' +
+					'<a href="#" title="Move">Move</a>' +
+				'</div>' +
+				'<div class="articleHeader"><h2><a href="'+strUrlLang+'c/'+item.id+'/">'+item.name+'</a></h2><div class="newsTopBlue">&nbsp;</div></div>' +
+				'<div class="newsAreaInner">' +
+					'<div class="block0 newsBlockHolder"><h3>Loading...</h3><div class="newsBlockControl"><a href="#" class="newsMore">Edit</a></div><div class="editDD"><div class="top">&nbsp;</div><div class="list">&nbsp;</div></div></div>' +
+					'<div class="block1 newsBlockHolder"><h3>Loading...</h3><div class="newsBlockControl"><a href="#" class="newsMore">Edit</a></div><div class="editDD"><div class="top">&nbsp;</div><div class="list">&nbsp;</div></div></div>' +
+					'<div class="block2 newsBlockHolder"><h3>Loading...</h3><div class="newsBlockControl"><a href="#" class="newsMore">Edit</a></div><div class="editDD"><div class="top">&nbsp;</div><div class="list">&nbsp;</div></div></div>' +
+				'</div>' +
+				'</div>' +
+				'<div class="newsTail">&nbsp;</div>'
+		});
+		var newPanel = panel.inject($('newsHolder'), 'bottom');
+		var delay = 1000;
+		item.layout.each(function(layout, index){
+			whNews.requestContent(newPanel, 'block'+index, item.id, layout.view, layout.content);
+		});
+		
+		panel.getElements('.newsBlockHolder').each(function(block, blockindex){
+			block.addEvents({
+			    'mouseover': function(){
+			        this.getElement('.newsBlockControl').setStyle('display', 'block');
+			    },
+			    'mouseleave': function(){
+			        this.getElement('.newsBlockControl').setStyle('display', 'none');
+			        new Fx.Morph(this.getElement('.editDD'), {duration: 300, transition: Fx.Transitions.Quad.easeIn}).start({
+			    	    'margin-top': 23,
+			            'opacity': 0
+			        });
+			    }
+			});
+			block.getElement('.newsBlockControl a').addEvents({
+			    'click': function(event){
+			    	event.stop();
+			    	var dd = block.getElement('.editDD')
+			    	dd.setStyle('display', 'block');
+			    	if(dd.getElement('ul') == null){
+				    	if((item.id == 'horse-racing') && (strLang == 'en') && (blockindex== '2')){
+				    		dd.setStyle('display', 'none');
+				    	}else{
+				    		switch (strLang)
+							{
+							case 'fr':
+						    		new Element('ul', {
+						    			'html': '<li><a href="#"><span class="newsSingle">Article Simple</span></a></li>' +
+						    				'<li><a href="#"><span class="newsImgGrid">Le Grid de l&#39;Image</span></a></li>' +
+						    				'<li><a href="#"><span class="newsImgList">Liste d&#39;Image</span></a></li>' + 
+						    				'<li><a href="#"><span class="newsList">Liste Simple</span></a></li>'
+						    		}).inject(dd.getElement('.list'), 'top');
+						    	break;
+						    	case 'es':
+						    		new Element('ul', {
+						    			'html': '<li><a href="#"><span class="newsSingle">ArtÃ­culo individual</span></a></li>' +
+						    				'<li><a href="#"><span class="newsImgGrid">CuadrÃ­cula de imÃ¡genes</span></a></li>' +
+						    				'<li><a href="#"><span class="newsImgList">Lista de imÃ¡genes</span></a></li>' + 
+						    				'<li><a href="#"><span class="newsList">Lista simple</span></a></li>'
+						    		}).inject(dd.getElement('.list'), 'top');
+						    	break;
+						    	default:
+						    		new Element('ul', {
+						    			'html': '<li><a href="#"><span class="newsSingle">Single Article</span></a></li>' +
+						    				'<li><a href="#"><span class="newsImgGrid">Image Grid</span></a></li>' +
+						    				'<li><a href="#"><span class="newsImgList">Image List</span></a></li>' + 
+						    				'<li><a href="#"><span class="newsList">Simple List</span></a></li>'
+						    		}).inject(dd.getElement('.list'), 'top');
+						    	break;
+						    	}
+				    	}
+				    	
+			    	}
+			    	dd.getElements('a').each(function(option, index){
+			    		option.addEvents({
+			    			'click': function(event){
+			    				event.stop();
+			    				whNews.dataStore.get('selectedSports').every(function(filter, index){
+							    if(item.id == filter.id){
+							    	item.layout[blockindex].view = option.getElement('span').get('class');
+								whNews.dataStore.save();
+							    }
+							});
+							
+			    				whNews.requestContent(panel, block.get('class').split(' ')[0], item.id, option.getElement('span').get('class'), block.getElement('h3').get('text'));
+			    			}
+			    		});
+			    	});
+			    	
+			    	new Fx.Morph(block.getElement('.editDD'), {duration: 300, transition: Fx.Transitions.Quad.easeIn}).start({
+			    	    'margin-top': 0,
+			            'opacity': 1
+			        });
+			    }
+			});
+		});
+	},
+	clickclear: function(thisfield, defaulttext) {
+		if (thisfield.value == defaulttext) {
+			thisfield.value = "";
+		}
+	},
+	clickrecall: function(thisfield, defaulttext) {
+		if (thisfield.value == "") {
+			thisfield.value = defaulttext;
+		}
+	},
+	requestContent: function(panel, col, id, view, content){
+		var data = panel.getElement('div.'+col).getElement('div.data');
+		if($chk(data)){data.dispose();}
+		if((id == 'horse-racing') && (strLang == 'en') && (col == 'block2')){
+			Element('div', {'html': '', 'id': 'trackside-live', 'class': 'data'}).inject(panel.getElement('div.'+col), 'bottom');
+			panel.getElement('div.'+col+' h3').set('text', content);
+			whNews.dataRequest.erase(strLang+'-'+view+id+content);
+			whNews.requestTrackside("Y");
+			(function() {whNews.requestTrackside("Y");}).periodical(90000);
+		}
+		else {
+			new Asset.javascript('http://whdn.williamhill.com/cms/index.php/cdn/'+view+'/'+strLang+'/'+id+'/'+content+'/', {
+				onload: function(){
+					//en-newsSinglehorse-racingFeatured
+			    		Element('div', {'html': whNews.dataRequest.get(strLang+'-'+view+id+content), 'class': 'data'}).inject(panel.getElement('div.'+col), 'bottom');
+			    		panel.getElement('div.'+col+' h3').set('text', content);
+			    		whNews.dataRequest.erase(strLang+'-'+view+id+content)
+				},
+				onFailure: function(){
+					console.log(' - Content Request Failed ');
+				}
+			});
+		}
+	},
+	requestTrackside: function(disp){
+		new Asset.javascript('http://whdn.williamhill.com/cms/index.php/cdn/tracksideJSON2/en/', {
+			onload: function(){
+				//console.log(" - Refresh Trackside");
+					$('trackside-live').innerHTML = "";
+					var newList;
+					if(disp!='Y') {
+						newList = "<div id=\"newsArticlesBloggers\"><div class=\"top\">&nbsp;</div><div class=\"topRepeat\"><h4>Trackside Live</h4></div><div class=\"content\" style=\"overflow:auto; height: 300px; padding-top:0;\" ><ul id='trackList'>";
+					}
+					else {
+						newList = "<div class=\"content\" style=\"overflow:auto; height: 260px; padding:5px;\" ><ul id='trackList'>";
+					}
+					tracksideLive.each(function(item) {
+						if(item.trackside_image != '') {
+							newList += "<li class=\"raceTime\"><img style=\"padding:3px; margin:0 15px 0 0; float:left; border:1px solid #E4E5E7;\" src=\"http://whdn.williamhill.com/cms/images/news/library/en/trackside/"+item.trackside_image+"\" border=\"0\" /><p>"+item.content+"</p><span class=\"authorDate\"><a href=\"/user-articles/"+item.username+"/\">"+item.screen_name+"</a> - "+item.entry_date+"</span><div class=\"clearBoth\"></div></li>";
+						}
+						else {
+							newList += "<li class=\"raceTime\"><p>"+item.content+"</p><span class=\"authorDate\"><a href=\"/user-articles/"+item.username+"/\">"+item.screen_name+"</a> - "+item.entry_date+"</span><div class=\"clearBoth\"></div></li>";
+						}
+					});
+					newList += "</ul></div><div class=\"content\" style=\"padding-top:0;\"><ul><li class='raceTime2'>Have your say at <a href='mailto:studio@williamhill.co.uk'>studio@williamhill.co.uk</a></li></ul></div>";
+					if(disp!='Y') {
+						newList += "<div class=\"tail\"></div></div>";
+					}
+					$('trackside-live').innerHTML = newList;
+			},
+			onFailure: function(){
+				//console.log(' - Content Request Failed ');
+			}
+		});
+	}
+}
+
+// Class for controlling MiniFeed
+var miniFeed = {
+
+	// options
+	right 		: 0,
+	slideDistance	: 80,
+	slideDuration	: 200,
+	counter 	: 0,
+	clicks		: 0,
+	visibleItems	: 6,
+	selectedItem	: '',
+
+	init: function() {
+		
+		var items	= $$('#scroller li');
+		
+		// Count Items
+		items.each(function() {
+			miniFeed.counter ++;				
+		});
+		
+		// Compensate for the items in view
+		miniFeed.counter = (miniFeed.counter - miniFeed.visibleItems);
+	
+	
+		// If theres 6 or less Items
+		if (miniFeed.counter <= 0) {
+		
+			$$('#r_arrow').setStyle('display', 'none');
+			$$('#l_arrow').setStyle('display', 'none');
+			
+		}else{
+		// If theres more than 6 Items
+		
+			// Disable/ Enable Arrows
+			
+			if (miniFeed.clicks <= 0) {
+				$$('#l_arrow').setStyle('opacity', '0.4');
+			}else{
+				$$('#l_arrow').setStyle('opacity', '1.0');
+			}
+			if (miniFeed.clicks == miniFeed.counter) {
+				$$('#r_arrow').setStyle('opacity', '0.4');
+			}else{
+				$$('#r_arrow').setStyle('opacity', '1.0');
+			}
+			
+		
+			// Easing Object
+			var EaseTransition = new Fx.Transition(Fx.Transitions.Quad, 999);
+			
+			// Tween Setup
+			$('scroller').set('tween', { duration: miniFeed.slideDuration, transition: EaseTransition.easeOut });
+		
+			// Hover Action
+			$$('#scroller li a').addEvent('mouseenter', function() {
+				var myFx = new Fx.Tween(this);
+				myFx.set('opacity', .5);
+				myFx.start('opacity', 1);
+			});
+			
+			// Right
+			$('r_arrow').addEvent('click', function(e) {
+				e.stop();
+				if (miniFeed.clicks < miniFeed.counter) {
+					miniFeed.clicks ++;
+					miniFeed.right = (miniFeed.slideDistance + miniFeed.right);
+					$('scroller').tween('right', miniFeed.right);
+				}else{
+					miniFeed.clicks = miniFeed.counter;
+				}
+				// Hide/ Show Arrows
+				if (miniFeed.clicks == miniFeed.counter) {	
+					$$('#r_arrow').setStyle('opacity', '0.4');
+				}
+				if (miniFeed.clicks > 0) {
+					$$('#l_arrow').setStyle('opacity', '1.0');
+				}
+			});
+			
+			// Left
+			$('l_arrow').addEvent('click', function(e) {
+				e.stop();
+				if (miniFeed.clicks > 0) {
+					$$('#l_arrow').setStyle('display', 'block');	
+					miniFeed.clicks --;
+					miniFeed.right = (miniFeed.right - miniFeed.slideDistance);
+					$('scroller').tween('right', miniFeed.right);
+				}else{
+					miniFeed.clicks = 0;
+				}
+				if (miniFeed.clicks < miniFeed.counter) {
+					$$('#r_arrow').setStyle('opacity', '1.0');
+				}
+				if (miniFeed.clicks == 0) {
+					$$('#l_arrow').setStyle('opacity', '0.4');
+				}
+			});
+			
+		}
+	
+		// Add Select Arrow 
+		$$('#scroller li a').addEvent('click', function(e) {
+		
+			// If we are on the bingo site, and the games already open,
+			// then we dont want to re-open it.
+			if (document.body.id == 'bingo_minilobby') {
+				
+				var thisID	= $(this).getProperty('id');
+				var id 		= thisID.replace(/game-/, '');
+				
+				if (id == miniFeed.selectedItem) {BingoLobby.cleanUp();}else{				
+					gameNav.load(id,'ML');
+					BingoLobby.cleanUp();
+				}
+				
+				miniFeed.selectedItem = id;
+			}	
+			
+			
+			$$('#scroller li a').setStyle('background-position', 'top left');
+			$(this).setStyle('background-position', '0 -57px');		
+								  
+		});
+		
+	},
+	
+	
+	clearArrows: function() {
+		var items		= $$('#scroller li a');
+		
+		items.each(function(item) {
+			item.setStyle('background-position', 'top left');
+		});
+		
+	},
+	
+	
+	scrollTo: function (gameCode) {
+		
+		var gameId		= 'game-'+gameCode;
+		var element		= $(gameId);
+		var count		= 0;
+		var counter		= 0;
+		var right		= 0;
+		var items		= $$('#scroller li a');
+		miniFeed.selectedItem	= gameCode;
+		
+		
+		if (gameCode) {
+					
+			if ($chk(element)) {
+				
+				items.each(function(item) {
+					
+					counter ++;
+					if (item.id == gameId) {
+						if (counter > miniFeed.visibleItems) {
+							miniFeed.clicks = counter - miniFeed.visibleItems;							
+						}
+						count = counter;
+					}
+					
+					// Take away the arrows
+					item.setStyle('background-position', '0 0');
+					
+				});
+				
+				// Add the arrow
+				element.setStyle('background-position', '0 -57px');
+				
+				if (count < miniFeed.visibleItems) {
+					// If its in View
+					$$('#l_arrow').setStyle('opacity', '0.4');
+					if (counter <= miniFeed.visibleItems) {
+						$$('#r_arrow').setStyle('opacity', '0.4');
+					}else{
+						$$('#r_arrow').setStyle('opacity', '1.0');
+					}
+					miniFeed.right	= 0;
+					miniFeed.clicks = 0;
+				}
+				
+				if (count == counter) { 
+					if (miniFeed.clicks == 0) {
+						// If its not in the minifeed
+						$$('#r_arrow').setStyle('opacity', '0.4');
+						$$('#l_arrow').setStyle('opacity', '1.0');
+					}else{
+						// If its the last entry
+						$$('#l_arrow').setStyle('opacity', '1.0');
+						$$('#r_arrow').setStyle('opacity', '0.4');
+						miniFeed.right	= miniFeed.slideDistance * (count - miniFeed.visibleItems);
+						miniFeed.clicks	=  counter - miniFeed.visibleItems;
+					}
+				}
+								
+				if (count > miniFeed.visibleItems) {
+					// If its out of view
+					miniFeed.right = miniFeed.slideDistance * (count - miniFeed.visibleItems);
+					$$('#l_arrow').setStyle('opacity', '1.0');
+					$$('#r_arrow').setStyle('opacity', '1.0');
+				}
+				
+				// Set Right Location
+				$('scroller').setStyle('right', miniFeed.right+'px');
+							
+			}else{
+				$$('#l_arrow').setStyle('opacity', '0.4');
+			}
+		
+		}
+		
+	}
+	
+};
+
+var ScrollSidebar = new Class({
+	
+	Implements: [Options],
+	
+	options: {
+		offsets: { x:0, y:0 },
+		mode: 'vertical',
+		positionVertical: 'top',
+		positionHorizontal: 'right',
+		speed: 300
+	},
+	
+	initialize: function(menu,options) {
+		/* initial options */
+		console.log(menu);
+		this.setOptions(options);
+		this.menu = $(menu);
+		this.move = this.options.mode == 'vertical' ? 'y' : 'x';
+		this.property = this.move == 'y' ? 'positionVertical' : 'positionHorizontal';
+		/* ensure a few things */
+		var css = { position: 'relative', display:'block' };
+		css[this.options.positionVertical] = this.options.offsets.y;
+		css[this.options.positionHorizontal] = this.options.offsets.x;
+		this.menu.setStyles(css).set('tween',{ duration: this.options.speed });
+		/* start listening */
+		this.startListeners();
+	},
+	
+	startListeners: function() {
+		var action = function() {
+			var tempH = $('newQuickLinks').getPosition();
+			var tempS = $(document.body).getScroll()[this.move] + this.options.offsets[this.move];
+			
+			tempT = tempS+379-51;
+			
+			//console.log(tempT+" > "+tempH.y+" "+tempS+" > 149");
+			if((tempT < tempH.y) && (tempS > 149)) {
+				//console.log($(document.body).getScroll()[this.move] + this.options.offsets[this.move])
+				tempD = tempS-149;
+				this.setDivPosition(tempD);
+				//console.log(this);
+				//this.menu.setStyle('top',tempD);
+			}
+			if(tempS < 149) {this.setDivPosition(0);}
+			if(tempT > tempH.y) {this.setDivPosition(tempH.y-580+51);}
+		}.bind(this);
+		window.addEvent('scroll',action);
+		window.addEvent('load',action);
+	},
+	
+	setDivPosition: function(move) {
+		this.menu.tween(this.options[this.property],move);
+		return this;
+	}
+});
+
+var gameNav = {
+	init: new Class({
+	    initialize: function(options) {
+		    if($chk($('productsContainer'))){
+			var cats = [];
+			var catCount = 0;
+			var catArr = $$('#category li a');
+			catArr.each(function(item, index){
+				var hashTitle = window.location.hash.substring(1);
+				cats.push(item.id);
+				
+				if(hashTitle != '' && hashTitle != undefined) {
+					hashTitle = 'nav-'+hashTitle;
+					if(item.get('id') == hashTitle) {
+						item.addClass('sel');
+						gameNav.leftTabs(item.id, cats);
+						catCount = 1;
+					}
+				}
+				else {
+					if(index == 0){
+						item.addClass('sel');
+						var tempCat = item.get('id').substring(4);
+						$(tempCat).setStyle('display', 'block');
+						if($chk($('page-'+tempCat))) {
+							$('pagingHolder').setStyle('display','block');
+							$$('#pagingHolder div').each(function(item2) {item2.setStyle('display','none');});
+							$('page-'+tempCat).setStyle('display','block');
+							pageBlock = $$('#page-'+tempCat+' a');
+							gameBlock = $$('#' + tempCat + ' li');
+							pageBlock.each(function(item, id) {
+								item.addEvent('click', function(event){
+									gameNav.paging(gameBlock, pageBlock, item, item.get('html'));
+								});
+							});
+						}
+						else {
+							if($chk($('pagingHolderDef'))) {$('pagingHolderDef').setStyle('display','block');}
+						}
+						gameNav.leftTabs(item.id, cats);
+						catCount = 1;
+					}
+				}
+				item.addEvent('click', function(event) {
+					event.stop();
+					gameNav.leftTabs(item.id, cats);
+				});
+				checker = index+1;
+				if((catArr.length == checker) && (catCount == 0)) {
+					gameNav.leftTabs(catArr[0].id, cats);
+				}
+			});
+		    }
+		    if($chk($('miniLobby'))){
+			var cats = [];
+			try{
+				var gameCode = window.location.hash.substring(1,3);
+			
+			}catch(e){
+				var gameCode = 'R2';
+			}
+			console.log(' - Game Code: ' + gameCode);
+			if(gameCode == null){gameCode = 'R2';}
+			$$('#gameNav li').each(function(item, index){
+				if(item.id.split('#')[0] == 'game'){
+					cats.push(item.id);
+					item.addEvent('click', function(event){
+						event.stop();
+						var sel = this.id;
+						cats.each(function(cat, index){
+							if(sel == cat){
+								$(cat).addClass('sel');
+								gameNav.load($(cat).id.split('#')[1], 'ML')
+							}else{$(cat).removeClass('sel');}
+						}); 
+						
+					});
+					item.addEvent('mouseover', function(event){
+						var sel = this.id;
+						var myFx = new Fx.Tween(sel);
+						myFx.set('opacity', .5);
+						myFx.start('opacity', 1);
+					});
+				}
+			});
+			var found = 0;
+			cats.each(function(cat, index){
+				if($(cat).id.split('#')[1] == gameCode){
+					found++;
+					$(cat).addClass('sel');
+					gameNav.load($(cat).id.split('#')[1], 'ML')
+				}
+			});
+			if(found == 0 ){
+				gameNav.load(gameCode, 'ML');
+			}
+		     }
+		     if($chk($('newQuickLinksTabs'))){
+		     	$$('#newQuickLinksTabs a').each(function(item, index){
+		     		item.addEvent('click', function(event){gameNav.whShowHideQuick(item.get('class'));});
+		     	});
+		     }
+	    }
+	}),
+	whShowHideQuick: function(tempClass) {
+		$$('#newQuickLinksTabs a').each(function(game, index){
+			if(game.get('class') == tempClass) {
+				game.getParent('li').set('id', 'selectedQLtab');
+			}
+			else {game.getParent('li').removeProperty('id');}
+		});
+		newId = 'quick-'+tempClass.replace('Links','');
+		console.log(newId);
+		$$('#newQuickLinksCtnt div').each(function(game, index){
+			if(game.get('id') == newId) {
+				game.setStyle('display', 'block');
+			}
+			else {
+				game.setStyle('display', 'none');
+			}
+		});
+	},
+	paging: function(listId, butt, buttC, pageNo) {
+		//console.log(buttC);
+		if((buttC.get('class').test('next')) || (buttC.get('class').test('normal'))) {
+			//console.log(pageNo);
+			switch(pageNo){
+				case '2': pageSel = 'Two'; break;
+				case '3': pageSel = 'Three'; break;
+				case '4': pageSel = 'Four'; break;
+				case '5': pageSel = 'Five'; break;
+				default: pageSel = 'One'; break;
+			}
+
+			var catN = listId[0].getParent().get('id');
+			//console.log(pageSel);
+			swapList = $$('#' + catN + ' li.'+pageSel);
+			listId.setStyle('display', 'none');
+			swapList.each(function(itemGame, index2) {
+				if(itemGame.getStyle('display') == 'none') {pageChange=0;} else {pageChange=1;}
+				if(pageChange == 0) {(function(){gameNav.opaGames(itemGame);}).delay(index2*100);
+				}
+			});
+			
+			butt.each(function(item, id) {
+				if(item.get('html') == buttC.get('html')) {
+					item.set('class', 'pagingbtn selected');
+				}
+				else {
+					if(id == 0) {
+						item.set('class', 'pagingbtn next');
+					}
+					else {
+						item.set('class', 'pagingbtn normal');
+					}
+				}
+			});
+		}
+	},
+	opaGames: function(game) {
+		var myFx = new Fx.Tween(game);
+	    	myFx.set('opacity', 0);
+	    	game.setStyle('display', 'block');
+                myFx.start('opacity', 1);
+	},
+	gamesPromoClose: function(cat) {
+		if(Cookie.read('fogPlayer')!=1) {
+			$(cat).getParent().setStyle('display', 'none');
+		}
+		Cookie.write("fogPlayer", "1", {duration: 365, domain: '.williamhill.com', path: '/'});
+	},
+	leftTabs: function(itemId, cats) {
+		var sel = itemId;
+		var pageCheck = '';
+		var changed = 0;
+		cats.each(function(cat, index){
+			var tempCat = cat.substring(4);
+			if(sel == cat){
+				if($chk($('pagingHolder'))){
+					$(cat).addClass('sel');
+					gameBlock = $$('#' + tempCat + ' li');
+					
+					if($(tempCat).get('class').test('pages')) {
+						if($chk($('page-'+tempCat))) {
+							$('pagingHolder').setStyle('display','block');
+							if($chk($('pagingHolderDef'))) {$('pagingHolderDef').setStyle('display','none');}
+							$$('#pagingHolder div').each(function(item) {item.setStyle('display','none');});
+							$('page-'+tempCat).setStyle('display','block');
+						}
+						pageBlock = $$('#page-'+tempCat+' a');
+						pageBlock.each(function(item, id) {
+							item.removeEvent('click');
+							item.addEvent('click', function(event){
+								gameNav.paging(gameBlock, pageBlock, item, item.get('html'));
+							});
+						});
+					}
+					else {
+						$('pagingHolder').setStyle('display','none');
+						if($chk($('pagingHolderDef'))) {$('pagingHolderDef').setStyle('display','block');}
+					}
+					$(tempCat).setStyle('display', 'block');
+					swapList = $$('#' + tempCat + ' li.One');
+					swapList.each(function(game, index){
+						
+					    game.setStyle('display', 'none');
+					    if((pageCheck != game.get('class')) && (index!=0) && (game.get('class').test('swap'))) {changed = 1;}
+					    if(changed == 0) {(function(){gameNav.opaGames(game);}).delay(index*100);
+					    }
+					    pageCheck = game.get('class');
+					});
+				}
+				else {
+					$(tempCat).setStyle('display', 'block');
+					if(document.body.id == 'games_site' && strLang == 'en') {
+						if(Cookie.read('fogPlayer')!=1) {
+							if($$('#' + tempCat + ' .gameBoxFeatured').length > 0) {
+								$$('#' + tempCat + ' .gameBoxFeatured')[0].setStyle('display', 'block');
+							}
+						}
+						else {
+							if($$('#' + tempCat + ' .gameBoxFeatured').length > 1) {
+								$$('#' + tempCat + ' .gameBoxFeatured')[0].setStyle('display', 'none');
+								$$('#' + tempCat + ' .gameBoxFeatured')[1].setStyle('display', 'block');
+							}
+							else {
+								if($$('#' + tempCat + ' .gameBoxFeatured').length > 0) {
+									$$('#' + tempCat + ' .gameBoxFeatured')[0].setStyle('display', 'none');
+								}
+								$$('#' + tempCat + ' .gameBoxColumn').setStyle('width','auto');
+								$$('#' + tempCat + ' .gameBoxColumn').setStyle('height','auto');
+								$$('#' + tempCat + ' .gameBoxColumn').setStyle('border-bottom','none');
+								$$('#' + tempCat + ' .gameBoxColumn .gameBox')[0].setStyle('border-right','4px solid #F1F1F1');
+							}
+						}
+						$(cat).getParent('li').addClass('active');
+						$$('#' + tempCat + ' div.gameBox').each(function(game, index){
+						    game.setStyle('display', 'none');
+						    (function(){gameNav.opaGames(game);}).delay(index*100);
+						});
+					}
+					else {
+						$(cat).addClass('sel');
+						$$('#' + tempCat + ' li').each(function(game, index){
+						    game.setStyle('display', 'none');
+						    (function(){gameNav.opaGames(game);}).delay(index*100);
+						});
+					}
+				}
+			}else{
+				if(document.body.id == 'games_site' && strLang == 'en') {
+					$(cat).getParent('li').removeClass('active');
+					$(tempCat).setStyle('display', 'none');
+					if($chk($('newLobbyLeftNav'))){
+						$('newLobbyLeftNav').position({y: 0});
+					}
+				}
+				else {
+					$(cat).removeClass('sel');
+					$(tempCat).setStyle('display', 'none');
+				}
+			}
+		}); 
+	},
+	gamesPopup: function(type, strGameCode, langLong, gamePath) {
+		if(Cookie.read('gameAgree')) {
+			gameNav.gamesVRPLaunch(type, strGameCode, langLong, gamePath);
+		}
+		else {
+			$('gameVegasRedirect').set('href', 'javascript:gameNav.load(\''+strGameCode+'\', \''+type+'\', 1)');
+	        	$('warning dialog').setStyle('display', 'block');
+			$('modalDimmer').setStyle('display', 'block');
+		}
+	},
+	gamesClose: function() {
+		var temp = $('gamesLaunchCheck').get('checked');
+		if(temp) { Cookie.write('gameAgree', '1', {duration: 30, path: '/'}); }
+        	$('warning dialog').setStyle('display', 'none');
+		$('modalDimmer').setStyle('display', 'none');
+	},
+	gamesVRPLaunch: function(type, strGameCode, langLong, gamePath) {
+		var new_window;
+		var temp = $('gamesLaunchCheck').get('checked');
+		if(temp) { Cookie.write('gameAgree', '1', {duration: 30, path: '/'}); }
+        	$('warning dialog').setStyle('display', 'none');
+		$('modalDimmer').setStyle('display', 'none');
+		
+		windowName = 'vegasGame';
+		if(type=='RP') {
+			if(strLang == 'en'){
+				new_window = window.open("http://vegas.williamhill.com/minilobby/#"+strGameCode ,windowName, "toolbar=no,width=800,height=663,resizable=yes,scrollbars=0");
+				if(!new_window || new_window.closed){
+					// do nothing
+				}
+				else {
+					new_window.close();
+					new_window = window.open("http://vegas.williamhill.com/minilobby/#"+strGameCode ,windowName, "toolbar=no,width=800,height=663,resizable=yes,scrollbars=0");
+				}
+	           		new_window.focus();
+           		}
+           		else {
+				new_window = window.open("https://sports.williamhill.com/bet/" +strLang+ "?action=DoGameLaunch&systemName=Games&base_url=http://games-gs.williamhill.com/FOB/"+langLong+"/"+ gamePath + "lang=" +strLang + "&source=GM","", "toolbar=no,width=800,height=550,resizable=yes");
+			}
+		}
+		else {
+			new_window = window.open("http://demo.williamhill.com/"+strLang+"/FOBredirectFun.asp?gamecode=" + strGameCode + "&product=" + productCode + "&source=GM", "", "toolbar=no,width=800,height=550,resizable=yes"); 
+		}
+		if(strLang == 'en') {
+			window.location = "http://vegas.williamhill.com/";
+		}
+		else {
+			window.location = "http://vegas.williamhill.com/"+strLang+"/index/";
+		}
+	},
+	load: function(strGameCode, type, vegasRedirect) {
+		void(0);
+		var gamePath = ""
+		var strLangUp = strLang.toUpperCase();
+		switch(strLang){
+			case 'el': langLong = 'Greek'; break;
+			case 'en': langLong = 'English'; break;
+			case 'es': langLong = 'Spanish'; break;
+			case 'fr': langLong = 'French'; break;
+			case 'zh': langLong = 'Chinese'; break;
+			case 'de': langLong = 'German'; break;
+			case 'tr': langLong = 'Turkish'; break;
+			case 'it': langLong = 'Italian'; break;
+		}
+		
+		switch(strGameCode){
+		   //Games
+			case 'QW': gamePath = 'quick_bet_wheel/quick_bet_wheel_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'QC': gamePath = 'quick_bet_cards/quickbet_cards_54_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'QD': gamePath = 'quick_bet_darts/gameloader.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'HL': gamePath = 'quick_bet_hilo_cards/gameloader.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'QT': gamePath = 'quick_bet_triple_hi_lo/quick_bet_triple_hi_lo_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'QH': gamePath = 'quick_bet_hexagons/quick_bet_hexagons_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'BR': gamePath = 'bagatelle_roulette/bagatelle_roulette_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'PT': gamePath = 'quick_bet_poker/quick_bet_poker_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'FW': gamePath = 'final_score_worldCup/finalscore_worldcup_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'HP': gamePath = 'poker_holdem/poker_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'RO': gamePath = 'quick_bet_roulette/roulette_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'KE': gamePath = 'quick_bet_keno/keno_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'KI': gamePath = 'quick_bet_keno/keno_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'FS': gamePath = 'finalscore_multi-league/finalscore_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'QF': gamePath = 'quick_bet_final_score/gameloader.asp&gameCode='+'FS'+strLangUp+'&'; break;
+			case 'GO': gamePath = 'quick_bet_golf/golf_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'RE': gamePath = 'viva_las_vegas/vegas_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'QS': gamePath = 'quick_bet_spoof/quickbet_spoof_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'VD': gamePath = 'virtual_dogs/virtual_dogs_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'KA': gamePath = 'KingArthur/king_arthur_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'TS': gamePath = 'TopOfTheSlots/top_slots_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'BJ': gamePath = 'SuperBlackJack/gameloader.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'RF': gamePath = 'RichAndFamous/rich_and_famous_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'AW': gamePath = 'AroundTheWorld/around_the_world_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'VH': gamePath = 'virtual_horses/virtual_horses_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'WF': gamePath = 'WhaleOfFortune/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'ZZ': gamePath = 'ZodiacZillions/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'HD': gamePath = 'HouseOfDragons/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'RC': gamePath = 'racingcards/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+		    //Vegas
+			case 'B1': gamePath = 'BlackJack/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case '3P': gamePath = '3_card_brag/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'JP': gamePath = 'JokerPoker/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'JB': gamePath = 'Jacks_or_Better_multihand/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'R2': gamePath = '3DRoulette/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'CW': gamePath = 'BeatTheDealer/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'CS': gamePath = 'CasinoPoker/game_load.asp&gameCode=CS'+strLangUp+'&'; break;
+			case 'PO': gamePath = 'PharaohsTreasure/game_load.asp&gameCode=PO'+strLangUp+'&'; break;
+			case 'GR': gamePath = 'GoldRush/game_load.asp&gameCode=GR'+strLangUp+'&'; break;
+			case 'GG': gamePath = 'GoForGold/game_load.asp&gameCode=GG'+strLangUp+'&'; break;
+			case 'LR': gamePath = 'KeepEmGoing/game_load.asp&gameCode=LR'+strLangUp+'&'; break;
+			case 'JA': gamePath = 'JewelsOfAtlantis/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'FM': gamePath = 'FruitMadness/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'CC': gamePath = 'CoffinUpTheCash/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'VS': gamePath = 'VegasSolitaire/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'AZ': gamePath = 'AmazonWild/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;	
+			case 'SB': gamePath = 'Slotris/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'HU': gamePath = 'HeadsUpPoker/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'BA': gamePath = 'LightningBalls/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'L8': gamePath = 'Lucky8/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'TM': gamePath = 'TimeMachine/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'GJ': gamePath = 'GinJointJackpot/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'SL': gamePath = 'stakesandladders/gameloader.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'RU': gamePath = 'Rubiks/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'AL': gamePath = 'AlicesWonderland/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'BX': gamePath = 'MultiBarX/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'BC': gamePath = 'Baccarat/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'R3': gamePath = 'highstakesroulette/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'CP': gamePath = 'Craps/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'RG': gamePath = 'Reelgems/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'SC': gamePath = 'leprechaunsluck/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'CT': gamePath = 'chestsofplenty/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'VL': gamePath = 'viva_las_vegas/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'RG': gamePath = 'ReelGems/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'WW': gamePath = 'waroftheworlds/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'SR': gamePath = 'slottolette/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'S1': gamePath = 'thebigone/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'S2': gamePath = 'fruitscratch/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'RS': gamePath = 'ReSpinner/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'LL': gamePath = 'LeprechaunsLuckSlot/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'OS': gamePath = 'OpenSesame/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+			case 'KM': gamePath = 'MidasMillions/game_load.asp&gameCode='+strGameCode+strLangUp+'&'; break;
+
+		    //Default
+		        default: gamePath = '3DRoulette/game_load.asp&gameCode=R2'+strLang+'&'; break;
+		}
+		var new_window;
+		if (new_window != null && !new_window.closed) {new_window.focus();}else{
+		    switch(type){
+			case 'realplay':
+		    		Cookie.write("fogPlayer", "1", {duration: 365, domain: '.williamhill.com', path: '/'});
+		    		whTrack.getTag(strGameCode+'/foglive');
+		    		windowName = 'fogGame';
+				new_window = window.open("https://fogaccounts.williamhill.com/game_loader?action=go_game_popup&game="+strGameCode+"&mode="+type+"&skip=true&lang="+strLang ,windowName, "toolbar=no,width=800,height=495,resizable=yes,scrollbars=0");
+		    		break;
+		    	case 'freeplay':
+		    		whTrack.getTag(strGameCode+'/fogdemo');
+		    		windowName = 'fogGame';
+				new_window = window.open("https://fogaccounts.williamhill.com/game_loader?action=go_game_popup&game="+strGameCode+"&mode="+type+"&skip=true&lang="+strLang ,windowName, "toolbar=no,width=800,height=495,resizable=yes,scrollbars=0");
+		    		break;
+	                case 'LD':
+	                    whTrack.getTag(strGameCode+'/live');
+	                    windowName = 'vegasGame';
+		            new_window = window.open("https://sports.williamhill.com/bet/" +strLang+ "?action=DoGameLaunch&systemName=Evolution&base_url=https://willhill.evolutiongaming.com/cgibin/UserAuthentication&lang=" +strLang+ "&source=VA&gameCode=" + strGameCode + "&evo_game_code=" + strGameCode ,windowName, "toolbar=no,width=800,height=550,resizable=yes");
+		            if (window.focus) {new_window.focus();}
+		            break;
+		        case 'RP':
+		            whTrack.getTag(strGameCode+'/real');
+		            windowName = 'vegasGame';
+		            switch(document.body.id){
+		                case 'vegas_site':
+		                	if(strLang == 'en'){
+						if (new_window == null || new_window.closed) {
+							new_window = window.open("http://vegas.williamhill.com/minilobby/#"+strGameCode ,windowName, "toolbar=no,width=800,height=663,resizable=yes,scrollbars=0");
+						}
+						else {
+			           			new_window.clearArrows();
+	        					new_window.scrollTo(strGameCode);
+			            			new_window.frames['gameFrame'].location = "https://sports.williamhill.com/bet/" +strLang+ "?action=DoGameLaunch&systemName=Vegas&base_url=http://vegas-gs.williamhill.com/FOB/"+langLong+"/"+ gamePath + "lang=" +strLang + "&source=VA" ,"", "toolbar=no,width=800,height=550,resizable=yes";
+			            			new_window.focus();
+			           		}
+			           	}else{
+			           		new_window = window.open("https://sports.williamhill.com/bet/" +strLang+ "?action=DoGameLaunch&systemName=Vegas&base_url=http://vegas-gs.williamhill.com/FOB/"+langLong+"/"+ gamePath + "lang=" +strLang + "&source=VA" ,windowName, "toolbar=no,width=800,height=550,resizable=yes");
+			           	}
+        				break;
+        			case 'poker_site':
+		                	if(strLang == 'en'){
+						if (new_window == null || new_window.closed) {
+							new_window = window.open("http://vegas.williamhill.com/minilobby/#"+strGameCode ,windowName, "toolbar=no,width=800,height=663,resizable=yes,scrollbars=0");
+						}
+						else {
+			           			new_window.clearArrows();
+	        					new_window.scrollTo(strGameCode);
+			            			new_window.frames['gameFrame'].location = "https://sports.williamhill.com/bet/" +strLang+ "?action=DoGameLaunch&systemName=Vegas&base_url=http://vegas-gs.williamhill.com/FOB/"+langLong+"/"+ gamePath + "lang=" +strLang + "&source=VA" ,"", "toolbar=no,width=800,height=550,resizable=yes";
+			            			new_window.focus();
+			           		}
+			           	}else{
+			           		new_window = window.open("https://sports.williamhill.com/bet/" +strLang+ "?action=DoGameLaunch&systemName=Vegas&base_url=http://vegas-gs.williamhill.com/FOB/"+langLong+"/"+ gamePath + "lang=" +strLang + "&source=VA" ,windowName, "toolbar=no,width=800,height=550,resizable=yes");
+			           	}
+        				break;
+        			//case 'games_site': 
+		                //	new_window = window.open("http://games.williamhill-test.local/minilobby/#"+strGameCode ,windowName, "toolbar=no,width=800,height=663,resizable=yes,scrollbars=0");
+		                //	if (new_window.onfocus) {		          
+        			//		new_window.clearArrows();
+        			//		new_window.scrollTo(strGameCode);
+		            	//		new_window.frames['gameFrame'].location = "https://sports.williamhill-test.local/bet/" +strLang+ "?action=DoGameLaunch&systemName=Games&base_url=http://games-gs.williamhill-test.local/FOB/"+langLong+"/"+ gamePath + "lang=" +strLang + "&source=GM" ,"", "toolbar=no,width=800,height=550,resizable=yes";
+		            	//		new_window.focus();
+		          	//	}
+		                //	break;
+		                //case 'games_site': new_window = window.open("https://sports.williamhill.com/bet/" +strLang+ "?action=DoGameLaunch&systemName=Games&base_url=http://games-gs.williamhill.com/FOB/"+langLong+"/"+ gamePath + "lang=" +strLang + "&source=GM","", "toolbar=no,width=800,height=550,resizable=yes"); break;
+		                case 'games_site': 
+		                	if(vegasRedirect) { 
+		                		if(vegasRedirect == 2) {
+			                		if (new_window == null || new_window.closed) {
+								new_window = window.open("http://vegas.williamhill.com/minilobby/#"+strGameCode ,windowName, "toolbar=no,width=800,height=663,resizable=yes,scrollbars=0");
+							}
+							else {
+				           			new_window.clearArrows();
+		        					new_window.scrollTo(strGameCode);
+				            			new_window.frames['gameFrame'].location = "https://sports.williamhill.com/bet/" +strLang+ "?action=DoGameLaunch&systemName=Vegas&base_url=http://vegas-gs.williamhill.com/FOB/"+langLong+"/"+ gamePath + "lang=" +strLang + "&source=VA" ,"", "toolbar=no,width=800,height=550,resizable=yes";
+				            			new_window.focus();
+				           		}
+		                		}
+		                		else {
+			                		gameNav.gamesVRPLaunch(type, strGameCode, langLong, gamePath); 
+			                	}
+		                	}
+		                	else {
+			                	gameNav.gamesPopup(type, strGameCode, langLong, gamePath);
+			                }
+		                	break;
+		            }
+		            if (typeof(new_window) != 'undefined') {new_window.focus();}
+			    break;		
+			case 'FP':
+		            whTrack.getTag(strGameCode+'/demo');
+		            windowName = 'vegasGame';
+		            switch(document.body.id){
+        			case 'vegas_site': new_window = window.open("http://demo.williamhill.com/"+strLang+"/FOBredirectFun.asp?gamecode=" + strGameCode + "&product=" + productCode + "&source=VA", windowName, "toolbar=no,width=800,height=550,resizable=yes"); break;
+		                case 'games_site': 
+		                	//new_window = window.open("http://demo.williamhill.com/"+strLang+"/FOBredirectFun.asp?gamecode=" + strGameCode + "&product=" + productCode + "&source=GM", "", "toolbar=no,width=800,height=550,resizable=yes"); break;
+		                	if(vegasRedirect) { 
+		                		gameNav.gamesVRPLaunch(type, strGameCode, langLong, gamePath); 
+		                	}
+		                	else {
+			                	gameNav.gamesPopup(type, strGameCode, langLong, gamePath);
+			                }
+		                	break;
+		            }
+		            if (typeof(new_window) != 'undefined') {new_window.focus();}
+		            break;
+		        case 'ML':
+		            switch(document.body.id){
+			            case 'games_minilobby':
+				    	whTrack.getTag(strGameCode+'/real/ML');
+			            	parent.frames['gameFrame'].location = "https://sports.williamhill.com/bet/" +strLang+ "?action=DoGameLaunch&systemName=Games&base_url=http://games-gs.williamhill.com/FOB/"+langLong+"/"+ gamePath + "lang=" +strLang + "&source=GM" ,"", "toolbar=no,width=800,height=550,resizable=yes";
+				    break;
+			            case 'vegas_minilobby':
+			            	whTrack.getTag(strGameCode+'/real/ML');
+			            	parent.frames['gameFrame'].location = "https://sports.williamhill.com/bet/" +strLang+ "?action=DoGameLaunch&systemName=Vegas&base_url=http://vegas-gs.williamhill.com/FOB/"+langLong+"/"+ gamePath + "lang=" +strLang + "&source=VA" ,"", "toolbar=no,width=800,height=550,resizable=yes";
+			   	    break;
+		   	   }
+		    }
+		}
+	},
+	skillLobby: function(defaultset,width,height,table) {
+		if((typeof(height) === 'undefined') && (typeof(width) === 'undefined')) {
+			var w = 950;
+			var h = 650;
+		}
+		else {
+			var w = width;
+			var h = height;
+		}
+		if(width == 950) {
+			var type = 'lobby';
+		}
+		else {
+			var type = 'single';
+		}
+		var nL = (screen.width - w) / 2 ;
+		var nT = (screen.height - h) / 2 ;
+		var prms = 'height='+h+',width='+w+',resizable=no,';
+		prms += 'scrollbars=no,location=no,menubar=no,top='+nT+',left='+nL;
+		
+		var url = 'https://login.williamhill.com/seamless_login.asp?game='+defaultset+'&type='+type+'&table='+table;
+		window.open(url,'lobby',prms);
+	}
+};
+
+var transformVegasTables = new Class ({
+	initialize: function(name){
+		this.name = name;
+
+		if($chk(this.name)){
+			$$('table.'+this.name).each(function(item, index){
+				item.getElements('tr').each(function(item2, index){
+					if (index%2 == 1 ) {item2.addClass("On");}
+				});
+			});
+			
+		}
+	}
+});
+
+
+// * Casino Site
+
+
+/* Jackpots */
+// * Casino Ticker Class
+// Look through page and find tickers, then animate...
+var casinoTicker = {
+
+	subtract: 200,
+	
+	// * Class Reader Method
+	// Get the number we are on from the class name
+	readClass : function(el) {
+	
+		var oldClass 	= el.get('class');
+		oldClass 		= oldClass.toString();
+		var newClass 	= oldClass.split(" "); 
+		newClass 		= newClass[1].match(/\d/);
+		
+		return newClass;
+	
+	},
+	
+	// * Search Method
+	// Search for Tickers on the Page
+	Search : function() {
+		
+		switch (strCurrency) {
+		
+		case "&pound;":
+			var currClass = '.GBP';
+			var dest = ['.EUR'];
+		break;
+		
+		case "&euro;":
+			var currClass = '.EUR';
+			var dest = ['.GBP'];
+		break;
+		
+		default:
+			var currClass = '.GBP';
+			var dest = ['.EUR'];
+			
+		}
+		
+		// Destroy unused...
+		dest.each(function(d) {$$(d).destroy();});
+				
+		// * Find the tickers
+		var tickers = $$('.jackpotDigits'+currClass);
+		
+		// Loop through
+		tickers.each(function(ticker) {
+				
+			// This id
+			var tid 		= ticker.get('id');
+			var this_ticker	= $$('#'+tid);
+			
+			// Get all the digits
+			var digits 		= $$('#'+tid+' span.jackpot-tick');
+			var digit_count	= digits.length;
+			
+			// Find last three digits
+			var start_at	= digit_count - 3;
+			
+			// * Remove 100 from the count & Seperate Hundreds, Tens, Units
+			var cursor 		= 0;
+			var current_no  = 0;
+			var n_cursor	= 0;
+			
+			digits.each(function(digit) {
+				cursor ++;
+				if (cursor > start_at) {
+					n_cursor ++;
+					current_no += casinoTicker.readClass(digit);
+					switch (n_cursor) {
+						case 1:
+							digit.addClass('hundred');
+						break;
+						case 2:
+							digit.addClass('ten');
+						break;
+						case 3:
+							digit.addClass('unit');
+						break;
+					}
+				}
+			});
+			
+			// Current & New Number
+			current_no 	= parseFloat(current_no);
+			new_no		= current_no - casinoTicker.subtract;
+			if (new_no < 200) {new_no = 100;}
+			
+			// Select Digit Elements
+			var str_current_no	= current_no.toString();
+			var numbers			= str_current_no.split("");
+			var hundreds 		= $$('#'+tid+' span.hundred');
+			var tens 			= $$('#'+tid+' span.ten');
+			var units 			= $$('#'+tid+' span.unit');
+			// Pre-get Classes
+			var unitClass		= units.get('class');
+			var tenClass		= tens.get('class');
+			var hundredClass	= hundreds.get('class');
+			
+			// * Drop by subtract value
+			var str_new_no		= new_no.toString();
+			var new_numbers		= str_new_no.split("");
+			hundreds.removeClass(hundredClass);
+			tens.removeClass(tenClass);
+			units.removeClass(unitClass);
+			
+			hundreds.addClass('jackpot-tick');
+			hundreds.addClass('no-'+new_numbers[0]);
+			hundreds.addClass('hundred');
+			
+			tens.addClass('jackpot-tick');
+			tens.addClass('no-'+new_numbers[1]);
+			tens.addClass('ten');
+			
+			units.addClass('jackpot-tick');
+			units.addClass('no-'+new_numbers[2]);
+			units.addClass('unit');
+			
+			// * Give information to the Animator, and relax
+			casinoTicker.Animator(tid, ticker, hundreds, tens, units, current_no, new_no);
+			
+		});
+		
+	},
+	
+	
+	// * Animator Method
+	// Takes information from the Searcher, and animates certain tickers
+	Animator : function (tid, ticker, h, t, u, from, to) {
+	
+		var period;
+		var scoreArray	= new Array();
+		var counter		= 0;
+		
+		// * Animate Functions
+		
+		// Flip Functions
+		var firstHalfFlip = function (el, to) {
+			var elClass = el.get('class');
+			el.removeClass(elClass);
+			el.addClass('unit');
+			el.addClass('jackpot-tick');
+			el.addClass('no-'+to+'-5');
+		}
+		var secondHalfFlip = function (el, to) {
+			var elClass = el.get('class');
+			el.removeClass(elClass);
+			el.addClass('unit');
+			el.addClass('jackpot-tick');
+			el.addClass('no-'+to);
+		}
+		
+		
+		// Units
+		var animate_units = function () {
+			
+			
+			if (!scoreArray[tid+'-unit']) {		
+				var units_current	= parseFloat(casinoTicker.readClass(u)); 
+				scoreArray[tid+'-unit'] = units_current + 1;
+			}else{
+				// Update Numbers
+				scoreArray[tid+'-unit'] = parseFloat(scoreArray[tid+'-unit']) + 1;
+			}
+			
+			// When it reaches the end of its cycle
+			if (scoreArray[tid+'-unit']	> 9) {	
+				scoreArray[tid+'-unit'] = '0';
+			}
+			
+			var str_new = scoreArray[tid+'-unit'];
+			
+			(function(){ firstHalfFlip(u, str_new) }).delay(90);
+			(function(){ secondHalfFlip(u, str_new) }).delay(200);
+			
+		}
+		
+		// Tens
+		var animate_tens = function () {
+			
+			// If its the tens first update
+			if (!scoreArray[tid+'-ten']) {
+				var tens_current		= parseFloat(casinoTicker.readClass(t)); 
+				scoreArray[tid+'-ten'] 	= tens_current + 1;
+			}else{
+				scoreArray[tid+'-ten'] = parseFloat(scoreArray[tid+'-ten']) + 1;
+			}
+			
+			// When it reaches the end of its cycle
+			if (scoreArray[tid+'-ten'] > 9) {
+				scoreArray[tid+'-ten'] = '0';
+			}
+			
+			var ten_new = scoreArray[tid+'-ten'];
+			
+			(function(){ firstHalfFlip(t, ten_new) }).delay(90);
+			(function(){ secondHalfFlip(t, ten_new) }).delay(200);
+		
+		};
+		
+		// Hundreds
+		var animate_hundreds = function () {
+			
+			// If its the hundreds first update
+			if (!scoreArray[tid+'-hundred']) {
+				var hundreds_current		= parseFloat(casinoTicker.readClass(h)); 
+				scoreArray[tid+'-hundred'] 	= hundreds_current + 1;
+			}else{
+				scoreArray[tid+'-hundred'] = parseFloat(scoreArray[tid+'-hundred']) + 1;
+			}
+			
+			// When it reaches the end of its cycle
+			if (scoreArray[tid+'-hundred'] > 9) {
+				scoreArray[tid+'-hundred'] = '0';
+			}
+			
+			var hundred_new = scoreArray[tid+'-hundred'];
+			
+			(function(){ firstHalfFlip(h, hundred_new) }).delay(90);
+			(function(){ secondHalfFlip(h, hundred_new) }).delay(200);
+			
+		};
+		
+		
+		// Animate
+		var animate = function() {
+			
+			// Counter
+			if (counter < casinoTicker.subtract) {
+			
+				animate_units();
+				
+				// When unit reaches end of cycle
+				if (scoreArray[tid+'-unit'] == '0') {
+					animate_tens();
+				
+					// When tens and units reaches end of their cycle
+					if (scoreArray[tid+'-ten'] == '0') {animate_hundreds();}
+				}
+			}
+			
+			counter ++;
+			
+		};
+		
+		// Periodical
+		period = animate.periodical(300);
+	
+	}
+
+};
+
+
+
+/* Casino Hover */
+var CasinoHover = {
+
+	Initiate : function() {
+		// Help out IE6 when hovering over games
+		if($chk($('games-list'))){
+			$$('.hoverListen').addEvent('mouseover', function() {
+				var play_now = $(this).getElement('.play-now');
+				var playButton = $(this).getElement('.play');
+				var desc = $(this).getElement('.desc');
+				var descOver = $(this).getElement('.descOver');
+				
+				play_now.setStyle('display', 'block');
+				playButton.setStyle('display', 'block');
+				desc.setStyle('display', 'block');
+				descOver.setStyle('display', 'block');
+								
+				if($chk($(this).getElement('.title'))){
+					var title = $(this).getElement('.title');
+					var titleOver = $(this).getElement('.titleOver');
+					title.setStyle('display', 'none');
+					titleOver.setStyle('display', 'none');
+				}
+				if($chk($(this).getElement('.jpOverlay'))){
+					var title = $(this).getElement('.jpOverlay');
+					title.setStyle('display', 'none');
+				}
+			});
+		
+			$$('.hoverListen').addEvent('mouseout', function() {
+				var play_now = $(this).getElement('.play-now');
+				var playButton = $(this).getElement('.play');
+				var desc = $(this).getElement('.desc');
+				var descOver = $(this).getElement('.descOver');
+				
+				play_now.setStyle('display', 'none');
+				playButton.setStyle('display', 'none');
+				desc.setStyle('display', 'none');
+				descOver.setStyle('display', 'none');
+				
+				if($chk($(this).getElement('.title'))){
+					var title = $(this).getElement('.title');
+					var titleOver = $(this).getElement('.titleOver');
+					title.setStyle('display', 'block');
+					titleOver.setStyle('display', 'block');
+				}
+				if($chk($(this).getElement('.jpOverlay'))){
+					var title = $(this).getElement('.jpOverlay');
+					title.setStyle('display', 'block');
+				}
+			});
+		}
+	}
+
+};
+
+
+// Class for New Casino Game Box
+var CasinoTabs = {
+	
+	// Globals
+	DefaultId	: 'blackjack',
+	ExpandAfter	: 12,
+	FirstClick	: true,
+	activeClass	: 'active',
+	GameClass	: 'cat_',
+	TabId		: 'casino_tab_',
+	Selected	: 0,
+	maxScroll	: 0,
+	marginTop	: 12,
+	newMargin	: 0,
+	passedAfter	: 0,
+
+	
+	// * Initiate Method
+	// Loads Everything Up
+	Initiate : function() {
+		
+		// Default Tab
+		var activeTab = $(CasinoTabs.TabId+CasinoTabs.DefaultId);	
+		
+		if ($chk(activeTab)) {
+			
+			// Activate Default Tab
+			activeTab.addClass('active');
+			
+			// Show the games...
+			CasinoTabs.FadeInGames(CasinoTabs.DefaultId);
+			
+		}
+		
+		if ($chk($('bankTable'))) {CasinoTabs.SlideInBanking();}
+		
+		// Scroll Promo Box with Page
+		if ($chk($('promo'))) {
+			
+			var promo			= $('promo');
+			var scrollAfter			= 550;
+			var promoBoxH			= promo.getStyle('height'); promoBoxH =  promoBoxH.replace(/px/i, '');
+			var marginBottom		= 15;
+			CasinoTabs.newMargin	= CasinoTabs.marginTop;
+			CasinoTabs.passedAfter	= false;
+			var periodical;
+			var marginLoop			= 0;
+			var loopCount			= 0;
+
+			// Check for scroll event
+			window.addEvent('scroll', function() {
+				
+				CasinoTabs.maxScroll	= (CasinoTabs.BoxHeight - promoBoxH) - marginBottom;
+
+				var scrollPosition		= window.getScroll();
+				
+				// If scroll position is correct, we can move the promo box
+				if (scrollPosition.y > scrollAfter) 
+					CasinoTabs.passedAfter	= true;
+				// If scroll position is less, we are no longer passed the limit
+				if (scrollPosition.y < scrollAfter)
+					CasinoTabs.passedAfter	= false;
+				
+				// Reset Passed
+				if (scrollPosition.y == 0)
+					CasinoTabs.passedAfter	= false;
+				
+				if (CasinoTabs.passedAfter) {
+
+					CasinoTabs.newMargin	= (scrollPosition.y) - scrollAfter;
+						
+				}else{
+					
+					CasinoTabs.newMargin	= CasinoTabs.marginTop;
+				
+				}
+				
+				if (CasinoTabs.newMargin < 0) {
+					CasinoTabs.newMargin = CasinoTabs.marginTop;
+				}else if (CasinoTabs.newMargin > CasinoTabs.maxScroll) {
+					CasinoTabs.newMargin = CasinoTabs.maxScroll;
+				}
+				
+			});
+			
+			
+			// The Tween object:
+			var tw = new Fx.Tween(promo, {
+				duration:	200,
+				
+				// Fix margin oversize issue
+				onComplete: function() {
+					if (CasinoTabs.newMargin < CasinoTabs.maxScroll) {
+						CasinoTabs.newMargin = CasinoTabs.maxScroll;
+					}
+				}
+			});
+			
+			var scrollEffect = function() {
+				
+				var scrollPosition	= window.getScroll();
+				
+				if (marginLoop == scrollPosition.y) {
+					loopCount ++;
+				}else{
+					loopCount = 0;
+				}
+				
+				// If scroll position is the same for 5 loops:
+				if (loopCount == 5) {
+					$clear(periodical);
+					if (CasinoTabs.passedAfter) {
+						if (CasinoTabs.newMargin > CasinoTabs.marginTop)
+							tw.start('margin-top', CasinoTabs.newMargin+'px');
+					}else{
+						tw.start('margin-top', '12px');
+					}
+					// Delay:
+					//tw.start.pass(['margin-top', CasinoTabs.newMargin+'px'], tw).delay(500);
+				}
+				
+				// Set Vars
+				marginLoop = scrollPosition.y;
+				
+				
+			}
+			
+			scrollEffect.periodical(100);
+				
+		}
+		
+	},
+	
+	//* Clear out all Games
+	ClearAll : function() {
+		$$('#games-list li').setStyle('display', 'none');
+	},
+	
+	// * Load in Jackpots
+	// Clears everything out, and loads in the Jackpots tab
+	Jackpots : function() {
+	
+		// Clear out all visible games
+		CasinoTabs.ClearAll();
+		
+		// Deactivate all tabs, and Activate Jackpots Tab
+		CasinoTabs.Switch('jackpots');
+	
+	},
+	
+	
+	// * Fade In Method
+	// Displays selected games with a nice animation
+	FadeInGames : function(id) {
+		
+		CasinoTabs.ClearAll();
+		
+		// Select Game Set
+		var gameGroup	= $$('.'+CasinoTabs.GameClass+id);
+
+		// Expand games-list div if needed
+		
+		// Element
+		var gamesBox	= $$('#casino-games');
+		// Numbers
+		var numGames	= gameGroup.length;
+		var boxSize	= 140;
+		
+		if (numGames > CasinoTabs.ExpandAfter) {
+			
+			// Some Maths
+			var newHeight		= Math.ceil(numGames / 4);
+			newHeight			= newHeight * boxSize;
+			CasinoTabs.BoxHeight= newHeight;
+			
+			// Animate Box
+			gamesBox.tween('height', newHeight);
+			
+			var expanded = true;
+			
+		}else{
+			var oldHeight	= boxSize * 3;
+			CasinoTabs.BoxHeight = oldHeight;
+			gamesBox.tween('height', oldHeight);
+			expanded	= false;
+		
+		}
+		
+		gameGroup.each( function(game) {
+					
+			// Show the game
+			game.setOpacity(0);
+			game.setStyle('display', 'block');	
+			
+			// New Effect
+			game.tween('opacity', '1.0');
+
+		
+		});
+	},
+	
+	
+	// * Switch Method
+	// Switches Tabs & Loads in Games
+	Switch : function(id) {
+		
+		if (id != CasinoTabs.Selected) {
+			
+			// Scroll tabs into view when clicked
+			//if (CasinoTabs.FirstClick) {
+				var scroll = new Fx.Scroll(window); 
+				scroll.toElement('scrollAnchor');
+				CasinoTabs.FirstClick = false;
+			//}
+			
+			// Hide all games by default
+			CasinoTabs.ClearAll();
+		
+			var activeTab	= $(CasinoTabs.TabId+id);
+			var currentTab	= $$('a.active');
+			
+			// Reset Active Tab
+			currentTab.removeClass('active');			
+			
+			// Add Active Class to New Tab
+			activeTab.addClass('active');
+			
+			// Load in Games
+			CasinoTabs.FadeInGames(id);
+			
+			// New Selected
+			CasinoTabs.Selected = id;
+		
+		}
+		
+	},
+	
+	// * Load Method
+	// Loads up a specific game in a new window
+	LoadGame : function(LoadType, GameCode) {
+	
+		var DefaultGame = '';
+		
+		var GameWindow = window.open("http://dev-casino.williamhill.local", "Game Window", 
+"status = 0, height = 500, width = 900, resizable = 0, scrollbars = 0");
+	
+	},
+	
+	// * Use Toggle
+	// Slides Payment Options into view on click
+	SlideInBanking : function(id) {
+		$$('#bankTable a.bankLink').each(function(item, index){
+			var bankingSlide = new Fx.Slide('drop'+index);
+			bankingSlide.hide();
+			bankingSlide.element.setStyle('display', 'block');
+			
+			item.addEvent('click', function(e){
+				if(item.className == 'bankLink') {item.addClass('drop');}
+				else {item.removeClass('drop');}
+				e.stop();
+				bankingSlide.toggle();
+			});
+		});
+	}
+	
+};
+
+
+// ** Casino General Class
+var generalDropDown = {
+
+	Initiate : function () {
+		
+		// Hover Menus
+		var dropList	= $$('ul.sub li.drop');
+
+		dropList.addEvent ('mouseover', function() {
+			
+			var dropArea 	=  this.getElement('ul');
+			var dropButton 	=  this.getElement('a.subLink');
+			dropButton.addClass('subTabHover');
+			dropArea.setStyle('display', 'block');			
+			
+		});
+		
+		dropList.addEvent ('mouseleave', function() {
+			
+			var dropArea 	=  this.getElement('ul');
+			var dropButton 	=  this.getElement('a.subLink');
+			dropButton.removeClass('subTabHover');
+			dropArea.setStyle('display', 'none');
+			
+		});
+		
+		// Hover Menus
+		var dropLeft	= $$('ul.sub li.dropLeft');
+		
+		dropLeft.addEvent ('mouseover', function() {
+			
+			var dropArea 	=  this.getElement('ul');
+			var dropButton 	=  this.getElement('a.subLink');
+			dropButton.addClass('subTabHover');
+			dropArea.setStyle('display', 'block');			
+			
+		});
+		
+		dropLeft.addEvent ('mouseleave', function() {
+			
+			var dropArea 	=  this.getElement('ul');
+			var dropButton 	=  this.getElement('a.subLink');
+			dropButton.removeClass('subTabHover');
+			dropArea.setStyle('display', 'none');
+			
+		});
+		// Browser detection - decides on what content to show in Casino Quick Start
+		if($chk($('qsFirefox')) && $chk($('qsIE'))) {
+    			if(Browser.Engine.gecko) {
+				$('qsFirefox').setStyle('display', 'block');
+    			}
+    			else {
+    				//console.log('Not Firefox');
+    				$('qsIE').setStyle('display', 'block');
+    			}
+    		}
+	}
+
+}
+
+// * Server Clock Class
+var serverTime = {
+
+	// * Init Method
+	init : function() {
+		
+		var podical;
+		var theClock = $$('#serverClock #st-dynamic');
+		var currenttime = theClock.get('html');
+		currenttime = currenttime[0];
+		currenttime = currenttime.replace(/<!--/g, '');
+		currenttime = currenttime.replace(/-->/g, '');
+
+		var serverdate=new Date(currenttime);
+		
+		function padlength (what) {
+			var output = (what.toString().length==1)? "0"+what : what;
+			return output;
+		}
+		function displaytime () {
+			serverdate.setSeconds(serverdate.getSeconds()+1);
+			var timestring = padlength(serverdate.getHours())+":"+padlength(serverdate.getMinutes())+":"+padlength(serverdate.getSeconds());
+			theClock.set('text',timestring);
+		
+		}
+		podical = displaytime.periodical(1000);
+	}
+};
+
+// * Countdown - used in Martians Vegas
+var countDown = {
+		
+	// * Init Method
+	gyear: 0,
+	gmonth: 0,
+	gday: 0,
+	ghour: 0,
+	gminute: 0,
+	theClock: '',
+	
+	init : function(year, month, day, hour, minute) {
+		
+		var podical;
+		countDown.gyear = year;
+		countDown.gmonth = month;
+		countDown.gday = day;
+		countDown.ghour = hour;
+		countDown.gminute = minute;
+		
+		if($chk($('martiansTab'))){
+			countDown.theClock = $('martiansTab');
+			podical = countDown.displaytime.periodical(1000);
+		}			
+	},
+	displaytime: function() {
+		Today = new Date();
+	        Todays_Year = Today.getFullYear() - 2000;
+	        Todays_Month = Today.getMonth();
+
+	        Todays_Date = (new Date(Todays_Year, Todays_Month, Today.getDate(), 
+	                                 Today.getHours(), Today.getMinutes(), Today.getSeconds())).getTime();                                 
+	        Target_Date = (new Date(countDown.gyear, countDown.gmonth - 1, countDown.gday, countDown.ghour, countDown.gminute, 00)).getTime();                  
+	       
+	        Time_Left = Math.round((Target_Date - Todays_Date) / 1000);
+	         
+	        if(Time_Left < 0)
+	            Time_Left = 0;
+		
+		//More datailed.
+		days = Math.floor(Time_Left / (60 * 60 * 24));
+		Time_Left %= (60 * 60 * 24);
+		hours = Math.floor(Time_Left / (60 * 60));
+		Time_Left %= (60 * 60);
+		minutes = Math.floor(Time_Left / 60);
+		Time_Left %= 60;
+		seconds = Time_Left;
+
+		days = countDown.zeroPad(days);
+		hours = countDown.zeroPad(hours);
+		minutes = countDown.zeroPad(minutes);
+		seconds = countDown.zeroPad(seconds);
+		
+		countDown.theClock.innerHTML = days + '  :  ';
+		countDown.theClock.innerHTML += hours + '  :  ';
+		countDown.theClock.innerHTML += minutes + '  :  ';
+		countDown.theClock.innerHTML += seconds;
+	},
+	zeroPad: function(num) {
+		var numZeropad = num + '';
+		if(numZeropad.length < 2) {
+			numZeropad = "0" + numZeropad;
+		}
+		return numZeropad;
+	}
+}
+
+//Lock & Load!
+window.addEvent('domready', function() {
+
+    //JS Redirects
+    //switch(window.location.href){
+    //        case 'http://www.williamhill.com/promotions/100-free-bet-for-new-william-hill-customers/':
+    //        window.location = "http://www.williamhill.com/promo-fs/"
+    //        break;            
+    //    default:
+    //        //Do Nothing;
+    //        break;
+    //}
+
+    //Start Server Clock
+    console.log('William Hill Core v 1.1');
+    console.log(' - Server Compile Time: ' + strCompileTime);
+    console.log(' - Server Query Count: ' + strQueries);
+    console.time('Execute Time');
+        
+    // Initialise Common Functions
+    if($chk($('serverClock'))) {if($chk($('st-dynamic'))){serverTime.init();}
+	else{
+	    	(function(){
+			serverDate.setTime(serverDate.getTime() + 1000);
+			$('serverClock').innerHTML = (serverDate.toTimeString().split(' ')[0] + " UK");
+		}).periodical(1000);
+	}
+    }
+    
+    
+	if($chk($('subNavContentId'))){
+		$('subNavContentId').setStyle('display', 'none');
+			$("langSelectLink").addEvent('click', function(event){
+				if ($("subNavContentId").style.display!='') {
+						var myFx = new Fx.Tween($("subNavContentId"));
+					    	myFx.set('opacity', 0);
+					    	$("subNavContentId").setStyle('display', '');
+				                myFx.start('opacity', 1);
+				}
+			}
+		);
+	}
+    
+    
+    //Initialise Site Specific Functions
+    if(Browser.Engine.trident4){
+	$$('.headerBG li').each(function(item, index){
+	    item.onmouseover=function() {
+		this.className+=" sfhover";
+	    }
+	    item.onmouseout=function() {
+		this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+	    }
+	});
+    }
+    
+    if(Browser.Engine.trident4){
+	$$('#products li').each(function(item, index){
+	    item.onmouseover=function() {
+		this.className+=" sfhover";
+	    }
+	    item.onmouseout=function() {
+		this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+	    }
+	});
+    }
+
+    //Detect Page
+    switch(document.body.id){
+        case 'root_site':
+            //Kwix.start();
+            if($chk($('user'))){whLogin.init();}
+            whTrack.getSERef('Seowh');
+            break;
+        case 'bingo_site':
+            
+            //MH - Bingo TV Campaign - Remove Tabs
+            if(document.referrer.indexOf('williamhill') == -1){
+            	if (strLang == 'en'){
+            		$('productsNav').setStyle('display', 'none');
+            	}
+            }
+            
+            
+            whLaunch.frameKill();
+            whLogin.init();
+            new SliderNav({
+                scrollArea: '.scrollContent',
+                scrollControl: '.scrollControl'
+            });
+	    new winners({
+                table: '.scheduleTable'
+            });
+            whTrack.getSERef('Seobn');
+            break;
+        case 'news_site':
+            whLogin.init();
+            //if(!Browser.Engine.trident4){whNews.init()};
+            whNews.init();
+            new transformVegasTables('newsTable');
+            break;
+        case 'vegas_site':
+            whLaunch.frameKill();
+            whLogin.init();
+            productCode = "VA";
+            new gameNav.init();
+            new FadeNav({
+                scrollArea: '.scrollContent',
+                duration: 30
+            });
+            new whAnnouncementScroll.init();
+            new transformVegasTables('vegasTable');
+            new whNewsScroll.init();
+            whTrack.getSERef('Seowhvegsn');
+            countDown.init("09","11","12","12","0");
+            break;
+        case 'liveDealer_site':
+            whLaunch.frameKill();
+            whLogin.init();
+            productCode = "LC";
+            new gameNav.init();
+            new FadeNav({
+                scrollArea: '.scrollContent',
+                duration: 30
+            });
+            new whAnnouncementScroll.init();
+            new transformVegasTables('vegasTable');
+            new whNewsScroll.init();
+            whTrack.getSERef('Seowhvegsn');
+            countDown.init("09","11","12","12","0");
+            break;
+        case 'vegas_minilobby':
+	    new gameNav.init();
+	    new miniFeed.init();
+	    new whNewsScroll.init();
+	    break;
+	case 'games_minilobby':
+	    new gameNav.init();
+	    new miniFeed.init();
+	    new whNewsScroll.init();
+	    break;
+        case 'games_site':
+            productCode = "GA";
+            whLaunch.frameKill();
+            whLogin.init();
+            new gameNav.init();
+
+	    if($chk($('newLobbyLeftNav'))){
+		var sidebar = new ScrollSidebar('newLobbyLeftNav',{
+			offsets: {
+				x: 0,
+				y: 0
+			}
+		});
+	    }
+            new CasinoTabs.Initiate();
+            new CasinoHover.Initiate();
+            new generalDropDown.Initiate();
+            whTrack.getSERef('Seowhgamesn');
+            break;
+        case 'casino_site':
+            whLaunch.frameKill();
+            whLogin.init();
+            productCode = "CA";
+            //new SliderNav({
+            //    scrollArea: '.scrollContent',
+            //    scrollControl: '.scrollControl'
+            //});
+            whLaunch.openCasino();
+            if($chk($('casino-leaderboard'))){casinoLeaderBoard();}
+            whTrack.getSERef('Seowhcn');
+            new CasinoTabs.Initiate();
+            new CasinoHover.Initiate();
+	    new generalDropDown.Initiate();
+	    $$('.jackpotTop').setOpacity(1);
+	    break;
+        case 'poker_site':
+            whLogin.init({
+            	callback: function(){
+            		whLogin.wsopPoker();
+            		whLogin.promoPoker();
+            		whLogin.pokerRS();
+            	}
+            });
+            productCode = "PK";
+            new whAnnouncementScroll.init();
+            new SliderPromo({
+                scrollArea: '#scroll',
+                scrollControl: '#promosMenu'
+            });
+            new whNewsScroll.init();
+	    $$('.Tips1').each(function(element,index) {  
+	    var content = element.get('title').split('::');  
+		element.store('tip:title', content[0]);  
+		element.store('tip:text', content[1]);  
+	    });
+	    
+	    
+	    var tips = new Tips($$('.Tips1'), {
+		showDelay: 200
+	    });
+	    tips.tip.setStyle('opacity', 0);
+	    tips.addEvent('show', function(tip) {tip.fade(1);});
+	    tips.addEvent('hide', function(tip){
+		tip.setStyle('opacity', 0);
+	    });
+	    if($chk($('wsopLeaders'))){
+            	whLogin.promoLeaderboard('wsopLeadersJSON', 'wsopLeaders');
+            }
+            whLaunch.launchPrompt();
+            scheduleToday.init();
+            whTrack.getSERef('Seowhpn');
+            break;    
+        case 'affiliate_site':
+            whLaunch.frameKill();
+            whLogin.showSimple();
+            Kwix.start();
+            break;    
+        case 'skill_site':
+            //Not Currently on Domain
+            //whLaunch.frameKill();
+            whLogin.init();
+            new gameNav.init();
+            new generalDropDown.Initiate();
+            //new SliderNav({
+            //    scrollArea: '.scrollContent',
+            //    scrollControl: '.scrollControl'
+            //});
+            //new whAnnouncementScroll.init();
+            //whTrack.getSERef('Seowhsk');
+            break;             
+        default:
+            //Default;
+            break;
+    }
+       
+    //All Pages
+    //var helpTip = new tip({
+    //    elLock: 'helpLink',
+    //    tipDelay: 2000,
+    //    tipDuration: 60000,
+    //    tipBounce: 5000,
+    //	msg: '<b>Need Assistance?</b> - Try our Help Centre.'
+    //});
+          
+    whTrack.getTag('&statCompile=' + strCompileTime + '&statQueries=' + strQueries);
+    whMessaging.init();
+    
+    console.timeEnd('Execute Time');
+});

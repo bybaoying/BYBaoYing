@@ -1,0 +1,124 @@
+BODY {
+	LEFT: 0px; BACKGROUND-IMAGE: url(../imagesLoginZ/2004/index_bg.gif); MARGIN: 0px; CLIP: rect(0px auto auto auto); FONT-FAMILY: Arial, Helvetica, sans-serif; TOP: 0px
+}
+.main_bg {
+	BACKGROUND-IMAGE: url(../imagesLoginZ/2004/index_tabbg.jpg); WIDTH: 100%; BACKGROUND-REPEAT: repeat-x
+}
+.main
+{
+	background-position: left top;
+	padding-left: 332px;
+	background-image: url(../imagesLoginZ/2004/index_logo.jpg);
+	margin-bottom: 100px;
+	width: 100%;
+	padding-top: 0px;
+	border-bottom: #676767 8px solid;
+	background-repeat: no-repeat;
+	height: 155px;
+}
+.main H1
+{
+	background-position: left 50%;
+	padding-left: 20px;
+	font-weight: normal;
+	font-size: 12px;
+	background-image: url(../imagesLoginZ/2004/arrow_0.gif);
+	margin: 0px;
+	color: #ffffff;
+	background-repeat: no-repeat;
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.main H2
+{
+	background-position: left 15px;
+	padding-left: 20px;
+	font-weight: normal;
+	font-size: 12px;
+	background-image: url(../imagesLoginZ/2004/index_login.gif);
+	margin: 0px;
+	color: #ffffff;
+	background-repeat: no-repeat;
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+}
+H3 {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; MARGIN: 0px; COLOR: #ffffff; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.main P
+{
+	background-position: left 10px;
+	padding-left: 20px;
+	font-size: 12px;
+	background-image: url(../imagesLoginZ/2004/arrow_4.gif);
+	margin: 0px;
+	color: #ffffff;
+	padding-top: 2px;
+	background-repeat: no-repeat;
+	font-family: Arial, Helvetica, sans-serif;
+}
+P INPUT {
+	FONT-SIZE: 12px; WIDTH: 80px; FONT-FAMILY: Arial; HEIGHT: 20px
+}
+.login {
+	MARGIN-LEFT: 15px
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.lang {
+	WIDTH: 100%; BORDER-BOTTOM: #720106 1px solid; HEIGHT: 50px; BACKGROUND-COLOR: #b91802
+}
+.link {
+	PADDING-RIGHT: 0px; BACKGROUND-POSITION: 50% top; MARGIN-TOP: 25px; PADDING-LEFT: 0px; BACKGROUND-IMAGE: url(../imagesLoginZ/2004/index_top2.gif); PADDING-BOTTOM: 0px; VERTICAL-ALIGN: bottom; PADDING-TOP: 0px; BACKGROUND-REPEAT: repeat-x
+}
+.link UL {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.link LI {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.link IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; MARGIN: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+.code
+{
+	border-right: #cc3300 2px outset;
+	padding-right: 5px;
+	border-top: #ff6633 2px outset;
+	margin-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	border-left: #cc3300 2px outset;
+	width: 350px;
+	padding-top: 5px;
+	border-bottom: #ff6633 2px outset;
+	background-color: #ae0201;
+}
+.number
+{
+	font-weight: bold;
+	font-size: 16px;
+	color: #0000ff;
+	text-align: center;
+}
+.font_1
+{
+	
+	font-size: 12px;
+	color: white;
+	text-decoration: none;
+	
+}
+
+.login_font_6
+{
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+.login_font_6:hover {
+	font-size: 12px;
+	color: #FFCC00;
+	text-decoration: none;
+}

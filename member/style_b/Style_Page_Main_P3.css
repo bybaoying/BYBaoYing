@@ -1,0 +1,604 @@
+html
+{
+}
+
+body
+{
+	background-color: #ffffff;
+	margin: 7px 0px 0px 1px;
+	display: block;
+}
+.div_windows
+{
+	overflow: hidden;
+	width: 668px;
+}
+.table_windows
+{
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 100%;
+	
+}
+A
+{
+	text-decoration: none;
+}
+A:link
+{
+	text-decoration: none;
+}
+A:hover
+{
+	text-decoration: none;
+}
+A:visited
+{
+	text-decoration: none;
+}
+.Td_TabPage
+{
+	clear: both;
+	border-right: #009780 2px solid;
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-bottom: 0px;
+	border-left: #009780 2px solid;
+	padding-top: 3px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: white;
+}
+.Td_Table
+{
+	clear: both;
+	border-right: #009780 2px solid;
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-bottom: 3px;
+	border-left: #009780 2px solid;
+	padding-top: 3px;
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: White;
+}
+.Td_Table_Stop
+{
+	clear: both;
+	border-right: #009780 2px solid;
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-bottom: 3px;
+	border-left: #009780 2px solid;
+	padding-top: 3px;
+	height: 30px;
+	background-image: url(../imagesa/error/STOP.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: White;
+}
+#TableKK
+{
+	width: 100%;
+}
+.Main_Table
+{
+	background-color: #993300;
+	width: 100%;
+}
+
+.table_ChipHead
+{
+	background-color: #993300;
+	width: 100%;
+}
+.table_ChipTitle
+{
+	font-size: 0.75em;
+	width: 100%;
+	background-color: #e4e4e4;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	height: 25px;
+}
+.table_ChipChoose
+{
+	padding-right: 10px;
+	padding-left: 10px;
+	font-size: 0.75em;
+	background-color: #e4e4e4;
+	width: 100%;
+}
+
+.tr_Chipsend
+{
+	padding-right: 10px;
+	padding-left: 10px;
+	background-color: #e4e4e4;
+}
+.td_Chipsend
+{
+	font-size: 0.75em;
+	background-color: #e4e4e4;
+}
+.J_Submit
+{
+	font-size: 12px;
+	width: 90px;
+	height: 27px;
+	margin-right: 6px;
+	border: 0;
+	display: inline-block;
+	background: url(../imagesa/PageNo_Split.png) no-repeat;
+	background-position: -59px -32px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.table_ChipInfo
+{
+	font-size: 0.75em;
+	width: 100%;
+	background-color: #e4e4e4;
+	height: 25px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.table_Chip
+{
+	background-color: #993300;
+	width: 100%;
+}
+.td_title_set_cen
+{
+	color: white;
+	background-color: #01A88F;/*表格头色区*/
+	text-align: center;
+	height: 25px;
+	font-size: 0.75em;
+	font-weight: bold;
+}
+.td_Head_set_cen
+{/*区分类表头*/
+	color: white;
+	background-color: #009780;
+	text-align: center;
+	height: 25px;
+	font-size: 0.75em;
+	font-weight: bold;
+}
+.table_ChipOther
+{
+	width: 100%;
+	background-color: #993300;
+}
+.td_Caption_set
+{
+	padding-right: 10px;
+	color: white;
+	background-color: #01A88F;/*表格头色区*/
+	text-align: right;
+	height: 25px;
+	font-size: 0.75em;
+	font-weight: bold;
+}
+.td_Caption_set_right
+{
+	padding-right: 10px;
+	text-align: right;
+	height: 25px;
+}
+
+.td_Input_set
+{
+	padding-top: 3px;
+	padding-left: 2px;
+	padding-right: 5px;
+	padding-bottom: 1px;
+	font-size: 0.75em;
+	color: #000000;
+	background-color: #ffffff;
+	height: 25px;
+}
+.td_Center_set
+{
+	padding-top: 3px;
+	padding-left: 2px;
+	padding-right: 4px;
+	padding-bottom: 1px;
+	font-size: 0.75em;
+	color: #000000;
+	background-color: #ffffff;
+	height: 25px;
+	text-align: center;
+}
+.td_Text_set
+{
+	padding-top: 3px;
+	padding-left: 2px;
+	padding-right: 4px;
+	padding-bottom: 1px;
+	font-size: 0.75em;
+	color: #000000;
+	background-color: #ffffff;
+	height: 25px;
+}
+.td_Mss_set
+{
+	background-color: #ffffff;
+	height: 25px;
+}
+.td_button_set
+{
+	text-align: center;
+	background-color: #ffffff;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.td_PageNo_set
+{
+	font-size: 0.75em;
+	text-align: center;
+	background-color: #ffffff;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.Input_set
+{
+	width: 97%;
+}
+.Input_set_readOnly
+{
+	width: 97%;
+	margin-right: 1px;
+	background-color: lightgrey;
+}
+.span_set
+{
+	display: block;
+	padding-left: 5px;
+}
+.select_set
+{
+	width: 100%;
+}
+.button_Ok
+{
+	font-size: 12px;
+	cursor: hand;
+	padding-top: 2px;
+	background-color: #993300;
+	color: white;
+	width: 54px;
+	height: 27px;
+	border: 0;
+	display: inline-block;
+	background: url(../imagesa/PageNo_Split.png) no-repeat;
+	background-position: -59px -118px;
+	font-weight: bold;
+}
+.button_Reset
+{
+	font-size: 12px;
+	cursor: hand;
+	padding-top: 2px;
+	background-color: #993300;
+	color: white;
+	width: 54px;
+	height: 27px;
+	border: 0;
+	display: inline-block;
+	background: url(../imagesa/PageNo_Split.png) no-repeat;
+	background-position: -59px -118px;
+	font-weight: bold;
+}
+.input_style_Null
+{
+	font-size: 0.75em;
+	color: #d1d1d1;
+}
+.input_style
+{
+	font-size: 0.75em;
+	color: black;
+}
+
+textarea.input_style_Null, textarea.input_style
+{
+	border-right: #a3b6d3 1px solid;
+	border-top: #a3b6d3 1px solid;
+	border-left: #a3b6d3 1px solid;
+	border-bottom: #a3b6d3 1px solid;
+	height: 100px;
+	width: 97%;
+}
+.tr_list_cen
+{
+	background-color: #ffffff;
+	text-align: center;
+	color: #000000;
+	height: 25px;
+}
+
+.list_cen
+{
+	background-color: #ffffff;
+	text-align: center;
+	color: #000000;
+	font-size: 0.75em;
+	height: 25px;
+}
+.list_cen td
+{
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
+.td_list_cen_right
+{
+	padding-right: 10px;
+	text-align: right;
+	height: 25px;
+}
+.td_list_cen
+{
+	font-size: 0.75em;
+}
+.span_Rows_set
+{
+	overflow: auto;
+	width: 97%;
+	height: 85px;
+	line-height: 17px;
+	display: block;
+	padding-left: 5px;
+}
+.Do_Focus
+{
+	background-color: powderblue;
+}
+.Out_time
+{
+	background-color: red;
+}
+.Td_TmBallfont
+{
+	font-size: 0.875em;
+	background-position: center center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-color: #C3FBF2;/*球号背景色区*/
+	text-align: center;
+}
+.Td_LmBallfont
+{
+	background-position: center center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-color: #ffcccc;/*球号背景色区*/
+	text-align: center;
+	display: block;
+	float: left;
+	vertical-align: middle;
+}
+
+.td_TmLabfont
+{
+	color: black;
+	background-color: #ffcccc;
+	text-align: center;
+	height: 25px;
+	font-size: 0.75em;
+	font-weight: bold;
+}
+.TmLabfont
+{
+	font-size: 0.75em;
+	background-color: #01A88F; /*球号背景色区*/
+	font-weight: bold;
+	text-align: center;
+}
+.ballfont
+{
+	padding-right: 2px;
+	padding-left: 2px;
+	padding-bottom: 2px;
+	color: #000000;
+	padding-top: 2px;
+	height: 10px;
+	font-weight: bold;
+}
+.Td_TmMoneyfont
+{
+	background-color: #e4e4e4;
+	text-align: center;
+}
+.Ed_TmMoneyfont
+{
+	width: 40px;
+	font-size: 0.75em;
+	border-right: 1px solid;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+}
+
+.Td_TmPlfont
+{
+	background-color: #e4e4e4;
+	text-align: center;
+	font-size: 0.875em;
+	font-weight: bold;
+}
+.TmLabValuefont
+{
+	background-color: #e4e4e4;
+	text-align: center;
+	font-size: 0.875em;
+	font-weight: bold;
+}
+.Show_Pl
+{
+	background-color: #e4e4e4;
+	text-align: center;
+}
+.Tr_TmShow
+{
+	height: 30px;
+}
+.tr_title_set_cen
+{
+	font-size: 12px;
+	width: 90px;
+	height: 27px;
+	margin-right: 6px;
+	border: 0;
+	background: url(../imagesa/PageNo_Split.png) no-repeat;
+	background-position: -59px -32px;
+	color: #cc0000;
+	font-weight: bold;
+}
+
+
+.Tr_Label
+{
+	height: 25px;
+}
+.td_Label
+{
+	background-position: center center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-color: #d1dadf;
+	font-size: 0.75em;
+}
+.Td_TmButton
+{
+	background-color: #e4e4e4;
+	text-align: center;
+}
+
+.GetTm
+{
+	width: 450px;
+	border-right: 1px solid;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+}
+input.checkSy
+{
+	zoom: 150%;
+}
+.checkSy
+{
+	MozTransform: 150%;
+}
+
+/*报表*/
+.tdbg
+{
+	background-color: white;
+}
+.tdbg_Win
+{
+	background-color: red;
+}
+
+div#tab ul
+{
+	margin: 5px 0px 0px 1px;
+	height: 24px;
+	line-height: 24px;
+	list-style: none;
+	padding: 0;
+	font-size: 12px;
+	font-weight: bold;
+	display: block;
+	overflow: visible;
+}
+
+div#tab ul li
+{
+	background: url(../imagesa/tab.png) no-repeat  ;
+	height: 24px;
+	text-align: center;
+	display: inline;
+	float: left;
+}
+div#tab ul .unTagClick {
+    background-position: left 0px;
+    border-bottom: 1px solid #000000;
+}
+
+div#tab ul .onTagClick {
+    background-position: left -50px;
+    border-bottom: 0;
+}
+div#tab ul .unTagClickHover
+{
+    background-position: left -50px;
+    border-bottom: 1px solid #000000;
+}
+div#tab ul .unTagClick a,div#tab ul .unTagClickHover a, div#tab ul .unTagClick span
+{
+	display: block;
+	padding: 0 14px 0  14px;
+	margin-right: 0px;
+	background: transparent url(../imagesa/tab.png) no-repeat right -100px;
+	color: #27537a;
+	cursor: pointer;
+	float: left;
+}
+
+
+div#tab ul .onTagClick a, div#tab ul .onTagClick span {
+    cursor: pointer;
+    display: block;
+    padding: 0 14px 0 14px;
+    margin: 0 0px 0 0;
+    background: transparent url( '../imagesa/tab.png' ) no-repeat right -150px;
+    color: #000;
+        float: left;
+}
+
+div#tab ul .onTagClick span font {
+    background-color: yellow;
+}
+
+div#tab ul .onTagClick span font, div#tab ul .unTagClick span font {
+    font-size: 12px;
+}
+
+div#tab ul li#space
+{
+	background: transparent url();
+	float: left;
+	height: 24px;
+	padding: 0;
+	border-bottom: 1px solid #000000;
+	display: block;
+
+}
+div#tab ul li#space span
+{
+	display: block;
+	width: 90%;
+	float: right;
+	margin-left: 0px;
+	margin-right: 0px;
+	
+	min-width:150px;
+}
+/*不跟随滚动*/
+ #line_window
+{
+	 position:fixed !important;  
+}
+.divPropertyBar
+{
+}

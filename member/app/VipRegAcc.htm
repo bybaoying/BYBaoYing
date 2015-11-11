@@ -1,0 +1,673 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="icon" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" />
+    <!--href="WHImages/favicon.ico"-->
+    <meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+    <title>创建注册账户</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="../WHStyle/coreLayout.css" type="text/css" rel="stylesheet" />
+    <link href="../WHStyle/mainLayout.css" type="text/css" rel="stylesheet" />
+    <link href="../WHStyle/regAcc.css" type="text/css" rel="stylesheet" />
+    <link media="all" href="../WHStyle/core_site_cdn.css" type="text/css" rel="stylesheet" />
+
+    <script language="JavaScript" type="text/javascript">
+        function RegUserSuccess(vVipUserId ,vSendEMail){
+            
+            //
+            if (vSendEMail)
+            {
+                alert("会员注册完成！会员帐号:" + vVipUserId + "")  ;
+            }else
+            {
+                alert("会员注册完成！会员帐号:" + vVipUserId + "发送到您的信箱!" );
+            }
+            document.location = 'WebLogin.aspx';
+        }
+        function RegUserWait(){
+            
+            //
+            alert('会员注册完成！请等待审核通过!会员帐号以电子邮件发送到你的信箱');
+            document.location = 'WebLogin.aspx';
+        }
+        
+    </script>
+
+</head>
+<body>
+    <div id="contentCenter" class="accStyle">
+        <div class="headerBG">
+            <div id="contentHeaderCenter">
+                <div id="blockB" style="z-index: 999;">
+                    <div id="logo" style="float: left; width: 212px;">
+                        <img alt="William Hill Logo" src="../WHImages/whLogo2.jpg" height="77" width="212" />
+                    </div>
+                    <div style="float: right; width: 750px;">
+                        <div>
+                            <div style="margin-right: 1px;">
+                                <ul id="headLinks">
+                                    <li id="langSelectLink" class="flagBorder flagCN"><a href="#"><span>简体中文</span></a> </li>
+                                </ul>
+                                <a class="helpLink">帮助</a>
+                                <div class="clearBoth">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearBoth">
+                </div>
+                <div id="sbTabsCanvas">
+                    <!-- relative contents -->
+                    <div id="content_sbTabsCanvas_sbTabsCanvas">
+                    </div>
+                    <!-- absolute contents -->
+                </div>
+                <div id="RegNavSB">
+                    <!-- relative contents -->
+                    <div id="content_RegNavSB_Content1">
+                        <div>
+                            <div id="regBG">
+                                <div id="regHeader" style="background: transparent url(../WHImages/reg_sportsCN.jpg) no-repeat scroll 0% 0%; padding-left: 22px; height: 1%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial;
+                                    -moz-background-inline-policy: -moz-initial;">
+                                    <div class="regHeaderLeft">
+                                        <h2 style="margin: 0pt; padding: 0pt;">
+                                            Sign up for your free account</h2>
+                                        <ul style="margin: 0pt 0pt 10px 20px; list-style-type: disc; list-style-image: none; list-style-position: outside; color: rgb(255, 255, 255);">
+                                            <li>20免费注册奖金 </li>
+                                            <li>进入超过200种游戏 </li>
+                                            <li>全方位24小时客户支援</li>
+                                        </ul>
+                                        <!--<p style="margin: 0pt; padding: 0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="payPalReg">&nbsp;</span> <a style="font-weight: normal; color: rgb(255, 255, 255);" href="/bet/CN?action=GoAccRegPayPal">Paypal 客户快速注册</a></p>-->
+                                    </div>
+                                    <div class="regHeaderRight">
+                                        &nbsp;</div>
+                                    <div class="clearBoth">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contentHolder">
+            <div id="thawte">
+                <img src="../WHImages/thawte.gif" alt="Thawte" height="62" width="62" />
+            </div>
+            <div id="contentHead">
+                <h2>
+                    创建注册账户</h2>
+                <div id="supportArea">
+                    <h4>
+                        客户服务部联系详情</h4>
+                    <ul>
+                        <li>在线帮助 </li>
+                        <li>向客户服务部发送电子邮件</li>
+                        <li>(英国本地)08000856296</li>
+                        <li>(国际长途)0080035513551</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="regAccContent">
+                <div id="acctErrBox" class="infoBox error displayNone">
+                    <ul id="acctErrMsg">
+                    </ul>
+                </div>
+                <div id="acctInfoBox" class="infoBox displayNone">
+                    <ul id="acctInfoMsg">
+                    </ul>
+                </div>
+                <form id="registration" method="post" action="VipRegAcc_but.aspx" target="Frame_sub">
+                    <div class="reqFieldHolder">
+                        <span class="reqField">*</span> 必填栏</div>
+                    <fieldset id="contactDetails">
+                        <legend><span>联系详情</span></legend>
+                        <ol>
+                            <li>
+                                <label for="title">
+                                    <span class="reqField">*</span> 称呼</label>
+                                <select id="title" name="title">
+                                    <option selected="selected" value="先生">先生</option>
+                                    <option value="女士">女士</option>
+                                    <option value="小姐">小姐</option>
+                                    <option value="博士">博士</option>
+                                    <option value="爵士">爵士</option>
+                                    <option value="教授">教授</option>
+                                </select>
+                                <div id="title_msg">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="fName">
+                                    <span class="reqField">*</span> 名字</label>
+                                <input name="fName" id="fName">
+                                <div id="fName_msg">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="lName">
+                                    <span class="reqField">*</span> 姓氏</label>
+                                <input name="lName" id="lName">
+                                <div id="lName_msg">
+                                </div>
+                            </li>
+                            <li id="dob" class="dateRow">
+                                <label for="dob_day" title="日">
+                                    <span class="reqField">*</span> 出生日期</label>
+                                <select name="dob_day" id="dob_day" class="dob">
+                                    <option selected="selected" value="-1">日</option>
+                                    <option id="dob_day_1" value="01">1</option>
+                                    <option id="dob_day_2" value="02">2</option>
+                                    <option id="dob_day_3" value="03">3</option>
+                                    <option id="dob_day_4" value="04">4</option>
+                                    <option id="dob_day_5" value="05">5</option>
+                                    <option id="dob_day_6" value="06">6</option>
+                                    <option id="dob_day_7" value="07">7</option>
+                                    <option id="dob_day_8" value="08">8</option>
+                                    <option id="dob_day_9" value="09">9</option>
+                                    <option id="dob_day_10" value="10">10</option>
+                                    <option id="dob_day_11" value="11">11</option>
+                                    <option id="dob_day_12" value="12">12</option>
+                                    <option id="dob_day_13" value="13">13</option>
+                                    <option id="dob_day_14" value="14">14</option>
+                                    <option id="dob_day_15" value="15">15</option>
+                                    <option id="dob_day_16" value="16">16</option>
+                                    <option id="dob_day_17" value="17">17</option>
+                                    <option id="dob_day_18" value="18">18</option>
+                                    <option id="dob_day_19" value="19">19</option>
+                                    <option id="dob_day_20" value="20">20</option>
+                                    <option id="dob_day_21" value="21">21</option>
+                                    <option id="dob_day_22" value="22">22</option>
+                                    <option id="dob_day_23" value="23">23</option>
+                                    <option id="dob_day_24" value="24">24</option>
+                                    <option id="dob_day_25" value="25">25</option>
+                                    <option id="dob_day_26" value="26">26</option>
+                                    <option id="dob_day_27" value="27">27</option>
+                                    <option id="dob_day_28" value="28">28</option>
+                                    <option id="dob_day_29" value="29">29</option>
+                                    <option id="dob_day_30" value="30">30</option>
+                                    <option id="dob_day_31" value="31">31</option>
+                                </select>
+                                <label for="dob_month" title="月" class="hide">
+                                    月</label>
+                                <select name="dob_month" id="dob_month" class="dob">
+                                    <option selected="selected" value="-1">月</option>
+                                    <option value="01">一月</option>
+                                    <option value="02">二月</option>
+                                    <option value="03">三月</option>
+                                    <option value="04">四月</option>
+                                    <option value="05">五月</option>
+                                    <option value="06">六月</option>
+                                    <option value="07">七月</option>
+                                    <option value="08">八月</option>
+                                    <option value="09">九月</option>
+                                    <option value="10">十月</option>
+                                    <option value="11">十一月</option>
+                                    <option value="12">十二月</option>
+                                </select>
+                                <label for="dob_year" title="年份" class="hide">
+                                    年份</label>
+                                <select name="dob_year" id="dob_year" class="dob">
+                                    <option selected="selected" value="-1">年份</option>
+
+                                    <script type="text/javascript">
+							var d = new Date;
+							var dob_year = parseInt('');
+							for (var i=d.getFullYear()-18; i>d.getFullYear()-120; i--) {
+								if (i == dob_year) {
+									document.write("<option value=\""+i+"\" selected=\"selected\">"+i+"<\/option>");
+								} else {
+									document.write("<option value=\""+i+"\">"+i+"<\/option>");
+								}
+							}
+                                    </script>
+
+                                </select>
+                                <div id="dob_day_msg">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="email">
+                                    <span class="reqField">*</span> 电子邮件地址</label>
+                                <input name="email" id="email" type="text">
+                                <div id="email_msg">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="telephone">
+                                    电话号码</label>
+                                <input name="telephone" id="telephone" type="text">
+                                <div id="telephone_msg">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="country_code">
+                                    <span class="reqField">*</span> 国家</label>
+                                <select name="country_code" id="country_code">
+                                    <option selected="selected" value="-1">选择国家</option>
+                                    <option value="BT">不丹</option>
+                                    <option value="TO">东加</option>
+                                    <option value="CN">中国</option>
+                                    <option value="MO">中国澳门</option>
+                                    <option value="CF">中非共和国</option>
+                                    <option value="DK">丹麦</option>
+                                    <option value="UA">乌克兰</option>
+                                    <option value="UZ">乌兹别克</option>
+                                    <option value="UG">乌干达</option>
+                                    <option value="UY">乌拉圭</option>
+                                    <option value="TD">乍得</option>
+                                    <option value="GE">乔治亚</option>
+                                    <option value="YE">也门</option>
+                                    <option value="AM">亚美尼亚</option>
+                                    <option value="IQ">伊拉克</option>
+                                    <option value="BZ">伯利兹</option>
+                                    <option value="CV">佛得角</option>
+                                    <option value="RU">俄罗斯</option>
+                                    <option value="HR">克罗地亚</option>
+                                    <option value="GM">冈比亚</option>
+                                    <option value="IS">冰岛</option>
+                                    <option value="GN">几内亚</option>
+                                    <option value="GP">几内亚比索</option>
+                                    <option value="GW">几内亚比索</option>
+                                    <option value="LI">列支敦斯登</option>
+                                    <option value="CG">刚果</option>
+                                    <option value="LY">利比亚</option>
+                                    <option value="LR">利比里亚</option>
+                                    <option value="CA">加拿大</option>
+                                    <option value="GH">加纳</option>
+                                    <option value="GA">加蓬</option>
+                                    <option value="HU">匈牙利</option>
+                                    <option value="MP">北马利亚纳群岛</option>
+                                    <option value="PN">匹特开恩群岛</option>
+                                    <option value="ZA">南非</option>
+                                    <option value="KR">南韩</option>
+                                    <option value="QA">卡塔尔</option>
+                                    <option value="RW">卢旺达</option>
+                                    <option value="LU">卢森堡</option>
+                                    <option value="IN">印度</option>
+                                    <option value="ID">印度尼西亚</option>
+                                    <option value="GT">危地马拉</option>
+                                    <option value="EC">厄瓜多尔</option>
+                                    <option value="ER">厄立特里亚</option>
+                                    <option value="TW">台湾</option>
+                                    <option value="KG">吉尔吉斯</option>
+                                    <option value="DJ">吉布提</option>
+                                    <option value="TV">吐瓦鲁</option>
+                                    <option value="KZ">哈薩克斯坦</option>
+                                    <option value="CO">哥伦比亚</option>
+                                    <option value="CR">哥斯达黎加</option>
+                                    <option value="CM">喀麦隆</option>
+                                    <option value="TM">土库曼斯坦</option>
+                                    <option value="KN">圣克里斯托佛岛及尼维斯岛</option>
+                                    <option value="LC">圣卢西亚</option>
+                                    <option value="ST">圣多美普林西比</option>
+                                    <option value="VC">圣文森特和格林纳丁斯</option>
+                                    <option value="PM">圣皮埃尔和密克隆群岛</option>
+                                    <option value="CX">圣诞岛</option>
+                                    <option value="SH">圣赫勒拿</option>
+                                    <option value="SM">圣马利诺</option>
+                                    <option value="GY">圭亚那</option>
+                                    <option value="TZ">坦桑尼亚共和国</option>
+                                    <option value="EG">埃及</option>
+                                    <option value="ET">埃塞俄比亚</option>
+                                    <option value="KI">基里巴斯</option>
+                                    <option value="TJ">塔吉克</option>
+                                    <option value="SN">塞内加尔</option>
+                                    <option value="RS">塞尔维亚</option>
+                                    <option value="SL">塞拉利昂</option>
+                                    <option value="CY">塞浦路斯</option>
+                                    <option value="SC">塞舌尔</option>
+                                    <option value="MX">墨西哥</option>
+                                    <option value="TG">多哥</option>
+                                    <option value="DM">多米尼克</option>
+                                    <option value="DO">多米尼加共和国</option>
+                                    <option value="AT">奧地利</option>
+                                    <option value="VE">委內瑞拉</option>
+                                    <option value="BD">孟加拉</option>
+                                    <option value="AO">安哥拉</option>
+                                    <option value="AI">安圭拉岛</option>
+                                    <option value="AG">安提瓜和巴布达</option>
+                                    <option value="AD">安道尔</option>
+                                    <option value="FM">密克罗尼西亚联邦</option>
+                                    <option value="NI">尼加拉瓜</option>
+                                    <option value="NG">尼日利亚</option>
+                                    <option value="NE">尼日尔</option>
+                                    <option value="NP">尼泊尔</option>
+                                    <option value="PS">巴勒斯坦</option>
+                                    <option value="BS">巴哈马</option>
+                                    <option value="PK">巴基斯坦</option>
+                                    <option value="BB">巴巴多斯</option>
+                                    <option value="PG">巴布亚新几內亚</option>
+                                    <option value="PY">巴拉圭</option>
+                                    <option value="PA">巴拿马</option>
+                                    <option value="BH">巴林</option>
+                                    <option value="BR">巴西</option>
+                                    <option value="BF">布基纳法索</option>
+                                    <option value="BI">布隆迪</option>
+                                    <option value="BV">布韦岛</option>
+                                    <option value="GR">希腊</option>
+                                    <option value="PW">帛琉</option>
+                                    <option value="CK">库克群岛</option>
+                                    <option value="KY">开曼群岛</option>
+                                    <option value="DE">德国</option>
+                                    <option value="SB">所罗门群岛</option>
+                                    <option value="TK">扥克劳</option>
+                                    <option value="LV">拉脱维亚</option>
+                                    <option value="NO">挪威</option>
+                                    <option value="CZ">捷克共和国</option>
+                                    <option value="MD">摩尔多瓦</option>
+                                    <option value="MA">摩洛哥</option>
+                                    <option value="MC">摩纳哥</option>
+                                    <option value="BN">文莱</option>
+                                    <option value="FJ">斐济</option>
+                                    <option value="SZ">斯威士兰</option>
+                                    <option value="SK">斯洛伐克</option>
+                                    <option value="SI">斯洛文尼亚</option>
+                                    <option value="LK">斯里兰卡</option>
+                                    <option value="SG">新加坡</option>
+                                    <option value="NC">新喀里多尼亚</option>
+                                    <option value="NZ">新西兰</option>
+                                    <option value="JP">日本</option>
+                                    <option value="CL">智利</option>
+                                    <option value="TL">東帝汶</option>
+                                    <option value="KH">柬埔寨</option>
+                                    <option value="GD">格林纳达</option>
+                                    <option value="GL">格陵兰</option>
+                                    <option value="VA">梵蒂冈</option>
+                                    <option value="MU">模里西斯</option>
+                                    <option value="BE">比利时</option>
+                                    <option value="MR">毛里塔尼亚</option>
+                                    <option value="SA">沙特阿拉伯</option>
+                                    <option value="FR">法国</option>
+                                    <option value="GF">法属圭亚那</option>
+                                    <option value="PF">法属波利尼西亚</option>
+                                    <option value="FO">法罗群岛</option>
+                                    <option value="PL">波兰</option>
+                                    <option value="BA">波斯尼亚黑塞哥维那</option>
+                                    <option value="BW">波札那</option>
+                                    <option value="TH">泰国</option>
+                                    <option value="HN">洪都拉斯</option>
+                                    <option value="HT">海地</option>
+                                    <option value="AU">澳大利亚</option>
+                                    <option value="IE">爱尔兰共和国</option>
+                                    <option value="EE">爱沙尼亚</option>
+                                    <option value="JM">牙买加</option>
+                                    <option value="TC">特克斯和凯科斯群岛</option>
+                                    <option value="TT">特立尼达和多巴哥</option>
+                                    <option value="BO">玻利维亚</option>
+                                    <option value="SE">瑞典</option>
+                                    <option value="CH">瑞士</option>
+                                    <option value="WF">瓦利斯和富图纳群岛</option>
+                                    <option value="VU">瓦努阿图</option>
+                                    <option value="RE">留尼旺島</option>
+                                    <option value="BY">白俄罗斯</option>
+                                    <option value="BM">百慕大</option>
+                                    <option value="GI">直布罗陀</option>
+                                    <option value="FK">福克兰群岛</option>
+                                    <option value="KW">科威特</option>
+                                    <option value="KM">科摩罗</option>
+                                    <option value="CI">科特迪瓦</option>
+                                    <option value="CC">科科斯（基林）群岛</option>
+                                    <option value="PE">秘鲁</option>
+                                    <option value="TN">突尼西亚</option>
+                                    <option value="LT">立陶宛</option>
+                                    <option value="SO">索马里</option>
+                                    <option value="JO">约旦</option>
+                                    <option value="NA">纳米比亚</option>
+                                    <option value="NU">纽埃</option>
+                                    <option value="RO">罗马尼亚</option>
+                                    <option value="UM">美国本土外小岛屿</option>
+                                    <option value="WS">美属萨摩亚</option>
+                                    <option value="LA">老挝</option>
+                                    <option value="KE">肯雅</option>
+                                    <option value="FI">芬兰</option>
+                                    <option value="SR">苏利南共和国</option>
+                                    <option value="UK">英国</option>
+                                    <option value="VG">英属维尔京群岛</option>
+                                    <option value="IO">英屬印度洋领地</option>
+                                    <option value="NL">荷兰</option>
+                                    <option value="AN">荷属安地列斯</option>
+                                    <option value="MZ">莫桑比克</option>
+                                    <option value="LS">莱索托</option>
+                                    <option value="SV">萨尔瓦多</option>
+                                    <option value="PT">葡萄牙</option>
+                                    <option value="MN">蒙古</option>
+                                    <option value="MS">蒙塞拉特岛</option>
+                                    <option value="ES">西班牙</option>
+                                    <option value="WE">西萨摩亚</option>
+                                    <option value="NF">诺福克岛</option>
+                                    <option value="BJ">贝宁</option>
+                                    <option value="ZM">赞比亚</option>
+                                    <option value="GQ">赤道几内亚</option>
+                                    <option value="HM">赫德岛和麦当劳群岛</option>
+                                    <option value="VN">越南</option>
+                                    <option value="ZW">辛巴威</option>
+                                    <option value="AZ">阿塞拜疆</option>
+                                    <option value="AF">阿富汗</option>
+                                    <option value="DZ">阿尔及利亚</option>
+                                    <option value="AL">阿尔巴尼亚</option>
+                                    <option value="AE">阿拉伯联合酋长国</option>
+                                    <option value="OM">阿曼</option>
+                                    <option value="AR">阿根廷</option>
+                                    <option value="AW">阿魯巴</option>
+                                    <option value="MK">马其顿共和国</option>
+                                    <option value="MV">马尔代夫</option>
+                                    <option value="MW">马拉维</option>
+                                    <option value="MQ">马提尼克</option>
+                                    <option value="MY">马来西亚</option>
+                                    <option value="YT">马约特</option>
+                                    <option value="MH">马绍尔群岛</option>
+                                    <option value="MT">马耳他</option>
+                                    <option value="MG">马达加斯加</option>
+                                    <option value="ML">马里</option>
+                                    <option value="LB">黎巴嫩</option>
+                                    <option value="ME">黑山共和国</option>
+                                </select>
+                                <div id="country_code_msg">
+                                </div>
+                            </li>
+                            <li id="reg_li_house_number">
+                                <label for="fhouse">
+                                    <span class="reqField">*</span> 门牌号或房屋名称</label>
+                                <input name="fhouse" id="fhouse" type="text">
+                                <div id="fhouse_msg">
+                                </div>
+                            </li>
+                            <li class="extraSpace" id="reg_li_addr_1">
+                                <label for="addr_street_1">
+                                    <span class="reqField">*</span> 地址栏1</label>
+                                <input name="addr_street_1" id="addr_street_1" type="text">
+                                <div id="addr_street_1_msg">
+                                </div>
+                            </li>
+                            <li id="reg_li_addr_2">
+                                <label for="addr_street_2">
+                                    地址栏2</label>
+                                <input name="addr_street_2" id="addr_street_2" type="text">
+                                <div id="addr_street_2_msg">
+                                </div>
+                            </li>
+                            <li id="reg_li_addr_city">
+                                <label for="addr_city">
+                                    <span class="reqField">*</span> 城市或城镇</label>
+                                <input name="addr_city" id="addr_city" type="text">
+                                <div id="addr_city_msg">
+                                </div>
+                            </li>
+                            <li id="reg_li_addr_region">
+                                <label for="addr_region">
+                                    地区/州</label>
+                                <input name="addr_region" id="addr_region" type="text">
+                                <div id="addr_region_msg">
+                                </div>
+                            </li>
+                            <li id="reg_li_postcode">
+                                <label for="postcode">
+                                    <span class="reqField">*</span> 邮政编码</label>
+                                <input name="postcode" id="postcode" type="text">
+                                <div id="postcode_msg">
+                                </div>
+                            </li>
+                            <li id="reg_find_address">
+                                <label for="find_address">
+                                </label>
+                            </li>
+                        </ol>
+                    </fieldset>
+                    <fieldset id="accDetails">
+                        <legend><span>账户详情</span></legend>
+                        <ol>
+                            <li>
+                                <label for="reg_username">
+                                    <span class="reqField">*</span> 账户名称</label>
+                                <input name="reg_username" id="reg_username" type="text">
+                                <div id="reg_username_msg">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="reg_password">
+                                    <span class="reqField">*</span> 密码</label>
+                                <input name="reg_password" id="reg_password" type="password">
+                                <div id="reg_password_msg">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="vfy_password">
+                                    <span class="reqField">*</span> 确认密码</label>
+                                <input name="vfy_password" id="vfy_password" type="password">
+                                <div id="vfy_password_msg">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="ccy_code">
+                                    <span class="reqField">*</span> 投注货币</label>
+                                <select name="ccy_code" id="ccy_code">
+                                    <option selected="selected" value="GBP">英镑</option>
+                                    <option value="RMB">人民币</option>
+                                    <option value="EUR">欧元</option>
+                                    <option value="AUD">澳元</option>
+                                    <option value="CAD">加拿大元</option>
+                                    <option value="USD">美元</option>
+                                    <option value="DKK">丹麦克朗</option>
+                                    <option value="SEK">瑞典克朗</option>
+                                    <option value="JPY">日元</option>
+                                    <option value="SGD">新加坡元</option>
+                                    <option value="HKD">港币</option>
+                                    <option value="CHF">瑞士法郎</option>
+                                </select>
+                                <div id="ccy_code_msg">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="challenge_1">
+                                    <span class="reqField">*</span> 安全问题</label>
+                                <select name="challenge_1" id="challenge_1">
+                                    <option selected="selected" value="-1">请选择一条安全问题</option>
+                                    <option value="0">我最喜欢的球员?</option>
+                                    <option value="1">我的第一所学校?</option>
+                                    <option value="2">我的第一辆车?</option>
+                                    <option value="3">我的第一只宠物的名字?</option>
+                                    <option value="4">母亲的婚前姓氏?</option>
+                                    <option value="5">母亲的生日(日期/月份/年份)?</option>
+                                    <option value="6">周年纪念日(日期/月份/年份)?</option>
+                                    <option value="7">配偶的中间名?</option>
+                                </select>
+                                <div id="challenge_1_msg">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="response_1">
+                                    <span class="reqField">*</span> 安全问题回答</label>
+                                <input name="response_1" id="response_1" type="text" />
+                                <div id="response_1_msg">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="fb_promo_code">
+                                    促销代号<sup><span class="hide">可选择的</span></sup></label>
+                                <input name="fb_promo_code" id="fb_promo_code" class="medField2" maxlength="255" type="text" />
+                                <div id="fb_promo_code_msg">
+                                </div>
+                            </li>
+                        </ol>
+                    </fieldset>
+                    <div class="lowerForm">
+                        <fieldset id="checkRows">
+                            <ol>
+                                <li>
+                                    <input name="acceptTerms" id="acceptTerms" type="checkbox">
+                                    <label for="acceptTerms">
+                                        <span class="reqField">*</span> 我接受此网站公布的条款和协议私隐以及年龄限制条例
+                                    </label>
+                                </li>
+                                <li>
+                                    <input name="keepInformed" id="keepInformed" checked="checked" type="checkbox">
+                                    <label for="keepInformed">
+                                        如在将来有任何优惠、项目或其他William Hill促销活动，请通知我。</label>
+                                </li>
+                            </ol>
+                        </fieldset>
+                        <div class="btnHolder">
+                            <input id="submitButton" value="创建我的账户" class="btn" type="submit" /><!--onclick="document.reg.submit_form()"-->
+                            <div id="submitButton_msg" class="hide">
+                            </div>
+                            <div class="clearBoth">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Canvas SiteFooter -->
+    <div id="SiteFooter">
+        <!-- relative contents -->
+        <div id="content_SiteFooter_Footer" style="position: relative;">
+            <div id="footer">
+                <div id="footerContent">
+                    <div class="footerContentHolder">
+                        <div class="footerLinksHolder">
+                            <div style="float: left;" class="footerLinksA">
+                                &nbsp;1998-2009 WHG (International) Ltd</div>
+                            <div style="float: right;" class="footerLinksA">
+                                条款和协议&nbsp;|&nbsp;私隐政策&nbsp;&nbsp;</div>
+                            <div class="clearBoth">
+                            </div>
+                            <div class="clearBoth">
+                            </div>
+                        </div>
+                        <!-- End of Payment Footer Section-->
+                        <div class="footerContentC">
+                            <ul>
+                                <li><span class="linkTitle">关于William Hill</span>我们拥有超过70年的经验 </li>
+                            </ul>
+                            <div class="clearBoth">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="footerSub">
+                        <div class="footerContentA">
+                            <ul>
+                                <li>William Hill 致力支持博彩责任政策。 </li>
+                            </ul>
+                            <div class="clearBoth">
+                            </div>
+                            <p>
+                                根据直布罗陀法律，William Hill保留请求年龄证明和检查所提供资料的准确性的权力。 我们可能会暂停相关账户的使用直至客户被证明已 年满18岁。</p>
+                            <p>
+                                WHG (International) Limited (注册牌照号码: 034) 和 WHG Trading Limited (注册牌照号码: 041) 均为直布罗陀博彩协会的成员并由直布罗陀监管机构 发牌管理。这两间公司的注册号码分别为99191和101439，注册办公地址为 6/1 Waterport Place, Gibraltar。&nbsp;&nbsp;|&nbsp;&nbsp;
+                                William Hill 为注册I.B.A.S.&nbsp;博彩公司。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="line_window"  style="visibility: hidden; position: absolute; z-index: 1;">
+        <iframe id="Frame_sub" name="Frame_sub" frameborder="0" scrolling="no" src="" style="width: 200px; height: 50px"></iframe>
+    </div>
+</body>
+</html>

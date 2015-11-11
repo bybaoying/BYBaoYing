@@ -1,0 +1,59 @@
+﻿.Page_Head
+{
+	width: 100%;
+	border : 0px;
+	font-size: 0.75em;
+	background-color: #ffffff;
+}
+
+.Page_Head .Page_HeadL{
+	background-image: url(../imagesa/head_1_r.gif);
+	background-repeat: repeat-x;
+	height: 24px;
+	width: 17px;
+
+}
+.Page_Head .Page_HeadM
+{
+	background-image: url(../imagesa/head_2_r.gif);
+	background-repeat: repeat-x;
+	height: 24px;
+	color: black;
+}
+.Page_Head .Page_HeadM .img_message
+{
+	background-image: url(../imagesa/message.gif); 
+	width: 15px;
+	height: 12px;
+	display: block;
+	float: left;
+}
+.Page_Head .Page_HeadR{
+	background-image: url(../imagesa/head_3_r.gif);
+	background-repeat: repeat-x;
+	height: 24px;
+	width: 27px;
+
+
+}
+.Page_Head .Cont_Head
+{ 
+ 
+ 
+	width: 100%;
+}
+
+.Page_Head .Cont_Head .Cont_font {
+	font-size: 12px;
+	
+	color: #FFFFFF;
+
+
+}
+.Page_Head .Cont_Head .Cont_font_M
+{
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: bold;
+
+}

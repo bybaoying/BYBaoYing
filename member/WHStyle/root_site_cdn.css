@@ -1,0 +1,327 @@
+BODY {
+	BACKGROUND-COLOR: #00486e
+}
+P {
+	LINE-HEIGHT: 1.6em
+}
+#root_site #contentCenter {
+	BACKGROUND: #002335
+}
+#root_site #contentHolder {
+	BORDER-RIGHT: #002335 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #002335 1px solid; PADDING-LEFT: 4px; BACKGROUND: #001b2c; PADDING-BOTTOM: 4px; BORDER-LEFT: #002335 1px solid; PADDING-TOP: 4px; BORDER-BOTTOM: #002335 1px solid
+}
+A#productLink1 {
+	DISPLAY: block; BACKGROUND: url(../William Hill Online_files/casino-btn.gif) no-repeat 50% top; FLOAT: left; WIDTH: 465px; TEXT-INDENT: -2000px; HEIGHT: 48px
+}
+A#productLink2 {
+	DISPLAY: block; BACKGROUND: url(../William Hill Online_files/livecasino-btn.gif) no-repeat 50% top; FLOAT: left; MARGIN-LEFT: 21px; WIDTH: 465px; TEXT-INDENT: -2000px; HEIGHT: 48px
+}
+#productLinkHolder A:hover {
+	BACKGROUND-POSITION: 50% bottom
+}
+#legalHolder {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 1.3em; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; BACKGROUND-COLOR: #ffffff
+}
+#legalHolder P {
+	MARGIN-TOP: 10px; LINE-HEIGHT: 1.6em
+}
+#legalHolder H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: 100; FONT-SIZE: 1.8em; PADDING-BOTTOM: 8px; MARGIN: 4px 0px 8px; COLOR: #111111; LINE-HEIGHT: 1.6em; PADDING-TOP: 4px; BORDER-BOTTOM: #00486e 2px solid; LETTER-SPACING: -1px
+}
+#legalHolder H3 {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 1.3em; PADDING-BOTTOM: 2px; MARGIN: 20px 0px 10px; COLOR: #111111; PADDING-TOP: 2px; BORDER-BOTTOM: #00486e 1px dotted; FONT-FAMILY: Arial,Helvetica,sans-serif; LETTER-SPACING: normal
+}
+#legalHolder UL {
+	LIST-STYLE-POSITION: inside; LIST-STYLE-TYPE: disc
+}
+#legalHolder LI {
+	MARGIN-TOP: 10px
+}
+#featureHolder {
+	BORDER-RIGHT: #12426c 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #12426c 1px solid; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; MARGIN: 0px 5px 0px 1px; BORDER-LEFT: #12426c 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #12426c 1px solid
+}
+#featureHolder A {
+	TEXT-DECORATION: none
+}
+#featureHolder SPAN {
+	CLEAR: both; DISPLAY: block; FONT-WEIGHT: bold; FLOAT: left; COLOR: #ffffff
+}
+#featureHolder SPAN.allTitleHolder {
+	LEFT: 24px; POSITION: absolute; TOP: 45px
+}
+#featureHolder SPAN.titleHolder {
+	CLEAR: both; POSITION: relative
+}
+#featureHolder SPAN.opaque {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; FILTER: alpha(opacity=40); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BACKGROUND-COLOR: #000000; opacity: 0.4
+}
+#featureHolder SPAN.opaque2 {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; FILTER: alpha(opacity=60); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BACKGROUND-COLOR: #000000; opacity: 0.6
+}
+#featureHolder SPAN.subtitle0 {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; LEFT: 0px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; POSITION: absolute; TOP: 0px
+}
+#featureHolder SPAN.subtitle2 {
+	FONT-SIZE: 1.4em
+}
+#featureHolder SPAN.subtitle3 {
+	FONT-WEIGHT: 100; FONT-SIZE: 2.7em; TEXT-TRANSFORM: uppercase
+}
+#featureHolder SPAN.splashBtnBig {
+	PADDING-RIGHT: 6px; MARGIN-TOP: 20px; DISPLAY: block; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 1em; BACKGROUND: url(../William Hill Online_files/splashBtnBigRight.gif) no-repeat right top; FLOAT: left; PADDING-BOTTOM: 0px; TEXT-TRANSFORM: uppercase; WIDTH: 200px; COLOR: #ffffff; PADDING-TOP: 0px; HEIGHT: 35px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#featureHolder SPAN.splashBtnBig SPAN.splashBtnBig2 {
+	PADDING-RIGHT: 6px; DISPLAY: block; PADDING-LEFT: 12px; FONT-SIZE: 1.5em; BACKGROUND: url(../William Hill Online_files/splashBtnBigLeft.gif) no-repeat; LEFT: 0px; PADDING-BOTTOM: 0px; WIDTH: 185px; CURSOR: pointer; LINE-HEIGHT: 35px; PADDING-TOP: 0px; POSITION: relative; TOP: 0px; HEIGHT: 35px; TEXT-ALIGN: center
+}
+#featureHolder A:hover SPAN.splashBtnBig {
+	BACKGROUND: url(../William Hill Online_files/splashBtnBigRight.gif) no-repeat right bottom
+}
+#featureHolder A:hover SPAN.splashBtnBig SPAN.splashBtnBig2 {
+	BACKGROUND: url(../William Hill Online_files/splashBtnBigLeft.gif) no-repeat left bottom
+}
+#featureHolder SPAN.termsLink {
+	LEFT: 300px; POSITION: absolute; TOP: 173px
+}
+#featureHolder SPAN.termsLink A {
+	COLOR: #70b402; TEXT-DECORATION: underline
+}
+A:link {
+	COLOR: #70b402; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #70b402; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #70b402; TEXT-DECORATION: underline
+}
+#featureHolder SPAN.termsLink A:hover {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.contentBar {
+	MARGIN: 7px 0px
+}
+.contentBar A:link {
+	BACKGROUND: url(../WHImages/dotSpacer.gif); FLOAT: left; WIDTH: 235px; COLOR: #fff; TEXT-DECORATION: none
+}
+.contentBar A:visited {
+	BACKGROUND: url(../WHImages/dotSpacer.gif); FLOAT: left; WIDTH: 235px; COLOR: #fff; TEXT-DECORATION: none
+}
+.contentBar A:active {
+	BACKGROUND: url(../WHImages/dotSpacer.gif); FLOAT: left; WIDTH: 235px; COLOR: #fff; TEXT-DECORATION: none
+}
+.contentBar UL LI {
+	CLEAR: none; BORDER-RIGHT: #12426c 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #12426c 1px solid; DISPLAY: block; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; BORDER-LEFT: #12426c 1px solid; WIDTH: 237px; COLOR: #fff; MARGIN-RIGHT: 10px; PADDING-TOP: 0px; BORDER-BOTTOM: #12426c 1px solid; POSITION: relative
+}
+.contentBar UL LI.end {
+	WIDTH: 237px; MARGIN-RIGHT: 0px
+}
+.contentBar UL LI IMG {
+	MARGIN: 2px
+}
+.contentBar UL {
+	MARGIN-LEFT: 1px
+}
+.contentBar UL LI {
+	WIDTH: 319px; HEIGHT: auto
+}
+.contentBar A:link {
+	WIDTH: 319px
+}
+.contentBar A:visited {
+	WIDTH: 319px
+}
+.contentBar A:active {
+	WIDTH: 319px
+}
+.contentBar UL LI.end {
+	WIDTH: 319px; MARGIN-RIGHT: 0px
+}
+.contentBar UL LI IMG {
+	DISPLAY: block; WIDTH: 316px; HEIGHT: 99px
+}
+.contentText {
+	BORDER-RIGHT: #12426c 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #12426c 1px solid; PADDING-LEFT: 10px; FONT-SIZE: 1.1em; PADDING-BOTTOM: 0px; MARGIN: 5px 5px 0px 0px; BORDER-LEFT: #12426c 1px solid; COLOR: #fff; PADDING-TOP: 10px; BORDER-BOTTOM: #12426c 1px solid; BACKGROUND-COLOR: #042a41
+}
+.contentText P {
+	MARGIN-BOTTOM: 10px
+}
+.contentText A {
+	COLOR: #00aeef
+}
+.contentText A:active {
+	COLOR: #00aeef
+}
+.contentText A:visited {
+	COLOR: #00aeef
+}
+.contentBar SPAN {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 0px; FONT-SIZE: 1.1em; PADDING-BOTTOM: 0px; LINE-HEIGHT: 1.2em; PADDING-TOP: 0px
+}
+.contentBar H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 7px; FONT-WEIGHT: bold; FONT-SIZE: 1.4em; BACKGROUND: url(../William Hill Online_files/h3-bg.gif) repeat-x; PADDING-BOTTOM: 4px; MARGIN: 1px; COLOR: #fff; PADDING-TOP: 5px
+}
+SPAN.subtitle {
+	DISPLAY: block; FONT-SIZE: 1.5em; LEFT: 18px; POSITION: absolute; TOP: 46px
+}
+SPAN.splashBtn {
+	PADDING-RIGHT: 6px; DISPLAY: block; PADDING-LEFT: 0px; FONT-WEIGHT: bold; BACKGROUND: url(../William Hill Online_files/splashBtnRight.gif) no-repeat right top; LEFT: 18px; PADDING-BOTTOM: 0px; TEXT-TRANSFORM: uppercase; COLOR: #ffffff; PADDING-TOP: 0px; POSITION: absolute; TOP: 83px; HEIGHT: 20px; TEXT-DECORATION: none
+}
+SPAN.splashBtn SPAN.splashBtn2 {
+	PADDING-RIGHT: 6px; DISPLAY: block; PADDING-LEFT: 12px; BACKGROUND: url(../William Hill Online_files/splashBtnLeft.gif?id=1) no-repeat; PADDING-BOTTOM: 0px; LINE-HEIGHT: 20px; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+.contentBar A:hover SPAN.splashBtn {
+	DISPLAY: block; BACKGROUND: url(../William Hill Online_files/splashBtnRight.gif) no-repeat right bottom
+}
+.contentBar A:hover SPAN.splashBtn SPAN.splashBtn2 {
+	BACKGROUND: url(../William Hill Online_files/splashBtnLeft.gif?id=1) no-repeat left bottom; CURSOR: pointer
+}
+#productBarB UL LI.splashOn {
+	WIDTH: 373px
+}
+#productBarB H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 2em; PADDING-BOTTOM: 6px; MARGIN: 0px; COLOR: #fff; PADDING-TOP: 0px
+}
+#productBarB P {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 0px; FONT-SIZE: 1.1em; PADDING-BOTTOM: 0px; WIDTH: 160px; COLOR: #fff; PADDING-TOP: 0px
+}
+#productLinkHolder {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 13px; PADDING-BOTTOM: 8px; OVERFLOW: auto; MARGIN-RIGHT: 4px; PADDING-TOP: 10px; HEIGHT: 1%; BACKGROUND-COLOR: #010a10
+}
+#footerContent {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.col_main {
+	PADDING-RIGHT: 9px; PADDING-LEFT: 9px; PADDING-BOTTOM: 9px; MARGIN: 9px; PADDING-TOP: 9px; BACKGROUND-COLOR: #ffffff
+}
+#footer {
+	BACKGROUND-COLOR: #00486e
+}
+.address {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; VERTICAL-ALIGN: text-top; WIDTH: 260px; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: Arial,Helvetica,sans-serif; BACKGROUND-COLOR: #f6f7fa; TEXT-ALIGN: left; min-width: 260px; max-width: 260px
+}
+.lists {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; LINE-HEIGHT: 21px; FONT-STYLE: normal; FONT-FAMILY: Arial,Helvetica,sans-serif; BACKGROUND-COLOR: #f6f7fa; TEXT-ALIGN: left
+}
+#contentMain404 {
+	PADDING-RIGHT: 20px; PADDING-LEFT: 20px; FONT-SIZE: 1.2em; PADDING-BOTTOM: 20px; COLOR: #000000; PADDING-TOP: 20px; BACKGROUND-COLOR: #ffffff
+}
+#contentMain404 P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; MARGIN: 0px; PADDING-TOP: 5px
+}
+#contentMain404 H1 {
+	PADDING-RIGHT: 0px; MARGIN-TOP: 6px; PADDING-LEFT: 0px; MARGIN-BOTTOM: 10px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#contentMain404 UL {
+	LIST-STYLE-POSITION: inside; LIST-STYLE-TYPE: disc
+}
+#contentMain404 LI {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 10px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px
+}
+#contentMain404 A {
+	TEXT-DECORATION: underline
+}
+#contentMain404 A:hover {
+	TEXT-DECORATION: none
+}
+#contentHolder #promoFeature {
+	BORDER-RIGHT: #12426c 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #12426c 1px solid; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; MARGIN: 0px 5px 0px 1px; BORDER-LEFT: #12426c 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #12426c 1px solid; POSITION: relative
+}
+#contentHolder #promoFeature H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.6em; LEFT: 400px; COLOR: #ffffff; POSITION: absolute; TOP: 80px
+}
+#promoContentBar {
+	FONT-SIZE: 1.2em; FLOAT: left
+}
+#promoContentBar A {
+	TEXT-DECORATION: underline
+}
+#promoContentBar A:hover {
+	TEXT-DECORATION: none
+}
+#promoContentBar #promoContentLeft {
+	BORDER-RIGHT: #12426c 1px solid; BORDER-TOP: #12426c 1px solid; FLOAT: left; MARGIN: 6px 0px 0px 1px; BORDER-LEFT: #12426c 1px solid; WIDTH: 300px; BORDER-BOTTOM: #12426c 1px solid; HEIGHT: 220px; BACKGROUND-COLOR: #ffffff
+}
+#promoContentBar #promoContentLeft H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.6em; MARGIN: 30px 30px 20px; COLOR: #000000
+}
+#promoContentBar #promoContentLeft UL {
+	MARGIN: 0px 10px 0px 20px
+}
+#promoContentBar #promoContentLeft UL LI {
+	PADDING-LEFT: 30px; BACKGROUND: url(../William Hill Online_files/tick.gif) no-repeat; MARGIN: 10px; COLOR: #000000
+}
+#promoContentBar #promoContentRight {
+	BORDER-RIGHT: #12426c 1px solid; BORDER-TOP: #12426c 1px solid; FLOAT: right; MARGIN: 6px 5px 0px 6px; BORDER-LEFT: #12426c 1px solid; WIDTH: 670px; BORDER-BOTTOM: #12426c 1px solid; HEIGHT: 220px; BACKGROUND-COLOR: #ffffff
+}
+#promoContentBar #promoContentRight UL {
+	MARGIN: 30px 30px 0px; HEIGHT: 110px
+}
+#promoContentBar #promoContentRight UL LI {
+	CLEAR: none; PADDING-RIGHT: 50px; PADDING-LEFT: 20px; BACKGROUND: url(../William Hill Online_files/right_arr_div2.gif) no-repeat right top; FLOAT: left; WIDTH: 140px; HEIGHT: 110px
+}
+#promoContentBar #promoContentRight UL LI.finalStep {
+	CLEAR: right; PADDING-RIGHT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%
+}
+#promoContentBar #promoContentRight A {
+	COLOR: #0083cd
+}
+#promoContentBar #promoContentRight UL LI IMG {
+	CLEAR: both; DISPLAY: block; MARGIN-BOTTOM: 10px
+}
+#promoContentBar #promoContentRight P {
+	PADDING-LEFT: 50px; FLOAT: left; MARGIN: 0px; WIDTH: 600px; LINE-HEIGHT: 1em; PADDING-TOP: 30px
+}
+#promoContentBar #promoContentRight P #promoOpenAccount {
+	MARGIN-TOP: -15px; FONT-WEIGHT: bold; FONT-SIZE: 1.4em; FLOAT: right; COLOR: #000000; POSITION: relative
+}
+#promoContentBar #promoMain100 {
+	BORDER-RIGHT: #12426c 1px solid; BORDER-TOP: #12426c 1px solid; FONT-SIZE: 1.4em; FLOAT: left; PADDING-BOTTOM: 10px; MARGIN: 6px 0px 0px 1px; BORDER-LEFT: #12426c 1px solid; WIDTH: 639px; BORDER-BOTTOM: #12426c 1px solid; BACKGROUND-COLOR: #ffffff
+}
+#promoContentBar #promoMain100 H1 {
+	FONT-WEIGHT: 100; FONT-SIZE: 1.6em; MARGIN: 10px 10px 20px; COLOR: #000000
+}
+#promoContentBar #promoMain100 H2 {
+	FONT-SIZE: 1.2em; PADDING-BOTTOM: 8px; MARGIN: 20px 10px 10px; BORDER-BOTTOM: #21609f 2px solid
+}
+#promoContentBar #promoMain100 H3 {
+	FONT-SIZE: 1em; MARGIN: 10px 10px 5px
+}
+#promoContentBar #promoMain100 P {
+	MARGIN: 0px 10px 4px; LINE-HEIGHT: 1.3em
+}
+#promoContentBar #promoMain100 UL {
+	MARGIN: 20px 10px 10px 30px; LIST-STYLE-TYPE: square
+}
+#promoContentBar #promoMain100 TABLE {
+	MARGIN: 10px
+}
+#promoContentBar #promoMain100 TD {
+	BORDER-RIGHT: #badef2 1px solid; BORDER-TOP: #badef2 1px solid; BORDER-LEFT: #badef2 1px solid; BORDER-BOTTOM: #badef2 1px solid
+}
+#promoContentBar #promoMain100 TD.spacerCol {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#promoContentBar #promoMain100 A.topLink {
+	MARGIN: 10px
+}
+SPAN.footySubtitle {
+	DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 1.5em; LEFT: 18px; TEXT-TRANSFORM: uppercase; WIDTH: 228px; POSITION: absolute; TOP: 77px
+}
+SPAN.footySubtitle1 {
+	DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 1.5em; LEFT: 26px; TEXT-TRANSFORM: uppercase; WIDTH: 214px; POSITION: absolute; TOP: 78px
+}
+SPAN.footySplashBtn {
+	PADDING-RIGHT: 6px; DISPLAY: block; PADDING-LEFT: 0px; FONT-WEIGHT: bold; LEFT: 18px; PADDING-BOTTOM: 0px; TEXT-TRANSFORM: uppercase; WIDTH: 120px; COLOR: #ffffff; PADDING-TOP: 0px; POSITION: absolute; TOP: 51px; HEIGHT: 20px; TEXT-DECORATION: none
+}
+SPAN.footySplashBtn {
+	PADDING-RIGHT: 6px; DISPLAY: block; PADDING-LEFT: 12px; BACKGROUND: url(../William Hill Online_files/footy-bet-now.jpg) repeat-x 0px 0px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 20px; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+SPAN.footySplashBtn2 {
+	PADDING-RIGHT: 6px; DISPLAY: block; PADDING-LEFT: 12px; BACKGROUND: url(../William Hill Online_files/footy-bet-now.jpg) repeat-x 0px 0px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 20px; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+#footybg {
+	BACKGROUND: url(../William Hill Online_files/footy-h3-bg.jpg) repeat-x 0px 0px; MARGIN: 0px 1px 0px 0px
+}
+P.opaque {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; FILTER: alpha(opacity=40); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BACKGROUND-COLOR: #000000; opacity: 0.4
+}
